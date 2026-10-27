@@ -160,7 +160,7 @@ def render_regional_analysis(disease: str, list_type: str):
         return ""
 
     st.dataframe(
-        display_df.style.applymap(style_badge, subset=["badge"]) if "badge" in display_df.columns else None,
+        display_df.style.map(style_badge, subset=["badge"]) if "badge" in display_df.columns else None,
         use_container_width=True,
     )
 

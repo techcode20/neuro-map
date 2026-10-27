@@ -109,7 +109,9 @@ def compute_null_distribution(
     for i, gene_set in enumerate(random_gene_sets):
         available = [g for g in gene_set if g in zscored.columns]
         if len(available) > 0:
-            null_scores[i] = zscored[available].mean(axis=1)
+            scores = zscored[available].mean(axis=1)
+            # Ensure it's a Series with region index
+            null_scores[i] = scores
 
     null_df = pd.DataFrame(null_scores)
     null_df.index.name = "region"
@@ -148,7 +150,10 @@ def compute_empirical_pvalues(
             continue
 
         observed = observed_scores[region]
+        # Get null values for this region, ensure 1D array
         null_vals = null_scores.loc[region].values
+        # Flatten in case it's 2D
+        null_vals = np.asarray(null_vals).ravel()
 
         if alternative == "greater":
             # p = (1 + number of null >= observed) / (1 + n_sets)
@@ -158,7 +163,7 @@ def compute_empirical_pvalues(
 
         pvalues[region] = (1 + n_extreme) / (1 + n_sets)
 
-    return pd.Series(pvalues, name="pvalue")
+    return pd.Series(pvalues, name="pvalue", index=observed_scores.index)
 
 
 def apply_fdr_correction(

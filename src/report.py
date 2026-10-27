@@ -67,7 +67,7 @@ def generate_html_report(
     )
 
     output_file = output_dir / f"report_{disease.lower()}_{list_type}.html"
-    with open(output_file, "w") as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         f.write(html)
 
     print(f"Generated report: {output_file}")

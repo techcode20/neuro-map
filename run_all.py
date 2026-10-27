@@ -6,20 +6,25 @@ This script rebuilds all results from raw data.
 Usage: python run_all.py
 """
 
-import pandas as pd
-import numpy as np
+import sys
 from pathlib import Path
 
-from src.load_data import load_allen_expression
-from src.gene_lists import build_gene_lists
-from src.scoring import compute_regional_scores, compute_donor_scores, compute_consistency_metric, save_scores
-from src.stats import run_permutation_test, save_statistical_results
-from src.validation import (
+# Add src to path
+sys.path.insert(0, str(Path(__file__).parent / "src"))
+
+import pandas as pd
+import numpy as np
+
+from load_data import load_allen_expression
+from gene_lists import build_gene_lists
+from scoring import compute_regional_scores, compute_donor_scores, compute_consistency_metric, save_scores
+from stats import run_permutation_test, save_statistical_results
+from validation import (
     validate_disease,
     load_negative_control_genes,
     run_negative_control_test,
 )
-from src.report import generate_html_report
+from report import generate_html_report
 
 # Configuration
 DISEASES = ["Parkinson", "Alzheimer", "Huntington"]
@@ -119,7 +124,7 @@ def main():
 
     # Step 1: Load Allen expression data
     print("\n1. Loading Allen Human Brain Atlas data...")
-    expression_matrix, donor_matrices = load_allen_expression(atlas=ATLAS)
+    expression_matrix, donor_matrices = load_allen_expression(atlas_name=ATLAS)
 
     print(f"\nExpression matrix shape: {expression_matrix.shape}")
     print(f"Number of donors: {len(donor_matrices)}")

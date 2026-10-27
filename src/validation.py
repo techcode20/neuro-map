@@ -27,7 +27,7 @@ def load_negative_control_genes(
     pvalue_threshold: float = 5e-8,
 ) -> pd.DataFrame:
     """Load negative control gene set (trait with no brain relevance)."""
-    from .load_data import load_gwas_catalog, match_genes_to_atlas
+    from load_data import load_gwas_catalog, match_genes_to_atlas
 
     control_gwas = load_gwas_catalog(control_trait, pvalue_threshold=pvalue_threshold)
     control_matched, _ = match_genes_to_atlas(control_gwas, expression_matrix)
@@ -138,7 +138,7 @@ def run_negative_control_test(
 
     Regions flagged by negative control are suspect.
     """
-    from .stats import run_permutation_test
+    from stats import run_permutation_test
 
     print(f"Running negative control test ({control_genes.shape[0]} genes)...")
     observed, pvals, fdr_results, effects = run_permutation_test(
@@ -184,10 +184,19 @@ def validate_disease(
         list_type,
     )
 
-    # Compare strict vs broad
-    broad_stats = load_stats_results(disease, "broad") if list_type == "strict" else stats_results
-    strict_stats = stats_results if list_type == "strict" else load_stats_results(disease, "strict")
-    comparison = compare_gene_lists(strict_stats, broad_stats)
+    # Compare strict vs broad (only if both exist)
+    comparison = pd.DataFrame(index=badges.index)
+    try:
+        if list_type == "strict":
+            broad_stats = load_stats_results(disease, "broad")
+            strict_stats = stats_results
+        else:
+            strict_stats = load_stats_results(disease, "strict")
+            broad_stats = stats_results
+        comparison = compare_gene_lists(strict_stats, broad_stats)
+    except FileNotFoundError:
+        # Broad/strict not yet computed, skip comparison
+        comparison["agreement"] = "Unknown"
 
     # Merge comparison into badges
     badges = badges.join(comparison[["agreement"]], how="left")
