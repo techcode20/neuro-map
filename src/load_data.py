@@ -1,11 +1,12 @@
 """Data loading and preprocessing utilities for NeuroMap."""
 
+import os
+
 import pandas as pd
 import numpy as np
 from pathlib import Path
 import abagen
 from typing import Optional, List, Tuple
-import requests
 
 
 DATA_DIR = Path(__file__).parent.parent / "data"
@@ -18,9 +19,10 @@ def load_allen_expression(
     atlas_name: str = "desikan-killiany",
     donors: Optional[List[str]] = None,
     force_refresh: bool = False,
+    real_data: Optional[bool] = None,
 ) -> Tuple[pd.DataFrame, dict]:
     """
-    Load and process Allen Human Brain Atlas expression data.
+    Load and process Allen Human Brain Atlas expression data using abagen.
 
     Parameters
     ----------
@@ -30,6 +32,9 @@ def load_allen_expression(
         Specific donor IDs to include. If None, uses all available donors.
     force_refresh : bool
         If True, re-download and reprocess data even if cached.
+    real_data : bool, optional
+        If True, download real AHBA data via abagen (falls back to mock on failure).
+        Defaults to the REAL_DATA environment variable, or False (mock data).
 
     Returns
     -------
@@ -37,11 +42,6 @@ def load_allen_expression(
         Region x gene expression matrix (averaged across donors if multiple).
     donor_matrices : dict
         Dictionary mapping donor ID to region x gene matrix for that donor.
-
-    Notes
-    -----
-    Currently uses mock data due to abagen 0.1.3 incompatibility with pandas >=3.0.
-    Real data download via abagen will work when abagen is updated for pandas 3.0+.
     """
     cache_file = PROCESSED_DIR / f"allen_expression_{atlas_name}.parquet"
     donor_cache_dir = PROCESSED_DIR / f"donor_matrices_{atlas_name}"
@@ -66,9 +66,40 @@ def load_allen_expression(
     else:
         raise ValueError(f"Unsupported atlas: {atlas_name}. Only 'desikan-killiany' is currently supported.")
 
-    # Use mock data (abagen 0.1.3 has pandas 3.0+ compatibility issues)
-    print(f"  Using mock expression data (real download disabled due to abagen/pandas version mismatch)...")
-    expression_data = _generate_mock_expression_data(atlas_img, atlas_info, donors)
+    # Try to fetch real data, fall back to mock data if download fails
+    print(f"Fetching Allen expression data...")
+    if donors is None:
+        donors = ['9861']
+        print(f"  Using single donor: {donors[0]} (for faster testing)")
+    
+    # Parse REAL_DATA environment variable if not explicitly set
+    if real_data is None:
+        real_data = os.environ.get("REAL_DATA", "").lower() in ("1", "true", "yes")
+    
+    probe_selection = 'max_intensity'
+    print(f"  Using '{probe_selection}' probe selection")
+    
+    if real_data:
+        # Try to download real AHBA data via abagen
+        print(f"  Downloading real AHBA data via abagen (this may take several minutes)...")
+        try:
+            donor_data = abagen.get_expression_data(
+                atlas_img, 
+                atlas_info=atlas_info,
+                probe_selection=probe_selection,
+                return_donors=True
+            )
+            if not donor_data:
+                raise RuntimeError("abagen returned no donor data")
+            expression_data = list(donor_data.values())
+            donors = list(donor_data.keys())
+            print(f"  Successfully downloaded data for {len(donors)} donors")
+        except Exception as exc:
+            print(f"  Real data download failed ({exc}); falling back to mock data")
+            expression_data = _generate_mock_expression_data(atlas_img, atlas_info, donors)
+    else:
+        print(f"  Using mock data for testing (set REAL_DATA=1 for real download)...")
+        expression_data = _generate_mock_expression_data(atlas_img, atlas_info, donors)
 
     # expression_data is a list of DataFrames, one per donor
     donor_matrices = {}
