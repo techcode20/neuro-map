@@ -1,0 +1,1188 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NeuroMap Report: Alzheimer (strict)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h1, h2, h3 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #34495e; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .badge-supported { background-color: #27ae60; color: white; padding: 4px 8px; border-radius: 4px; }
+        .badge-uncertain { background-color: #f39c12; color: white; padding: 4px 8px; border-radius: 4px; }
+        .badge-not-supported { background-color: #e74c3c; color: white; padding: 4px 8px; border-radius: 4px; }
+        .metric { display: inline-block; margin: 10px 20px 10px 0; padding: 10px; background: #ecf0f1; border-radius: 4px; }
+        .limitations { background: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 4px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>NeuroMap Analysis Report</h1>
+    <p><strong>Disease:</strong> Alzheimer | <strong>Gene List:</strong> strict | <strong>Generated:</strong> 2026-10-28 19:16:21</p>
+
+    <div class="limitations">
+        <h3>⚠️ Limitations</h3>
+        <ul>
+            <li>Data from healthy donor brains, not patients. Shows where disease genes are expressed, not where damage occurs.</li>
+            <li>Expression enrichment ≠ vulnerability. Top-scoring region is not automatically the most damaged one.</li>
+            <li>GWAS-associated genes are not all proven disease-causing genes. Evidence type and mapping method kept for every gene.</li>
+            <li>Random gene sets are not extra donors. Permutation tests do not add biological samples.</li>
+            <li>This is a research exploration tool and is <strong>not for clinical use</strong>.</li>
+        </ul>
+    </div>
+
+    <h2>Summary</h2>
+    <div class="metric"><strong>Genes in list:</strong> 20</div>
+    <div class="metric"><strong>Regions tested:</strong> 83</div>
+    <div class="metric"><strong>Significant (FDR < 0.05):</strong> 0</div>
+    <div class="metric"><strong>Supported regions:</strong> 0</div>
+    <div class="metric"><strong>Uncertain regions:</strong> 0</div>
+    <div class="metric"><strong>Not supported regions:</strong> 83</div>
+
+    <h2>Top 10 Regions by Score</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>score</th>
+      <th>pvalue</th>
+      <th>fdr</th>
+      <th>cohens_d</th>
+      <th>significant</th>
+    </tr>
+    <tr>
+      <th>region</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>R_middletemporal</th>
+      <td>0.4903</td>
+      <td>0.0430</td>
+      <td>0.7064</td>
+      <td>1.9016</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>L_rostralanteriorcingulate</th>
+      <td>0.4102</td>
+      <td>0.0104</td>
+      <td>0.7064</td>
+      <td>2.7703</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>R_supramarginal</th>
+      <td>0.3893</td>
+      <td>0.0420</td>
+      <td>0.7064</td>
+      <td>2.0041</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>L_supramarginal</th>
+      <td>0.3862</td>
+      <td>0.0570</td>
+      <td>0.7064</td>
+      <td>1.7542</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>L_transversetemporal</th>
+      <td>0.3820</td>
+      <td>0.0688</td>
+      <td>0.7064</td>
+      <td>1.6232</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>L_accumbensarea</th>
+      <td>0.3737</td>
+      <td>0.0418</td>
+      <td>0.7064</td>
+      <td>1.9396</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>L_rostralmiddlefrontal</th>
+      <td>0.3669</td>
+      <td>0.0664</td>
+      <td>0.7064</td>
+      <td>1.6216</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>R_temporalpole</th>
+      <td>0.3226</td>
+      <td>0.1762</td>
+      <td>0.7064</td>
+      <td>0.8864</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>R_superiorparietal</th>
+      <td>0.3044</td>
+      <td>0.0770</td>
+      <td>0.7064</td>
+      <td>1.5109</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>R_caudate</th>
+      <td>0.3030</td>
+      <td>0.1478</td>
+      <td>0.7064</td>
+      <td>1.0374</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>Evidence Badges</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>badge</th>
+      <th>fdr_pass</th>
+      <th>consistency_pass</th>
+      <th>in_expected</th>
+      <th>n_positive_donors</th>
+    </tr>
+    <tr>
+      <th>region</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>L_bankssts</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_caudalanteriorcingulate</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_caudalmiddlefrontal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_cuneus</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_entorhinal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_fusiform</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_inferiorparietal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_inferiortemporal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_isthmuscingulate</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_lateraloccipital</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_lateralorbitofrontal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_lingual</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_medialorbitofrontal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_middletemporal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_parahippocampal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_paracentral</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_parsopercularis</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_parsorbitalis</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_parstriangularis</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_pericalcarine</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_postcentral</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_posteriorcingulate</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_precentral</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_precuneus</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_rostralanteriorcingulate</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_rostralmiddlefrontal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_superiorfrontal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_superiorparietal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_superiortemporal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_supramarginal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_frontalpole</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_temporalpole</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_transversetemporal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_insula</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_thalamusproper</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_caudate</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_putamen</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_pallidum</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_accumbensarea</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>L_hippocampus</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>L_amygdala</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_bankssts</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_caudalanteriorcingulate</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_caudalmiddlefrontal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_cuneus</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_entorhinal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_fusiform</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_inferiorparietal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_inferiortemporal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_isthmuscingulate</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_lateraloccipital</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_lateralorbitofrontal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_lingual</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_medialorbitofrontal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_middletemporal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_parahippocampal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_paracentral</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_parsopercularis</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_parsorbitalis</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_parstriangularis</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_pericalcarine</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_postcentral</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_posteriorcingulate</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_precentral</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_precuneus</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_rostralanteriorcingulate</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_rostralmiddlefrontal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_superiorfrontal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_superiorparietal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_superiortemporal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_supramarginal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_frontalpole</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_temporalpole</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_transversetemporal</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_insula</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_thalamusproper</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_caudate</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_putamen</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_pallidum</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>R_accumbensarea</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_hippocampus</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>R_amygdala</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>brainstem</th>
+      <td>&lt;span class="badge-not-supported"&gt;Not supported&lt;/span&gt;</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>Expected Regions (from literature)</h2>
+    <p>No expected regions defined</p>
+
+    <h2>Gene List</h2>
+    <ul><li>GENE_0037 (study: GCST000, mapping: reported)</li><li>GENE_0726 (study: GCST001, mapping: reported)</li><li>GENE_0846 (study: GCST002, mapping: reported)</li><li>GENE_0295 (study: GCST003, mapping: reported)</li><li>GENE_0924 (study: GCST004, mapping: reported)</li><li>GENE_0658 (study: GCST005, mapping: reported)</li><li>GENE_0682 (study: GCST006, mapping: reported)</li><li>GENE_0286 (study: GCST007, mapping: reported)</li><li>GENE_0880 (study: GCST008, mapping: reported)</li><li>GENE_0272 (study: GCST009, mapping: reported)</li><li>GENE_0137 (study: GCST010, mapping: reported)</li><li>GENE_0954 (study: GCST011, mapping: reported)</li><li>GENE_0515 (study: GCST012, mapping: reported)</li><li>GENE_0788 (study: GCST013, mapping: reported)</li><li>GENE_0860 (study: GCST014, mapping: reported)</li><li>GENE_0640 (study: GCST015, mapping: reported)</li><li>GENE_0737 (study: GCST016, mapping: reported)</li><li>GENE_0683 (study: GCST017, mapping: reported)</li><li>GENE_0412 (study: GCST018, mapping: reported)</li><li>GENE_0071 (study: GCST019, mapping: reported)</li></ul>
+
+    <h2>Donor Consistency</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>9861</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>L_bankssts</th>
+      <td>0.1590</td>
+    </tr>
+    <tr>
+      <th>L_caudalanteriorcingulate</th>
+      <td>-0.2042</td>
+    </tr>
+    <tr>
+      <th>L_caudalmiddlefrontal</th>
+      <td>-0.0094</td>
+    </tr>
+    <tr>
+      <th>L_cuneus</th>
+      <td>-0.0085</td>
+    </tr>
+    <tr>
+      <th>L_entorhinal</th>
+      <td>-0.3065</td>
+    </tr>
+    <tr>
+      <th>L_fusiform</th>
+      <td>0.1606</td>
+    </tr>
+    <tr>
+      <th>L_inferiorparietal</th>
+      <td>-0.4448</td>
+    </tr>
+    <tr>
+      <th>L_inferiortemporal</th>
+      <td>0.0270</td>
+    </tr>
+    <tr>
+      <th>L_isthmuscingulate</th>
+      <td>0.2552</td>
+    </tr>
+    <tr>
+      <th>L_lateraloccipital</th>
+      <td>-0.1763</td>
+    </tr>
+    <tr>
+      <th>L_lateralorbitofrontal</th>
+      <td>-0.2475</td>
+    </tr>
+    <tr>
+      <th>L_lingual</th>
+      <td>0.1240</td>
+    </tr>
+    <tr>
+      <th>L_medialorbitofrontal</th>
+      <td>0.0154</td>
+    </tr>
+    <tr>
+      <th>L_middletemporal</th>
+      <td>0.2341</td>
+    </tr>
+    <tr>
+      <th>L_parahippocampal</th>
+      <td>-0.0581</td>
+    </tr>
+    <tr>
+      <th>L_paracentral</th>
+      <td>0.2612</td>
+    </tr>
+    <tr>
+      <th>L_parsopercularis</th>
+      <td>-0.1275</td>
+    </tr>
+    <tr>
+      <th>L_parsorbitalis</th>
+      <td>-0.2942</td>
+    </tr>
+    <tr>
+      <th>L_parstriangularis</th>
+      <td>-0.1140</td>
+    </tr>
+    <tr>
+      <th>L_pericalcarine</th>
+      <td>-0.1639</td>
+    </tr>
+    <tr>
+      <th>L_postcentral</th>
+      <td>-0.0919</td>
+    </tr>
+    <tr>
+      <th>L_posteriorcingulate</th>
+      <td>0.2595</td>
+    </tr>
+    <tr>
+      <th>L_precentral</th>
+      <td>-0.1791</td>
+    </tr>
+    <tr>
+      <th>L_precuneus</th>
+      <td>-0.3879</td>
+    </tr>
+    <tr>
+      <th>L_rostralanteriorcingulate</th>
+      <td>0.4102</td>
+    </tr>
+    <tr>
+      <th>L_rostralmiddlefrontal</th>
+      <td>0.3669</td>
+    </tr>
+    <tr>
+      <th>L_superiorfrontal</th>
+      <td>-0.1052</td>
+    </tr>
+    <tr>
+      <th>L_superiorparietal</th>
+      <td>0.1184</td>
+    </tr>
+    <tr>
+      <th>L_superiortemporal</th>
+      <td>0.1247</td>
+    </tr>
+    <tr>
+      <th>L_supramarginal</th>
+      <td>0.3862</td>
+    </tr>
+    <tr>
+      <th>L_frontalpole</th>
+      <td>0.1807</td>
+    </tr>
+    <tr>
+      <th>L_temporalpole</th>
+      <td>-0.0002</td>
+    </tr>
+    <tr>
+      <th>L_transversetemporal</th>
+      <td>0.3820</td>
+    </tr>
+    <tr>
+      <th>L_insula</th>
+      <td>0.2920</td>
+    </tr>
+    <tr>
+      <th>L_thalamusproper</th>
+      <td>-0.2733</td>
+    </tr>
+    <tr>
+      <th>L_caudate</th>
+      <td>0.1430</td>
+    </tr>
+    <tr>
+      <th>L_putamen</th>
+      <td>-0.2557</td>
+    </tr>
+    <tr>
+      <th>L_pallidum</th>
+      <td>-0.3626</td>
+    </tr>
+    <tr>
+      <th>L_accumbensarea</th>
+      <td>0.3737</td>
+    </tr>
+    <tr>
+      <th>L_hippocampus</th>
+      <td>-0.0682</td>
+    </tr>
+    <tr>
+      <th>L_amygdala</th>
+      <td>-0.2156</td>
+    </tr>
+    <tr>
+      <th>R_bankssts</th>
+      <td>0.2568</td>
+    </tr>
+    <tr>
+      <th>R_caudalanteriorcingulate</th>
+      <td>0.0103</td>
+    </tr>
+    <tr>
+      <th>R_caudalmiddlefrontal</th>
+      <td>-0.1535</td>
+    </tr>
+    <tr>
+      <th>R_cuneus</th>
+      <td>-0.2720</td>
+    </tr>
+    <tr>
+      <th>R_entorhinal</th>
+      <td>-0.1056</td>
+    </tr>
+    <tr>
+      <th>R_fusiform</th>
+      <td>-0.2688</td>
+    </tr>
+    <tr>
+      <th>R_inferiorparietal</th>
+      <td>-0.0129</td>
+    </tr>
+    <tr>
+      <th>R_inferiortemporal</th>
+      <td>0.0130</td>
+    </tr>
+    <tr>
+      <th>R_isthmuscingulate</th>
+      <td>0.1214</td>
+    </tr>
+    <tr>
+      <th>R_lateraloccipital</th>
+      <td>-0.0553</td>
+    </tr>
+    <tr>
+      <th>R_lateralorbitofrontal</th>
+      <td>-0.1401</td>
+    </tr>
+    <tr>
+      <th>R_lingual</th>
+      <td>0.0607</td>
+    </tr>
+    <tr>
+      <th>R_medialorbitofrontal</th>
+      <td>0.0542</td>
+    </tr>
+    <tr>
+      <th>R_middletemporal</th>
+      <td>0.4903</td>
+    </tr>
+    <tr>
+      <th>R_parahippocampal</th>
+      <td>-0.4875</td>
+    </tr>
+    <tr>
+      <th>R_paracentral</th>
+      <td>0.1661</td>
+    </tr>
+    <tr>
+      <th>R_parsopercularis</th>
+      <td>-0.2325</td>
+    </tr>
+    <tr>
+      <th>R_parsorbitalis</th>
+      <td>-0.1983</td>
+    </tr>
+    <tr>
+      <th>R_parstriangularis</th>
+      <td>-0.0921</td>
+    </tr>
+    <tr>
+      <th>R_pericalcarine</th>
+      <td>-0.1151</td>
+    </tr>
+    <tr>
+      <th>R_postcentral</th>
+      <td>-0.0490</td>
+    </tr>
+    <tr>
+      <th>R_posteriorcingulate</th>
+      <td>0.1234</td>
+    </tr>
+    <tr>
+      <th>R_precentral</th>
+      <td>-0.0376</td>
+    </tr>
+    <tr>
+      <th>R_precuneus</th>
+      <td>0.0662</td>
+    </tr>
+    <tr>
+      <th>R_rostralanteriorcingulate</th>
+      <td>-0.0823</td>
+    </tr>
+    <tr>
+      <th>R_rostralmiddlefrontal</th>
+      <td>-0.0873</td>
+    </tr>
+    <tr>
+      <th>R_superiorfrontal</th>
+      <td>-0.0864</td>
+    </tr>
+    <tr>
+      <th>R_superiorparietal</th>
+      <td>0.3044</td>
+    </tr>
+    <tr>
+      <th>R_superiortemporal</th>
+      <td>0.0825</td>
+    </tr>
+    <tr>
+      <th>R_supramarginal</th>
+      <td>0.3893</td>
+    </tr>
+    <tr>
+      <th>R_frontalpole</th>
+      <td>0.1964</td>
+    </tr>
+    <tr>
+      <th>R_temporalpole</th>
+      <td>0.3226</td>
+    </tr>
+    <tr>
+      <th>R_transversetemporal</th>
+      <td>-0.2159</td>
+    </tr>
+    <tr>
+      <th>R_insula</th>
+      <td>0.1750</td>
+    </tr>
+    <tr>
+      <th>R_thalamusproper</th>
+      <td>0.1226</td>
+    </tr>
+    <tr>
+      <th>R_caudate</th>
+      <td>0.3030</td>
+    </tr>
+    <tr>
+      <th>R_putamen</th>
+      <td>-0.1883</td>
+    </tr>
+    <tr>
+      <th>R_pallidum</th>
+      <td>0.2514</td>
+    </tr>
+    <tr>
+      <th>R_accumbensarea</th>
+      <td>-0.2714</td>
+    </tr>
+    <tr>
+      <th>R_hippocampus</th>
+      <td>-0.2238</td>
+    </tr>
+    <tr>
+      <th>R_amygdala</th>
+      <td>-0.2313</td>
+    </tr>
+    <tr>
+      <th>brainstem</th>
+      <td>-0.0821</td>
+    </tr>
+  </tbody>
+</table>
+
+    <hr>
+    <p><em>Generated by NeuroMap pipeline. For research use only.</em></p>
+</body>
+</html>
