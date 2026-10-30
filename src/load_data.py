@@ -1,5 +1,3 @@
-"""Data loading and preprocessing utilities for NeuroMap."""
-
 import os
 
 import pandas as pd
@@ -7,6 +5,31 @@ import numpy as np
 from pathlib import Path
 import abagen
 from typing import Optional, List, Tuple
+
+# Monkey-patch abagen.samples_.groupby_index for pandas >= 2.0 compatibility
+# DataFrame.append was removed in pandas 2.0; use pd.concat instead
+import abagen.samples_ as _abagen_samples
+_original_groupby_index = _abagen_samples.groupby_index
+
+def _patched_groupby_index(microarray, labels=None, metric='mean'):
+    metric = _abagen_samples.utils.check_metric(metric)
+    if labels is not None:
+        missing = np.setdiff1d(labels, np.unique(microarray.index))
+        labels_df = pd.DataFrame(columns=microarray.columns,
+                                 index=pd.Series(missing, name='label'))
+    else:
+        labels_df = None
+    gene_by_label = (microarray.groupby('label')
+                           .aggregate(metric)
+                           .sort_index()
+                           .rename_axis('label'))
+    if labels_df is not None:
+        gene_by_label = pd.concat([gene_by_label, labels_df]).sort_index()
+    if 0 in gene_by_label.index:
+        gene_by_label = gene_by_label.drop([0], axis=0)
+    return gene_by_label
+
+_abagen_samples.groupby_index = _patched_groupby_index
 
 
 DATA_DIR = Path(__file__).parent.parent / "data"
@@ -80,22 +103,25 @@ def load_allen_expression(
     print(f"  Using '{probe_selection}' probe selection")
     
     if real_data:
-        # Try to download real AHBA data via abagen
-        print(f"  Downloading real AHBA data via abagen (this may take several minutes)...")
+        # Use local Allen microarray data via abagen
+        print(f"  Loading real AHBA data from local files (data_dir=data/raw/allen)...")
         try:
             donor_data = abagen.get_expression_data(
-                atlas_img, 
+                atlas_img,
                 atlas_info=atlas_info,
                 probe_selection=probe_selection,
-                return_donors=True
+                return_donors=True,
+                donors=["9861"],
+                data_dir="data/raw/allen",
+                verbose=1
             )
             if not donor_data:
-                raise RuntimeError("abagen returned no donor data")
+                raise RuntimeError("abagen get_expression_data returned no donor data")
             expression_data = list(donor_data.values())
             donors = list(donor_data.keys())
-            print(f"  Successfully downloaded data for {len(donors)} donors")
+            print(f"  Successfully processed data for {len(donors)} donors")
         except Exception as exc:
-            print(f"  Real data download failed ({exc}); falling back to mock data")
+            print(f"  Real data processing failed ({exc}); falling back to mock data")
             expression_data = _generate_mock_expression_data(atlas_img, atlas_info, donors)
     else:
         print(f"  Using mock data for testing (set REAL_DATA=1 for real download)...")

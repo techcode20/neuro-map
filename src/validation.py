@@ -25,12 +25,32 @@ def load_negative_control_genes(
     expression_matrix: pd.DataFrame,
     control_trait: str = "Height",
     pvalue_threshold: float = 5e-8,
+    n_control_genes: int = 20,
 ) -> pd.DataFrame:
     """Load negative control gene set (trait with no brain relevance)."""
     from load_data import load_gwas_catalog, match_genes_to_atlas
 
     control_gwas = load_gwas_catalog(control_trait, pvalue_threshold=pvalue_threshold)
     control_matched, _ = match_genes_to_atlas(control_gwas, expression_matrix)
+
+    # If no genes matched (e.g., mock genes vs real expression matrix),
+    # use random real genes from the expression matrix as negative control
+    if len(control_matched) == 0:
+        print(f"  No control genes matched expression matrix; using {n_control_genes} random real genes")
+        import numpy as np
+        np.random.seed(42)
+        all_genes = list(expression_matrix.columns)
+        random_genes = np.random.choice(all_genes, size=min(n_control_genes, len(all_genes)), replace=False)
+        control_matched = pd.DataFrame({
+            "gene_symbol": random_genes,
+            "reported_gene": random_genes,
+            "mapped_gene": random_genes,
+            "pvalue": [1e-8] * len(random_genes),
+            "study_accession": ["random"] * len(random_genes),
+            "trait": ["random"] * len(random_genes),
+            "mapping_method": ["random"] * len(random_genes),
+        })
+
     return control_matched
 
 
