@@ -112,6 +112,7 @@ def load_allen_expression(
                 probe_selection=probe_selection,
                 return_donors=True,
                 donors=donors,
+                lr_mirror="bidirectional",
                 data_dir="data/raw/allen",
                 verbose=1
             )
