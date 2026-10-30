@@ -92,8 +92,8 @@ def load_allen_expression(
     # Try to fetch real data, fall back to mock data if download fails
     print(f"Fetching Allen expression data...")
     if donors is None:
-        donors = ['9861']
-        print(f"  Using single donor: {donors[0]} (for faster testing)")
+        donors = ['9861', '10021', '12876', '14380', '15496', '15697']
+        print(f"  Using all {len(donors)} donors")
     
     # Parse REAL_DATA environment variable if not explicitly set
     if real_data is None:
@@ -111,7 +111,7 @@ def load_allen_expression(
                 atlas_info=atlas_info,
                 probe_selection=probe_selection,
                 return_donors=True,
-                donors=["9861"],
+                donors=donors,
                 data_dir="data/raw/allen",
                 verbose=1
             )

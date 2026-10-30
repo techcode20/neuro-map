@@ -51,9 +51,16 @@ def compute_regional_scores(
 
     # Compute mean z-score across disease genes for each region
     regional_scores = zscored[available_genes].mean(axis=1, skipna=True)
-    # If all genes are NaN for a region, score is NaN -> replace with 0
-    regional_scores = regional_scores.fillna(0.0)
     regional_scores.name = "score"
+
+    # Drop regions with all-NaN expression (no data for any disease gene)
+    nan_mask = regional_scores.isna()
+    if nan_mask.any():
+        dropped = regional_scores.index[nan_mask].tolist()
+        print(f"  Dropped {len(dropped)} regions with no expression data: {dropped}")
+        regional_scores = regional_scores.dropna()
+
+    return regional_scores
 
     return regional_scores
 
