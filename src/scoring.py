@@ -50,7 +50,9 @@ def compute_regional_scores(
         raise ValueError("No disease genes found in expression matrix")
 
     # Compute mean z-score across disease genes for each region
-    regional_scores = zscored[available_genes].mean(axis=1)
+    regional_scores = zscored[available_genes].mean(axis=1, skipna=True)
+    # If all genes are NaN for a region, score is NaN -> replace with 0
+    regional_scores = regional_scores.fillna(0.0)
     regional_scores.name = "score"
 
     return regional_scores

@@ -54,23 +54,29 @@ def generate_matched_random_gene_sets(
     # Compute mean expression per gene (across regions)
     mean_expr = expression_matrix[background_genes].mean(axis=0)
 
-    # Bin background genes by mean expression
-    bins = pd.qcut(mean_expr, q=n_bins, labels=False, duplicates="drop")
-    bin_labels = bins.unique()
+    # Bin background genes by mean expression using qcut
+    bins, bin_edges = pd.qcut(mean_expr, q=n_bins, retbins=True, duplicates="drop")
 
-    # Get bin assignments for disease genes
+    # Assign disease genes to the SAME bins using cut with background bin edges
     disease_mean_expr = expression_matrix[list(disease_symbols & all_genes)].mean(axis=0)
-    disease_bins = pd.qcut(disease_mean_expr, q=n_bins, labels=False, duplicates="drop")
+    disease_binned = pd.cut(disease_mean_expr, bins=bin_edges, labels=False, include_lowest=True)
 
     # Count disease genes per bin
-    bin_counts = disease_bins.value_counts().to_dict()
+    bin_counts = disease_binned.value_counts().to_dict()
+
+    # Build bin -> background genes mapping using SAME bin edges
+    background_binned = pd.cut(mean_expr, bins=bin_edges, labels=False, include_lowest=True)
+    bin_to_genes = {}
+    for bin_label in bin_counts.keys():
+        bin_genes = background_binned[background_binned == bin_label].index.tolist()
+        bin_to_genes[bin_label] = bin_genes
 
     # Generate random sets
     random_sets = []
     for _ in range(n_sets):
         random_set = []
         for bin_label, count in bin_counts.items():
-            bin_genes = bins[bins == bin_label].index.tolist()
+            bin_genes = bin_to_genes.get(bin_label, [])
             if len(bin_genes) >= count:
                 selected = np.random.choice(bin_genes, size=count, replace=False)
                 random_set.extend(selected.tolist())
@@ -150,6 +156,11 @@ def compute_empirical_pvalues(
             continue
 
         observed = observed_scores[region]
+        # Skip NaN observed scores
+        if pd.isna(observed):
+            pvalues[region] = np.nan
+            continue
+
         # Get null values for this region, ensure 1D array
         null_vals = null_scores.loc[region].values
         # Flatten in case it's 2D

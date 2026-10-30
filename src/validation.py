@@ -218,8 +218,12 @@ def validate_disease(
         # Broad/strict not yet computed, skip comparison
         comparison["agreement"] = "Unknown"
 
-    # Merge comparison into badges
-    badges = badges.join(comparison[["agreement"]], how="left")
+    # Add gene count and exploratory flag
+    n_strict = len(strict_genes)
+    n_broad = len(broad_genes)
+    badges["n_strict_genes"] = n_strict
+    badges["n_broad_genes"] = n_broad
+    badges["exploratory"] = (n_strict < 10) or (n_broad < 10)
 
     # Add negative control flag if available
     if negative_control_results is not None:
