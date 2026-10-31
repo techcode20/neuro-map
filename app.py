@@ -85,9 +85,7 @@ def render_sidebar():
     st.sidebar.markdown("---")
     st.sidebar.markdown("### Robustness Sandbox")
 
-    # Sliders for robustness
-    st.sidebar.slider("GWAS p-value threshold", 1e-8, 1e-4, 5e-8, format="%.1e", key="gwas_threshold")
-    st.sidebar.slider("Random gene sets", 100, 5000, 5000, step=100, key="n_random_sets")
+    # Donor subset filter (functional)
     st.sidebar.multiselect(
         "Donor subset",
         ["Donor 1", "Donor 2", "Donor 3", "Donor 4", "Donor 5", "Donor 6"],
@@ -96,13 +94,11 @@ def render_sidebar():
     )
 
     st.sidebar.markdown("---")
-    st.sidebar.markdown("**Limitations**")
     st.sidebar.caption(
         "• Data from healthy donors, not patients\n"
         "• Expression ≠ vulnerability\n"
         "• GWAS genes ≠ causal genes\n"
-        "• Not for clinical use\n"
-        "• GWAS threshold & random sets require re-running pipeline"
+        "• Not for clinical use"
     )
 
     return disease, list_type
