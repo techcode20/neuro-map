@@ -166,33 +166,46 @@ Fisher's exact test (FDR-corrected across all disease × cell-type tests) of GWA
 | Parkinson's | broad | Microglia | 6.21 | 0.0019 | 0.0199 | Yes |
 | Alzheimer's | strict | Oligodendrocytes | 9.47 | 0.0051 | 0.0427 | Yes |
 
-### What did not hold up
+### Sensitivity Analyses
 
-**Microglia enrichment is circular.** When the 8 genes that appear in both the AD GWAS list and the microglial marker list (CD33, TREM2, HLA-DRA, HLA-DRB1, HLA-DRB5, IL34, NR1H3, SPI1) are removed from both sets, the Alzheimer's–microglia odds ratio drops from 16.97 to 0.00. The same happens for Parkinson's (OR 10.02→0.00 when 5 overlapping genes removed). The enrichment is driven entirely by genes that are both disease risk genes and microglial markers by construction.
+**Leave-one-gene-out (microglia enrichment):**
+- **AD strict (8 overlap genes):** OR stays ~14.85 when dropping any single gene — signal spread across multiple genes, not driven by one
+- **PD strict (5 overlap genes):** OR stays ~8.02 when dropping any single gene — same pattern
 
-**Dopaminergic neurons: no enrichment detected, low power.** Parkinson's GWAS genes show zero overlap with 23 dopaminergic marker genes (TH, SLC6A3, DDC, DRD1, DRD2, etc.). The odds ratio is 0.00 with a confidence interval of [0, inf] — not estimable due to zero overlap. This cannot be interpreted as evidence of absence; it is simply underpowered.
+**Independent loci among overlap genes (500kb windows):**
+- **AD overlap genes (8):** HLA-DRA, HLA-DRB1, HLA-DRB5 on chr6 (1 locus), HLA-DQB1 on chr6 (1 locus), FCGR2A on chr1 (1 locus). CD33, IL34, NR1H3, SPI1, TREM2 not in significant GWAS hits. → 3 independent loci
+- **PD overlap genes (5):** HLA-DRA, HLA-DRB1, HLA-DRB5, HLA-DQB1 on chr6 (2 independent loci), FCGR2A on chr1 (1 locus). → 3 independent loci
+- Most overlap genes sit in the MHC region (chr6), where genes are in linkage disequilibrium — so they may represent fewer than 8 independent signals.
 
-**Positive control (regional method): striatal gene set.** The real positive control for the regional method is the striatal gene set (DRD1, DRD2, PPP1R1B, ADORA2A, PENK, TAC1, GPR88, RGS9). Caudate and putamen are FDR-significant (p=0.0002, FDR=0.004), confirming the regional pipeline can detect a true signal when one exists.
+**Dopaminergic neuron CI:**
+- OR=0 with zero overlap (23 markers vs 162 PD genes). CI not estimable ([0, inf]). Low power — cannot conclude absence.
+
+**Locus collapse (Parkinson microglia):**
+- OR 10.02 → 10.12 when collapsing to one gene per 500kb locus — enrichment remains robust.
+
+### What Did Not Hold Up
+
+| Claim | Result | Why |
+|-------|--------|-----|
+| AD–microglia enrichment | Overlap of 8 genes with microglial marker list; OR stays ~14.85 when dropping any single gene | Enrichment spread across multiple genes, but 5 of 8 are in the MHC region on chr6 (2 independent loci) — may reflect LD, not independent signals |
+| PD–microglia enrichment | Overlap of 5 genes with microglial marker list; OR stays ~8.02 when dropping any single gene | Same pattern — 4 of 5 in MHC region on chr6 |
+| PD–dopaminergic neuron enrichment | Zero overlap, CI not estimable | Low power (23 markers vs 162 genes) - cannot conclude absence |
+| Caudate/putamen depletion for PD | Does not survive two-sided FDR | Descriptive only, not a significant finding |
+| Huntington's cell-type analysis | Only 3 genes | Underpowered |
+
+### Positive Control (regional method)
+
+The real positive control for the regional method is the striatal gene set (DRD1, DRD2, PPP1R1B, ADORA2A, PENK, TAC1, GPR88, RGS9). Caudate and putamen are FDR-significant (p=0.0002, FDR=0.004), confirming the regional pipeline can detect a true signal when one exists.
 
 ## What the Story Becomes
 
-"Disease genes are not enriched in the expected brain regions by bulk expression, a validated and calibrated method confirms that, and the cell-type layer shows which cell types the genes actually belong to - but with important caveats about circularity and low power."
+"Disease genes are not enriched in the expected brain regions by bulk expression, a validated and calibrated method confirms that, and the cell-type layer shows which cell types the genes actually belong to - but with important caveats about overlap-gene independence and low power."
 
 This is a stronger, more honest narrative than a forced positive result:
 - Bulk regional expression shows **no significant enrichment** for Parkinson's (0 regions pass FDR)
 - Caudate/putamen show **depletion** (not enrichment), consistent across all 6 donors (cohens_d ≈ -2.4), but this **does not survive two-sided FDR correction** - treat as descriptive only
-- The **cell-type layer** reveals that PD and AD GWAS signals track microglia (neuroinflammation), not cell-type-specific vulnerability - but the AD-microglia enrichment is driven by known AD genes that are also microglial markers (circularity; disappears when 8 shared genes removed)
+- The **cell-type layer** reveals that PD and AD GWAS signals track microglia (neuroinflammation), not cell-type-specific vulnerability - but 5 of 8 AD overlap genes and 4 of 5 PD overlap genes are in the MHC region on chr6, suggesting linkage disequilibrium rather than independent microglial signals
 - All methods are calibrated: negative control returns 0 significant regions, calibration test returns 0/100 false positives, positive control (striatal gene set for caudate/putamen) returns FDR-significant signal
-
-## What Did Not Hold Up
-
-| Claim | Result | Why |
-|-------|--------|-----|
-| AD–microglia enrichment | Disappears when 8 overlap genes removed | Driven by known AD risk genes that are also microglial markers (circularity) |
-| PD–microglia enrichment | Disappears when 5 overlap genes removed | Same circularity issue |
-| PD–dopaminergic neuron enrichment | Zero overlap, CI not estimable | Low power (23 markers vs 162 genes) - cannot conclude absence |
-| Caudate/putamen depletion for PD | Does not survive two-sided FDR | Descriptive only, not a significant finding |
-| Huntington's cell-type analysis | Only 3 genes | Underpowered |
 
 ## Installation
 
