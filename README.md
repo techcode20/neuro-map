@@ -12,6 +12,24 @@ Build a Python application that takes a neurological disease (Parkinson's first,
 
 The output is an interactive dashboard with a 3D brain map, ranked regions, evidence badges, gene-level explanations, and exportable results.
 
+## Key Findings
+
+- **Bulk regional expression:** No significant enrichment of Parkinson's GWAS genes in any brain region (0 regions pass FDR). Caudate/putamen show depletion (cohens_d ≈ -2.4) but it does not survive two-sided FDR — descriptive only.
+- **Cell-type layer:** Microglia marker overlap present for both diseases but rests on about three loci, mostly in the MHC; not strong evidence for microglial involvement. AD-microglia OR=16.97 → OR=10.85 without MHC locus (still significant); PD-microglia OR=10.02 → OR=2.01 without MHC locus (not significant).
+- **Validation:** Negative control returns 0 significant regions; calibration test returns 0/100 false positives; striatal gene set positive control returns FDR-significant caudate/putamen enrichment.
+
+## Validation Summary
+
+| Test | Result | Interpretation |
+|------|--------|----------------|
+| Negative control (Height GWAS) | 0 significant regions | Method calibrated, no false positives |
+| Calibration test | 0/100 runs with any FDR hit | Null model correct |
+| Positive control (striatal genes) | Caudate/putamen FDR-significant | Pipeline detects real signal |
+| PD regional enrichment | 0 regions significant | Honest null result |
+| AD–microglia enrichment | OR=16.97 → OR=10.85 without MHC | Remains significant; driven by non-MHC genes |
+| PD–microglia enrichment | OR=10.02 → OR=2.01 without MHC | Not significant; driven by MHC locus |
+| PD–dopaminergic neuron enrichment | Zero overlap, CI not estimable | Low power — cannot conclude absence |
+
 ## The Problem
 
 Disease-associated genes exist throughout the body, yet diseases damage specific brain regions. For example, Parkinson's prominently affects the substantia nigra, Alzheimer's the entorhinal cortex and connected memory regions, and Huntington's the striatum. These are simplified descriptions, since each disease affects multiple regions and cell types.
@@ -168,14 +186,14 @@ Fisher's exact test (FDR-corrected across all disease × cell-type tests) of GWA
 
 ### Sensitivity Analyses
 
-**Leave-one-gene-out (microglia enrichment):**
-- **AD strict (8 overlap genes):** OR stays ~14.85 when dropping any single gene — signal spread across multiple genes, not driven by one
-- **PD strict (5 overlap genes):** OR stays ~8.02 when dropping any single gene — same pattern
+**Leave-one-locus-out (microglia enrichment):**
+- **AD strict (8 overlap genes):** OR=16.97 with all overlap → OR=10.85 without MHC locus (HLA-DRA, HLA-DRB1, HLA-DRB5, HLA-DQB1). Remaining overlap genes: CD33, IL34, NR1H3, SPI1, TREM2 (5 genes across chr19, chrX, chr12, chr11, chr6p21 — independent chromosomes). Enrichment remains significant (p=0.00017), not driven by MHC.
+- **PD strict (5 overlap genes):** OR=10.02 with all overlap → OR=2.01 without MHC locus (p=0.399, not significant). Only FCGR2A (chr1) remains as overlap. PD-microglia enrichment is driven by MHC locus genes.
 
 **Independent loci among overlap genes (500kb windows):**
-- **AD overlap genes (8):** HLA-DRA, HLA-DRB1, HLA-DRB5 on chr6 (1 locus), HLA-DQB1 on chr6 (1 locus), FCGR2A on chr1 (1 locus). CD33, IL34, NR1H3, SPI1, TREM2 not in significant GWAS hits. → 3 independent loci
-- **PD overlap genes (5):** HLA-DRA, HLA-DRB1, HLA-DRB5, HLA-DQB1 on chr6 (2 independent loci), FCGR2A on chr1 (1 locus). → 3 independent loci
-- Most overlap genes sit in the MHC region (chr6), where genes are in linkage disequilibrium — so they may represent fewer than 8 independent signals.
+- **AD overlap genes (8):** HLA-DRA, HLA-DRB1, HLA-DRB5 on chr6 (1 MHC locus), HLA-DQB1 on chr6 (1 MHC locus), FCGR2A on chr1 (1 locus). CD33, IL34, NR1H3, SPI1, TREM2 not in significant GWAS hits. → 3 independent loci total.
+- **PD overlap genes (5):** HLA-DRA, HLA-DRB1, HLA-DRB5, HLA-DQB1 on chr6 (2 MHC loci), FCGR2A on chr1 (1 locus). → 3 independent loci total.
+- Most overlap genes sit in the MHC region (chr6), where genes are in linkage disequilibrium — this is a hypothesis, not something directly tested.
 
 **Dopaminergic neuron CI:**
 - OR=0 with zero overlap (23 markers vs 162 PD genes). CI not estimable ([0, inf]). Low power — cannot conclude absence.
@@ -187,9 +205,9 @@ Fisher's exact test (FDR-corrected across all disease × cell-type tests) of GWA
 
 | Claim | Result | Why |
 |-------|--------|-----|
-| AD–microglia enrichment | Overlap of 8 genes with microglial marker list; OR stays ~14.85 when dropping any single gene | Enrichment spread across multiple genes, but 5 of 8 are in the MHC region on chr6 (2 independent loci) — may reflect LD, not independent signals |
-| PD–microglia enrichment | Overlap of 5 genes with microglial marker list; OR stays ~8.02 when dropping any single gene | Same pattern — 4 of 5 in MHC region on chr6 |
-| PD–dopaminergic neuron enrichment | Zero overlap, CI not estimable | Low power (23 markers vs 162 genes) - cannot conclude absence |
+| AD–microglia enrichment | OR=16.97 → OR=10.85 without MHC locus (still significant) | Remaining overlap genes (CD33, IL34, NR1H3, SPI1, TREM2) across 4 chromosomes — not driven by MHC alone |
+| PD–microglia enrichment | OR=10.02 → OR=2.01 without MHC locus (not significant) | Enrichment driven by MHC locus genes on chr6; only FCGR2A (chr1) remains |
+| PD–dopaminergic neuron enrichment | Zero overlap, CI not estimable | Low power (23 markers vs 162 genes) — cannot conclude absence |
 | Caudate/putamen depletion for PD | Does not survive two-sided FDR | Descriptive only, not a significant finding |
 | Huntington's cell-type analysis | Only 3 genes | Underpowered |
 
@@ -204,8 +222,12 @@ The real positive control for the regional method is the striatal gene set (DRD1
 This is a stronger, more honest narrative than a forced positive result:
 - Bulk regional expression shows **no significant enrichment** for Parkinson's (0 regions pass FDR)
 - Caudate/putamen show **depletion** (not enrichment), consistent across all 6 donors (cohens_d ≈ -2.4), but this **does not survive two-sided FDR correction** - treat as descriptive only
-- The **cell-type layer** reveals that PD and AD GWAS signals track microglia (neuroinflammation), not cell-type-specific vulnerability - but 5 of 8 AD overlap genes and 4 of 5 PD overlap genes are in the MHC region on chr6, suggesting linkage disequilibrium rather than independent microglial signals
-- All methods are calibrated: negative control returns 0 significant regions, calibration test returns 0/100 false positives, positive control (striatal gene set for caudate/putamen) returns FDR-significant signal
+- The **cell-type layer** reveals that PD and AD GWAS signals track microglia (neuroinflammation), not cell-type-specific vulnerability - but:
+  - **AD–microglia**: OR=16.97 → OR=10.85 without MHC locus (still significant). Driven by non-MHC genes (CD33, IL34, NR1H3, SPI1, TREM2) across 4 different chromosomes. Likely real.
+  - **PD–microglia**: OR=10.02 → OR=2.01 without MHC locus (not significant). Driven by MHC locus genes on chr6. Likely reflects LD in the MHC region rather than independent microglial signals.
+  - **HLA caveat**: HLA genes are expressed in several cell types besides microglia (e.g., dendritic cells, B cells), so microglia-enrichment claims based on HLA overlap may partly reflect antigen-presentation genes in general.
+
+**Microglia marker overlap is present for both diseases but rests on about three loci, mostly in the MHC; it is not strong evidence for microglial involvement.**
 
 ## Installation
 
@@ -217,6 +239,8 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
+For real-data reproduction steps, see [REPRODUCE.md](REPRODUCE.md).
+
 ## Running the Pipeline
 
 ```bash
@@ -226,6 +250,10 @@ python run_all.py
 # Launch the dashboard
 python -m streamlit run app.py
 ```
+
+### Dashboard Robustness Sandbox
+
+The dashboard sidebar includes sliders for GWAS p-value threshold, number of random gene sets, and donor subset. These are **UI controls only** in this release — they set session state but do not re-run the pipeline with different parameters. To change these parameters, edit `src/gene_lists.py` (P_THRESHOLD) and `src/stats.py` (n_sets) and re-run `run_all.py`. A fully parameterized dashboard is planned for a future release.
 
 ## Reproducibility
 
