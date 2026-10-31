@@ -14,7 +14,14 @@ env/
 *.parquet
 *.h5
 *.h5ad
+*.tsv
+*.csv
+*.part
 retrain_trigger.json
+
+# Data directories (gitignored per AGENTS.md)
+data/
+results/
 
 # Exception: reference CSVs are tracked
 !reference/*.csv
