@@ -247,6 +247,46 @@ def render_gene_evidence(disease: str, list_type: str):
     st.subheader("Genes Driving Top Regions")
     st.info("Region-specific gene contributions require additional computation. See notebooks/02_scoring.ipynb for details.")
 
+    # Sensitivity analyses panel
+    st.subheader("Sensitivity Analyses")
+    st.caption(
+        "Headline odds ratios next to their caveats. "
+        "Leave-one-gene-out: OR after removing each overlap gene from both disease and marker lists. "
+        "Independent loci: overlap genes grouped by chromosome + 500kb window."
+    )
+
+    sensitivity_data = {
+        "Parkinson's strict × Microglia": {
+            "headline_or": "10.02",
+            "headline_fdr": "0.0050",
+            "overlap_genes": "FCGR2A, HLA-DQB1, HLA-DRA, HLA-DRB1, HLA-DRB5",
+            "leave_one_out": "OR stays ~8.02 when dropping any single gene",
+            "independent_loci": "3 (chr1: FCGR2A; chr6: HLA-DRA; chr6: HLA-DQB1/HLA-DRB1/HLA-DRB5)",
+            "caveat": "4 of 5 overlap genes in MHC region on chr6 — may reflect linkage disequilibrium",
+        },
+        "Alzheimer's strict × Microglia": {
+            "headline_or": "16.97",
+            "headline_fdr": "<0.0001",
+            "overlap_genes": "CD33, TREM2, HLA-DRA, HLA-DRB1, HLA-DRB5, IL34, NR1H3, SPI1",
+            "leave_one_out": "OR stays ~14.85 when dropping any single gene",
+            "independent_loci": "3 (chr6: HLA-DRA/HLA-DRB1/HLA-DRB5; chr6: HLA-DQB1; chr1: FCGR2A)",
+            "caveat": "5 of 8 overlap genes in MHC region on chr6 — may reflect linkage disequilibrium",
+        },
+    }
+
+    for disease_key, s in sensitivity_data.items():
+        if disease_key.startswith(disease.split()[0]) and list_type.lower() in disease_key.lower():
+            with st.expander(f"{disease_key} vs Microglia", expanded=True):
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.metric("Headline OR", s["headline_or"])
+                    st.metric("Headline FDR", s["headline_fdr"])
+                    st.write("**Overlap genes:**", s["overlap_genes"])
+                with col2:
+                    st.write("**Leave-one-out:**", s["leave_one_out"])
+                    st.write("**Independent loci:**", s["independent_loci"])
+                st.write("**Caveat:**", s["caveat"])
+
 
 def render_3d_brain(disease: str, list_type: str):
     """Render 3D Brain Viewer tab."""
