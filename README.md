@@ -150,9 +150,35 @@ Document mismatches with published evidence as findings. Never change the method
 
 ### Advanced (choose one or two)
 
-- Cell-type layer: test enrichment in cell types such as dopaminergic neurons or medium spiny neurons
+- **Cell-type layer**: test enrichment in cell types such as dopaminergic neurons or medium spiny neurons
 - Spatially aware null models
 - Gene co-expression network view
+
+## Cell-Type Enrichment Results
+
+Fisher's exact test (FDR-corrected across all disease × cell-type tests) of GWAS genes against published cell-type marker lists:
+
+| Disease | List | Cell Type | Odds Ratio | p-value | FDR | Significant |
+|---------|------|-----------|------------|---------|-----|-------------|
+| Alzheimer's | strict | Microglia | 16.97 | <0.0001 | <0.0001 | Yes |
+| Parkinson's | strict | Microglia | 10.02 | 0.0002 | 0.0050 | Yes |
+| Alzheimer's | broad | Microglia | 3.57 | 0.0005 | 0.0071 | Yes |
+| Parkinson's | broad | Microglia | 6.21 | 0.0019 | 0.0199 | Yes |
+| Alzheimer's | strict | Oligodendrocytes | 9.47 | 0.0051 | 0.0427 | Yes |
+
+**Positive control confirmed**: Microglia markers are significantly enriched among Alzheimer's GWAS genes (known from literature), validating the cell-type analysis pipeline.
+
+**Key insight**: Disease GWAS signals track neuroinflammation (microglia) more strongly than specific neuronal populations. Parkinson's genes are NOT enriched in dopaminergic neurons (OR=0), and Huntington's has too few genes (3) for meaningful cell-type analysis.
+
+## What the Story Becomes
+
+"Disease genes are not enriched in the expected brain regions by bulk expression, a validated and calibrated method confirms that, and the cell-type layer shows which cell types the genes actually belong to."
+
+This is a stronger, more honest narrative than a forced positive result:
+- Bulk regional expression shows **no significant enrichment** for Parkinson's (0 regions pass FDR)
+- Caudate/putamen show **depletion** (not enrichment), consistent across all 6 donors
+- The **cell-type layer** reveals that PD and AD GWAS signals track microglia (neuroinflammation), not cell-type-specific vulnerability
+- All methods are calibrated: negative control returns 0 significant regions, positive control (microglia in AD) returns strong signal
 
 ## Installation
 
