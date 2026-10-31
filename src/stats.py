@@ -177,6 +177,49 @@ def compute_empirical_pvalues(
     return pd.Series(pvalues, name="pvalue", index=observed_scores.index)
 
 
+def compute_empirical_pvalues_two_sided(
+    observed_scores: pd.Series,
+    null_scores: pd.DataFrame,
+) -> pd.Series:
+    """
+    Compute two-sided empirical p-values from null distribution.
+
+    Two-sided p = (1 + number of null with |null| >= |observed|) / (1 + n_sets).
+
+    Parameters
+    ----------
+    observed_scores : pd.Series
+        Observed regional scores.
+    null_scores : pd.DataFrame
+        Null distribution (regions x random_sets).
+
+    Returns
+    -------
+    pd.Series
+        Two-sided empirical p-values per region.
+    """
+    n_sets = null_scores.shape[1]
+    pvalues = {}
+
+    for region in observed_scores.index:
+        if region not in null_scores.index:
+            pvalues[region] = np.nan
+            continue
+
+        observed = observed_scores[region]
+        if pd.isna(observed):
+            pvalues[region] = np.nan
+            continue
+
+        null_vals = null_scores.loc[region].values
+        null_vals = np.asarray(null_vals).ravel()
+
+        n_extreme = np.sum(np.abs(null_vals) >= np.abs(observed))
+        pvalues[region] = (1 + n_extreme) / (1 + n_sets)
+
+    return pd.Series(pvalues, name="pvalue_two_sided", index=observed_scores.index)
+
+
 def apply_fdr_correction(
     pvalues: pd.Series,
     alpha: float = 0.05,
@@ -286,12 +329,24 @@ def run_permutation_test(
 
     print("Computing empirical p-values...")
     pvals = compute_empirical_pvalues(observed, null_dist)
+    pvals_two_sided = compute_empirical_pvalues_two_sided(observed, null_dist)
 
     print("Applying FDR correction...")
     fdr_results = apply_fdr_correction(pvals)
+    fdr_results_two_sided = apply_fdr_correction(pvals_two_sided)
 
     print("Computing effect sizes...")
     effects = compute_effect_sizes(observed, null_dist)
+
+    # Add depleted column: two-sided significant AND negative effect
+    depleted = (
+        (fdr_results_two_sided["fdr"] < 0.05)
+        & (effects["cohens_d"] < 0)
+    )
+    depleted.name = "depleted"
+    fdr_results["depleted"] = depleted
+    fdr_results["pvalue_two_sided"] = pvals_two_sided
+    fdr_results["fdr_two_sided"] = fdr_results_two_sided["fdr"]
 
     return observed, pvals, fdr_results, effects
 
@@ -314,6 +369,9 @@ def save_statistical_results(
         "cohens_d": effect_sizes["cohens_d"],
         "null_mean": effect_sizes["null_mean"],
         "null_std": effect_sizes["null_std"],
+        "pvalue_two_sided": fdr_results.get("pvalue_two_sided", pd.Series(dtype=float)),
+        "fdr_two_sided": fdr_results.get("fdr_two_sided", pd.Series(dtype=float)),
+        "depleted": fdr_results.get("depleted", pd.Series(dtype=bool)),
     })
     results.index.name = "region"
     results["disease"] = disease
