@@ -101,7 +101,8 @@ def render_sidebar():
         "• Data from healthy donors, not patients\n"
         "• Expression ≠ vulnerability\n"
         "• GWAS genes ≠ causal genes\n"
-        "• Not for clinical use"
+        "• Not for clinical use\n"
+        "• GWAS threshold & random sets require re-running pipeline"
     )
 
     return disease, list_type
@@ -139,7 +140,20 @@ def render_regional_analysis(disease: str, list_type: str):
     # Ranked table
     st.subheader("Ranked Regions")
 
+    # Donor consistency filter
+    if "n_positive_donors" in stats.columns:
+        min_donors = st.slider(
+            "Min donors with positive score",
+            min_value=0,
+            max_value=6,
+            value=0,
+            help="Filter regions by number of donors (out of 6) with positive regional score",
+        )
+        stats = stats[stats["n_positive_donors"] >= min_donors]
+
     display_cols = ["score", "pvalue", "fdr", "cohens_d", "significant"]
+    if "depleted" in stats.columns:
+        display_cols.append("depleted")
     if "badge" in stats.columns:
         display_cols = ["badge"] + display_cols + ["n_positive_donors"]
 

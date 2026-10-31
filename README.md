@@ -166,21 +166,13 @@ Fisher's exact test (FDR-corrected across all disease × cell-type tests) of GWA
 | Parkinson's | broad | Microglia | 6.21 | 0.0019 | 0.0199 | Yes |
 | Alzheimer's | strict | Oligodendrocytes | 9.47 | 0.0051 | 0.0427 | Yes |
 
-**Positive control confirmed**: Microglia markers are significantly enriched among Alzheimer's GWAS genes (known from literature), validating the cell-type analysis pipeline.
+### What did not hold up
 
-**Key insight**: Disease GWAS signals track neuroinflammation (microglia) more strongly than specific neuronal populations. Parkinson's genes show **no enrichment detected in dopaminergic neurons** (OR=0 with 23 markers vs 162 PD genes, CI not estimable due to zero overlap - low power), and Huntington's has too few genes (3) for meaningful cell-type analysis.
+**Microglia enrichment is circular.** When the 8 genes that appear in both the AD GWAS list and the microglial marker list (CD33, TREM2, HLA-DRA, HLA-DRB1, HLA-DRB5, IL34, NR1H3, SPI1) are removed from both sets, the Alzheimer's–microglia odds ratio drops from 16.97 to 0.00. The same happens for Parkinson's (OR 10.02→0.00 when 5 overlapping genes removed). The enrichment is driven entirely by genes that are both disease risk genes and microglial markers by construction.
 
-## Sensitivity Analyses
+**Dopaminergic neurons: no enrichment detected, low power.** Parkinson's GWAS genes show zero overlap with 23 dopaminergic marker genes (TH, SLC6A3, DDC, DRD1, DRD2, etc.). The odds ratio is 0.00 with a confidence interval of [0, inf] — not estimable due to zero overlap. This cannot be interpreted as evidence of absence; it is simply underpowered.
 
-Three sensitivity checks were performed to validate the robustness of results:
-
-| Check | Result | Interpretation |
-|-------|--------|----------------|
-| **Dopaminergic neuron CI** | OR=0, CI not estimable (zero overlap: 23 markers vs 162 PD genes) | No enrichment detected, low power - cannot conclude absence |
-| **Microglia circularity** | OR 16.97→0.00 when 8 overlap genes removed (CD33, TREM2, HLA-DRA, HLA-DRB1, HLA-DRB5, IL34, NR1H3, SPI1) | Enrichment driven by known AD genes that are also microglial markers - circularity concern |
-| **Locus collapse (Parkinson)** | OR 10.02→10.12 (570→61 genes) | Enrichment remains after collapsing to one gene per 500kb locus - robust |
-
-**Positive control confirmed**: Microglia markers are significantly enriched among Alzheimer's GWAS genes (known from literature), validating the cell-type analysis pipeline. However, the microglia enrichment disappears when known AD risk genes (which are also microglial markers) are removed - suggesting the signal is driven by AD risk genes rather than independent microglial biology.
+**Positive control (regional method): striatal gene set.** The real positive control for the regional method is the striatal gene set (DRD1, DRD2, PPP1R1B, ADORA2A, PENK, TAC1, GPR88, RGS9). Caudate and putamen are FDR-significant (p=0.0002, FDR=0.004), confirming the regional pipeline can detect a true signal when one exists.
 
 ## What the Story Becomes
 
@@ -189,8 +181,18 @@ Three sensitivity checks were performed to validate the robustness of results:
 This is a stronger, more honest narrative than a forced positive result:
 - Bulk regional expression shows **no significant enrichment** for Parkinson's (0 regions pass FDR)
 - Caudate/putamen show **depletion** (not enrichment), consistent across all 6 donors (cohens_d ≈ -2.4), but this **does not survive two-sided FDR correction** - treat as descriptive only
-- The **cell-type layer** reveals that PD and AD GWAS signals track microglia (neuroinflammation), not cell-type-specific vulnerability - but the AD-microglia enrichment is driven by known AD genes that are also microglial markers (circularity)
-- All methods are calibrated: negative control returns 0 significant regions, calibration test returns 0/100 false positives, positive control (microglia in AD) returns strong signal
+- The **cell-type layer** reveals that PD and AD GWAS signals track microglia (neuroinflammation), not cell-type-specific vulnerability - but the AD-microglia enrichment is driven by known AD genes that are also microglial markers (circularity; disappears when 8 shared genes removed)
+- All methods are calibrated: negative control returns 0 significant regions, calibration test returns 0/100 false positives, positive control (striatal gene set for caudate/putamen) returns FDR-significant signal
+
+## What Did Not Hold Up
+
+| Claim | Result | Why |
+|-------|--------|-----|
+| AD–microglia enrichment | Disappears when 8 overlap genes removed | Driven by known AD risk genes that are also microglial markers (circularity) |
+| PD–microglia enrichment | Disappears when 5 overlap genes removed | Same circularity issue |
+| PD–dopaminergic neuron enrichment | Zero overlap, CI not estimable | Low power (23 markers vs 162 genes) - cannot conclude absence |
+| Caudate/putamen depletion for PD | Does not survive two-sided FDR | Descriptive only, not a significant finding |
+| Huntington's cell-type analysis | Only 3 genes | Underpowered |
 
 ## Installation
 
