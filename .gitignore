@@ -11,11 +11,13 @@ env/
 
 # Data files (gitignored per AGENTS.md)
 *.db
-*.csv
 *.parquet
 *.h5
 *.h5ad
 retrain_trigger.json
+
+# Exception: reference CSVs are tracked
+!reference/*.csv
 
 # Jupyter notebooks
 .ipynb_checkpoints/
