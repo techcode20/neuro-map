@@ -164,6 +164,25 @@ def render_regional_analysis(disease: str, list_type: str):
         use_container_width=True,
     )
 
+    # Evidence checklist per region
+    st.subheader("Evidence Checklist per Region")
+    st.caption(
+        "Each region is evaluated on: null test (FDR < 0.05), donor consistency "
+        "(positive in ≥4 of 6 donors), strict vs broad agreement, negative control flag, "
+        "and match to the frozen expected-regions table."
+    )
+
+    if not validation.empty:
+        checklist_cols = ["badge", "fdr_pass", "consistency_pass", "in_expected", "negative_control_flag", "n_positive_donors"]
+        available = [c for c in checklist_cols if c in validation.columns]
+        if available:
+            checklist_df = validation[available].copy()
+            checklist_df.columns = [c.replace("_", " ").title() for c in checklist_df.columns]
+            for col in ["Fdr Pass", "Consistency Pass", "In Expected", "Negative Control Flag"]:
+                if col in checklist_df.columns:
+                    checklist_df[col] = checklist_df[col].map({True: "✓", False: "✗"})
+            st.dataframe(checklist_df, use_container_width=True)
+
     # Score distribution plot
     st.subheader("Score Distribution")
     fig = px.histogram(stats, x="score", nbins=30, title="Regional Score Distribution")
@@ -384,17 +403,28 @@ def render_export(disease: str, list_type: str):
             mime="text/csv",
         )
 
-    # HTML report
+    # HTML report - auto-generated
     report_file = RESULTS_DIR / f"report_{disease.lower()}_{list_type}.html"
     if report_file.exists():
         with open(report_file, "r") as f:
             html_content = f.read()
         st.download_button(
-            label="📄 Download HTML Report",
+            label="📄 Download HTML Report (pre-generated)",
             data=html_content,
             file_name=f"neuromap_{disease.lower()}_{list_type}_report.html",
             mime="text/html",
         )
+
+    # Auto-generate report on-the-fly
+    if st.button("🔄 Generate HTML Report Now"):
+        html = _generate_html_report(disease, list_type, stats, validation, genes)
+        st.download_button(
+            label="📄 Download Generated HTML Report",
+            data=html,
+            file_name=f"neuromap_{disease.lower()}_{list_type}_report_generated.html",
+            mime="text/html",
+        )
+        st.components.v1.html(html, height=600, scrolling=True)
 
     st.markdown("---")
     st.caption(
@@ -430,6 +460,73 @@ def main():
 
     with tabs[4]:
         render_export(disease, list_type)
+
+
+def _generate_html_report(disease: str, list_type: str, stats: pd.DataFrame,
+                          validation: pd.DataFrame, genes: pd.DataFrame) -> str:
+    """Auto-generate an HTML report for the selected disease and list type."""
+    n_regions = len(stats)
+    n_sig = int(stats["significant"].sum()) if "significant" in stats.columns else 0
+    n_depleted = int(stats["depleted"].sum()) if "depleted" in stats.columns else 0
+    n_supported = int((validation["badge"] == "Supported").sum()) if "badge" in validation.columns else 0
+
+    top_regions = stats.sort_values("score", ascending=False).head(10)
+
+    html = f"""<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>NeuroMap Report - {disease} ({list_type})</title>
+    <style>
+        body {{ font-family: Arial, sans-serif; margin: 40px; }}
+        h1, h2 {{ color: #2c3e50; }}
+        table {{ border-collapse: collapse; width: 100%; margin: 20px 0; }}
+        th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
+        th {{ background-color: #34495e; color: white; }}
+        tr:nth-child(even) {{ background-color: #f2f2f2; }}
+        .badge-supported {{ background-color: #d4edda; color: #155724; padding: 4px 8px; border-radius: 4px; }}
+        .badge-uncertain {{ background-color: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px; }}
+        .badge-notsupported {{ background-color: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 4px; }}
+        .limitations {{ background-color: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; margin: 20px 0; }}
+    </style>
+</head>
+<body>
+    <h1>NeuroMap Report</h1>
+    <p><strong>Disease:</strong> {disease} &nbsp;|&nbsp; <strong>Gene List:</strong> {list_type}</p>
+    <p><strong>Generated:</strong> {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
+
+    <h2>Summary</h2>
+    <table>
+        <tr><th>Metric</th><th>Value</th></tr>
+        <tr><td>Regions tested</td><td>{n_regions}</td></tr>
+        <tr><td>FDR significant regions</td><td>{n_sig}</td></tr>
+        <tr><td>Depleted regions (two-sided FDR)</td><td>{n_depleted}</td></tr>
+        <tr><td>Supported badges</td><td>{n_supported}</td></tr>
+        <tr><td>Data source</td><td>Allen Human Brain Atlas (6 donors)</td></tr>
+        <tr><td>Gene source</td><td>GWAS Catalog (Parkinson's disease)</td></tr>
+        <tr><td>Random seed</td><td>42</td></tr>
+    </table>
+
+    <h2>Top 10 Regions by Score</h2>
+    <table>
+        <tr><th>Region ID</th><th>Score</th><th>P-value</th><th>FDR</th><th>Significant</th><th>Depleted</th><th>Cohen's d</th></tr>
+        {"".join(f'<tr><td>{rid}</td><td>{r["score"]:.4f}</td><td>{r["pvalue"]:.4f}</td><td>{r["fdr"]:.4f}</td><td>{r["significant"]}</td><td>{r.get("depleted", False)}</td><td>{r["cohens_d"]:.4f}</td></tr>' for rid, r in top_regions.iterrows())}
+    </table>
+
+    <div class="limitations">
+    <h2>Limitations</h2>
+    <ul>
+        <li>Data from healthy donor brains, not patients</li>
+        <li>Expression enrichment is not the same as vulnerability</li>
+        <li>GWAS-associated genes are not all proven disease-causing genes</li>
+        <li>Random gene sets are not extra donors</li>
+        <li>Not for clinical use - research exploration tool only</li>
+    </ul>
+    </div>
+</body>
+</html>
+"""
+    return html
 
 
 if __name__ == "__main__":

@@ -168,17 +168,29 @@ Fisher's exact test (FDR-corrected across all disease × cell-type tests) of GWA
 
 **Positive control confirmed**: Microglia markers are significantly enriched among Alzheimer's GWAS genes (known from literature), validating the cell-type analysis pipeline.
 
-**Key insight**: Disease GWAS signals track neuroinflammation (microglia) more strongly than specific neuronal populations. Parkinson's genes are NOT enriched in dopaminergic neurons (OR=0), and Huntington's has too few genes (3) for meaningful cell-type analysis.
+**Key insight**: Disease GWAS signals track neuroinflammation (microglia) more strongly than specific neuronal populations. Parkinson's genes show **no enrichment detected in dopaminergic neurons** (OR=0 with 23 markers vs 162 PD genes, CI not estimable due to zero overlap - low power), and Huntington's has too few genes (3) for meaningful cell-type analysis.
+
+## Sensitivity Analyses
+
+Three sensitivity checks were performed to validate the robustness of results:
+
+| Check | Result | Interpretation |
+|-------|--------|----------------|
+| **Dopaminergic neuron CI** | OR=0, CI not estimable (zero overlap: 23 markers vs 162 PD genes) | No enrichment detected, low power - cannot conclude absence |
+| **Microglia circularity** | OR 16.97→0.00 when 8 overlap genes removed (CD33, TREM2, HLA-DRA, HLA-DRB1, HLA-DRB5, IL34, NR1H3, SPI1) | Enrichment driven by known AD genes that are also microglial markers - circularity concern |
+| **Locus collapse (Parkinson)** | OR 10.02→10.12 (570→61 genes) | Enrichment remains after collapsing to one gene per 500kb locus - robust |
+
+**Positive control confirmed**: Microglia markers are significantly enriched among Alzheimer's GWAS genes (known from literature), validating the cell-type analysis pipeline. However, the microglia enrichment disappears when known AD risk genes (which are also microglial markers) are removed - suggesting the signal is driven by AD risk genes rather than independent microglial biology.
 
 ## What the Story Becomes
 
-"Disease genes are not enriched in the expected brain regions by bulk expression, a validated and calibrated method confirms that, and the cell-type layer shows which cell types the genes actually belong to."
+"Disease genes are not enriched in the expected brain regions by bulk expression, a validated and calibrated method confirms that, and the cell-type layer shows which cell types the genes actually belong to - but with important caveats about circularity and low power."
 
 This is a stronger, more honest narrative than a forced positive result:
 - Bulk regional expression shows **no significant enrichment** for Parkinson's (0 regions pass FDR)
-- Caudate/putamen show **depletion** (not enrichment), consistent across all 6 donors
-- The **cell-type layer** reveals that PD and AD GWAS signals track microglia (neuroinflammation), not cell-type-specific vulnerability
-- All methods are calibrated: negative control returns 0 significant regions, positive control (microglia in AD) returns strong signal
+- Caudate/putamen show **depletion** (not enrichment), consistent across all 6 donors (cohens_d ≈ -2.4), but this **does not survive two-sided FDR correction** - treat as descriptive only
+- The **cell-type layer** reveals that PD and AD GWAS signals track microglia (neuroinflammation), not cell-type-specific vulnerability - but the AD-microglia enrichment is driven by known AD genes that are also microglial markers (circularity)
+- All methods are calibrated: negative control returns 0 significant regions, calibration test returns 0/100 false positives, positive control (microglia in AD) returns strong signal
 
 ## Installation
 
