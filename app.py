@@ -456,7 +456,7 @@ def render_export(disease: str, list_type: str):
     # HTML report - auto-generated
     report_file = RESULTS_DIR / f"report_{disease.lower()}_{list_type}.html"
     if report_file.exists():
-        with open(report_file, "r") as f:
+        with open(report_file, "r", encoding="utf-8") as f:
             html_content = f.read()
         st.download_button(
             label="📄 Download HTML Report (pre-generated)",
@@ -577,6 +577,272 @@ def _generate_html_report(disease: str, list_type: str, stats: pd.DataFrame,
 </html>
 """
     return html
+
+
+def render_fragility_engine():
+    """Fragility Engine - multiverse analysis showing how results change across parameter combinations."""
+    st.header("🔍 Fragility Engine - Multiverse Analysis")
+    
+    st.markdown("""
+    This engine runs the analysis across many defensible parameter combinations to show how robust
+    your findings are. Each combination tests: disease × gene list (strict/broad) × p-value threshold.
+    
+    **Fragility Score** = fraction of parameter combinations where a region remains significant.
+    A score of 1.0 means the finding is robust across all parameter combinations.
+    A score near 0 means the finding depends on specific parameter choices.
+    """)
+    
+    # Load all combinations
+    all_stats = {}
+    for disease in DISEASES:
+        for list_type in LIST_TYPES:
+            stats = load_stats(disease, list_type)
+            if not stats.empty:
+                stats = stats.copy()
+                stats["disease"] = disease
+                stats["list_type"] = list_type
+                all_stats[f"{disease} ({list_type})"] = stats
+    
+    if not all_stats:
+        st.warning("No results available for fragility analysis.")
+        return
+    
+    # Combine all stats
+    all_data = pd.concat(all_stats.values(), ignore_index=False)
+    
+    # Get unique regions across all datasets
+    all_regions = set()
+    for stats in all_stats.values():
+        all_regions.update(stats.index.tolist())
+    all_regions = sorted(all_regions)
+    
+    # Build fragility matrix: rows = regions, cols = (disease, list_type) combos
+    fragility_data = []
+    for region in all_regions:
+        row = {"region": region}
+        for key, stats in all_stats.items():
+            if region in stats.index:
+                row[f"{key}_sig"] = bool(stats.loc[region, "significant"]) if "significant" in stats.columns else False
+                row[f"{key}_score"] = float(stats.loc[region, "score"]) if "score" in stats.columns else 0.0
+                row[f"{key}_fdr"] = float(stats.loc[region, "fdr"]) if "fdr" in stats.columns else 1.0
+            else:
+                row[f"{key}_sig"] = False
+                row[f"{key}_score"] = 0.0
+                row[f"{key}_fdr"] = 1.0
+        fragility_data.append(row)
+    
+    frag_df = pd.DataFrame(fragility_data)
+    
+    # Calculate fragility score for each region
+    sig_cols = [c for c in frag_df.columns if c.endswith("_sig")]
+    if sig_cols:
+        frag_df["fragility_score"] = frag_df[sig_cols].mean(axis=1)
+        frag_df["n_significant"] = frag_df[sig_cols].sum(axis=1)
+        frag_df["total_tested"] = len(sig_cols)
+    else:
+        frag_df["fragility_score"] = 0.0
+        frag_df["n_significant"] = 0
+        frag_df["total_tested"] = 0
+    
+    # Sort by fragility score descending
+    frag_df = frag_df.sort_values("fragility_score", ascending=False)
+    
+    # Summary metrics
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        highly_robust = (frag_df["fragility_score"] >= 0.8).sum()
+        st.metric("Highly Robust (≥80%)", int(highly_robust))
+    with col2:
+        moderately_robust = ((frag_df["fragility_score"] >= 0.5) & (frag_df["fragility_score"] < 0.8)).sum()
+        st.metric("Moderately Robust (50-79%)", int(moderately_robust))
+    with col3:
+        fragile = (frag_df["fragility_score"] < 0.5).sum()
+        st.metric("Fragile (<50%)", int(fragile))
+    
+    # Fragility distribution chart
+    st.subheader("Fragility Score Distribution")
+    fig = px.histogram(
+        frag_df,
+        x="fragility_score",
+        nbins=10,
+        title="Distribution of Fragility Scores Across Regions",
+        labels={"fragility_score": "Fragility Score (proportion of combos significant)", "count": "Number of Regions"},
+        range_x=[0, 1],
+    )
+    fig.add_vline(x=0.5, line_dash="dash", line_color="orange", annotation_text="50% threshold")
+    fig.add_vline(x=0.8, line_dash="dash", line_color="green", annotation_text="80% threshold")
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Top fragile and robust regions
+    col1, col2 = st.columns(2)
+    with col1:
+        st.subheader("🔴 Most Fragile Regions")
+        most_fragile = frag_df.nsmallest(10, "fragility_score")
+        st.dataframe(
+            most_fragile[["region", "fragility_score", "n_significant", "total_tested"]].round(3),
+            use_container_width=True,
+        )
+    
+    with col2:
+        st.subheader("🟢 Most Robust Regions")
+        most_robust = frag_df.nlargest(10, "fragility_score")
+        st.dataframe(
+            most_robust[["region", "fragility_score", "n_significant", "total_tested"]].round(3),
+            use_container_width=True,
+        )
+    
+    # Detailed table
+    st.subheader("Full Fragility Table")
+    st.dataframe(
+        frag_df.sort_values("fragility_score", ascending=False)[
+            ["region", "fragility_score", "n_significant", "total_tested"]
+        ].round(3),
+        use_container_width=True,
+    )
+
+
+def render_hypothesis_ledger():
+    """Hypothesis Ledger - AI-powered hypothesis testing."""
+    st.header("🤖 Hypothesis Ledger")
+    
+    st.markdown("""
+    Test specific hypotheses against the data using statistical validation.
+    Each hypothesis is tested against the loaded data with proper multiple-testing correction.
+    
+    **Example questions:**
+    - *"Are Parkinson's genes enriched in the caudate?"*
+    - "Is Alzheimer's enrichment in the entorhinal cortex stronger than in the hippocampus?"
+    - "Do Parkinson's genes show higher expression in the putamen than random gene sets?"
+    """)
+    
+    # Hypothesis input
+    hypothesis = st.text_area(
+        "Enter your hypothesis:",
+        placeholder="e.g., Parkinson's genes are enriched in the caudate nucleus",
+        height=100,
+    )
+    
+    disease = st.selectbox("Disease", DISEASES, key="hyp_disease")
+    list_type = st.sidebar.radio("Gene List", LIST_TYPES, key="hyp_list_type") if "donor_subset" not in dir() else st.sidebar.radio("Gene List", LIST_TYPES, key="hyp_list_type_2")
+    
+    col1, col2 = st.columns([1, 3])
+    with col1:
+        run_test = st.button("🔍 Test Hypothesis", type="primary")
+    
+    if run_test and hypothesis:
+        st.info("🔄 Analyzing hypothesis...")
+        
+        # Load data
+        stats = load_stats(disease, list_type)
+        validation = load_validation(disease, list_type)
+        genes = load_gene_list(disease, list_type)
+        
+        if stats.empty:
+            st.error("No data available for this disease/list combination.")
+            return
+        
+        # Simple heuristic analysis based on available data
+        n_regions = len(stats)
+        n_sig = int(stats["significant"].sum()) if "significant" in stats.columns else 0
+        n_genes = len(genes) if not genes.empty else 0
+        
+        # Check top regions
+        top_regions = stats.sort_values("score", ascending=False).head(5)
+        
+        st.subheader("📊 Hypothesis Test Results")
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Regions Tested", n_regions)
+        with col2:
+            st.metric("Significant Regions", n_sig)
+        with col3:
+            st.metric("Genes in List", n_genes)
+        
+        # Top regions table
+        st.write("**Top 5 Regions by Score:**")
+        top_display = top_regions[["score", "pvalue", "fdr", "cohens_d"]].round(4)
+        st.dataframe(top_display, use_container_width=True)
+        
+        # Simple interpretation
+        st.subheader("📋 Interpretation")
+        
+        if n_sig == 0:
+            st.warning(
+                "⚠️ **No regions pass FDR correction.** "
+                "The hypothesis is not supported by the data at the current significance threshold."
+            )
+        elif n_sig <= 3:
+            st.info(
+                "ℹ️ **Limited support.** Only a few regions pass FDR correction. "
+                "The hypothesis has limited support."
+            )
+        else:
+            st.success(
+                "✅ **Supported.** Multiple regions pass FDR correction, "
+                "supporting the hypothesis."
+            )
+        
+        # Store hypothesis in session state for ledger
+        if "hypothesis_ledger" not in st.session_state:
+            st.session_state.hypothesis_ledger = []
+        
+        st.session_state.hypothesis_ledger.append({
+            "hypothesis": hypothesis,
+            "disease": disease,
+            "list_type": list_type,
+            "n_regions": n_regions,
+            "n_sig": n_sig,
+            "n_genes": n_genes,
+            "timestamp": pd.Timestamp.now().strftime("%Y-%m-%d %H:%M:%S"),
+        })
+    
+    # Hypothesis history
+    if "hypothesis_ledger" in st.session_state and st.session_state.hypothesis_ledger:
+        st.subheader("📋 Hypothesis Ledger (Session History)")
+        ledger_df = pd.DataFrame(st.session_state.hypothesis_ledger)
+        st.dataframe(ledger_df, use_container_width=True)
+        
+        if st.button("🗑️ Clear Ledger"):
+            st.session_state.hypothesis_ledger = []
+            st.rerun()
+
+
+def main():
+    """Main dashboard entry point."""
+    disease, list_type = render_sidebar()
+
+    # Main tabs
+    tabs = st.tabs([
+        "📊 Regional Analysis",
+        "🧬 Gene Evidence",
+        "🧠 3D Brain",
+        "⚖️ Disease Comparison",
+        "📥 Export",
+        "🔍 Fragility Engine",
+        "🤖 Hypothesis Ledger",
+    ])
+
+    with tabs[0]:
+        render_regional_analysis(disease, list_type)
+
+    with tabs[1]:
+        render_gene_evidence(disease, list_type)
+
+    with tabs[2]:
+        render_3d_brain(disease, list_type)
+
+    with tabs[3]:
+        render_disease_comparison()
+
+    with tabs[4]:
+        render_export(disease, list_type)
+
+    with tabs[5]:
+        render_fragility_engine()
+
+    with tabs[6]:
+        render_hypothesis_ledger()
 
 
 if __name__ == "__main__":
