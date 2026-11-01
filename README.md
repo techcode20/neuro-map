@@ -184,16 +184,13 @@ Fisher's exact test (FDR-corrected across all disease × cell-type tests) of GWA
 | Parkinson's | broad | Microglia | 6.21 | 0.0019 | 0.0199 | Yes |
 | Alzheimer's | strict | Oligodendrocytes | 9.47 | 0.0051 | 0.0427 | Yes |
 
-### Sensitivity Analyses
-
 **Leave-one-locus-out (microglia enrichment):**
-- **AD strict (8 overlap genes):** OR=16.97 with all overlap → OR=10.85 without MHC locus (HLA-DRA, HLA-DRB1, HLA-DRB5, HLA-DQB1). Remaining overlap genes: CD33, IL34, NR1H3, SPI1, TREM2 (5 genes across chr19, chrX, chr12, chr11, chr6p21 — independent chromosomes). Enrichment remains significant (p=0.00017), not driven by MHC.
-- **PD strict (5 overlap genes):** OR=10.02 with all overlap → OR=2.01 without MHC locus (p=0.399, not significant). Only FCGR2A (chr1) remains as overlap. PD-microglia enrichment is driven by MHC locus genes.
+- **AD strict (8 overlap genes):** OR=16.97 with all overlap → OR=10.85 without MHC locus (HLA-DRA, HLA-DRB1, HLA-DRB5, HLA-DQB1). Remaining overlap genes: CD33 (chr19), IL34 (chrX), NR1H3 (chr12), SPI1 (chr11), TREM2 (chr6p21 — separate from MHC). Enrichment remains significant (p=0.00017), not driven by MHC alone.
+- **PD strict (5 overlap genes):** OR=10.02 with all overlap → OR=2.01 without MHC locus (p=0.399, not significant). Only FCGR2A (chr1) remains. PD-microglia enrichment is driven by MHC locus genes.
 
 **Independent loci among overlap genes (500kb windows):**
-- **AD overlap genes (8):** HLA-DRA, HLA-DRB1, HLA-DRB5 on chr6 (1 MHC locus), TREM2 on chr6 (1 separate locus), CD33 (chr19, 1 locus), IL34 (chrX, 1 locus), NR1H3 (chr12, 1 locus), SPI1 (chr11, 1 locus). → 6 independent loci.
-- **PD overlap genes (5):** HLA-DRA, HLA-DRB1, HLA-DRB5, HLA-DQB1 on chr6 (1 MHC locus), FCGR2A on chr1 (1 locus). → 2 independent loci.
-- Most overlap genes sit in the MHC region (chr6), where genes are in linkage disequilibrium — this is a hypothesis, not something directly tested.
+- **AD overlap genes (8):** HLA-DRA, HLA-DRB1, HLA-DRB5 on chr6 (1 MHC locus), TREM2 on chr6:41M (1 separate locus), CD33 (chr19), IL34 (chrX), NR1H3 (chr12), SPI1 (chr11). → **6 independent loci.**
+- **PD overlap genes (5):** HLA-DRA, HLA-DRB1, HLA-DRB5, HLA-DQB1 on chr6 (1 MHC locus), FCGR2A on chr1 (1 locus). → **2 independent loci.**
 
 **Dopaminergic neuron CI:**
 - OR=0 with zero overlap (23 markers vs 162 PD genes). CI not estimable ([0, inf]). Low power — cannot conclude absence.
@@ -205,7 +202,7 @@ Fisher's exact test (FDR-corrected across all disease × cell-type tests) of GWA
 
 | Claim | Result | Why |
 |-------|--------|-----|
-| AD–microglia enrichment | OR=16.97 → OR=10.85 without MHC locus (still significant, p=0.00017) | Remaining overlap genes (CD33, IL34, NR1H3, SPI1, TREM2) across 4 chromosomes — not driven by MHC alone |
+| AD–microglia enrichment | OR=16.97 → OR=10.85 without MHC locus (still significant) | Remaining overlap genes (CD33, IL34, NR1H3, SPI1, TREM2) across 5 chromosomes — not driven by MHC alone |
 | PD–microglia enrichment | OR=10.02 → OR=2.01 without MHC locus (p=0.399, not significant) | Enrichment driven by MHC locus genes on chr6; only FCGR2A (chr1) remains |
 | PD–dopaminergic neuron enrichment | Zero overlap, CI not estimable | Low power (23 markers vs 162 genes) — cannot conclude absence |
 | Caudate/putamen depletion for PD | Does not survive two-sided FDR | Descriptive only, not a significant finding |
@@ -223,8 +220,8 @@ This is a stronger, more honest narrative than a forced positive result:
 - Bulk regional expression shows **no significant enrichment** for Parkinson's (0 regions pass FDR)
 - Caudate/putamen show **depletion** (not enrichment), consistent across all 6 donors (cohens_d ≈ -2.4), but this **does not survive two-sided FDR correction** - treat as descriptive only
 - The **cell-type layer** reveals that PD and AD GWAS signals track microglia (neuroinflammation), not cell-type-specific vulnerability - but:
-  - **AD–microglia**: OR=16.97 → OR=10.85 without MHC locus (still significant). Driven by non-MHC genes (CD33, IL34, NR1H3, SPI1, TREM2) across 4 different chromosomes. This is consistent with known microglial involvement in AD, but the marker list and the AD gene list are not fully independent, so we treat it as supporting rather than confirmatory.
-  - **PD–microglia**: OR=10.02 → OR=2.01 without MHC locus (not significant). Driven by MHC locus genes on chr6. Likely reflects LD in the MHC region rather than independent microglial signals.
+  - **AD–microglia**: OR=16.97 → OR=10.85 without MHC locus (still significant). Driven by non-MHC genes (CD33, IL34, NR1H3, SPI1, TREM2) across 4 different chromosomes. Consistent with known microglial involvement in AD, but the marker list and the AD gene list are not fully independent, so we treat it as supporting rather than confirmatory.
+  - **PD–microglia**: OR=10.02 → OR=2.01 without MHC locus (not significant). Driven by MHC locus genes on chr6.
   - **HLA caveat**: HLA genes are expressed in several cell types besides microglia (e.g., dendritic cells, B cells), so microglia-enrichment claims based on HLA overlap may partly reflect antigen-presentation genes in general.
 
 **Microglia marker overlap is present for both diseases but rests on about three loci, mostly in the MHC; it is not strong evidence for microglial involvement.**

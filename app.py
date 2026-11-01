@@ -243,11 +243,14 @@ def render_gene_evidence(disease: str, list_type: str):
     st.subheader("Genes Driving Top Regions")
     st.info("Region-specific gene contributions require additional computation. See notebooks/02_scoring.ipynb for details.")
 
+    st.subheader("Genes Driving Top Regions")
+    st.info("Region-specific gene contributions require additional computation. See notebooks/02_scoring.ipynb for details.")
+
     # Sensitivity analyses panel
     st.subheader("Sensitivity Analyses")
     st.caption(
         "Headline odds ratios next to their caveats. "
-        "Leave-one-gene-out: OR after removing each overlap gene from both disease and marker lists. "
+        "Leave-one-locus-out: OR after removing the MHC locus from both disease and marker lists. "
         "Independent loci: overlap genes grouped by chromosome + 500kb window."
     )
 
@@ -257,15 +260,15 @@ def render_gene_evidence(disease: str, list_type: str):
             "headline_fdr": "0.0050",
             "overlap_genes": "FCGR2A, HLA-DQB1, HLA-DRA, HLA-DRB1, HLA-DRB5",
             "leave_one_out": "OR stays ~8.02 when dropping any single gene",
-            "independent_loci": "3 (chr1: FCGR2A; chr6: HLA-DRA; chr6: HLA-DQB1/HLA-DRB1/HLA-DRB5)",
+            "independent_loci": "2 (chr1: FCGR2A; chr6 MHC: HLA-DRA/HLA-DRB1/HLA-DRB5/HLA-DQB1)",
             "caveat": "4 of 5 overlap genes in MHC region on chr6 — may reflect linkage disequilibrium",
         },
         "Alzheimer's strict × Microglia": {
             "headline_or": "16.97",
             "headline_fdr": "<0.0001",
-            "overlap_genes": "CD33, TREM2, HLA-DRA, HLA-DRB1, HLA-DRB5, IL34, NR1H3, SPI1",
+            "overlap_genes": "CD33, HLA-DRA, HLA-DRB1, HLA-DRB5, IL34, NR1H3, SPI1, TREM2",
             "leave_one_out": "OR stays ~14.85 when dropping any single gene",
-            "independent_loci": "3 (chr6: HLA-DRA/HLA-DRB1/HLA-DRB5; chr6: HLA-DQB1; chr1: FCGR2A)",
+            "independent_loci": "6 (chr6 MHC: HLA-DRA/HLA-DRB1/HLA-DRB5; chr6: TREM2; chr19: CD33; chrX: IL34; chr12: NR1H3; chr11: SPI1)",
             "caveat": "5 of 8 overlap genes in MHC region on chr6 — may reflect linkage disequilibrium",
         },
     }
@@ -279,9 +282,24 @@ def render_gene_evidence(disease: str, list_type: str):
                     st.metric("Headline FDR", s["headline_fdr"])
                     st.write("**Overlap genes:**", s["overlap_genes"])
                 with col2:
-                    st.write("**Leave-one-out:**", s["leave_one_out"])
+                    st.write("**Leave-one-locus-out:**", s["leave_one_out"])
                     st.write("**Independent loci:**", s["independent_loci"])
                 st.write("**Caveat:**", s["caveat"])
+
+    # What did not hold up panel
+    st.subheader("What Did Not Hold Up")
+    st.info(
+        "Sensitivity analyses show which results are robust and which depend on specific analytic choices."
+    )
+    did_not_hold_up = [
+        ("AD–microglia enrichment", "OR=16.97 → OR=10.85 without MHC locus (still significant)", "Remaining overlap genes (CD33, IL34, NR1H3, SPI1, TREM2) across 5 chromosomes — not driven by MHC alone"),
+        ("PD–microglia enrichment", "OR=10.02 → OR=2.01 without MHC locus (p=0.399, not significant)", "Enrichment driven by MHC locus genes on chr6; only FCGR2A (chr1) remains"),
+        ("PD–dopaminergic neuron enrichment", "Zero overlap, CI not estimable", "Low power (23 markers vs 162 genes) — cannot conclude absence"),
+        ("Caudate/putamen depletion for PD", "Does not survive two-sided FDR", "Descriptive only, not a significant finding"),
+        ("Huntington's cell-type analysis", "Only 3 genes", "Underpowered"),
+    ]
+    for claim, result, why in did_not_hold_up:
+        st.write(f"**{claim}:** {result} — {why}")
 
 
 def render_3d_brain(disease: str, list_type: str):
