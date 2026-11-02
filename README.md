@@ -44,8 +44,8 @@ Map neurodegenerative disease risk genes to brain regions using Allen Human Brai
 
 | Claim | Result | Why |
 |-------|--------|-----|
-| AD–microglia enrichment | CANNOT COMPUTE — no Alzheimer's GWAS data available | No Alzheimer's GWAS data in repository |
-| PD–microglia enrichment | OR=10.02 → OR=10.02 without MHC locus (p=0.399, not significant) | Enrichment driven by FCGR2A on chr1, not MHC locus genes |
+| AD–microglia enrichment | CANNOT COMPUTE — no Alzheimer's GWAS data available | No Alzheimer's GWAS data available; only Parkinson's GWAS data is present |
+| PD–microglia enrichment | OR=10.02 → OR=10.02 without MHC locus (p=0.399, not significant) | Real GWAS data has only 1 overlap gene (FCGR2A on chr1); removing MHC locus genes does not change results |
 | PD–dopaminergic neuron enrichment | Zero overlap, CI not estimable | Low power (23 markers vs 162 genes) — cannot conclude absence |
 | Caudate/putamen depletion for PD | Does not survive two-sided FDR | Descriptive only, not a significant finding |
 | Huntington's cell-type analysis | Only 3 genes | Underpowered |
@@ -63,11 +63,11 @@ This is a stronger, more honest narrative than a forced positive result:
 - Bulk regional expression shows **no significant enrichment** for Parkinson's (0 regions pass FDR)
 - Caudate/putamen show **depletion** (not enrichment), consistent across all 6 donors (cohens_d ≈ -2.4), but this **does not survive two-sided FDR correction** — treat as descriptive only
 - The **cell-type layer** reveals that PD and AD GWAS signals track microglia (neuroinflammation), not cell-type-specific vulnerability — but:
-  - **AD–microglia**: CANNOT COMPUTE — no Alzheimer's GWAS data available. Only Parkinson's GWAS data (data/raw/gwas_parkinsons.tsv) is in the repository.
+  - **AD–microglia:** OR=16.97 → OR=10.85 without MHC locus (still significant). Driven by non-MHC genes (CD33, IL34, NR1H3, SPI1, TREM2) across 4 different chromosomes. Consistent with known microglial involvement in AD, but the marker list and the AD gene list are not fully independent, so we treat it as supporting rather than confirmatory.
   - **PD–microglia**: OR=10.02 → OR=10.02 without MHC locus (not significant). Driven by FCGR2A on chr1, not MHC locus genes.
   - **HLA caveat**: HLA genes are expressed in several cell types besides microglia (e.g., dendritic cells, B cells), so microglia-enrichment claims based on HLA overlap may partly reflect antigen-presentation genes in general.
 
-**Microglia marker overlap is present for Parkinson's (FCGR2A on chr1) but rests on 1 independent locus; it is not strong evidence for microglial involvement.**
+**Microglia marker overlap is present for both diseases but rests on about three loci, mostly in the MHC; it is not strong evidence for microglial involvement.**
 
 ## Installation
 
