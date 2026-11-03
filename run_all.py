@@ -8,6 +8,9 @@ Usage: python run_all.py
 
 import sys
 from pathlib import Path
+import argparse
+import json
+import subprocess
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent / "src"))
@@ -58,6 +61,12 @@ def run_pipeline_for_disease(
         disease, expression_matrix, force_refresh=False
     )
 
+    # Save gene lists to results for audit/reproducibility
+    results_dir = Path("results")
+    results_dir.mkdir(exist_ok=True)
+    strict_genes.to_csv(results_dir / f"gene_list_{disease.lower()}_strict.csv", index=False)
+    broad_genes.to_csv(results_dir / f"gene_list_{disease.lower()}_broad.csv", index=False)
+
     for list_type, genes in [("strict", strict_genes), ("broad", broad_genes)]:
         print(f"\n  Processing {list_type} list ({len(genes)} genes)...")
 
@@ -66,33 +75,9 @@ def run_pipeline_for_disease(
                 f"  WARNING: Only {len(genes)} genes for {disease} ({list_type}); "
                 f"minimum {MIN_GENES_FOR_ANALYSIS} required for meaningful analysis. Skipping."
             )
-            empty_scores = pd.Series(index=expression_matrix.index, dtype=float, name="score")
-            empty_index = expression_matrix.index
-            save_scores(empty_scores, disease, list_type)
-            save_statistical_results(
-                disease,
-                list_type,
-                empty_scores,
-                pd.Series(index=empty_index, dtype=float, name="pvalue"),
-                pd.DataFrame(
-                    index=empty_index,
-                    data={
-                        "fdr": pd.Series(dtype=float, index=empty_index),
-                        "significant": pd.Series(dtype=bool, index=empty_index),
-                        "pvalue_two_sided": pd.Series(dtype=float, index=empty_index),
-                        "fdr_two_sided": pd.Series(dtype=float, index=empty_index),
-                        "depleted": pd.Series(dtype=bool, index=empty_index),
-                    },
-                ),
-                pd.DataFrame(
-                    index=empty_index,
-                    data={
-                        "cohens_d": pd.Series(dtype=float, index=empty_index),
-                        "null_mean": pd.Series(dtype=float, index=empty_index),
-                        "null_std": pd.Series(dtype=float, index=empty_index),
-                    },
-                ),
-            )
+            continue
+
+        if len(genes) == 0:
             continue
 
         if len(genes) == 0:
@@ -283,6 +268,26 @@ def run_striatal_positive_control(
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Run the full NeuroMap pipeline.")
+    parser.add_argument(
+        "--clean",
+        action="store_true",
+        help="Delete data/processed/ and results/ before running.",
+    )
+    args = parser.parse_args()
+
+    if args.clean:
+        import shutil
+        for d in [Path("data/processed"), Path("results")]:
+            if d.exists():
+                shutil.rmtree(d)
+                print(f"Cleaned {d}")
+
+    # Ensure results directory exists
+    Path("results").mkdir(exist_ok=True)
+    Path("results_summary").mkdir(exist_ok=True)
+    Path("data/processed").mkdir(parents=True, exist_ok=True)
+
     print("NeuroMap Pipeline")
     print("=" * 60)
 
@@ -355,6 +360,18 @@ def main():
     print("  - data/processed/  (expression matrices, gene lists)")
     print("  - results/         (scores, stats, validation, reports)")
     print("\nTo view dashboard: python -m streamlit run app.py")
+
+    # Write manifest to results_summary
+    manifest_dir = Path("results_summary")
+    manifest_dir.mkdir(exist_ok=True)
+    manifest = {
+        "commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+        "gwas_file": str(Path("data/raw/gwas_catalog_full.tsv").resolve()),
+        "gwas_file_size": Path("data/raw/gwas_catalog_full.tsv").stat().st_size,
+        "run_date": pd.Timestamp.now().strftime("%Y-%m-%d %H:%M:%S"),
+    }
+    manifest_path = manifest_dir / "run_manifest.json"
+    manifest_path.write_text(json.dumps(manifest, indent=2))
 
 
 if __name__ == "__main__":

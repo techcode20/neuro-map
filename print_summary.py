@@ -6,25 +6,27 @@ README numbers are copied from here, never typed by hand.
 import pandas as pd
 from pathlib import Path
 
-RESULTS_DIR = Path("results_summary")
-PROCESSED_DIR = Path("data/processed")
+RESULTS_DIR = Path("results")
 
 
 def gene_count(disease: str, list_type: str) -> int:
-    file = PROCESSED_DIR / f"gene_list_{disease.lower()}_{list_type}.parquet"
+    file = RESULTS_DIR / f"gene_list_{disease.lower()}_{list_type}.csv"
     if file.exists():
-        return len(pd.read_parquet(file))
+        return len(pd.read_csv(file))
     return 0
 
 
-def region_name(region_id: int) -> str:
+def region_name(region_id) -> str:
     """Map Desikan-Killiany atlas region ID to name."""
-    # Subcortical regions of interest
     mapping = {
         36: "Caudate (L)", 37: "Putamen (L)",
         77: "Caudate (R)", 78: "Putamen (R)",
     }
-    return mapping.get(int(region_id), str(region_id))
+    region_id_str = str(region_id)
+    for rid, name in mapping.items():
+        if str(rid) == region_id_str:
+            return name
+    return str(region_id)
 
 
 def main():
@@ -75,40 +77,64 @@ def main():
     pd_stats = RESULTS_DIR / "stats_parkinson_strict.csv"
     if pd_stats.exists():
         pdf = pd.read_csv(pd_stats)
-        pdf["region"] = pdf["region"].astype(int)
-        pdf["region_name"] = pdf["region"].apply(region_name)
+        if len(pdf) > 0 and "region" in pdf.columns and len(pdf["region"].dropna()) > 0:
+            # Check if region column has numeric or string IDs
+            first_region = pdf["region"].dropna().iloc[0]
+            if isinstance(first_region, str):
+                # String region IDs — map directly
+                pdf["region_name"] = pdf["region"].apply(region_name)
+            else:
+                pdf["region"] = pdf["region"].astype(int)
+                pdf["region_name"] = pdf["region"].apply(region_name)
 
-        print()
-        print("## Parkinson's strict — top 10 regions by score")
-        print("| Region | Score | P-value | FDR | Cohen's d | Significant | Depleted |")
-        print("|--------|-------|---------|-----|-----------|-------------|----------|")
-        top10 = pdf.nlargest(10, "score")
-        for _, r in top10.iterrows():
-            print(
-                f"| {region_name(int(r['region']))} | {r['score']:.4f} | "
-                f"{r['pvalue']:.4f} | {r['fdr']:.4f} | {r['cohens_d']:.3f} | "
-                f"{r['significant']} | {r['depleted']} |"
-            )
+            print()
+            print("## Parkinson's strict — top 10 regions by score")
+            print("| Region | Score | P-value | FDR | Cohen's d | Significant | Depleted |")
+            print("|--------|-------|---------|-----|-----------|-------------|----------|")
+            top10 = pdf.nlargest(10, "score")
+            for _, r in top10.iterrows():
+                print(
+                    f"| {r['region_name']} | {r['score']:.4f} | "
+                    f"{r['pvalue']:.4f} | {r['fdr']:.4f} | {r['cohens_d']:.3f} | "
+                    f"{r['significant']} | {r['depleted']} |"
+                )
 
-        print()
-        print("## Parkinson's strict — Caudate and Putamen")
-        print("| Region | Score | P-value | FDR | Cohen's d | Significant | Depleted |")
-        print("|--------|-------|---------|-----|-----------|-------------|----------|")
-        targets = [36, 37, 77, 78]
-        cp = pdf[pdf["region"].isin(targets)].sort_values("region")
-        for _, r in cp.iterrows():
-            print(
-                f"| {region_name(int(r['region']))} | {r['score']:.4f} | "
-                f"{r['pvalue']:.4f} | {r['fdr']:.4f} | {r['cohens_d']:.3f} | "
-                f"{r['significant']} | {r['depleted']} |"
-            )
+            print()
+            print("## Parkinson's strict — Caudate and Putamen")
+            print("| Region | Score | P-value | FDR | Cohen's d | Significant | Depleted |")
+            print("|--------|-------|---------|-----|-----------|-------------|----------|")
+            targets = [36, 37, 77, 78]
+            cp = pdf[pdf["region"].isin(targets)].sort_values("region")
+            for _, r in cp.iterrows():
+                print(
+                    f"| {r['region_name']} | {r['score']:.4f} | "
+                    f"{r['pvalue']:.4f} | {r['fdr']:.4f} | {r['cohens_d']:.3f} | "
+                    f"{r['significant']} | {r['depleted']} |"
+                )
+        else:
+            print()
+            print("## Parkinson's strict — No regional data available")
+            print("(0 matched genes — analysis skipped)")
 
     # Striatal positive control — separate gene set analysis
     print()
     print("## Striatal positive control (regional method)")
     print("Gene set: DRD1, DRD2, PPP1R1B, ADORA2A, PENK, TAC1, GPR88, RGS9")
-    print("Status: not computed by run_all.py — external validation referenced in README")
-    print("Caudate/putamen FDR-significant at p=0.0002, FDR=0.004 (from prior validation)")
+    sc_stats = RESULTS_DIR / "stats_striatalcontrol_strict.csv"
+    if sc_stats.exists():
+        sc_df = pd.read_csv(sc_stats)
+        if len(sc_df) > 0 and "region" in sc_df.columns:
+            cp_stats = sc_df[sc_df["region"].isin([36, 37, 77, 78])]
+            print("| Region | Score | P-value | FDR | Cohen's d | Significant | Depleted |")
+            print("|--------|-------|---------|-----|-----------|-------------|----------|")
+            for _, r in cp_stats.iterrows():
+                print(
+                    f"| {region_name(r['region'])} | {r['score']:.4f} | "
+                    f"{r['pvalue']:.4f} | {r['fdr']:.4f} | {r['cohens_d']:.3f} | "
+                    f"{r['significant']} | {r['depleted']} |"
+                )
+    else:
+        print("Not computed — run `python run_all.py` to generate.")
 
 
 if __name__ == "__main__":
