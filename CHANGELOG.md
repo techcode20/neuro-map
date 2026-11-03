@@ -12,7 +12,7 @@
 - `data/raw/gwas_parkinsons.tsv` renamed to `data/raw/gwas_catalog_full.tsv` (it was the full GWAS catalog, 1.2M rows, misnamed).
 
 ### Changed
-- Gene lists are now trait-filtered from the full catalog. Trait inclusion / exclusion rules were **fixed before looking at any enrichment results**:
+- Gene lists are now trait-filtered from the full catalog. Trait inclusion / exclusion rules were **fixed before the rebuild**:
   - Include trait containing the disease keyword (case-insensitive)
   - Exclude traits containing: progression, polygenic, risk score, family history, resilience, motor subtype, pleiotropy, atrophy, proxy, mtag, dyskinesia, adjusted
   - Include age-at-onset traits
@@ -26,16 +26,12 @@
   - Huntington's: strict 1 / broad 1 (was 3 / 3)
   - 0 regions pass FDR correction for all diseases
 - Cell-type enrichment recomputed (`results_summary/cell_type_enrichment.csv`):
-  - Alzheimer's × Microglia: OR=7.16 strict (FDR=2.35e-04), OR=4.79 broad (FDR=2.01e-05)
+  - Alzheimer's × Microglia: OR=7.16 strict (FDR=7.7e-03), OR=4.79 broad (FDR=4.0e-03)
   - Parkinson's × Microglia: OR=10.36 strict (FDR=1.9e-03), OR=7.06 broad (FDR=7.7e-03)
-- Leave-one-locus-out sensitivity analysis recomputed (`results_summary/overlap_loci.csv`):
-  - PD without MHC locus: OR=1.91 (p=0.41, not significant)
-  - AD without MHC locus: OR=4.13 (p=0.041, unadjusted, not corrected)
-- HLA-removed marker analysis (`results_summary/cell_type_enrichment_hla_removed.csv`):
-  - AD strict: OR 7.16 → 4.44 (FDR 0.0077 → 0.28)
-  - AD broad: OR 4.79 (FDR 3.0e-05 → 0.28)
-  - PD strict: OR 10.36 (FDR 4.0e-03 → 0.81)
-  - PD broad: OR 7.06 (FDR 1.1e-02 → 0.91)
+- Fragility Engine rebuilt as cell-type specification curve (`results_summary/fragility_celltype.csv`):
+  - All four disease/list combinations significant in 1 of 2 specifications (full markers only)
+  - When HLA genes removed from marker list, enrichment disappears (FDR > 0.28 for all combinations)
+  - Conclusion: microglia enrichment is fragile — driven by HLA/MHC genes in marker set
 - `cell_type_analysis.py` moved to `src/`; diseases with <10 genes (Huntington's) reported as "not analyzable".
 - Removed "preliminary" banner from README — audit complete.
 - Removed 20 unused scratch scripts/outputs (`fix_readme*.py`, `check_readme*.py`, `read_*.py`, `sensitivity_*.py`, `verify_final.py`, `test_setup.py`, `*.txt` outputs).

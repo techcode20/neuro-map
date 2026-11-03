@@ -1,0 +1,5 @@
+finding,n_specs,n_significant,fragility_score,min_fdr,max_fdr
+Alzheimer's strict,2,1,0.500,0.0077,0.2847
+Alzheimer's broad,2,1,0.500,0.0040,0.2847
+Parkinson's strict,2,1,0.500,0.0040,0.8051
+Parkinson's broad,2,1,0.500,0.0077,0.9088

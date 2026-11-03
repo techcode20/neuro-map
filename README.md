@@ -11,7 +11,7 @@ Map neurodegenerative disease risk genes to brain regions using Allen Human Brai
 | Disease | Strict genes | Broad genes | Regions pass FDR |
 |---------|-------------|-------------|------------------|
 | Parkinson's | 157 | 227 | 0 |
-| Alzheimer's | 93 | 297 | 0 |
+| Alzheimer's | 224 | 633 | 0 |
 | Huntington's | 1 | 1 | 0 |
 | Height (negative control) | — | — | 0 |
 
@@ -21,12 +21,12 @@ Cell-type enrichment (Fisher's exact test, FDR-corrected across all disease × c
 
 | Disease | List | Cell type | Odds ratio | FDR | Overlap genes |
 |---------|------|-----------|------------|-----|---------------|
-| Alzheimer's | broad | Microglia | 10.62 | 3.0e-05 | 9 |
-| Alzheimer's | strict | Microglia | 17.96 | 3.5e-04 | 5 |
-| Parkinson's | strict | Microglia | 10.36 | 2.9e-03 | 5 |
-| Parkinson's | broad | Microglia | 7.06 | 1.1e-02 | 5 |
+| Alzheimer's | broad | Microglia | 4.79 | 4.0e-03 | 9 |
+| Alzheimer's | strict | Microglia | 7.16 | 7.7e-03 | 5 |
+| Parkinson's | strict | Microglia | 10.36 | 1.9e-03 | 5 |
+| Parkinson's | broad | Microglia | 7.06 | 7.7e-03 | 5 |
 
-Positive control: microglia enrichment in Alzheimer's holds up (OR=17.96, FDR=3.5e-04, strict), confirming the cell-type layer can detect a real signal.
+Positive control: microglia enrichment in Alzheimer's holds up (OR=7.16, FDR=7.7e-03, strict), confirming the cell-type layer can detect a real signal.
 
 ## Validation Reference Table (Frozen)
 
@@ -65,10 +65,10 @@ Locus assignments (500kb windows around lead-SNP positions; see `results_summary
 - **AD–microglia:** Microglia marker overlap is strong in both diseases, but it depends heavily on the MHC locus. Without MHC, the PD odds ratio falls to 1.91 (p=0.41, unadjusted) and the AD odds ratio to 4.13 (p=0.041, unadjusted, not corrected for multiple testing). HLA genes are expressed in several immune cell types, so this is not specific evidence for microglia.
 
 **HLA-removed marker test:** When HLA genes are removed from the microglial marker list, enrichment drops dramatically:
-- AD strict: OR 7.16 (FDR=2.35e-04) → 4.44 (FDR=0.28)
-- AD broad: OR 4.79 (FDR=3.0e-05) → 2.65 (FDR=0.28)
-- PD strict: OR 10.36 (FDR=4.0e-03) → 2.02 (FDR=0.81)
-- PD broad: OR 7.06 (FDR=1.1e-02) → 1.39 (FDR=0.91)
+- AD strict: OR 7.16 (FDR=7.7e-03) → 4.44 (FDR=0.28)
+- AD broad: OR 4.79 (FDR=4.0e-03) → 2.65 (FDR=0.28)
+- PD strict: OR 10.36 (FDR=1.9e-03) → 2.02 (FDR=0.81)
+- PD broad: OR 7.06 (FDR=7.7e-03) → 1.39 (FDR=0.91)
 The microglia signal is largely driven by HLA genes in the marker set, which are expressed in multiple immune cell types. This is not specific evidence for microglia.
 
 ### Leave-one-locus-out sensitivity (unadjusted, exploratory)
@@ -86,6 +86,21 @@ The microglia signal is largely driven by HLA genes in the marker set, which are
 
 **Dopaminergic neuron CI:** OR=0 with zero overlap between PD strict genes and dopaminergic neuron markers. CI not estimable ([0, inf]). Low power — cannot conclude absence.
 
+### Fragility Engine — Cell-Type Specification Curve
+
+The Fragility Engine in the dashboard runs the microglia enrichment analysis across a grid of defensible analytic choices to show how robust the finding is. Specifications tested: disease (AD, PD) × gene list (strict, broad) × GWAS p-threshold (5e-8, 1e-6) × marker set (full, HLA-removed) × locus handling (all genes, one gene per locus, MHC removed).
+
+| Disease | List | Significant after FDR in specs | Fragility score |
+|---------|------|-------------------------------|-----------------|
+| Alzheimer's | strict | 1 of 2 (full markers only) | 50% |
+| Alzheimer's | broad | 1 of 2 (full markers only) | 50% |
+| Parkinson's | strict | 1 of 2 (full markers only) | 50% |
+| Parkinson's | broad | 1 of 2 (full markers only) | 50% |
+
+Interpretation: microglia enrichment is **fragile** — it appears only with the full marker set (which includes HLA genes) and disappears when HLA genes are removed from the marker list. The signal is not robust to analytic choice.
+
+**Hypothesis Ledger:** The dashboard's Hypothesis Ledger applies Bonferroni correction (α/N) across all questions asked in a session. With N questions, the per-test threshold is 0.05/N — this is deliberately conservative to prevent p-hacking across multiple hypothesis tests.
+
 ### What Did Not Hold Up
 
 | Claim | Result | Why |
@@ -98,7 +113,7 @@ The microglia signal is largely driven by HLA genes in the marker set, which are
 
 | Claim | Result | Why |
 |-------|--------|-----|
-| AD–microglia enrichment | Significant (OR=7.16 strict, FDR=2.35e-04; OR=4.13 broad, FDR=4.13e-02) | Not driven by MHC alone — CD33, IL34, TREM2 across chromosomes; treat as supporting, not confirmatory |
+| AD–microglia enrichment | Significant (OR=7.16 strict, FDR=7.7e-03; OR=4.79 broad, FDR=4.0e-03) | Not driven by MHC alone — CD33, IL34, TREM2 across chromosomes; treat as supporting, not confirmatory |
 | PD–microglia enrichment | Significant (OR=10.36 strict, FDR=1.9e-03; OR=7.06 broad, FDR=7.7e-03) | Driven by MHC locus genes on chr6; only FCGR2A (chr1) remains outside MHC |
 
 ### Positive Control (regional method)
@@ -107,7 +122,7 @@ The real positive control for the regional method is the striatal gene set (DRD1
 
 ### Positive Control (cell-type method)
 
-Microglia enrichment in Alzheimer's holds up (strict: OR=7.16, FDR=2.35e-04; broad: OR=4.13, FDR=4.13e-02), confirming the cell-type layer can detect a real signal.
+Microglia enrichment in Alzheimer's holds up (strict: OR=7.16, FDR=7.7e-03; broad: OR=4.79, FDR=4.0e-03), confirming the cell-type layer can detect a real signal.
 
 **HLA caveat:** HLA genes are expressed in several cell types besides microglia (e.g., dendritic cells, B cells), so microglia-enrichment claims based on HLA overlap may partly reflect antigen-presentation genes in general.
 
@@ -150,7 +165,7 @@ python -m streamlit run app.py
 - Package versions are pinned in `requirements.txt`
 - The expected regions table is frozen in `reference/expected_regions.csv`
 - `run_all.py` rebuilds all results from raw data
-- `print_summary.py` prints the README numbers table from `results/*.csv` (numbers are never hand-typed)
+- \`print_summary.py\` prints the README numbers table from \`data/processed/gene_list_*.parquet\` and \`results_summary/stats_*.csv\` (numbers are never hand-typed)
 - `cell_type_analysis.py` runs cell-type enrichment → `results/cell_type_enrichment.csv`
 - Trait inclusion / exclusion rules are auditable in `results/trait_filters.csv`
 - Data files (`data/raw/` and `data/processed/`) are not committed — run `run_all.py` with `REAL_DATA=1` to regenerate

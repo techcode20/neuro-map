@@ -11,9 +11,9 @@ PROCESSED_DIR = Path("data/processed")
 
 
 def gene_count(disease: str, list_type: str) -> int:
-    file = RESULTS_DIR / f"gene_list_{disease.lower()}_{list_type}.csv"
+    file = PROCESSED_DIR / f"gene_list_{disease.lower()}_{list_type}.parquet"
     if file.exists():
-        return len(pd.read_csv(file))
+        return len(pd.read_parquet(file))
     return 0
 
 
