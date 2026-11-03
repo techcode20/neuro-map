@@ -30,12 +30,14 @@ from load_data import load_allen_expression
 MIN_GENES_FOR_ANALYSIS = 10
 
 
-def load_marker_genes(path="cell_markers.csv"):
-    """Load cell-type marker genes."""
+def load_marker_genes(path="cell_markers.csv", remove_hla=False):
+    """Load cell-type marker genes, optionally removing HLA genes."""
     df = pd.read_csv(REFERENCE_DIR / path)
     markers = {}
     for cell_type in df["cell_type"].unique():
         genes = df[df["cell_type"] == cell_type]["gene_symbol"].tolist()
+        if remove_hla:
+            genes = [g for g in genes if not g.startswith("HLA-") and not g.startswith("HLA")]
         markers[cell_type] = set(genes)
     return markers
 
@@ -177,6 +179,91 @@ def main():
     for _, r in alz_microglia.iterrows():
         print(f"  {r['list_type']}: OR={r['odds_ratio']:.2f}, p={r['p_value']:.4g}, "
               f"FDR={r.get('fdr', float('nan')):.4g}, sig={r.get('significant', False)}")
+
+    # HLA-removed marker set analysis
+    print()
+    print("=" * 80)
+    print("HLA-REMOVED MARKER SET ANALYSIS")
+    print("=" * 80)
+    print("Repeating enrichment with HLA genes removed from marker lists...")
+    run_hla_removed_analysis(expr, background_genes, disease_genes, RESULTS_DIR)
+
+
+def run_hla_removed_analysis(expr, background_genes, disease_genes, results_dir):
+    """Run enrichment with HLA genes removed from marker lists."""
+    markers = load_marker_genes(remove_hla=True)
+    print(f"Cell types (HLA-removed): {list(markers.keys())}")
+    for ct, genes in markers.items():
+        print(f"  {ct}: {len(genes)} genes")
+
+    results_hla = []
+    for dkey, dgenes in disease_genes.items():
+        disease = dkey.rsplit("_", 1)[0]
+        list_type = dkey.rsplit("_", 1)[1]
+
+        if len(dgenes) < MIN_GENES_FOR_ANALYSIS:
+            continue
+
+        d_set = set(dgenes) & background_genes
+
+        for ctype, mgenes in markers.items():
+            m_set = mgenes & background_genes
+            result = fisher_exact_test(d_set, m_set, background_genes)
+            result["disease"] = disease
+            result["list_type"] = list_type
+            result["cell_type"] = ctype
+            result["marker_set"] = "HLA-removed"
+            results_hla.append(result)
+
+    results_hla_df = pd.DataFrame(results_hla)
+
+    # FDR correction across all tests
+    valid = results_hla_df[results_hla_df["p_value"].notna()]
+    if len(valid) > 0:
+        reject, fdr_corrected, _, _ = multipletests(
+            valid["p_value"].values, alpha=0.05, method="fdr_bh"
+        )
+        results_hla_df.loc[valid.index, "fdr"] = fdr_corrected
+        results_hla_df.loc[valid.index, "significant"] = reject
+
+    # Sort and save
+    results_hla_df = results_hla_df.sort_values(["fdr"], ascending=True, na_position="last")
+    results_dir.mkdir(parents=True, exist_ok=True)
+    results_hla_df.to_csv(results_dir / "cell_type_enrichment_hla_removed.csv", index=False)
+
+    # Print results
+    print()
+    print("CELL-TYPE ENRICHMENT (HLA-REMOVED MARKERS, FDR-corrected)")
+    print("=" * 80)
+    print()
+    print(f"{'Disease':<15} {'List':<8} {'Cell Type':<25} {'OR':>8} {'p':>10} {'FDR':>10} {'Sig':>6} {'Overlap':>8}")
+    print("-" * 90)
+    for _, r in results_hla_df.iterrows():
+        sig = "**" if r.get("significant", False) else ""
+        print(f"{r['disease']:<15} {r['list_type']:<8} {r['cell_type']:<25} "
+              f"{r['odds_ratio']:>8.2f} {r['p_value']:>10.4g} {r.get('fdr', float('nan')):>10.4g} "
+              f"{sig:>6} {r['n_overlap']:>8}")
+
+    # Compare microglia results
+    print()
+    print("COMPARISON: Microglia enrichment (full vs HLA-removed markers)")
+    print("-" * 80)
+    for disease in ["Alzheimer", "Parkinson"]:
+        for lt in ["strict", "broad"]:
+            full = pd.read_csv(RESULTS_DIR / "cell_type_enrichment.csv")
+            hla_removed = results_hla_df
+            for r in full.itertuples():
+                if r.disease == disease and r.list_type == lt and r.cell_type == "Microglia":
+                    or_full = r.odds_ratio
+                    fdr_full = r.fdr
+                    break
+            for r in hla_removed.itertuples():
+                if r.disease == disease and r.list_type == lt and r.cell_type == "Microglia":
+                    or_hla = r.odds_ratio
+                    fdr_hla = r.fdr
+                    break
+            print(f"  {disease} {lt}: full OR={or_full:.2f}, FDR={fdr_full:.4g} | "
+                  f"HLA-removed OR={or_hla:.2f}, FDR={fdr_hla:.4g}")
 
 
 if __name__ == "__main__":

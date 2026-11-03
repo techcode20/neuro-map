@@ -39,6 +39,8 @@ Positive control: microglia enrichment in Alzheimer's holds up (OR=17.96, FDR=3.
 | Alzheimer's | Hippocampus | Braak & Braak, 1991; Braak et al., 2006 | No |
 | Huntington's | Caudate | Vonsattel et al., 1985; Reiner et al., 1988 | No |
 
+**AD regional null:** Entorhinal cortex and hippocampus — both expected AD-affected regions per Braak & Braak — show no significant enrichment (FDR ≈ 1.0), confirming no bulk expression enrichment in AD-vulnerable regions.
+
 ## Sensitivity Analyses
 
 Microglia overlap genes (computed as `results_summary/gene_list_*.csv` ∩ `reference/cell_markers.csv`):
@@ -60,7 +62,14 @@ Locus assignments (500kb windows around lead-SNP positions; see `results_summary
 | Alzheimer's | broad | chr6_locus1 (HLA-DRB1/HLA-DRB5), chr6_locus2 (TREM2/HLA-DQA1/HLA-DQB1), chr16_locus3 (IL34), chr19_locus4 (CD33), plus others | HLA-DRA, HLA-DQB1, HLA-DRB1, HLA-DRB5 |
 
 - **PD–microglia:** 4 of 5 overlap genes are HLA genes on chr6 (MHC locus); only FCGR2A (chr1) lies outside MHC. Enrichment is driven by the MHC locus.
-- **AD–microglia:** Not driven by MHC alone — CD33 (chr19), IL34 (chrX), TREM2 (chr6p21, separate from MHC) and SPI1 (chr11) are non-MHC genes. Consistent with known microglial involvement in AD, but the marker list and AD gene list are not fully independent, so treat as supporting rather than confirmatory.
+- **AD–microglia:** Microglia marker overlap is strong in both diseases, but it depends heavily on the MHC locus. Without MHC, the PD odds ratio falls to 1.91 (p=0.41, unadjusted) and the AD odds ratio to 4.13 (p=0.041, unadjusted, not corrected for multiple testing). HLA genes are expressed in several immune cell types, so this is not specific evidence for microglia.
+
+**HLA-removed marker test:** When HLA genes are removed from the microglial marker list, enrichment drops dramatically:
+- AD strict: OR 7.16 (FDR=2.35e-04) → 4.44 (FDR=0.28)
+- AD broad: OR 4.79 (FDR=3.0e-05) → 2.65 (FDR=0.28)
+- PD strict: OR 10.36 (FDR=4.0e-03) → 2.02 (FDR=0.81)
+- PD broad: OR 7.06 (FDR=1.1e-02) → 1.39 (FDR=0.91)
+The microglia signal is largely driven by HLA genes in the marker set, which are expressed in multiple immune cell types. This is not specific evidence for microglia.
 
 ### Leave-one-locus-out sensitivity (unadjusted, exploratory)
 
@@ -82,7 +91,7 @@ Locus assignments (500kb windows around lead-SNP positions; see `results_summary
 | Claim | Result | Why |
 |-------|--------|-----|
 | PD–dopaminergic neuron enrichment | Zero overlap, CI not estimable | Low power (0 overlap with 23 dopaminergic markers) — cannot conclude absence |
-| Caudate/putamen depletion for PD | Does not survive two-sided FDR | Descriptive only, not a significant finding (cohens_d ≈ -2.5, FDR ≈ 0.99) |
+| Caudate/putamen depletion for PD | Does not survive two-sided FDR | Descriptive only, not a significant finding (one-sided enrichment FDR ≈ 0.99 — depletion direction yields FDR ≈ 1)
 | Huntington's cell-type analysis | Only 1 gene | Underpowered — not analyzable |
 
 ### What Held Up (cell-type layer)
