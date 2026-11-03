@@ -57,6 +57,40 @@ def run_pipeline_for_disease(
     for list_type, genes in [("strict", strict_genes), ("broad", broad_genes)]:
         print(f"\n  Processing {list_type} list ({len(genes)} genes)...")
 
+        if len(genes) == 0:
+            print(
+                f"  WARNING: No matched genes for {disease} ({list_type}); "
+                f"skipping scoring/stats (real GWAS data not available)."
+            )
+            empty_scores = pd.Series(index=expression_matrix.index, dtype=float, name="score")
+            empty_index = expression_matrix.index
+            save_scores(empty_scores, disease, list_type)
+            save_statistical_results(
+                disease,
+                list_type,
+                empty_scores,
+                pd.Series(index=empty_index, dtype=float, name="pvalue"),
+                pd.DataFrame(
+                    index=empty_index,
+                    data={
+                        "fdr": pd.Series(dtype=float, index=empty_index),
+                        "significant": pd.Series(dtype=bool, index=empty_index),
+                        "pvalue_two_sided": pd.Series(dtype=float, index=empty_index),
+                        "fdr_two_sided": pd.Series(dtype=float, index=empty_index),
+                        "depleted": pd.Series(dtype=bool, index=empty_index),
+                    },
+                ),
+                pd.DataFrame(
+                    index=empty_index,
+                    data={
+                        "cohens_d": pd.Series(dtype=float, index=empty_index),
+                        "null_mean": pd.Series(dtype=float, index=empty_index),
+                        "null_std": pd.Series(dtype=float, index=empty_index),
+                    },
+                ),
+            )
+            continue
+
         # Compute regional scores
         print("  Computing regional scores...")
         regional_scores = compute_regional_scores(expression_matrix, genes)

@@ -47,7 +47,11 @@ def compute_regional_scores(
     available_genes = [g for g in gene_symbols if g in zscored.columns]
 
     if len(available_genes) == 0:
-        raise ValueError("No disease genes found in expression matrix")
+        print(
+            "  WARNING: No disease genes found in expression matrix; "
+            "returning empty scores."
+        )
+        return pd.Series(index=expression_matrix.index, dtype=float, name="score")
 
     # Compute mean z-score across disease genes for each region
     regional_scores = zscored[available_genes].mean(axis=1, skipna=True)
@@ -130,7 +134,7 @@ def save_scores(
     donor_scores: Optional[pd.DataFrame] = None,
     consistency: Optional[pd.Series] = None,
 ) -> None:
-    """Save regional scores to results directory."""
+    """Save regional scores to results directory (Parquet + CSV)."""
     # Main scores
     scores_df = scores.to_frame("score")
     scores_df.index.name = "region"
@@ -138,11 +142,18 @@ def save_scores(
     scores_df["list_type"] = list_type
     scores_file = RESULTS_DIR / f"scores_{disease.lower()}_{list_type}.parquet"
     scores_df.to_parquet(scores_file)
+    scores_df.reset_index().to_csv(
+        RESULTS_DIR / f"scores_{disease.lower()}_{list_type}.csv", index=False
+    )
 
     # Donor-level scores
     if donor_scores is not None:
         donor_file = RESULTS_DIR / f"donor_scores_{disease.lower()}_{list_type}.parquet"
         donor_scores.to_parquet(donor_file)
+        donor_scores.reset_index().to_csv(
+            RESULTS_DIR / f"donor_scores_{disease.lower()}_{list_type}.csv",
+            index=False,
+        )
 
     # Consistency
     if consistency is not None:
@@ -150,6 +161,10 @@ def save_scores(
         consistency_df.index.name = "region"
         consistency_file = RESULTS_DIR / f"consistency_{disease.lower()}_{list_type}.parquet"
         consistency_df.to_parquet(consistency_file)
+        consistency_df.reset_index().to_csv(
+            RESULTS_DIR / f"consistency_{disease.lower()}_{list_type}.csv",
+            index=False,
+        )
 
     print(f"Saved scores for {disease} ({list_type}) to {scores_file}")
 

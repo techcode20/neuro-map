@@ -292,6 +292,10 @@ def compute_effect_sizes(
             "cohens_d": cohens_d,
         })
 
+    if not effect_data:
+        return pd.DataFrame(
+            columns=["region", "observed_score", "null_mean", "null_std", "cohens_d"]
+        ).set_index("region")
     return pd.DataFrame(effect_data).set_index("region")
 
 
@@ -379,4 +383,7 @@ def save_statistical_results(
 
     file = RESULTS_DIR / f"stats_{disease.lower()}_{list_type}.parquet"
     results.to_parquet(file)
+    results.reset_index().to_csv(
+        RESULTS_DIR / f"stats_{disease.lower()}_{list_type}.csv", index=False
+    )
     print(f"Saved statistical results to {file}")

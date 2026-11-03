@@ -234,6 +234,9 @@ def validate_disease(
     # Save
     file = RESULTS_DIR / f"validation_{disease.lower()}_{list_type}.parquet"
     badges.to_parquet(file)
+    badges.reset_index().to_csv(
+        RESULTS_DIR / f"validation_{disease.lower()}_{list_type}.csv", index=False
+    )
     print(f"Saved validation results to {file}")
 
     return badges
