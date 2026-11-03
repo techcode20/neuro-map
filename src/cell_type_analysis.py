@@ -6,25 +6,33 @@ disease x cell-type tests.
 
 Positive control: microglia markers should be enriched among Alzheimer's
 genes (known from GWAS literature).
+
+Diseases with fewer than 10 genes are reported as "not analyzable"
+(underpowered) and skipped from the enrichment test.
 """
 
 import pandas as pd
 import numpy as np
 import sys
+from pathlib import Path
 from scipy import stats
 from statsmodels.stats.multitest import multipletests
-from pathlib import Path
 
-sys.path.insert(0, "src")
+# Resolve paths relative to repo root (this file lives in src/)
+REPO_ROOT = Path(__file__).parent.parent
+RESULTS_DIR = REPO_ROOT / "results"
+REFERENCE_DIR = REPO_ROOT / "reference"
+PROCESSED_DIR = REPO_ROOT / "data" / "processed"
+
+sys.path.insert(0, str(REPO_ROOT / "src"))
 from load_data import load_allen_expression
 
-RESULTS_DIR = Path("results")
-REFERENCE_DIR = Path("reference")
+MIN_GENES_FOR_ANALYSIS = 10
 
 
-def load_marker_genes(path="reference/cell_markers.csv"):
+def load_marker_genes(path="cell_markers.csv"):
     """Load cell-type marker genes."""
-    df = pd.read_csv(path)
+    df = pd.read_csv(REFERENCE_DIR / path)
     markers = {}
     for cell_type in df["cell_type"].unique():
         genes = df[df["cell_type"] == cell_type]["gene_symbol"].tolist()
@@ -38,7 +46,6 @@ def fisher_exact_test(disease_genes, marker_genes, background_genes):
     m_set = set(marker_genes)
     bg_set = set(background_genes)
 
-    # Count: disease genes that are markers vs not markers
     n_disease_marker = len(d_set & m_set)
     n_disease_nonmarker = len(d_set - m_set)
     n_nondisease_marker = len((bg_set - d_set) & m_set)
@@ -76,19 +83,43 @@ def main():
     disease_genes = {}
     for disease in diseases:
         for lt in ["strict", "broad"]:
-            try:
-                df = pd.read_parquet(f"data/processed/gene_list_{disease.lower()}_{lt}.parquet")
+            f = PROCESSED_DIR / f"gene_list_{disease.lower()}_{lt}.parquet"
+            if f.exists():
+                df = pd.read_parquet(f)
                 key = f"{disease}_{lt}"
+                n_genes = len(df)
                 disease_genes[key] = df["gene_symbol"].tolist()
-                print(f"{key}: {len(disease_genes[key])} genes")
-            except FileNotFoundError:
+                print(f"{key}: {n_genes} genes")
+            else:
                 print(f"{disease}_{lt}: not found, skipping")
 
     # Run Fisher's exact test for all disease x cell_type combinations
     results = []
     for dkey, dgenes in disease_genes.items():
-        disease = dkey.rsplit("_", 1)[0]  # Strip _strict/_broad
+        disease = dkey.rsplit("_", 1)[0]
         list_type = dkey.rsplit("_", 1)[1]
+
+        # Skip diseases with too few genes (underpowered)
+        if len(dgenes) < MIN_GENES_FOR_ANALYSIS:
+            print(f"\n{dkey}: {len(dgenes)} genes < {MIN_GENES_FOR_ANALYSIS} — "
+                  f"not analyzable, skipping enrichment test.")
+            for ctype in markers:
+                results.append({
+                    "disease": disease,
+                    "list_type": list_type,
+                    "cell_type": ctype,
+                    "n_disease_genes": len(dgenes),
+                    "n_marker_genes": len(markers[ctype]),
+                    "n_background_genes": len(background_genes),
+                    "n_overlap": 0,
+                    "odds_ratio": float("nan"),
+                    "p_value": float("nan"),
+                    "fdr": float("nan"),
+                    "significant": False,
+                    "analyzable": False,
+                })
+            continue
+
         d_set = set(dgenes) & background_genes
 
         for ctype, mgenes in markers.items():
@@ -97,20 +128,25 @@ def main():
             result["disease"] = disease
             result["list_type"] = list_type
             result["cell_type"] = ctype
+            result["analyzable"] = True
             results.append(result)
 
     results_df = pd.DataFrame(results)
 
-    # FDR correction across all tests
-    valid = results_df.dropna(subset=["p_value"])
-    reject, fdr_corrected, _, _ = multipletests(
-        valid["p_value"].values, alpha=0.05, method="fdr_bh"
-    )
-    results_df.loc[valid.index, "fdr"] = fdr_corrected
-    results_df.loc[valid.index, "significant"] = reject
+    # FDR correction across all analyzable tests
+    valid = results_df[results_df["analyzable"] & results_df["p_value"].notna()]
+    if len(valid) > 0:
+        reject, fdr_corrected, _, _ = multipletests(
+            valid["p_value"].values, alpha=0.05, method="fdr_bh"
+        )
+        results_df.loc[valid.index, "fdr"] = fdr_corrected
+        results_df.loc[valid.index, "significant"] = reject
 
-    # Sort by FDR
-    results_df = results_df.sort_values("fdr")
+    # Sort by FDR (analyzable first, then by FDR)
+    results_df = results_df.sort_values(
+        ["analyzable", "fdr"], ascending=[False, True],
+        na_position="last"
+    )
 
     # Save results
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -121,22 +157,26 @@ def main():
     print("CELL-TYPE ENRICHMENT RESULTS (Fisher's exact test, FDR-corrected)")
     print("=" * 80)
     print()
-    print(f"{'Disease':<15} {'List':<8} {'Cell Type':<25} {'OR':>8} {'p':>10} {'FDR':>10} {'Sig':>6} {'Overlap':>8}")
-    print("-" * 80)
+    print(f"{'Disease':<15} {'List':<8} {'Cell Type':<25} {'OR':>8} {'p':>10} {'FDR':>10} {'Sig':>6} {'Overlap':>8} {'Analyzable':>10}")
+    print("-" * 100)
     for _, r in results_df.iterrows():
         sig = "**" if r.get("significant", False) else ""
+        ana = "Yes" if r.get("analyzable", False) else "No"
         print(f"{r['disease']:<15} {r['list_type']:<8} {r['cell_type']:<25} "
-              f"{r['odds_ratio']:>8.2f} {r['p_value']:>10.4f} {r.get('fdr', float('nan')):>10.4f} "
-              f"{sig:>6} {r['n_overlap']:>8}")
+              f"{r['odds_ratio']:>8.2f} {r['p_value']:>10.4g} {r.get('fdr', float('nan')):>10.4g} "
+              f"{sig:>6} {r['n_overlap']:>8} {ana:>10}")
 
     # Positive control check: microglia in Alzheimer's
     print()
     print("POSITIVE CONTROL: Microglia in Alzheimer's")
     alz_microglia = results_df[
-        (results_df["disease"] == "Alzheimer") & (results_df["cell_type"] == "Microglia")
+        (results_df["disease"] == "Alzheimer") &
+        (results_df["cell_type"] == "Microglia") &
+        (results_df["analyzable"] == True)
     ]
     for _, r in alz_microglia.iterrows():
-        print(f"  {r['list_type']}: OR={r['odds_ratio']:.2f}, p={r['p_value']:.4f}, FDR={r.get('fdr', float('nan')):.4f}, sig={r.get('significant', False)}")
+        print(f"  {r['list_type']}: OR={r['odds_ratio']:.2f}, p={r['p_value']:.4g}, "
+              f"FDR={r.get('fdr', float('nan')):.4g}, sig={r.get('significant', False)}")
 
 
 if __name__ == "__main__":
