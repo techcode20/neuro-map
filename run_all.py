@@ -172,6 +172,36 @@ def main():
     )
     print(f"  Negative control significant regions: {negative_control_results['significant'].sum()}")
 
+    # Save negative control stats for audit/reporting
+    save_statistical_results(
+        "Height",
+        "strict",
+        negative_control_results["score"],
+        negative_control_results["pvalue"],
+        negative_control_results[["fdr", "significant", "pvalue_two_sided", "fdr_two_sided", "depleted"]]
+        if "pvalue_two_sided" in negative_control_results.columns
+        else pd.DataFrame(
+            index=negative_control_results.index,
+            data={
+                "fdr": negative_control_results["fdr"],
+                "significant": negative_control_results["significant"],
+                "pvalue_two_sided": pd.Series(dtype=float),
+                "fdr_two_sided": pd.Series(dtype=float),
+                "depleted": pd.Series(dtype=bool),
+            },
+        ),
+        negative_control_results[["cohens_d", "null_mean", "null_std"]]
+        if "cohens_d" in negative_control_results.columns
+        else pd.DataFrame(
+            index=negative_control_results.index,
+            data={
+                "cohens_d": pd.Series(dtype=float),
+                "null_mean": pd.Series(dtype=float),
+                "null_std": pd.Series(dtype=float),
+            },
+        ),
+    )
+
     # Step 3: Run pipeline for each disease
     all_results = {}
     for disease in DISEASES:
