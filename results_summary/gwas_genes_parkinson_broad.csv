@@ -1,0 +1,367 @@
+gene,mapping_type,study,snp,chr_id,chr_pos,p_value,trait
+COL18A1,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,8e-240,Early-onset Parkinson's disease
+SNCA,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,4.0,89704960.0,4e-170,Parkinson's disease
+LRRK2,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,12.0,40340400.0,4e-148,Parkinson's disease or first degree relation to individual with Parkinson's disease
+FER,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,4e-133,Early-onset Parkinson's disease
+ZFAT,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,2.9999999999999997e-96,Early-onset Parkinson's disease
+GBA1,mapped,A genome-wide association study coupled with machine learning approaches to identify influential demographic and genomic factors underlying Parkinson's disease.,,1.0,155235843.0,3e-90,Parkinson disease
+HMGN2P18,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,155148667.0,1.0000000000000001e-75,Parkinson's disease
+TMEM175,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,4.0,958159.0,5.000000000000001e-75,Parkinson's disease
+KRTCAP2,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,1.0,155162560.0,2e-70,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LINC02210-CRHR1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,17.0,45666837.0,1e-69,Parkinson's disease
+KANSL1,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,17.0,45917282.0,1e-68,Parkinson's disease
+SPPL2C,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,17.0,45917282.0,1e-68,Parkinson's disease
+CRHR1,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,17.0,45917282.0,1e-68,Parkinson's disease
+MAPT,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,17.0,45917282.0,1e-68,Parkinson's disease
+STH,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,17.0,45917282.0,1e-68,Parkinson's disease
+ARHGAP27,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,17.0,45917282.0,1e-68,Parkinson's disease
+ASH1L,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,155419060.0,4e-68,Parkinson's disease
+NSF,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,17.0,46723580.0,9e-67,Parkinson's disease or first degree relation to individual with Parkinson's disease
+TRIM46,mapped,A genome-wide association study coupled with machine learning approaches to identify influential demographic and genomic factors underlying Parkinson's disease.,,1.0,155179361.0,9e-60,Parkinson disease
+GPRIN3,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,4.0,89704960.0,9.999999999999999e-57,Parkinson's disease
+DGKQ,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,4.0,958159.0,9.999999999999999e-51,Parkinson's disease
+MCCC1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,3.0,183042285.0,6e-50,Parkinson's disease
+RPL18P3,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,3e-46,Early-onset Parkinson's disease
+ADAMTS9,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,5.999999999999999e-44,Early-onset Parkinson's disease
+AS2,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,5.999999999999999e-44,Early-onset Parkinson's disease
+GAK,reported,Large-scale meta-analysis of genome-wide association data identifies six new risk loci for Parkinson's disease.,,4.0,958159.0,1e-43,Parkinson's disease
+STK39,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,2.0,168264031.0,3.9999999999999995e-42,Parkinson's disease
+RN7SL813P,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,2.0,168264031.0,3.9999999999999995e-42,Parkinson's disease
+HIP1R,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,12.0,122842051.0,2e-41,Parkinson's disease
+PBXIP1,mapped,A genome-wide association study coupled with machine learning approaches to identify influential demographic and genomic factors underlying Parkinson's disease.,,1.0,154951539.0,2.0000000000000002e-39,Parkinson disease
+PMVK,mapped,A genome-wide association study coupled with machine learning approaches to identify influential demographic and genomic factors underlying Parkinson's disease.,,1.0,154882579.0,1e-37,Parkinson disease
+KCNN3,mapped,A genome-wide association study coupled with machine learning approaches to identify influential demographic and genomic factors underlying Parkinson's disease.,,1.0,154882579.0,1e-37,Parkinson disease
+MAPT-AS1,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,17.0,45855941.0,1e-37,Parkinson's disease or first degree relation to individual with Parkinson's disease
+ARHGEF2,mapped,A genome-wide association study coupled with machine learning approaches to identify influential demographic and genomic factors underlying Parkinson's disease.,,1.0,155974835.0,4e-36,Parkinson disease
+GBA,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,1.0,155162560.0,3e-35,Parkinson's disease
+RIT1,mapped,A genome-wide association study coupled with machine learning approaches to identify influential demographic and genomic factors underlying Parkinson's disease.,,1.0,155900625.0,3e-34,Parkinson disease
+PPFIBP1,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,1e-33,Early-onset Parkinson's disease
+SLC2A13,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,12.0,40006146.0,3e-33,Parkinson's disease
+BST1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,4.0,15735725.0,6e-33,Parkinson's disease
+NUCKS1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,205694350.0,1.9999999999999998e-32,Parkinson's disease
+Metazoa_SRP,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,205694350.0,1.9999999999999998e-32,Parkinson's disease
+LINC02210,mapped,Detection and interpretation of shared genetic influences on 42 human traits.,,17.0,45628235.0,3.9999999999999997e-32,Parkinson's disease
+LRRC37A3,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,17.0,45628235.0,3.9999999999999997e-32,Parkinson's disease
+FRRS1L,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,2e-31,Early-onset Parkinson's disease
+SYT11,reported,Large-scale meta-analysis of genome-wide association data identifies six new risk loci for Parkinson's disease.,,1.0,155162560.0,1.0000000000000001e-29,Parkinson's disease
+RAB29,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,1.0,205754444.0,1.0000000000000001e-29,Parkinson's disease or first degree relation to individual with Parkinson's disease
+RIT2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,18.0,43092999.0,2.0000000000000002e-28,Parkinson's disease
+INPP5F,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,10.0,119776815.0,2.0000000000000002e-28,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LRRK2-DT,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,12.0,40220632.0,2.0000000000000002e-28,Parkinson's disease or first degree relation to individual with Parkinson's disease
+GPNMB,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,7.0,23260430.0,4.0000000000000003e-28,Parkinson's disease
+SNX29P2,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,4.0000000000000003e-28,Early-onset Parkinson's disease
+HLA-DRB5,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,32610995.0,7e-28,Parkinson's disease or first degree relation to individual with Parkinson's disease
+HLA-DRB1,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,32610995.0,7e-28,Parkinson's disease or first degree relation to individual with Parkinson's disease
+HLA-DQA1,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,32610995.0,7e-28,Parkinson's disease or first degree relation to individual with Parkinson's disease
+CNTN1,mapped,Genome-wide mapping of IBD segments in an Ashkenazi PD cohort identifies associated haplotypes.,,12.0,40971838.0,2e-27,Parkinson's disease
+WWOX,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,3e-27,Early-onset Parkinson's disease
+RNA5SP443,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,17.0,45339907.0,8e-27,Parkinson's disease or first degree relation to individual with Parkinson's disease
+MAP3K14,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,17.0,45339907.0,8e-27,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LINC02555,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,12.0,40141971.0,9e-27,Parkinson's disease
+SEMA4A,mapped,A genome-wide association study coupled with machine learning approaches to identify influential demographic and genomic factors underlying Parkinson's disease.,,1.0,156176849.0,9.999999999999999e-27,Parkinson disease
+ZNF98,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,6e-25,Early-onset Parkinson's disease
+ITPKB,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,226728377.0,3e-24,Parkinson's disease
+CCSER1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,4.0,90290373.0,3e-24,Parkinson's disease
+SETD1A,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,16.0,30959620.0,4.0000000000000004e-24,Parkinson's disease
+TMEM163,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,2.0,134782397.0,8.000000000000001e-24,Parkinson's disease
+CCNT2-AS1,mapped,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,2.0,134782397.0,8.000000000000001e-24,Parkinson's disease
+CCNT2,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,2.0,134782397.0,8.000000000000001e-24,Parkinson's disease
+SLC41A1,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,1.0,205754444.0,1.0000000000000001e-23,Parkinson's disease
+ELOVL7,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,5.0,60842132.0,3e-23,Parkinson's disease or first degree relation to individual with Parkinson's disease
+MIR4682,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,10.0,119950976.0,4.0000000000000004e-23,Parkinson's disease
+SEC23IP,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,10.0,119950976.0,4.0000000000000004e-23,Parkinson's disease
+GBAP1,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,1.0,155235843.0,2e-22,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LINC02349,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,15.0,61705186.0,5e-22,Parkinson's disease
+RORA,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,15.0,61705186.0,5e-22,Parkinson's disease
+SLC25A44,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,1.0,156185069.0,8e-22,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LMNA,mapped,A genome-wide association study coupled with machine learning approaches to identify influential demographic and genomic factors underlying Parkinson's disease.,,1.0,156129878.0,2e-21,Parkinson disease
+PARK16,reported,Identification of Risk Loci for Parkinson Disease in Asians and Comparison of Risk Between Asians and Europeans: A Genome-Wide Association Study.,,1.0,205787356.0,4e-21,Parkinson's disease
+SYT10,mapped,Detection and interpretation of shared genetic influences on 42 human traits.,,12.0,33148871.0,4e-21,Parkinson's disease
+PKP2,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,12.0,33148871.0,4e-21,Parkinson's disease
+ASS1P14,mapped,Detection and interpretation of shared genetic influences on 42 human traits.,,12.0,33148871.0,4e-21,Parkinson's disease
+FAM47E,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,4.0,76276901.0,6e-21,Parkinson's disease or first degree relation to individual with Parkinson's disease
+FAM47E-STBD1,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,4.0,76276901.0,6e-21,Parkinson's disease or first degree relation to individual with Parkinson's disease
+SH3GL2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,9.0,17579692.0,8e-21,Parkinson's disease
+CCDC62,mapped,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,12.0,122819039.0,2e-20,Parkinson's disease
+OGFOD2,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,12.0,122819039.0,2e-20,Parkinson's disease
+MUC19,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,12.0,40528770.0,2e-20,Parkinson's disease or first degree relation to individual with Parkinson's disease
+IGSF9B,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,11.0,133917106.0,6e-20,Parkinson's disease or first degree relation to individual with Parkinson's disease
+ACMSD,reported,Large-scale meta-analysis of genome-wide association data identifies six new risk loci for Parkinson's disease.,,2.0,134782397.0,9e-20,Parkinson's disease
+CD38,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,4.0,15735478.0,1e-19,Parkinson's disease
+FAM200B,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,4.0,15735478.0,1e-19,Parkinson's disease
+BAG3,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,10.0,119776815.0,2e-19,Parkinson's disease
+SCARB2,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,4.0,76226816.0,5e-19,Parkinson's disease or first degree relation to individual with Parkinson's disease
+MUC12,mapped,"Imputation and Reanalysis of ExomeChip Data Identifies Novel, Conditional and Joint Genetic Effects on Parkinson's Disease Risk.",,7.0,101004230.0,3e-18,Parkinson's disease
+NUPL2,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,7.0,23254127.0,4e-18,Parkinson's disease
+KLHL7,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,7.0,23254127.0,4e-18,Parkinson's disease
+VPS13C,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,15.0,61705186.0,6e-18,Parkinson's disease or first degree relation to individual with Parkinson's disease
+SIPA1L2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,232533936.0,1e-17,Parkinson's disease
+WNT3,reported,"Meta-analysis of Parkinson's disease: identification of a novel locus, RIT2.",,17.0,46779275.0,3e-17,Parkinson's disease
+RN7SL474P,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,8.0,16843772.0,6e-17,Parkinson's disease
+MSR1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,8.0,16843772.0,6e-17,Parkinson's disease
+MCCC1-AS1,mapped,Identification of Risk Loci for Parkinson Disease in Asians and Comparison of Risk Between Asians and Europeans: A Genome-Wide Association Study.,,3.0,183017423.0,8e-17,Parkinson's disease
+MMRN1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,4.0,89938128.0,1e-16,Parkinson's disease
+GCH1,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,14.0,54882151.0,2e-16,Parkinson's disease or first degree relation to individual with Parkinson's disease
+RAB7L1,reported,Large-scale meta-analysis of genome-wide association data identifies six new risk loci for Parkinson's disease.,,1.0,205754444.0,2e-16,Parkinson's disease
+C17orf69,reported,Genome-wide association study reveals genetic risk underlying Parkinson's disease.,,17.0,45641777.0,2e-16,Parkinson's disease
+LOC644246,reported,Genome-wide association study reveals genetic risk underlying Parkinson's disease.,,17.0,45641777.0,2e-16,Parkinson's disease
+KIAA1267,reported,Genome-wide association study reveals genetic risk underlying Parkinson's disease.,,17.0,45641777.0,2e-16,Parkinson's disease
+ZNF277,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,2e-16,Early-onset Parkinson's disease
+CERS6,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,2.0,168299085.0,3e-16,Parkinson's disease
+CTSB,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,8.0,11854934.0,4e-16,Parkinson's disease or first degree relation to individual with Parkinson's disease
+WDHD1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,14.0,54986588.0,4e-16,Parkinson's disease
+SYT4,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,18.0,43093415.0,6e-16,Parkinson's disease
+CCT3,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,156330940.0,1e-15,Parkinson's disease
+HASPIN,reported,"Imputation and Reanalysis of ExomeChip Data Identifies Novel, Conditional and Joint Genetic Effects on Parkinson's Disease Risk.",,17.0,3702823.0,2e-15,Parkinson's disease
+ITGAE,mapped,"Imputation and Reanalysis of ExomeChip Data Identifies Novel, Conditional and Joint Genetic Effects on Parkinson's Disease Risk.",,17.0,3702823.0,2e-15,Parkinson's disease
+P2RX5,mapped,"Imputation and Reanalysis of ExomeChip Data Identifies Novel, Conditional and Joint Genetic Effects on Parkinson's Disease Risk.",,17.0,3702823.0,2e-15,Parkinson's disease
+FGF20,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,8.0,16840084.0,3e-15,Parkinson's disease or first degree relation to individual with Parkinson's disease
+FYN,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,6.0,111847106.0,4e-15,Parkinson's disease
+NDUFAF2,mapped,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,5.0,60978096.0,5e-15,Parkinson's disease
+CEL,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,1e-14,Early-onset Parkinson's disease
+Y_RNA,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,12.0,33974571.0,2e-14,Parkinson's disease
+RNU6-472P,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,12.0,33974571.0,2e-14,Parkinson's disease
+DCUN1D1,mapped,Detection and interpretation of shared genetic influences on 42 human traits.,,3.0,183012503.0,3e-14,Parkinson's disease
+TMEM229B,mapped,Large-scale meta-analysis of genome-wide association data identifies six new risk loci for Parkinson's disease.,,14.0,67517653.0,7e-14,Parkinson's disease
+MTCO3P1,mapped,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,6.0,32698883.0,1e-13,Parkinson's disease
+MIR4697,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,11.0,133895472.0,1e-13,Parkinson's disease
+HLA-DQB1,mapped,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,6.0,32698883.0,1e-13,Parkinson's disease
+SPATA19,mapped,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,11.0,133895472.0,1e-13,Parkinson's disease
+HLA-DRB6,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,6.0,32698883.0,1e-13,Parkinson's disease
+TXNP1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,10.0,119699575.0,2e-13,Parkinson's disease
+ITGA8,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,10.0,15515407.0,3e-13,Parkinson's disease or first degree relation to individual with Parkinson's disease
+PARK2,reported,"The Genetic Architecture of Parkinson Disease in Spain: Characterizing Population-Specific Risk, Differential Haplotype Structures, and Providing Etiologic Insight.",,6.0,162403694.0,4e-13,Parkinson's disease (age of onset)
+PRKN,mapped,"The Genetic Architecture of Parkinson Disease in Spain: Characterizing Population-Specific Risk, Differential Haplotype Structures, and Providing Etiologic Insight.",,6.0,162403694.0,4e-13,Parkinson's disease (age of onset)
+TBC1D5,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,3.0,18320267.0,6e-13,Parkinson's disease or first degree relation to individual with Parkinson's disease
+SATB1,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,3.0,18320267.0,6e-13,Parkinson's disease or first degree relation to individual with Parkinson's disease
+MAP4K4,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,2.0,101780501.0,8e-13,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LINC01012,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,6.0,27713436.0,9e-13,Parkinson's disease
+CASC16,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,16.0,52602330.0,1e-12,Parkinson's disease or first degree relation to individual with Parkinson's disease
+IFTAP,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,11.0,37312016.0,1e-12,Takes medication for parkinson's disease?
+ZNF184,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,6.0,27713436.0,1e-12,Parkinson's disease
+CAMK2D,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,4.0,113447909.0,1e-12,Parkinson's disease or first degree relation to individual with Parkinson's disease
+RPL7AP56,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,11.0,37312016.0,1e-12,Takes medication for parkinson's disease?
+HLA-DQB,reported,Large-scale meta-analysis of genome-wide association data identifies six new risk loci for Parkinson's disease.,,6.0,32698883.0,1e-12,Parkinson's disease
+KLHL7-DT,mapped,Detection and interpretation of shared genetic influences on 42 human traits.,,7.0,23084258.0,2e-12,Parkinson's disease
+HYCC1,mapped,Detection and interpretation of shared genetic influences on 42 human traits.,,7.0,23084258.0,2e-12,Parkinson's disease
+SLC45A3,reported,Genome-wide association study identifies common variants at four loci as genetic risk factors for Parkinson's disease.,,1.0,205783537.0,2e-12,Parkinson's disease
+PM20D1,reported,Genome-wide association study identifies common variants at four loci as genetic risk factors for Parkinson's disease.,,1.0,205783537.0,2e-12,Parkinson's disease
+FAM126A,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,7.0,23084258.0,2e-12,Parkinson's disease
+BCKDK,reported,Large-scale meta-analysis of genome-wide association data identifies six new risk loci for Parkinson's disease.,,16.0,31110472.0,2e-12,Parkinson's disease
+STX1B,reported,Large-scale meta-analysis of genome-wide association data identifies six new risk loci for Parkinson's disease.,,16.0,31110472.0,2e-12,Parkinson's disease
+SV2C-AS2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,5.0,76303351.0,3e-12,Parkinson's disease
+SV2C,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,5.0,76303351.0,3e-12,Parkinson's disease
+PARP9,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,3.0,122535800.0,3e-12,Parkinson's disease
+RAB25,mapped,Imputation of sequence variants for identification of genetic risks for Parkinson's disease: a meta-analysis of genome-wide association studies.,,1.0,156060246.0,4e-12,Parkinson's disease
+LAMTOR2,mapped,Genome-wide Association Analysis of Parkinson's Disease and Schizophrenia Reveals Shared Genetic Architecture and Identifies Novel Risk Loci.,,1.0,156060246.0,4e-12,Parkinson's disease
+ZNF646,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,16.0,31110472.0,5e-12,Parkinson's disease
+KAT8,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,16.0,31110472.0,5e-12,Parkinson's disease
+DLG2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,11.0,83798730.0,5e-12,Parkinson's disease
+RBMS3,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,3.0,28664199.0,6e-12,Parkinson's disease
+RNU6-481P,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,1.0,161499264.0,6e-12,Parkinson's disease or first degree relation to individual with Parkinson's disease
+FCGR2A,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,1.0,161499264.0,6e-12,Parkinson's disease or first degree relation to individual with Parkinson's disease
+GPR89P,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,27771022.0,6e-12,Parkinson's disease or first degree relation to individual with Parkinson's disease
+RSL24D1P1,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,27771022.0,6e-12,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LOC100131289,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,27771022.0,6e-12,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LINC02400,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,12.0,41901977.0,7e-12,Parkinson's disease or first degree relation to individual with Parkinson's disease
+GXYLT1,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,12.0,41901977.0,7e-12,Parkinson's disease or first degree relation to individual with Parkinson's disease
+RNU4-66P,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,6.0,71778059.0,7e-12,Parkinson's disease
+RIMS1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,6.0,71778059.0,7e-12,Parkinson's disease
+LINC00693,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,3.0,28664199.0,8e-12,Parkinson's disease or first degree relation to individual with Parkinson's disease
+C12orf40,reported,Genome-wide association study of Parkinson's disease in East Asians.,,12.0,40064582.0,8e-12,Parkinson's disease
+LAMP3,reported,Imputation of sequence variants for identification of genetic risks for Parkinson's disease: a meta-analysis of genome-wide association studies.,,3.0,183103487.0,8e-12,Parkinson's disease
+SERTM1,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,13.0,36532864.0,9e-12,Takes medication for parkinson's disease?
+H2ACP1,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,13.0,36532864.0,9e-12,Takes medication for parkinson's disease?
+KPNA1,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,3.0,122478045.0,1e-11,Parkinson's disease or first degree relation to individual with Parkinson's disease
+RNU6-259P,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,2.0,124952741.0,1e-11,Takes medication for parkinson's disease?
+RNA5SP102,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,2.0,124952741.0,1e-11,Takes medication for parkinson's disease?
+RNF141,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,11.0,10511626.0,1e-11,Parkinson's disease
+MIR4485,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,11.0,10511626.0,1e-11,Parkinson's disease
+COMMD1,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,2.0,62072723.0,1e-11,Parkinson's disease
+FAM171A2,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,17.0,44357262.0,1e-11,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LHFPL2,reported,Identification of genetic modifiers of age-at-onset for familial Parkinson's disease.,,5.0,78564785.0,1e-11,"Parkinson's disease (familial, age at onset)"
+PCGF3,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,4.0,740563.0,2e-11,Parkinson's disease
+LDLRAD4,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,18.0,13651014.0,2e-11,Parkinson's disease
+CLCN3,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,4.0,169642795.0,2e-11,Parkinson's disease
+MICU3,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,8.0,16839582.0,2e-11,Parkinson's disease
+TIAL1,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,10.0,119612816.0,3e-11,Parkinson's disease
+SLC18B1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,6.0,132797077.0,3e-11,Parkinson's disease
+LOC642072,reported,"Meta-analysis of Parkinson's disease: identification of a novel locus, RIT2.",,6.0,32420032.0,3e-11,Parkinson's disease
+DDRGK1,reported,Large-scale meta-analysis of genome-wide association data identifies six new risk loci for Parkinson's disease.,,20.0,3187520.0,3e-11,Parkinson's disease
+TSBP1-AS1,mapped,"Meta-analysis of Parkinson's disease: identification of a novel locus, RIT2.",,6.0,32420032.0,3e-11,Parkinson's disease
+RAD1P1,mapped,Detection and interpretation of shared genetic influences on 42 human traits.,,10.0,119612816.0,3e-11,Parkinson's disease
+SYT17,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,16.0,19266171.0,3e-11,Parkinson's disease or first degree relation to individual with Parkinson's disease
+TPRA1,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,3.0,127563982.0,3e-11,Parkinson's disease
+DYRK1A,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,21.0,37480059.0,3e-11,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LINC02034,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,3.0,127563982.0,3e-11,Parkinson's disease
+LZTS3,mapped,Large-scale meta-analysis of genome-wide association data identifies six new risk loci for Parkinson's disease.,,20.0,3187520.0,3e-11,Parkinson's disease
+HLA-DRA,mapped,"Meta-analysis of Parkinson's disease: identification of a novel locus, RIT2.",,6.0,32420032.0,3e-11,Parkinson's disease
+SLC44A4,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,31878457.0,4e-11,Parkinson's disease or first degree relation to individual with Parkinson's disease
+CDC42BPB,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,14.0,102973017.0,4e-11,Parkinson's disease
+EHMT2-AS1,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,31878457.0,4e-11,Parkinson's disease or first degree relation to individual with Parkinson's disease
+SPATA6,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,1.0,48345118.0,4e-11,Parkinson's disease
+FAM47E:FAM47E-STBD1:FAM47E-STBD1,reported,Genome-wide Association Analysis of Parkinson's Disease and Schizophrenia Reveals Shared Genetic Architecture and Identifies Novel Risk Loci.,,4.0,76255695.0,4e-11,Parkinson's disease
+SNCA-AS1,mapped,Comprehensive research synopsis and systematic meta-analyses in Parkinson's disease genetics: The PDGene database.,,4.0,89859751.0,5e-11,Parkinson's disease
+FBRSL1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,12.0,132487182.0,5e-11,Parkinson's disease
+IL1R2,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,2.0,101796654.0,5e-11,Parkinson's disease
+ANK2,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,4.0,113439216.0,5e-11,Parkinson's disease
+MED12L,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,3.0,151395180.0,5e-11,Parkinson's disease
+GALNT9,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,12.0,132487182.0,5e-11,Parkinson's disease
+GALC,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,14.0,87997920.0,6e-11,Parkinson's disease or first degree relation to individual with Parkinson's disease
+PDLIM2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,8.0,22595913.0,6e-11,Parkinson's disease
+RNU6-835P,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,14.0,87997920.0,6e-11,Parkinson's disease or first degree relation to individual with Parkinson's disease
+GPR65,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,14.0,87997920.0,6e-11,Parkinson's disease or first degree relation to individual with Parkinson's disease
+DNM1L,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,12.0,32657825.0,8e-11,Parkinson's disease or first degree relation to individual with Parkinson's disease
+FGD4,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,12.0,32657825.0,8e-11,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LCORL,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,4.0,17956065.0,8e-11,Parkinson's disease
+TPM1,mapped,Identification of genetic modifiers of age-at-onset for familial Parkinson's disease.,,15.0,63054177.0,9e-11,"Parkinson's disease (familial, age at onset)"
+FMNL1-DT,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,17.0,45196625.0,9e-11,Parkinson's disease
+COQ7,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,16.0,19268142.0,9e-11,Parkinson's disease
+RPS12,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,132889222.0,1e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+CHD9,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,16.0,52935514.0,1e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+PBX1,reported,Genetics of early-onset Parkinson's disease in Finland: exome sequencing and genome-wide association study.,,,,1e-10,Early-onset Parkinson's disease
+PHB1P21,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,16.0,52935514.0,1e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+ZBTB7B,mapped,Genome-Wide Meta-Analysis of Parkinson's Disease Associated Genetic Loci and Validation of Therapeutic Targets.,,1.0,155015779.0,1e-10,Parkinson's disease
+UBQLN4,mapped,Genome-Wide Meta-Analysis of Parkinson's Disease Associated Genetic Loci and Validation of Therapeutic Targets.,,1.0,156038197.0,1e-10,Parkinson's disease
+APOE,mapped,Genome-wide determinants of mortality and motor progression in Parkinson's disease.,,19.0,44908684.0,1e-10,Mortality (time to event) in Parkinson's disease
+HMGB1P13,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,132889222.0,1e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LINC00326,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,132889222.0,1e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+IP6K2,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,3.0,48711556.0,1e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+TOX3,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,16.0,52565276.0,1e-10,Parkinson's disease
+RPL13AP3,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,14.0,55724695.0,2e-10,Parkinson's disease
+KTN1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,14.0,55724695.0,2e-10,Parkinson's disease
+DCST1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,155042492.0,2e-10,Parkinson's disease
+HIST1H2BL,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,6.0,27709015.0,2e-10,Parkinson's disease
+BRIP1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,17.0,61840005.0,2e-10,Parkinson's disease
+CARS2,reported,"Imputation and Reanalysis of ExomeChip Data Identifies Novel, Conditional and Joint Genetic Effects on Parkinson's Disease Risk.",,13.0,110677242.0,2e-10,Parkinson's disease
+SPPL2B,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,19.0,2341049.0,4e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+HUSEYO,reported,Identification of a novel Parkinson's disease locus via stratified genome-wide association study.,,1.0,101414449.0,4e-10,Parkinson's disease
+LINC01709,mapped,Identification of a novel Parkinson's disease locus via stratified genome-wide association study.,,1.0,101414449.0,4e-10,Parkinson's disease
+LINC01307,mapped,Identification of a novel Parkinson's disease locus via stratified genome-wide association study.,,1.0,101414449.0,4e-10,Parkinson's disease
+HLA,reported,Identification of a novel Parkinson's disease locus via stratified genome-wide association study.,,6.0,32441753.0,5e-10,Parkinson's disease
+SPTSSB,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,3.0,161359842.0,5e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+MED13,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,17.0,62048221.0,5e-10,Parkinson's disease
+CC2D2A,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,4.0,15564251.0,5e-10,Parkinson's disease
+UBTF,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,17.0,44216969.0,6e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+ATXN7L3-AS1,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,17.0,44216969.0,6e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+ITGA2B,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,17.0,44376902.0,7e-10,Parkinson's disease
+ITPKB-IT1,mapped,Identification of Risk Loci for Parkinson Disease in Asians and Comparison of Risk Between Asians and Europeans: A Genome-Wide Association Study.,,1.0,226659011.0,8e-10,Parkinson's disease
+PMF1-BGLAP,mapped,A genome-wide association study coupled with machine learning approaches to identify influential demographic and genomic factors underlying Parkinson's disease.,,1.0,156242034.0,8e-10,Parkinson disease
+TEKT4,reported,"Imputation and Reanalysis of ExomeChip Data Identifies Novel, Conditional and Joint Genetic Effects on Parkinson's Disease Risk.",,2.0,94894760.0,8e-10,Parkinson's disease
+MTCO1P48,mapped,"Imputation and Reanalysis of ExomeChip Data Identifies Novel, Conditional and Joint Genetic Effects on Parkinson's Disease Risk.",,2.0,94894760.0,8e-10,Parkinson's disease
+CD19,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,16.0,28933075.0,8e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+RABEP2,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,16.0,28933075.0,8e-10,Parkinson's disease or first degree relation to individual with Parkinson's disease
+TBXAS1,mapped,Genome-wide determinants of mortality and motor progression in Parkinson's disease.,,7.0,139937623.0,8e-10,Mortality (time to event) in Parkinson's disease
+RNA5SP455,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,18.0,43360967.0,9e-10,Parkinson's disease
+LINC01147,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,14.0,88021226.0,9e-10,Parkinson's disease
+CYCSP42,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,21.0,15440233.0,1e-09,Parkinson's disease
+MBNL2,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,13.0,97212767.0,1e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+RPL10,mapped,Common X-Chromosome Variants Are Associated with Parkinson Disease Risk.,,,154405192.0,1e-09,Parkinson's disease
+LINC00456,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,13.0,97212767.0,1e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+RETREG3,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,17.0,42588995.0,1e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+NOD2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,16.0,50710008.0,1e-09,Parkinson's disease
+DNASE1L1,mapped,Common X-Chromosome Variants Are Associated with Parkinson Disease Risk.,,,154405192.0,1e-09,Parkinson's disease
+GBF1,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,10.0,102255522.0,1e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+LINC02920,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,21.0,15440233.0,1e-09,Parkinson's disease
+HEATR6,mapped,Genome-wide association study using whole-genome sequencing identifies risk loci for Parkinson's disease in Chinese population.,,17.0,60061921.0,1e-09,Parkinson's disease
+UBAP2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,9.0,34046393.0,1e-09,Parkinson's disease
+LINC02527,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,111922088.0,2e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+OR5BD1P,mapped,Detection and interpretation of shared genetic influences on 42 human traits.,,11.0,57926788.0,2e-09,Parkinson's disease
+OR9Q1,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,11.0,57926788.0,2e-09,Parkinson's disease
+LNCOB1,mapped,Proteogenomic network analysis reveals dysregulated mechanisms and potential mediators in Parkinson's disease.,,19.0,44888997.0,2e-09,Parkinson's disease
+CTNND1,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,11.0,57926788.0,2e-09,Parkinson's disease
+OR5AZ1P,mapped,Detection and interpretation of shared genetic influences on 42 human traits.,,11.0,57926788.0,2e-09,Parkinson's disease
+PAM,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,5.0,103030090.0,2e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+MIPOL1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,14.0,37539010.0,2e-09,Parkinson's disease
+HCAR2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,12.0,122638867.0,2e-09,Parkinson's disease
+RPS6KL1,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,14.0,74906331.0,2e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+KNTC1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,12.0,122638867.0,2e-09,Parkinson's disease
+IRS2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,13.0,109810821.0,2e-09,Parkinson's disease
+RN7SKP10,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,13.0,109810821.0,2e-09,Parkinson's disease
+ZNF204P,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,6.0,27331788.0,2e-09,Parkinson's disease
+VN1R10P,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,6.0,27331788.0,2e-09,Parkinson's disease
+VAMP4,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,171704096.0,2e-09,Parkinson's disease
+CCN6,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,111922088.0,2e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+NECTIN2,mapped,Proteogenomic network analysis reveals dysregulated mechanisms and potential mediators in Parkinson's disease.,,19.0,44888997.0,2e-09,Parkinson's disease
+MTF2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,93086630.0,3e-09,Parkinson's disease
+DNAH17,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,17.0,78429399.0,3e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+PIK3CA,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,3.0,179225280.0,3e-09,Parkinson's disease
+ZNF608,mapped,Genome-wide Association Analysis of Parkinson's Disease and Schizophrenia Reveals Shared Genetic Architecture and Identifies Novel Risk Loci.,,5.0,124774580.0,3e-09,Parkinson's disease
+PIK3CA-DT,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,3.0,179143629.0,3e-09,Parkinson's disease
+LINC02240,mapped,Genome-wide Association Analysis of Parkinson's Disease and Schizophrenia Reveals Shared Genetic Architecture and Identifies Novel Risk Loci.,,5.0,124774580.0,3e-09,Parkinson's disease
+FASN,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,17.0,82087210.0,3e-09,Parkinson's disease
+NDN,reported,Genetic Modifiers of Age at Onset for Parkinson's Disease in Asians: A Genome-Wide Association Study.,,15.0,23923803.0,3e-09,Parkinson's disease (age of onset)
+PWRN4,reported,Genetic Modifiers of Age at Onset for Parkinson's Disease in Asians: A Genome-Wide Association Study.,,15.0,23923803.0,3e-09,Parkinson's disease (age of onset)
+PITPNM2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,12.0,123086549.0,3e-09,Parkinson's disease
+METTL13,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,1.0,171750629.0,4e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+NOL4,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,18.0,33779450.0,4e-09,Parkinson's disease
+MYLK2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,20.0,31833121.0,4e-09,Parkinson's disease
+ASXL3,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,18.0,33779450.0,4e-09,Parkinson's disease
+FCGR3B,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,161647726.0,5e-09,Parkinson's disease
+ADAMTS20,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,12.0,42655580.0,5e-09,Parkinson's disease
+PRICKLE1,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,12.0,42655580.0,5e-09,Parkinson's disease
+LINC02450,mapped,Detection and interpretation of shared genetic influences on 42 human traits.,,12.0,42655580.0,5e-09,Parkinson's disease
+FCGR2B,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,1.0,161647726.0,5e-09,Parkinson's disease
+BCL9,mapped,Diversity and longitudinal records: Genetic architecture of disease associations and polygenic risk in the Taiwanese Han population.,,1.0,147564992.0,6e-09,Parkinson's disease (PheCode 332)
+TXNDC15,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,5.0,134863415.0,7e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+C5orf24,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,5.0,134863415.0,7e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+1,reported,Genome-wide Association Analysis of Parkinson's Disease and Schizophrenia Reveals Shared Genetic Architecture and Identifies Novel Risk Loci.,,15.0,61712597.0,7e-09,Parkinson's disease
+RP11-162I7,reported,Genome-wide Association Analysis of Parkinson's Disease and Schizophrenia Reveals Shared Genetic Architecture and Identifies Novel Risk Loci.,,15.0,61712597.0,7e-09,Parkinson's disease
+DPP6,mapped,GWAS identifies DPP6 as risk gene of cognitive decline in Parkinson's disease.,,7.0,154529004.0,9e-09,Cognitive decline (time to event) in Parkinson's disease
+CRLS1,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,20.0,6025395.0,9e-09,Parkinson's disease or first degree relation to individual with Parkinson's disease
+CDC71,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,48711556.0,9e-09,Parkinson's disease
+NCKIPSD,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,48711556.0,9e-09,Parkinson's disease
+LPPR1,reported,Plasticity-related gene 3 (LPPR1) and age at diagnosis of Parkinson disease.,,9.0,101115169.0,9e-09,Parkinson's disease (age at diagnosis)
+PLPPR1,mapped,Plasticity-related gene 3 (LPPR1) and age at diagnosis of Parkinson disease.,,9.0,101115169.0,9e-09,Parkinson's disease (age at diagnosis)
+KCNIP3,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,2.0,95335195.0,1e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+KCNS3,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,2.0,17966582.0,1e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+CLEC19A,reported,Detection and interpretation of shared genetic influences on 42 human traits.,,16.0,19268142.0,1e-08,Parkinson's disease
+PLPP4,mapped,Insights on Genetic and Environmental Factors in Parkinson's Disease from a Regional Swedish Case-Control Cohort.,,10.0,120558635.0,1e-08,Parkinson's disease
+SRSF10P1,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,18.0,51157219.0,1e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+SMAD4,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,18.0,51157219.0,1e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+MEX3C,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,18.0,51157219.0,1e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+CD83P1,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,6.0,27584991.0,1e-08,Parkinson's disease
+RNU6-471P,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,6.0,27584991.0,1e-08,Parkinson's disease
+CCDC85A,mapped,"The Genetic Drivers of Juvenile, Young, and Early-Onset Parkinson's Disease in India.",,2.0,56375408.0,1e-08,Parkinson's disease
+CHRNB1,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,17.0,7452302.0,1e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+CAB39L,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,13.0,49353596.0,1e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+FAM171A1,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,10.0,15527599.0,1e-08,Parkinson's disease
+GS1-124K5.11,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,7.0,66544864.0,1e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+GPM6B,mapped,Common X-Chromosome Variants Are Associated with Parkinson Disease Risk.,,,13874463.0,1e-08,Parkinson's disease
+POLRMTP1,reported,Genome-wide Association Analysis of Parkinson's Disease and Schizophrenia Reveals Shared Genetic Architecture and Identifies Novel Risk Loci.,,17.0,62120839.0,1e-08,Parkinson's disease
+BIN3,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,8.0,22668467.0,1e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+RABGEF1P1,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,7.0,66544864.0,1e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+WDR41,reported,"Imputation and Reanalysis of ExomeChip Data Identifies Novel, Conditional and Joint Genetic Effects on Parkinson's Disease Risk.",,5.0,77616673.0,2e-08,Parkinson's disease
+KPNA3,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,13.0,49721979.0,2e-08,Parkinson's disease
+ALCAM,mapped,Identification of Novel Genetic Loci Affecting Age at Onset of Parkinson's Disease: A Genome-wide Association Study.,,3.0,105114639.0,2e-08,Parkinson's disease (age of onset)
+EZRP1,mapped,Identification of Novel Genetic Loci Affecting Age at Onset of Parkinson's Disease: A Genome-wide Association Study.,,3.0,105114639.0,2e-08,Parkinson's disease (age of onset)
+CYRIB,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,8.0,129889663.0,2e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+FAM49B,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,8.0,129889663.0,2e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+TRIM40,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,6.0,30140906.0,2e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+ITIH3,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,52782824.0,3e-08,Parkinson's disease
+STAB1,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,52782824.0,3e-08,Parkinson's disease
+SCN2A,mapped,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,2.0,165277122.0,3e-08,Parkinson's disease
+SORBS3,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,8.0,22668467.0,3e-08,Parkinson's disease
+ITIH4,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,52782824.0,3e-08,Parkinson's disease
+USP8,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,15.0,50495212.0,3e-08,Parkinson's disease
+USP50,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,15.0,50495212.0,3e-08,Parkinson's disease
+RILPL2,mapped,Multi-ancestry genome-wide association meta-analysis of Parkinson's disease.,,12.0,123427666.0,3e-08,Parkinson's disease
+BAP1,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,52782824.0,3e-08,Parkinson's disease
+SCN3A,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,2.0,165277122.0,3e-08,Parkinson's disease
+ALAS1,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,52782824.0,3e-08,Parkinson's disease
+TLR9,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,52782824.0,3e-08,Parkinson's disease
+DNAH1,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,52782824.0,3e-08,Parkinson's disease
+NISCH,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,52782824.0,3e-08,Parkinson's disease
+ITIH1,mapped,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,52782824.0,3e-08,Parkinson's disease
+PDGFB,mapped,Genetic Determinants of Survival in Parkinson's Disease in the Asian Population.,,22.0,39312335.0,3e-08,Mortality in Parkinson's disease
+C8orf58,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,8.0,22668467.0,3e-08,Parkinson's disease
+PHF7,reported,A meta-analysis of genome-wide association studies identifies 17 new Parkinson's disease risk loci.,,3.0,52782824.0,3e-08,Parkinson's disease
+RPL3,mapped,Genetic Determinants of Survival in Parkinson's Disease in the Asian Population.,,22.0,39312335.0,3e-08,Mortality in Parkinson's disease
+LRRN2,mapped,Genome-wide association study identifies zonisamide responsive gene in Parkinson's disease patients.,,1.0,204582702.0,4e-08,Levodopa wearing off effect (time symptoms uncontrolled) in Parkinson's disease (response to zonisamide)
+RNA5SP74,mapped,Genome-wide association study identifies zonisamide responsive gene in Parkinson's disease patients.,,1.0,204582702.0,4e-08,Levodopa wearing off effect (time symptoms uncontrolled) in Parkinson's disease (response to zonisamide)
+MDM4,reported,Genome-wide association study identifies zonisamide responsive gene in Parkinson's disease patients.,,1.0,204582702.0,4e-08,Levodopa wearing off effect (time symptoms uncontrolled) in Parkinson's disease (response to zonisamide)
+BICD1-AS1,mapped,Genome-wide Association Analysis of Parkinson's Disease and Schizophrenia Reveals Shared Genetic Architecture and Identifies Novel Risk Loci.,,12.0,32089513.0,4e-08,Parkinson's disease
+SLC38A1,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,12.0,46025303.0,4e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+BICD1,reported,Genome-wide Association Analysis of Parkinson's Disease and Schizophrenia Reveals Shared Genetic Architecture and Identifies Novel Risk Loci.,,12.0,32089513.0,4e-08,Parkinson's disease
+RPL13AP21,mapped,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,12.0,46025303.0,4e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease
+SCAF11,reported,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies.",,12.0,46025303.0,4e-08,Parkinson's disease or first degree relation to individual with Parkinson's disease

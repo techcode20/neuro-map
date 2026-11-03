@@ -26,6 +26,9 @@ results/
 # Exception: reference CSVs are tracked
 !reference/*.csv
 
+# Exception: tracked summary CSVs for audit/reproducibility
+!results_summary/*.csv
+
 # Jupyter notebooks
 .ipynb_checkpoints/
 

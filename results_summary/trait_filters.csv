@@ -1,0 +1,203 @@
+disease,trait
+Alzheimer,Accelerated cognitive decline after conversion of mild cognitive impairment to Alzheimer's disease (Alzhiemer's diagnosis trajectory interaction)
+Alzheimer,Affective disturbance in Alzheimer's disease
+Alzheimer,Alzheimer disease and age of onset
+Alzheimer,Alzheimer's disease
+Alzheimer,Alzheimer's disease (APOE e4 interaction)
+Alzheimer,Alzheimer's disease (PheCode 290.11)
+Alzheimer,Alzheimer's disease (SNP x SNP interaction)
+Alzheimer,Alzheimer's disease (age of onset)
+Alzheimer,Alzheimer's disease (age of onset) in APOE e4 non-carriers
+Alzheimer,Alzheimer's disease (clinical and registry cases) (e-XCI inactivation)
+Alzheimer,Alzheimer's disease (clinical and registry cases) (r-XCI inactivation)
+Alzheimer,Alzheimer's disease (clinical cases)  (r-XCI inactivation)
+Alzheimer,Alzheimer's disease (cognitive decline)
+Alzheimer,Alzheimer's disease (late onset)
+Alzheimer,Alzheimer's disease (onset at age over 80)
+Alzheimer,Alzheimer's disease (onset between ages 58 and 79)
+Alzheimer,Alzheimer's disease (survival time)
+Alzheimer,Alzheimer's disease and Lewy body co-pathology
+Alzheimer,Alzheimer's disease assessment scale (12 month visit)
+Alzheimer,Alzheimer's disease assessment scale (24 month visit)
+Alzheimer,Alzheimer's disease assessment scale (6 month visit)
+Alzheimer,Alzheimer's disease assessment scale (baseline)
+Alzheimer,Alzheimer's disease biomarkers
+Alzheimer,Alzheimer's disease in APOE E4 homozygosity
+Alzheimer,Alzheimer's disease in APOE e33 genotype
+Alzheimer,Alzheimer's disease in APOE e33 or e44 or e43 genotype
+Alzheimer,Alzheimer's disease in APOE e4+ carriers
+Alzheimer,Alzheimer's disease in APOE e4- carriers
+Alzheimer,Alzheimer's disease in APOE e44 or e43 genotype
+Alzheimer,Alzheimer's disease in hypertension
+Alzheimer,Alzheimer's disease in hypertension-negative individuals
+Alzheimer,Alzheimer's disease in non-APOE e4 carriers
+Alzheimer,Alzheimer's disease in non-smokers
+Alzheimer,Alzheimer's disease in smokers
+Alzheimer,Alzheimer's disease or gastroesophageal reflux disease
+Alzheimer,Alzheimer's disease or gastroesophageal reflux disease and/or peptic ulcer disease
+Alzheimer,Alzheimer's disease or peptic ulcer disease
+Alzheimer,Alzheimer's disease or related dementias
+Alzheimer,Alzheimer's disease or small vessel stroke
+Alzheimer,Alzheimer's disease pathology
+Alzheimer,Alzheimer's disease with language domain impairment
+Alzheimer,Alzheimer's disease with memory domain impairment
+Alzheimer,Alzheimer's disease with multiple cognitive domain impairments
+Alzheimer,Alzheimer's disease with no specific cognitive domain impairment
+Alzheimer,Alzheimer's disease with visuospatial domain impairment
+Alzheimer,Alzheimer's disease x APOE e4 carrier interaction
+Alzheimer,Alzheimer's disease x pack-years of smoking interaction
+Alzheimer,Alzheimer's disease x smoking interaction
+Alzheimer,Alzheimer’s disease (clinical subgroup AD+)
+Alzheimer,Alzheimer’s disease (clinical subgroup AD++)
+Alzheimer,Alzheimer’s disease (clinical subgroup AD+++)
+Alzheimer,Alzheimer’s disease and/or vascular dementia (clinical subgroup VaD+)
+Alzheimer,Alzheimer’s disease and/or vascular dementia (clinical subgroup VaD++)
+Alzheimer,Biological Father: Alzheimer's / Other Dementia
+Alzheimer,Biological Grandparent (maternal): Alzheimer's / Other Dementia
+Alzheimer,Biological Grandparent (paternal): Alzheimer's / Other Dementia
+Alzheimer,Biological Mother: Alzheimer's / Other Dementia
+Alzheimer,Biological Sibling: Alzheimer's / Other Dementia
+Alzheimer,Cerebral amyloid angiopathy in APOEe4 carrier Alzheimer’s disease
+Alzheimer,Cerebral amyloid angiopathy in APOEe4 non-carrier Alzheimer’s disease
+Alzheimer,Cerebral amyloid angiopathy in Alzheimer’s disease
+Alzheimer,Cerebral amyloid angiopathy x APOEe4 status interaction in Alzheimer’s disease
+Alzheimer,Cerebral amyloid angiopathy x sex interaction in Alzheimer’s disease
+Alzheimer,Cerebrospinal AB1-42 levels in Alzheimer's disease dementia
+Alzheimer,Cerebrospinal fluid amyloid beta 42 levels in Alzheimer's disease
+Alzheimer,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+Alzheimer,Cerebrospinal fluid p-tau levels in Alzheimer's disease dementia
+Alzheimer,Cerebrospinal fluid p-tau181 levels in Alzheimer's disease
+Alzheimer,Cerebrospinal fluid t-tau levels in Alzheimer's disease
+Alzheimer,Cerebrospinal fluid t-tau levels in Alzheimer's disease dementia
+Alzheimer,"Dementia (includes Alzheimer's, Vascular, etc.)"
+Alzheimer,Dementia and core Alzheimer's disease neuropathologic changes
+Alzheimer,Dementia or Alzheimer's disease
+Alzheimer,Early-onset Alzheimer's disease
+Alzheimer,Entorhinal cortical thickness (Alzheimer's disease interaction)
+Alzheimer,Entorhinal cortical volume (Alzheimer's disease interaction)
+Alzheimer,Hippocampal volume in Alzheimer's disease dementia
+Alzheimer,Illnesses of mother: Alzheimer's disease/dementia (UKB data field 20110_10)
+Alzheimer,Late-onset Alzheimer's disease
+Alzheimer,Late-onset Alzheimer’s disease in APOEe4 non-carriers
+Alzheimer,Logical memory (delayed recall) in Alzheimer's disease dementia
+Alzheimer,Logical memory (immediate recall) in Alzheimer's disease dementia
+Alzheimer,Maternal history of Alzheimer's disease
+Alzheimer,Paternal history of Alzheimer's disease
+Alzheimer,Plasma amyloid beta 42 levels in Alzheimer disease
+Alzheimer,Plasma amyloid beta 42 to 40 ratio in Alzheimer disease
+Alzheimer,Plasma glial fibrillary acidic protein levels in Alzheimer disease
+Alzheimer,Plasma neurofilament light levels in Alzheimer disease
+Alzheimer,Plasma p-tau181 levels in Alzheimer disease
+Alzheimer,Psychosis and Alzheimer's disease
+Alzheimer,Psychosis and affective disturbance in Alzheimer's disease
+Alzheimer,Psychosis in Alzheimer's disease
+Alzheimer,Rapidly progressive Alzheimer's disease (clinical vs typical) (case-control set 1)
+Alzheimer,Rapidly progressive Alzheimer's disease (clinical vs typical) (case-control set 2)
+Alzheimer,Rapidly progressive Alzheimer's disease (clinical vs typical) (case-control set 3)
+Alzheimer,Rapidly progressive Alzheimer's disease (clinical) (case-control set 1)
+Alzheimer,Rapidly progressive Alzheimer's disease (clinical) (case-control set 2)
+Alzheimer,Rapidly progressive Alzheimer's disease (clinical) (case-control set 3)
+Alzheimer,Rapidly progressive Alzheimer's disease (pathologically-confirmed vs clinical) (case-control set 1)
+Alzheimer,Rapidly progressive Alzheimer's disease (pathologically-confirmed vs typical) (case-control set 1)
+Alzheimer,Rapidly progressive Alzheimer's disease (pathologically-confirmed vs typical) (case-control set 2)
+Alzheimer,Rapidly progressive Alzheimer's disease (pathologically-confirmed vs typical) (case-control set 3)
+Alzheimer,Rapidly progressive Alzheimer's disease (pathologically-confirmed) (case-control set 1)
+Alzheimer,Rapidly progressive Alzheimer's disease (pathologically-confirmed) (case-control set 2)
+Alzheimer,Rapidly progressive Alzheimer's disease (pathologically-confirmed) (case-control set 3)
+Alzheimer,Rapidly progressive Alzheimer's disease (typical) (case-control set 1)
+Alzheimer,Rapidly progressive Alzheimer's disease (typical) (case-control set 2)
+Alzheimer,Rapidly progressive Alzheimer's disease (typical) (case-control set 3)
+Alzheimer,Rate of cognitive decline in Alzheimer's disease
+Alzheimer,Response to cholinesterase inhibitors in Alzheimer's disease
+Alzheimer,Sphingomyeline (d43:1/d34:1) ratio in Alzheimer disease
+Alzheimer,Symptomatic autosomal dominant Alzheimer's disease mutations
+Alzheimer,"Takes medication for Dementia (includes Alzheimer's, Vascular, etc.)?"
+Alzheimer,Total ventricular volume (Alzheimer's disease interaction)
+Alzheimer,Vascular dementia or Alzheimer's disease
+Alzheimer,Voxel-wise structural brain imaging measurements in Alzheimer’s disease
+Alzheimer,Whole-brain volume (Alzheimer's disease interaction)
+Height,Age at peak height velocity
+Height,Breast cancer x adult height interaction
+Height,Comparative height size at age 10 - Taller (UKB data field 1697)
+Height,Countermovement jump height change after resistance training
+Height,Facial morphology (Frontal nasal height)
+Height,"Facial morphology (factor 17, height of vermillion upper lip)"
+Height,"Facial morphology (factor 4, facial height related to vertical position of gnathion)"
+Height,"Facial morphology (factor 6, height of vermillion lower lip)"
+Height,"Facial morphology (factor 9, facial height related to vertical position of nasion)"
+Height,Facial morphology (nose height)
+Height,Facial phenotypes (left palpebrale fissure height)
+Height,Facial phenotypes (nasal bridge height)
+Height,Facial phenotypes (nasal height)
+Height,Facial phenotypes (philtrum height)
+Height,Facial phenotypes (right palpebrale fissure height)
+Height,Facial trait (Forehead height)
+Height,Facial trait (Frontal nasal height)
+Height,Femur length to body height ratio
+Height,First year height change in growth hormone-treated short stature
+Height,Forearm length to body height ratio
+Height,Head length to body height ratio
+Height,Head width to body height ratio
+Height,Height
+Height,Height (baseline)
+Height,"Height (maximum, inv-normal transformed)"
+Height,Height (standard GWA)
+Height,Height (weighted GWA)
+Height,Height at peak velocity
+Height,Height at take-off
+Height,Height decline (difference score)
+Height,Height decline (log-difference score)
+Height,Height decline (residual change score)
+Height,Height in pregnancy
+Height,Height x sex interaction
+Height,Hip width to body height ratio
+Height,Humerus length to body height ratio
+Height,Knee height
+Height,Lower facial height
+Height,Lower lip height
+Height,Morphological facial height
+Height,Nasal height
+Height,Peak height velocity
+Height,Pelvic height
+Height,Postburn scar height
+Height,Seated height (UKB data field 51)
+Height,Shoulder width to body height ratio
+Height,Sitting height (UKB data field 20015)
+Height,Sitting height (inverse-normalization-transformed)
+Height,Sitting height ratio
+Height,Standing height
+Height,Standing height (UKB data field 50)
+Height,Tibia length to body height ratio
+Height,Torso length to body height ratio
+Height,"What is your height? (cm, inv-normal transformed)"
+Height,"height (mean, inv-normal transformed)"
+Height,"height (minimum, inv-normal transformed)"
+Huntington,Huntington's disease (age at onset)
+Parkinson,Age of onset of parkinson disease
+Parkinson,Cognitive decline (time to event) in Parkinson's disease
+Parkinson,Early-onset Parkinson's disease
+Parkinson,Impulse control disorders in Parkinson’s disease
+Parkinson,Levodopa wearing off effect (motor symptom score change) in Parkinson's disease (response to zonisamide)
+Parkinson,Levodopa wearing off effect (time symptoms uncontrolled) in Parkinson's disease (response to zonisamide)
+Parkinson,Mortality (time to event) in Parkinson's disease
+Parkinson,Mortality in Parkinson's disease
+Parkinson,Motor fluctuations in levodopa treated Parkinson's disease
+Parkinson,Parkinson disease
+Parkinson,Parkinson disease and lewy body pathology
+Parkinson,Parkinson disease axial motor severity
+Parkinson,Parkinson's disease
+Parkinson,Parkinson's disease (PheCode 332)
+Parkinson,Parkinson's disease (age at diagnosis)
+Parkinson,Parkinson's disease (age of onset)
+Parkinson,Parkinson's disease (age of onset) x smoking interaction
+Parkinson,Parkinson's disease (familial)
+Parkinson,"Parkinson's disease (familial, age at onset)"
+Parkinson,Parkinson's disease (motor and cognition)
+Parkinson,Parkinson's disease (pesticide exposure interaction)
+Parkinson,Parkinson's disease in GBA mutation carriers
+Parkinson,Parkinson's disease or first degree relation to individual with Parkinson's disease
+Parkinson,Parkinsonism in frontotemporal lobe dementia
+Parkinson,REM sleep behavior disorder in Parkinson's disease
+Parkinson,Takes medication for parkinson's disease?
+Parkinson,cognitive impairment (MMSE score) in Parkinson’s disease
+Parkinson,cognitive impairment (MoCA score) in Parkinson’s disease

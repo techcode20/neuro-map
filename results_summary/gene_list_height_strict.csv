@@ -1,0 +1,678 @@
+gene_symbol,mapping_type,study,snp,chr_id,chr_pos,p_value,trait
+CNPY2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,56305645.0,1e-189,Height
+CS,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,56305645.0,1e-189,Height
+ZBTB38,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,3.0,141386728.0,3e-158,Height
+HMGA1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,34243565.0,1e-107,Height
+PARPBP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,102157937.0,2.9999999999999997e-97,Height
+CDK6,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,7.0,92615108.0,4.0000000000000003e-88,Height
+HHIP,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,4.0,144653692.0,1.9999999999999998e-86,Height
+DIS3L2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,232181472.0,1.0000000000000001e-82,Height
+EFEMP1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,55869757.0,4.0000000000000004e-82,Height
+SERPINA1,reported,Evaluation and application of summary statistic imputation to discover new height-associated loci.,,14.0,94378610.0,6e-78,Height
+CABLES1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,18.0,23155444.0,2e-76,Height
+HIST1H2BF,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,26200449.0,5e-74,Height
+GNA12,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,7.0,2756323.0,2e-71,Height
+DLEU7,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,13.0,50531198.0,1e-69,Height
+TRIP11,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,91968721.0,4.9999999999999997e-64,Height
+PAN2,reported,A Genome-Wide Association Study of Novel Genetic Variants Associated With Anthropometric Traits in Koreans.,,12.0,56329710.0,4e-57,Height
+HIST1H2BG,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,26206947.0,2e-55,Height
+HIST1H4E,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,26206947.0,2e-55,Height
+AMZ1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,2719348.0,2.9999999999999998e-55,Height
+ADAMTSL3,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,15.0,83845538.0,8e-55,Height
+CHCHD7,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,56226117.0,1e-53,Height
+PRKG2,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,4.0,81247735.0,1e-53,Height
+SDR16C5,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,56226117.0,1e-53,Height
+GH2,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,17.0,63882380.0,1e-52,Height
+CRADD,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,93591706.0,1e-52,Height
+SOCS2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,93591706.0,1e-52,Height
+PHF20,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,20.0,35844748.0,3e-52,Height
+ANKRD52,reported,A Genome-Wide Association Study of Novel Genetic Variants Associated With Anthropometric Traits in Koreans.,,12.0,56241043.0,8e-52,Height
+BMP2,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,20.0,6632185.0,1e-48,Height
+COPB1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,14449593.0,1e-47,Height
+RRAS2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,14449593.0,1e-47,Height
+SH3GL3,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,15.0,83597393.0,1e-47,Height
+IGF1,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,12.0,102236901.0,4e-47,Height
+NUP37,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,12.0,102112266.0,4e-46,Height
+JAZF1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,7.0,28165684.0,9e-46,Height
+ESR1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,151805689.0,9e-46,Height
+NHEJ1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,219118308.0,2.0000000000000003e-45,Height
+QSOX2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,136209737.0,4.0000000000000006e-45,Height
+COLGALT2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,184037985.0,7e-45,Height
+ACAN,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,15.0,88852395.0,2.9999999999999997e-44,Height
+FNDC3B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,172281493.0,4e-44,Height
+ANAPC10,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,4.0,144918112.0,3e-43,Height
+SYN3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,22.0,32662616.0,5e-43,Height
+L3MBTL3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,130016121.0,5e-43,Height
+LIN28B,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,104944870.0,9.999999999999999e-43,Height
+FAM184B,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,4.0,17796343.0,2e-40,Height
+PLAG1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,8.0,56183249.0,2e-40,Height
+SV2A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,149920979.0,6e-39,Height
+SF3B4,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,149920979.0,6e-39,Height
+NPPC,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,2.0,231950631.0,8.000000000000001e-39,Height
+IGFBP3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,46033677.0,9e-39,Height
+TNS3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,46033677.0,9e-39,Height
+GNAS,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,58857551.0,2e-38,Height
+SLC44A2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,19.0,10631767.0,2e-38,Height
+RASGEF1B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,81278988.0,3e-38,Height
+IGF1R,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,15.0,98651667.0,3e-38,Height
+PTPN9,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,75515351.0,4e-38,Height
+BMP6,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,7708398.0,4e-38,Height
+LTBP1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,33246125.0,5e-38,Height
+EXOC6B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,72345606.0,7e-38,Height
+PXMP4,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,20.0,33716847.0,8e-38,Height
+ATP13A2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,16986248.0,1e-37,Height
+DNMT3A,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,2.0,25240614.0,2e-37,Height
+TH,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,2165105.0,6e-35,Height
+HLA-C,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,31304484.0,8e-35,Height
+SERPINH1,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,11.0,75571007.0,3e-34,Height
+PTCH1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,9.0,95617940.0,4.0000000000000006e-34,Height
+ADGRG6,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,142345724.0,1e-33,Height
+RNF41,reported,A Genome-Wide Association Study of Novel Genetic Variants Associated With Anthropometric Traits in Koreans.,,12.0,56209692.0,2e-33,Height
+DNM3,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,1.0,172114741.0,4e-33,Height
+HABP4,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,9.0,96439303.0,4e-33,Height
+CENPO,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,2.0,24817213.0,8e-33,Height
+PSORS1C1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,31138682.0,1.9999999999999998e-32,Height
+PSORS1C2,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,31138682.0,1.9999999999999998e-32,Height
+CCDC91,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,12.0,28447311.0,3e-32,Height
+COX18,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,72664035.0,3e-32,Height
+CCDC3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,12903180.0,3e-32,Height
+TSEN15,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,1.0,184054395.0,2e-31,Height
+ZCCHC24,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,10.0,79379706.0,2e-31,Height
+FGF18,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,171773655.0,4e-31,Height
+ZNF76,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,35279126.0,8e-31,Height
+ZFAT,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,8.0,134638240.0,9.999999999999999e-31,Height
+TET2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,105153669.0,1.9999999999999998e-30,Height
+ATP7A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,77914078.0,3e-30,Height
+PSMC3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,47425651.0,6.999999999999999e-30,Height
+RREB1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,7231610.0,7.999999999999999e-30,Height
+HHIP-AS1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,144645696.0,1.0000000000000001e-29,Height
+SP7,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,53328577.0,1.0000000000000001e-29,Height
+IGF2BP2,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,3.0,185830895.0,1.0000000000000001e-29,Height
+FBN1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,48639254.0,2.0000000000000002e-29,Height
+PML,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,15.0,74044292.0,2.0000000000000002e-29,Height
+FAAH2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,57322090.0,2.0000000000000002e-29,Height
+HLA-B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,31351620.0,3e-29,Height
+FBXW11,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,5.0,171856465.0,3e-29,Height
+FRS2,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,12.0,69433878.0,4.0000000000000003e-29,Height
+PKN2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,88723411.0,5.0000000000000004e-29,Height
+ELN,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,73905479.0,7.000000000000001e-29,Height
+MICA,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,6.0,31412752.0,8.000000000000001e-29,Height
+LINC00476,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,95602265.0,9.000000000000001e-29,Height
+MIRLET7BHG,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,22.0,46088037.0,1.0000000000000001e-28,Height
+CDC42EP3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,37768279.0,2.0000000000000002e-28,Height
+DOT1L,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,19.0,2176404.0,7e-28,Height
+PRDM12,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,130639951.0,8.000000000000001e-28,Height
+FUBP3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,130639951.0,8.000000000000001e-28,Height
+ZNF638,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,71379703.0,1e-27,Height
+ADCY3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,24927889.0,2e-27,Height
+DNAJC27,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,24927889.0,2e-27,Height
+KCNQ1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,2792115.0,3e-27,Height
+FAM46A,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,81082346.0,3e-27,Height
+LTBP2,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,14.0,74520869.0,5e-27,Height
+BCKDHB,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,80628778.0,6e-27,Height
+TGFB2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,218436360.0,8e-27,Height
+ACBD4,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,17.0,45138914.0,8e-27,Height
+RAB2B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,21456066.0,9.999999999999999e-27,Height
+SBNO1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,12.0,123338164.0,9.999999999999999e-27,Height
+CHD8,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,21456066.0,9.999999999999999e-27,Height
+FAM208A,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,3.0,56658293.0,1.9999999999999998e-26,Height
+IGF2BP3,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,7.0,23481697.0,3.9999999999999996e-26,Height
+PNPT1,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,2.0,55840047.0,9.999999999999999e-26,Height
+HDAC9,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,18659038.0,9.999999999999999e-26,Height
+REST,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,56932023.0,1.9999999999999998e-25,Height
+CHAD,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,50468565.0,1.9999999999999998e-25,Height
+CDKN2C,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,50997752.0,3e-25,Height
+MYEOV,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,69457328.0,3.9999999999999997e-25,Height
+FILIP1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,75454873.0,5e-25,Height
+H1FX,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,3.0,129332100.0,7.999999999999999e-25,Height
+DYM,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,18.0,49433130.0,8.999999999999998e-25,Height
+EIF2AK3,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,2.0,88625104.0,8.999999999999998e-25,Height
+LOXL2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,23313979.0,1.0000000000000001e-24,Height
+CCDC152,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,42731670.0,2.0000000000000002e-24,Height
+GHSR,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,172447200.0,2.0000000000000002e-24,Height
+GHR,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,42731670.0,2.0000000000000002e-24,Height
+TBX2,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,17.0,61419288.0,2.0000000000000002e-24,Height
+STAU1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,20.0,49155727.0,2.0000000000000002e-24,Height
+CEP250,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,20.0,35509524.0,3e-24,Height
+SLIT3,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,5.0,168823898.0,4.0000000000000004e-24,Height
+MEF2C,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,5.0,89031965.0,6e-24,Height
+CPZ,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,8596971.0,6e-24,Height
+PCSK5,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,9.0,75927370.0,6e-24,Height
+DLEU1,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,13.0,50576594.0,6e-24,Height
+ZNF678,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,1.0,227562367.0,7.000000000000001e-24,Height
+ETV6,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,12.0,11702839.0,8.000000000000001e-24,Height
+C17orf67,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,17.0,56762291.0,1.0000000000000001e-23,Height
+PASK,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,241144348.0,1.0000000000000001e-23,Height
+MTMR11,reported,Genome-wide meta-analysis identifies 11 new loci for anthropometric traits and provides insights into genetic architecture.,,1.0,149934520.0,4.0000000000000004e-23,Height
+DUT,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,48393978.0,4.0000000000000004e-23,Height
+CDK10,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,16.0,89687847.0,4.0000000000000004e-23,Height
+RPN2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,37242731.0,6e-23,Height
+COPG1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,129265010.0,7.000000000000001e-23,Height
+RBBP8,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,18.0,23092591.0,7.000000000000001e-23,Height
+RYBP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,72347090.0,1e-22,Height
+IPPK,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,9.0,92625701.0,2e-22,Height
+SLC25A43,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,119460459.0,3e-22,Height
+NFATC4,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,14.0,24361644.0,3e-22,Height
+SLC25A5-AS1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,119460459.0,3e-22,Height
+CSH1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,63898651.0,5e-22,Height
+ZNF143,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,9515869.0,5e-22,Height
+ATF7,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,53628818.0,5e-22,Height
+ZNF341,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,20.0,33745375.0,6e-22,Height
+KLHL42,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,27955755.0,7e-22,Height
+PTHLH,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,27955755.0,7e-22,Height
+SLC38A9,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,5.0,55659243.0,7e-22,Height
+RPSAP52,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,65740217.0,8e-22,Height
+HIST1H1E,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,26157253.0,8e-22,Height
+MYO9B,reported,Evaluation and application of summary statistic imputation to discover new height-associated loci.,,19.0,17154151.0,9e-22,Height
+GRM4,reported,A Genome-Wide Association Study of Novel Genetic Variants Associated With Anthropometric Traits in Koreans.,,6.0,34195464.0,2e-21,Height
+SLCO1C1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,12.0,20704533.0,2e-21,Height
+CCDC12,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,46936461.0,2e-21,Height
+NPR3,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,5.0,32830415.0,2e-21,Height
+BCKDHA,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,19.0,41416447.0,2e-21,Height
+ZRANB1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,124895019.0,2e-21,Height
+SMIM29,reported,A Genome-Wide Association Study of Novel Genetic Variants Associated With Anthropometric Traits in Koreans.,,6.0,34263228.0,2e-21,Height
+C6orf106,reported,A Genome-Wide Association Study of Novel Genetic Variants Associated With Anthropometric Traits in Koreans.,,6.0,34193168.0,4e-21,Height
+ZNFX1,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,20.0,49286482.0,1e-20,Height
+SUPT3H,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,45276678.0,1e-20,Height
+SCMH1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,1.0,41090581.0,2e-20,Height
+LUZP1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,1.0,23178302.0,2e-20,Height
+NFIC,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,19.0,3434030.0,2e-20,Height
+FGFR4,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,5.0,177090325.0,2e-20,Height
+PTPRJ,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,11.0,47947600.0,2e-20,Height
+ZNF483,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,111525145.0,2e-20,Height
+THOC1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,18.0,258284.0,4e-20,Height
+ZBTB4,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,17.0,7459769.0,5e-20,Height
+WWP2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,69796425.0,6e-20,Height
+MKL2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,14301575.0,6e-20,Height
+TWISTNB,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,19208655.0,7e-20,Height
+KIZ,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,21243309.0,1e-19,Height
+TC2N,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,91866524.0,3e-19,Height
+PEX2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,77184925.0,3e-19,Height
+FIBIN,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,26994864.0,4e-19,Height
+CRIM1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,36435390.0,4e-19,Height
+OTUD7B,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,1.0,149966973.0,4e-19,Height
+ZNF462,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,106853743.0,8e-19,Height
+TNFAIP8L3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,51049670.0,8e-19,Height
+AP4E1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,51049670.0,8e-19,Height
+ANAPC13,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,134473096.0,9e-19,Height
+SMPD3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,68361468.0,1e-18,Height
+HIST1H2BE,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,6.0,26183874.0,1e-18,Height
+ADAMTS10,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,19.0,8579147.0,1e-18,Height
+DLK1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,100729932.0,1e-18,Height
+TRPS1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,115590628.0,1e-18,Height
+STARD3NL,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,7.0,38070471.0,1e-18,Height
+EZH2,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,7.0,148932667.0,2e-18,Height
+STAG1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,3.0,136388707.0,2e-18,Height
+AP3D1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,19.0,2135715.0,3e-18,Height
+PPIF,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,79371576.0,4e-18,Height
+ARHGEF12,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,120371214.0,4e-18,Height
+FADS1,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,11.0,61803311.0,6e-18,Height
+YEATS4,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,69433878.0,6e-18,Height
+SATB2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,,7e-18,Height
+ANKRD39,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,96858148.0,7e-18,Height
+INSR,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,19.0,7184751.0,7e-18,Height
+DOCK3,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,3.0,51034282.0,8e-18,Height
+PIK3R1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,68292172.0,8e-18,Height
+TAF5,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,103388893.0,8e-18,Height
+PTPN14,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,214444842.0,8e-18,Height
+BCL6B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,,9e-18,Height
+HIST1H2BD,reported,Evaluation and application of summary statistic imputation to discover new height-associated loci.,,6.0,26163118.0,9e-18,Height
+EIF4E2,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,2.0,232577381.0,1e-17,Height
+TLE3,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,15.0,70072013.0,1e-17,Height
+TET1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,68583440.0,1e-17,Height
+TNS1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,2.0,217419555.0,1e-17,Height
+PPIL6,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,109402736.0,2e-17,Height
+ETS1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,128081167.0,2e-17,Height
+FBLN5,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,14.0,91960878.0,2e-17,Height
+EPB41L2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,131050608.0,2e-17,Height
+PPM1B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,44194972.0,2e-17,Height
+HIST1H1D,reported,Identification of ten loci associated with height highlights new biological pathways in human growth.,,6.0,26233159.0,4e-17,Height
+ID4,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,6.0,19839184.0,4e-17,Height
+PIP4K2B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,38765943.0,4e-17,Height
+PXDN,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,,5e-17,Height
+OSTN,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,191101305.0,6e-17,Height
+PMAIP1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,18.0,60165624.0,6e-17,Height
+TARS,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,5.0,33381475.0,8e-17,Height
+MARK3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,103515605.0,9e-17,Height
+CKB,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,103515605.0,9e-17,Height
+ZNF713,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,55888744.0,9e-17,Height
+CASKIN1,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,16.0,2199375.0,9e-17,Height
+RFT1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,53069246.0,1e-16,Height
+SMOX,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,4110155.0,1e-16,Height
+RNF24,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,4110155.0,1e-16,Height
+SFMBT1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,53069246.0,1e-16,Height
+ILF3,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,19.0,10655143.0,2e-16,Height
+ZZZ3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,77664558.0,2e-16,Height
+PHF21A,reported,Evaluation and application of summary statistic imputation to discover new height-associated loci.,,11.0,46063126.0,2e-16,Height
+ARHGEF11,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,157011556.0,2e-16,Height
+SCN4A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,63939368.0,3e-16,Height
+PDXDC1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,15039051.0,4e-16,Height
+NTAN1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,15039051.0,4e-16,Height
+NIPBL,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,5.0,37046524.0,4e-16,Height
+CSGALNACT1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,19505795.0,4e-16,Height
+BCL6,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,187729244.0,4e-16,Height
+COG6,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,13.0,39771329.0,5e-16,Height
+RYK,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,134101845.0,5e-16,Height
+SLCO2A1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,134101845.0,5e-16,Height
+SLC22A5,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,5.0,132364175.0,7e-16,Height
+SRRM2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,2753955.0,7e-16,Height
+ZMIZ1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,79165257.0,8e-16,Height
+BOD1,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,5.0,173557111.0,9e-16,Height
+TNPO1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,72904799.0,1e-15,Height
+TOP1MT,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,143320168.0,1e-15,Height
+FRYL,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,48685334.0,1e-15,Height
+TEAD1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,11.0,12656868.0,1e-15,Height
+CCDC80,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,112636422.0,1e-15,Height
+PROCR,reported,Genome-wide meta-analysis identifies 11 new loci for anthropometric traits and provides insights into genetic architecture.,,20.0,35201339.0,1e-15,Height
+LEF1-AS1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,108494980.0,2e-15,Height
+DEF6,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,6.0,35311147.0,2e-15,Height
+NKX2-8,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,36544871.0,2e-15,Height
+TULP4,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,6.0,158301002.0,2e-15,Height
+ARID3B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,74577704.0,2e-15,Height
+RPL34-AS1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,108494980.0,2e-15,Height
+MOV10,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,112699500.0,2e-15,Height
+FADS2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,61864218.0,2e-15,Height
+AKR1C1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,10.0,4923242.0,2e-15,Height
+LPAR1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,111062301.0,3e-15,Height
+NCL,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,231464848.0,3e-15,Height
+ZNF438,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,30829136.0,4e-15,Height
+CENPP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,,4e-15,Height
+PXYLP1,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,3.0,141334437.0,5e-15,Height
+MECOM,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,169328749.0,6e-15,Height
+RHOD,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,11.0,67058689.0,6e-15,Height
+RPL34,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,4.0,108487452.0,6e-15,Height
+PGP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,2215070.0,7e-15,Height
+GPC5,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,13.0,91372320.0,8e-15,Height
+PRRX1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,170721452.0,8e-15,Height
+ADAP2,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,17.0,30909727.0,9e-15,Height
+MSMP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,35754503.0,9e-15,Height
+CEP120,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,123381125.0,9e-15,Height
+ELF1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,13.0,41001255.0,1e-14,Height
+DNAH2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,7831745.0,1e-14,Height
+KDM2A,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,11.0,67129907.0,1e-14,Height
+AXIN1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,299293.0,1e-14,Height
+UBE2Z,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,48928226.0,1e-14,Height
+ZKSCAN1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,100028173.0,1e-14,Height
+ZNF280C,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,130191451.0,2e-14,Height
+RAB33A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,130191451.0,2e-14,Height
+C5orf42,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,37075443.0,2e-14,Height
+ALDH2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,111803962.0,2e-14,Height
+MSRB3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,65272610.0,2e-14,Height
+LEMD3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,65272610.0,2e-14,Height
+PDE8A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,85030912.0,2e-14,Height
+EPDR1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,38107023.0,3e-14,Height
+CYP26B1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,72133031.0,3e-14,Height
+UPK3A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,22.0,45300814.0,3e-14,Height
+FAM118A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,22.0,45300814.0,3e-14,Height
+CDC14B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,96497287.0,4e-14,Height
+SERPINE2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,224012535.0,4e-14,Height
+GATAD2B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,153875494.0,5e-14,Height
+DOK1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,74554248.0,6e-14,Height
+PIP4K2A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,22558964.0,6e-14,Height
+PRIM1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,56752285.0,7e-14,Height
+MSI2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,57681285.0,7e-14,Height
+LOXL1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,73936469.0,7e-14,Height
+MCC,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,113038021.0,8e-14,Height
+DCAF16,reported,"Genome-wide association study in the Taiwan biobank identifies four novel genes for human height: NABP2, RASA2, RNF41 and SLC39A5.",,4.0,17795832.0,8e-14,Height
+NEK4,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,,8e-14,Height
+ANAPC16,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,72231714.0,8e-14,Height
+HOMEZ,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,23277060.0,9e-14,Height
+ATAD5,reported,Genome-wide meta-analysis identifies 11 new loci for anthropometric traits and provides insights into genetic architecture.,,17.0,30837005.0,9e-14,Height
+MAP3K3,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,17.0,63685825.0,9e-14,Height
+GATAD2A,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,19.0,19480257.0,9e-14,Height
+DCBLD2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,99262206.0,1e-13,Height
+VGLL4,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,11636349.0,1e-13,Height
+POMC,reported,Genome-wide meta-analysis identifies 11 new loci for anthropometric traits and provides insights into genetic architecture.,,2.0,24813989.0,1e-13,Height
+STAT2,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,12.0,56346898.0,1e-13,Height
+EFR3B,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,2.0,25110866.0,1e-13,Height
+NARFL,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,16.0,742190.0,1e-13,Height
+SAMD4A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,54793948.0,1e-13,Height
+LOC389895,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,140199935.0,1e-13,Height
+SOX3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,140199935.0,1e-13,Height
+NACA2,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,17.0,61497943.0,2e-13,Height
+JMJD4,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,1.0,227724182.0,2e-13,Height
+APOLD1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,12726320.0,2e-13,Height
+BCL7A,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,12.0,122056903.0,2e-13,Height
+C2CD4B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,62085937.0,2e-13,Height
+C2CD4A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,62085937.0,2e-13,Height
+PHC1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,8929985.0,2e-13,Height
+MEX3B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,81543120.0,2e-13,Height
+SOCS5,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,2.0,46694146.0,3e-13,Height
+SENP6,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,6.0,75555926.0,3e-13,Height
+FER,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,5.0,108777643.0,3e-13,Height
+TMEM176A,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,7.0,150819934.0,3e-13,Height
+COL11A2,reported,Genetic analyses of diverse populations improves discovery for complex traits.,,6.0,33164453.0,3e-13,Height
+GLCCI1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,7971003.0,4e-13,Height
+RSBN1L,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,7.0,77678978.0,4e-13,Height
+SSSCA1,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,11.0,65569348.0,4e-13,Height
+E2F1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,33675818.0,5e-13,Height
+BOK,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,241561144.0,5e-13,Height
+MIR497HG,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,7018350.0,5e-13,Height
+RAB28,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,4.0,12961950.0,8e-13,Height
+OTUD4,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,4.0,145160700.0,8e-13,Height
+SPIN1,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,9.0,88220811.0,9e-13,Height
+STAB1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,52523022.0,9e-13,Height
+H6PD,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,1.0,9232223.0,9e-13,Height
+STRBP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,123193962.0,1e-12,Height
+WWTR1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,149657805.0,1e-12,Height
+RTF1,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,3.0,53084723.0,1e-12,Height
+ASTN2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,116428254.0,1e-12,Height
+PLOD2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,146076801.0,1e-12,Height
+DAPK1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,87184586.0,1e-12,Height
+CDO1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,115680693.0,2e-12,Height
+SLC27A3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,153778206.0,2e-12,Height
+KCNJ12,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,21380195.0,2e-12,Height
+USP34,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,61400499.0,2e-12,Height
+FANCI,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,15.0,89308349.0,2e-12,Height
+CLIC4,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,1.0,24717620.0,2e-12,Height
+LYPLAL1,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,1.0,219570377.0,2e-12,Height
+NCKAP5,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,2.0,133677253.0,2e-12,Height
+ITPK1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,92939887.0,2e-12,Height
+INPP5B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,37943401.0,2e-12,Height
+MKX,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,27655616.0,2e-12,Height
+RAB18,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,27655616.0,2e-12,Height
+ABHD2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,,2e-12,Height
+MFGE8,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,,2e-12,Height
+CAPZA1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,1.0,112659949.0,2e-12,Height
+HNRNPC,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,21273782.0,2e-12,Height
+SNRNP48,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,7702426.0,2e-12,Height
+ZCCHC6,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,9.0,86501713.0,3e-12,Height
+PLEKHA1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,122427198.0,4e-12,Height
+NCOR2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,124518346.0,4e-12,Height
+CHD1L,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,147341608.0,4e-12,Height
+KCNB1,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,20.0,49313692.0,4e-12,Height
+UBE2C,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,45812764.0,4e-12,Height
+EZH1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,42749806.0,4e-12,Height
+ECE1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,1.0,21256818.0,5e-12,Height
+ARSE,reported,Genome-wide association study of body height in African Americans: the Women's Health Initiative SNP Health Association Resource (SHARe).,,,2967682.0,5e-12,Height
+EPB41L1,reported,Genome-wide meta-analysis identifies 11 new loci for anthropometric traits and provides insights into genetic architecture.,,20.0,36124388.0,6e-12,Height
+CRYBA2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,218998934.0,6e-12,Height
+PCSK6,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,101475115.0,6e-12,Height
+GMDS,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,1775629.0,6e-12,Height
+HES7,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,17.0,8128618.0,7e-12,Height
+MAP2K2,reported,Evaluation and application of summary statistic imputation to discover new height-associated loci.,,19.0,4118483.0,7e-12,Height
+LHPP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,124597659.0,7e-12,Height
+ANKS1A,reported,Genome-wide meta-analysis identifies 11 new loci for anthropometric traits and provides insights into genetic architecture.,,6.0,35037307.0,8e-12,Height
+FLI1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,128794013.0,8e-12,Height
+TMEM263,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,106925883.0,8e-12,Height
+SPSB1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,9412922.0,9e-12,Height
+RBL1,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,20.0,37008995.0,9e-12,Height
+ATAD2B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,23855109.0,9e-12,Height
+ZNF346,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,177082192.0,1e-11,Height
+NPEPPS,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,47501069.0,1e-11,Height
+CCND1,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,11.0,69457328.0,1e-11,Height
+SLC23A3,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,2.0,219164178.0,1e-11,Height
+CCDC25,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,27772635.0,1e-11,Height
+SNED1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,240997747.0,1e-11,Height
+PPARD,reported,"Identification, replication, and fine-mapping of Loci associated with adult height in individuals of african ancestry.",,6.0,35374073.0,1e-11,Height
+CHAMP1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,13.0,114309403.0,1e-11,Height
+UPF3A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,13.0,114309403.0,1e-11,Height
+R3HDM1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,135618945.0,1e-11,Height
+NFE2L3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,25989866.0,2e-11,Height
+ANKRD9,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,102511539.0,2e-11,Height
+COMMD1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,61964637.0,2e-11,Height
+SCIN,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,12570952.0,2e-11,Height
+LAMA2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,129509196.0,2e-11,Height
+DDAH1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,85544565.0,2e-11,Height
+UGGT1,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,2.0,128174377.0,2e-11,Height
+ENPP2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,119454969.0,3e-11,Height
+SMAD6,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,66700089.0,3e-11,Height
+NOV,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,119454969.0,3e-11,Height
+DOK7,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,3450618.0,3e-11,Height
+CREB3L2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,137906118.0,4e-11,Height
+CYTL1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,4.0,5033860.0,4e-11,Height
+POLR2B,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,4.0,56957310.0,4e-11,Height
+ANK3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,60408170.0,4e-11,Height
+NSD1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,5.0,177149292.0,5e-11,Height
+CHFR,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,132843252.0,5e-11,Height
+FLNB,reported,Genetic analyses of diverse populations improves discovery for complex traits.,,3.0,58008671.0,5e-11,Height
+PCTP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,56126294.0,5e-11,Height
+SOWAHA,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,132790398.0,5e-11,Height
+SEPT8,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,132790398.0,5e-11,Height
+DNM2,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,19.0,10748832.0,5e-11,Height
+MIR7-3HG,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,19.0,4781091.0,6e-11,Height
+DLC1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,13493656.0,6e-11,Height
+ATXN7L3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,44195541.0,6e-11,Height
+BICD2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,92672140.0,6e-11,Height
+FEM1A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,19.0,4781091.0,6e-11,Height
+ADAMTS2,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,5.0,179108712.0,6e-11,Height
+UBE2V2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,48463007.0,6e-11,Height
+ZNF521,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,18.0,25262189.0,6e-11,Height
+RPL5,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,1.0,92858414.0,7e-11,Height
+BPTF,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,67981016.0,7e-11,Height
+TRA2B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,185830129.0,7e-11,Height
+ARID5B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,61959980.0,8e-11,Height
+ZNF318,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,6.0,43378065.0,8e-11,Height
+ECD,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,10.0,73158438.0,8e-11,Height
+FAM95A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,94670365.0,8e-11,Height
+ZNF518A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,96117563.0,9e-11,Height
+PCBD2,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,5.0,135004025.0,9e-11,Height
+CFB,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,6.0,31948623.0,9e-11,Height
+MYO1F,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,19.0,8573083.0,9e-11,Height
+PRRC2A,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,6.0,31635814.0,9e-11,Height
+ENTPD1-AS1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,96117563.0,9e-11,Height
+ATXN3,reported,Many sequence variants affecting diversity of adult human height.,,14.0,91960878.0,1e-10,Height
+CSF1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,109951107.0,1e-10,Height
+CPSF2,reported,Many sequence variants affecting diversity of adult human height.,,14.0,91960878.0,1e-10,Height
+SPTY2D1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,18617165.0,1e-10,Height
+TFDP1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,13.0,113647023.0,1e-10,Height
+PSMG1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,21.0,39181418.0,1e-10,Height
+EIF3H,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,116552698.0,1e-10,Height
+CTDSP2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,57895010.0,1e-10,Height
+LOC100506844,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,57895010.0,1e-10,Height
+NCOA6,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,20.0,34699274.0,1e-10,Height
+AHCYL1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,109951107.0,1e-10,Height
+AXIN2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,65555266.0,1e-10,Height
+PPP1CA,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,11.0,67417254.0,2e-10,Height
+CARNS1,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,11.0,67417254.0,2e-10,Height
+MLLT11,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,151063152.0,2e-10,Height
+TGFB3,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,14.0,75978342.0,2e-10,Height
+ST3GAL4,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,126364925.0,2e-10,Height
+POLR3E,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,22323242.0,2e-10,Height
+GLDN,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,51390578.0,2e-10,Height
+PLCD4,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,2.0,218607602.0,2e-10,Height
+SLC4A3,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,2.0,219842264.0,2e-10,Height
+SMAD3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,67071982.0,2e-10,Height
+ADAMTS5,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,21.0,26950187.0,2e-10,Height
+SOX6,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,15905998.0,2e-10,Height
+OR5L2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,55833540.0,2e-10,Height
+SLC22A3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,160361902.0,2e-10,Height
+MUM1L1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,106234538.0,2e-10,Height
+CXorf57,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,,106234538.0,2e-10,Height
+PEX11A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,89684725.0,3e-10,Height
+SLC12A2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,128218526.0,3e-10,Height
+SPTBN1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,54631374.0,3e-10,Height
+ANTXR1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,69103152.0,3e-10,Height
+MYC,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,8.0,127822157.0,3e-10,Height
+MOXD1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,132366109.0,3e-10,Height
+ACAP2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,195476367.0,3e-10,Height
+AIF1,reported,Genome-wide meta-analysis identifies 11 new loci for anthropometric traits and provides insights into genetic architecture.,,6.0,31605179.0,3e-10,Height
+RCN3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,19.0,49539611.0,4e-10,Height
+SLC25A37,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,23510244.0,4e-10,Height
+ENTPD4,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,23510244.0,4e-10,Height
+HLA-DQB1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,32688072.0,4e-10,Height
+IGSF11,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,117887069.0,4e-10,Height
+DAAM2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,39808584.0,4e-10,Height
+ZHX3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,41179129.0,5e-10,Height
+GAB1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,143496294.0,5e-10,Height
+CRB1,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,1.0,197304988.0,5e-10,Height
+ZDHHC7,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,16.0,84954073.0,5e-10,Height
+AGXT,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,240843622.0,5e-10,Height
+SMOC2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,168953155.0,5e-10,Height
+SMARCA5,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,143496294.0,5e-10,Height
+PARN,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,16.0,14294448.0,5e-10,Height
+PCDHB16,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,141184688.0,5e-10,Height
+KIF1A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,240843622.0,5e-10,Height
+KCNS3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,18419011.0,6e-10,Height
+RDH14,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,18419011.0,6e-10,Height
+XRCC1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,19.0,43574077.0,6e-10,Height
+MSL2,reported,Genetic analyses of diverse populations improves discovery for complex traits.,,3.0,136220390.0,6e-10,Height
+PCNP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,101638262.0,7e-10,Height
+SHISA9,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,12810107.0,7e-10,Height
+ZBTB11,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,101638262.0,7e-10,Height
+HDAC11,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,3.0,13514336.0,7e-10,Height
+CPPED1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,12810107.0,7e-10,Height
+PPP3R1,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,2.0,68267870.0,8e-10,Height
+CCND2-AS1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,4269580.0,8e-10,Height
+IL17RD,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,57113101.0,8e-10,Height
+MAX,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,14.0,65075759.0,8e-10,Height
+GPR20,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,141386280.0,9e-10,Height
+PTP4A3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,141386280.0,9e-10,Height
+MIB2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,1624591.0,1e-09,Height
+TRIM13,reported,Genome-wide meta-analysis identifies 11 new loci for anthropometric traits and provides insights into genetic architecture.,,13.0,49989311.0,1e-09,Height
+PTPDC1,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,9.0,94131663.0,1e-09,Height
+DDX25,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,125955329.0,1e-09,Height
+CDON,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,125955329.0,1e-09,Height
+PRKG1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,51020675.0,1e-09,Height
+GALR1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,18.0,77260182.0,1e-09,Height
+HCG18,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,6.0,30305977.0,1e-09,Height
+QPCT,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,37425070.0,1e-09,Height
+LAMC1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,183055334.0,1e-09,Height
+GARS,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,30595905.0,1e-09,Height
+ABCF2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,151208358.0,1e-09,Height
+FOXP1,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,3.0,71412076.0,1e-09,Height
+LSM3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,14214267.0,2e-09,Height
+RRBP1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,17614084.0,2e-09,Height
+UQCC1,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,20.0,35308144.0,2e-09,Height
+SNAP47,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,1.0,227739541.0,2e-09,Height
+SLC35D2,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,9.0,96382631.0,2e-09,Height
+RSRC1,reported,Genome-wide meta-analysis identifies 11 new loci for anthropometric traits and provides insights into genetic architecture.,,3.0,158391590.0,2e-09,Height
+FBRSL1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,132577680.0,2e-09,Height
+DDX27,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,49227804.0,2e-09,Height
+TRAF7,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,16.0,2158888.0,2e-09,Height
+TOX,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,59686770.0,2e-09,Height
+DNPEP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,219345462.0,2e-09,Height
+RESP18,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,219345462.0,2e-09,Height
+CA8,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,59686770.0,2e-09,Height
+RNF135,reported,Many sequence variants affecting diversity of adult human height.,,17.0,30920697.0,2e-09,Height
+CRLF3,reported,Many sequence variants affecting diversity of adult human height.,,17.0,30920697.0,2e-09,Height
+GFPT2,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,5.0,180304014.0,2e-09,Height
+SUCLG2,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,3.0,67365898.0,2e-09,Height
+NCLN,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,19.0,3207867.0,2e-09,Height
+DROSHA,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,5.0,31525100.0,2e-09,Height
+COL6A2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,21.0,46129449.0,2e-09,Height
+ADAM28,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,8.0,24258791.0,2e-09,Height
+NRM,reported,Genetic analyses of diverse populations improves discovery for complex traits.,,6.0,30696674.0,2e-09,Height
+BBX,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,3.0,107466004.0,2e-09,Height
+PHGDH,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,1.0,119722200.0,2e-09,Height
+DAB2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,39390020.0,2e-09,Height
+CD164,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,109332929.0,2e-09,Height
+STC2,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,5.0,173557111.0,2e-09,Height
+GDF5OS,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,20.0,35424169.0,2e-09,Height
+CREBL2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,12571681.0,2e-09,Height
+DUSP16,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,12571681.0,2e-09,Height
+ALPP,reported,A genome-wide association study of northwestern Europeans involves the C-type natriuretic peptide signaling pathway in the etiology of human height variation.,,2.0,232290400.0,3e-09,Height
+PNRC1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,89047276.0,3e-09,Height
+ARHGAP26,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,5.0,143084873.0,3e-09,Height
+RNGTT,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,89047276.0,3e-09,Height
+ATF7IP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,14212175.0,3e-09,Height
+RCCD1,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,15.0,90957066.0,3e-09,Height
+GRIN2B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,14212175.0,3e-09,Height
+DPY19L3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,19.0,32421716.0,3e-09,Height
+CHAF1B,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,21.0,36378531.0,4e-09,Height
+ARL4A,reported,Genetic analyses of diverse populations improves discovery for complex traits.,,7.0,13452059.0,4e-09,Height
+ETV1,reported,Genetic analyses of diverse populations improves discovery for complex traits.,,7.0,13452059.0,4e-09,Height
+NFATC1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,18.0,79465154.0,4e-09,Height
+WNT6,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,218864536.0,4e-09,Height
+TBXAS1,reported,Genetic analyses of diverse populations improves discovery for complex traits.,,7.0,139807769.0,4e-09,Height
+MAPK14,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,6.0,36042898.0,4e-09,Height
+PCCB,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,3.0,136255374.0,4e-09,Height
+MORC3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,21.0,36378531.0,4e-09,Height
+BCL2L2,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,14.0,23310668.0,4e-09,Height
+MEGF9,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,120608544.0,4e-09,Height
+VTA1,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,6.0,142194305.0,4e-09,Height
+DDX6,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,11.0,118773873.0,4e-09,Height
+PDE3A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,20515862.0,5e-09,Height
+NUCB2,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,11.0,17294482.0,5e-09,Height
+CAMK1D,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,12786454.0,5e-09,Height
+MAFF,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,22.0,38211528.0,6e-09,Height
+TMEM100,reported,Genome-wide association study of body height in African Americans: the Women's Health Initiative SNP Health Association Resource (SHARe).,,17.0,55680426.0,6e-09,Height
+ADCY9,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,3979971.0,6e-09,Height
+DDR2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,162634091.0,6e-09,Height
+COMMD7,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,32685126.0,6e-09,Height
+HLA-DPB2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,33128930.0,7e-09,Height
+ANKRD13B,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,17.0,29590753.0,7e-09,Height
+POLN,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,2144709.0,7e-09,Height
+RALGAPA2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,20.0,20875611.0,7e-09,Height
+MAML2,reported,Genome-wide association study in Han Chinese identifies three novel loci for human height.,,11.0,96262284.0,8e-09,Height
+NFKBIL1,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,6.0,31555900.0,8e-09,Height
+NEUROG3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,69543565.0,8e-09,Height
+FER1L4,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,20.0,35595557.0,8e-09,Height
+TSPAN15,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,10.0,69543565.0,8e-09,Height
+ZNF70,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,22.0,23744998.0,8e-09,Height
+CLOCK,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,4.0,55533481.0,8e-09,Height
+RORA,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,15.0,60819119.0,9e-09,Height
+JAK2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,9.0,5089770.0,9e-09,Height
+NCOA2,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,8.0,70258369.0,9e-09,Height
+NAV3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,77214270.0,9e-09,Height
+GDAP2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,117735272.0,9e-09,Height
+MYO18A,reported,Genome-wide Analysis of Body Proportion Classifies Height-Associated Variants by Mechanism of Action and Implicates Genes Important for Skeletal Development.,,17.0,29210392.0,1e-08,Sitting height ratio
+GATAD1,reported,Many sequence variants affecting diversity of adult human height.,,7.0,92635096.0,1e-08,Height
+LBH,reported,Many sequence variants affecting diversity of adult human height.,,6.0,34227234.0,1e-08,Height
+PEX1,reported,Many sequence variants affecting diversity of adult human height.,,7.0,92635096.0,1e-08,Height
+SEPT2,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,2.0,241323571.0,1e-08,Height
+STAT1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,2.0,190977153.0,1e-08,Height
+CHST11,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,104762674.0,1e-08,Height
+QKI,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,163752935.0,1e-08,Height
+C6orf118,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,163752935.0,1e-08,Height
+CLPB,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,72357235.0,1e-08,Height
+LINC00339,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,22029485.0,1e-08,Height
+GRB7,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,39737231.0,1e-08,Height
+TNNT1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,19.0,55141929.0,1e-08,Height
+CACNA1E,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,1.0,181787206.0,1e-08,Height
+SPRY2,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,13.0,80976314.0,1e-08,Height
+SORBS2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,185776340.0,1e-08,Height
+LMO1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,8228596.0,2e-08,Height
+PLEC,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,8.0,143934275.0,2e-08,Height
+GDPD5,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,11.0,75542783.0,2e-08,Height
+EXTL3,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,8.0,28747274.0,2e-08,Height
+DCBLD1,reported,Genome-wide meta-analysis identifies 11 new loci for anthropometric traits and provides insights into genetic architecture.,,6.0,117550673.0,2e-08,Height
+SPATA18,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,52163519.0,2e-08,Height
+ITSN1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,21.0,33871390.0,2e-08,Height
+CCDC88A,reported,"Identification, replication, and fine-mapping of Loci associated with adult height in individuals of african ancestry.",,2.0,55289187.0,2e-08,Height
+TTLL4,reported,Meta-analysis of genome-wide association studies of adult height in East Asians identifies 17 novel loci.,,2.0,218722568.0,2e-08,Height
+ZBTB7C,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,18.0,48349931.0,2e-08,Height
+CTIF,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,18.0,48349931.0,2e-08,Height
+FOLH1,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,11.0,49537620.0,2e-08,Height
+COL6A3,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,2.0,237452065.0,2e-08,Height
+MLPH,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,2.0,237452065.0,2e-08,Height
+NDUFS3,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,11.0,47584931.0,2e-08,Height
+MED13L,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,116092030.0,2e-08,Height
+USP46,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,4.0,52163519.0,2e-08,Height
+PRKCZ,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,1.0,2137733.0,2e-08,Height
+SOBP,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,107637122.0,2e-08,Height
+LHX3,reported,A genome-wide association study in 19 633 Japanese subjects identified LHX3-QSOX2 and IGF1 as adult height loci.,,9.0,136229894.0,2e-08,Height
+C10orf90,reported,Genome-wide Analysis of Body Proportion Classifies Height-Associated Variants by Mechanism of Action and Implicates Genes Important for Skeletal Development.,,10.0,126685138.0,2e-08,Sitting height ratio
+CMTM8,reported,"Exploration of haplotype research consortium imputation for genome-wide association studies in 20,032 Generation Scotland participants.",,3.0,32306212.0,2e-08,Height
+C18orf12,reported,Genome-wide association study in Han Chinese identifies three novel loci for human height.,,18.0,48339226.0,2e-08,Height
+BTNL2,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,6.0,32415431.0,2e-08,Height
+IER2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,19.0,13153584.0,2e-08,Height
+MAFB,reported,Defining the role of common variation in the genomic and biological architecture of adult human height.,,20.0,39923436.0,2e-08,Height
+FREM1,reported,Genome-wide association study of facial morphology reveals novel associations with FREM1 and PARK2.,,9.0,14883256.0,2e-08,"Facial morphology (factor 17, height of vermillion upper lip)"
+ZBTB24,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,6.0,109462738.0,3e-08,Height
+MYO9A,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,15.0,71869062.0,3e-08,Height
+DAP,reported,"Exploration of haplotype research consortium imputation for genome-wide association studies in 20,032 Generation Scotland participants.",,5.0,10698974.0,3e-08,Height
+CCND2,reported,"Exploration of haplotype research consortium imputation for genome-wide association studies in 20,032 Generation Scotland participants.",,12.0,4275678.0,3e-08,Height
+PDIA4,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,7.0,148953542.0,3e-08,Height
+LRRC37B,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,17.0,32016263.0,3e-08,Height
+PDE11A,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,2.0,177819993.0,3e-08,Height
+AFF3,reported,Genetic analyses of diverse populations improves discovery for complex traits.,,2.0,99825511.0,3e-08,Height
+G6PC3,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,17.0,44070837.0,3e-08,Height
+CAPRIN2,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,12.0,30745066.0,3e-08,Height
+PIEZO1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,16.0,88717495.0,3e-08,Height
+PRKCA,reported,Genome-wide association study of body height in African Americans: the Women's Health Initiative SNP Health Association Resource (SHARe).,,17.0,66783312.0,3e-08,Height
+PATZ1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,22.0,31339226.0,3e-08,Height
+ARHGAP24,reported,"Exploration of haplotype research consortium imputation for genome-wide association studies in 20,032 Generation Scotland participants.",,4.0,85575677.0,4e-08,Height
+PPP2R2A,reported,Genome-wide meta-analysis identifies 11 new loci for anthropometric traits and provides insights into genetic architecture.,,8.0,26348561.0,4e-08,Height
+ELMO1,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,7.0,37354775.0,4e-08,Height
+ARL17A,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,17.0,46496008.0,4e-08,Height
+WWC2,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,4.0,183294522.0,4e-08,Height
+ZNF652,reported,Hundreds of variants clustered in genomic loci and biological pathways affect human height.,,17.0,49312652.0,4e-08,Height
+FYN,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,111954157.0,4e-08,Height
+CRIP3,reported,Characterizing rare and low-frequency height-associated variants in the Japanese population.,,6.0,43308652.0,4e-08,Height
+RGS5,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,1.0,163269560.0,4e-08,Height
+WDR70,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,5.0,37550094.0,4e-08,Height
+KLF6,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,10.0,4262527.0,4e-08,Height
+CEP95,reported,Discovery and fine-mapping of height loci via high-density imputation of GWASs in individuals of African ancestry.,,17.0,64538341.0,4e-08,Height
+BAG6,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,6.0,31638890.0,4e-08,Height
+SUZ12P1,reported,Whole-Genome Sequencing Coupled to Imputation Discovers Genetic Signals for Anthropometric Traits.,,17.0,30776721.0,4e-08,Height

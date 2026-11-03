@@ -1,0 +1,94 @@
+gene_symbol,mapping_type,study,snp,chr_id,chr_pos,p_value,trait
+APOE,reported,Genome-wide association analysis of dementia and its clinical endophenotypes reveal novel loci associated with Alzheimer's disease and three causality networks: The GR@ACE project.,,19.0,44908684.0,2e-303,Alzheimer's disease
+TOMM40,reported,Genome-wide association study identifies variants at CLU and PICALM associated with Alzheimer's disease.,,19.0,44892362.0,2e-157,Alzheimer's disease
+APOC1,reported,Genome-wide association study of Alzheimer's disease.,,19.0,44919689.0,8e-149,Alzheimer's disease
+PVR,reported,Overrepresentation of glutamate signaling in Alzheimer's disease: network-based pathway enrichment using meta-analysis of genome-wide association studies.,,19.0,44892362.0,9e-116,Alzheimer's disease
+BCAM,reported,Overrepresentation of glutamate signaling in Alzheimer's disease: network-based pathway enrichment using meta-analysis of genome-wide association studies.,,19.0,44892362.0,9e-116,Alzheimer's disease
+EXOC3L2,reported,Overrepresentation of glutamate signaling in Alzheimer's disease: network-based pathway enrichment using meta-analysis of genome-wide association studies.,,19.0,44892362.0,9e-116,Alzheimer's disease
+BCL3,reported,Overrepresentation of glutamate signaling in Alzheimer's disease: network-based pathway enrichment using meta-analysis of genome-wide association studies.,,19.0,44892362.0,9e-116,Alzheimer's disease
+TDRD10,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,1.0,154447611.0,6e-63,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+IL6R,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,1.0,154447611.0,6e-63,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+UBE2Q1,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,1.0,154447611.0,6e-63,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+ADAR,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,1.0,154447611.0,6e-63,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+DCUN1D5,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,11.0,102846249.0,2e-44,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+BIN1,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,2.0,127135234.0,7e-44,Alzheimer's disease (late onset)
+PPP1R37,reported,"SORL1 is genetically associated with late-onset Alzheimer's disease in Japanese, Koreans and Caucasians.",,19.0,44873027.0,5.0000000000000005e-39,Alzheimer's disease (late onset)
+PICALM,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,11.0,86156833.0,9e-26,Alzheimer's disease (late onset)
+CLU,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,8.0,27610169.0,3e-25,Alzheimer's disease (late onset)
+TREM2,reported,"Rare coding variants in PLCG2, ABI3, and TREM2 implicate microglial-mediated innate immunity in Alzheimer's disease.",,6.0,41161514.0,5e-24,Alzheimer's disease (late onset)
+PTK2B,reported,Genome-wide meta-analysis identifies new loci and functional pathways influencing Alzheimer's disease risk.,,8.0,27607412.0,6e-20,Alzheimer's disease (late onset)
+ABCA7,reported,"Common variants at ABCA7, MS4A6A/MS4A4E, EPHA1, CD33 and CD2AP are associated with Alzheimer's disease.",,19.0,1046521.0,5e-17,Alzheimer's disease
+SORL1,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,11.0,121564878.0,1e-14,Alzheimer's disease (late onset)
+EPHA1,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,7.0,143413669.0,1e-13,Alzheimer's disease (late onset)
+OARD1,reported,"Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing.",,6.0,41066261.0,2e-13,Alzheimer's disease (late onset)
+CCR5,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,3.0,46408373.0,2e-13,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+CCR3,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,3.0,46408373.0,2e-13,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+MAN2A1,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,5.0,109885325.0,9e-13,Alzheimer's disease (cognitive decline)
+SUCLG2,reported,SUCLG2 identified as both a determinator of CSF Aβ1-42 levels and an attenuator of cognitive decline in Alzheimer's disease.,,3.0,67406609.0,3e-12,Cerebrospinal AB1-42 levels in Alzheimer's disease dementia
+HLA-DRB1,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,6.0,32610753.0,3e-12,Alzheimer's disease (late onset)
+HLA-DRB5,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,6.0,32610753.0,3e-12,Alzheimer's disease (late onset)
+ACE,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,17.0,63471115.0,4e-12,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+CYB561,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,17.0,63471115.0,4e-12,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+PLCG2,reported,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,16.0,81739604.0,7e-12,Alzheimer's disease
+MS4A4A,reported,"Common variants at MS4A4/MS4A6E, CD2AP, CD33 and EPHA1 are associated with late-onset Alzheimer's disease.",,11.0,60266956.0,8e-12,Alzheimer's disease (late onset)
+HS3ST1,reported,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,4.0,11025995.0,9e-12,Alzheimer's disease
+APP,reported,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,21.0,26101558.0,1e-11,Alzheimer's disease
+BCAS3,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,17.0,61215075.0,1e-11,Alzheimer's disease (cognitive decline)
+ECHDC3,reported,"Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing.",,10.0,11678309.0,2e-11,Alzheimer's disease (late onset)
+CD2AP,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,6.0,47520026.0,5e-11,Alzheimer's disease (late onset)
+BZW2,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,7.0,16668236.0,6e-11,Alzheimer's disease (cognitive decline)
+TSPAN13,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,7.0,16668236.0,6e-11,Alzheimer's disease (cognitive decline)
+PSMA1,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,11.0,14202800.0,7e-11,Alzheimer's disease (cognitive decline)
+SPON1,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,11.0,14202800.0,7e-11,Alzheimer's disease (cognitive decline)
+RRAS2,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,11.0,14202800.0,7e-11,Alzheimer's disease (cognitive decline)
+GAB2,reported,GAB2 alleles modify Alzheimer's risk in APOE epsilon4 carriers.,,11.0,78380104.0,1e-10,Alzheimer's disease (late onset)
+FRMD4A,reported,Genome-wide haplotype association study identifies the FRMD4A gene as a risk locus for Alzheimer's disease.,,,,1e-10,Alzheimer's disease
+MTHFD1L,reported,Dementia revealed: novel chromosome 6 locus for late-onset Alzheimer disease provides genetic evidence for folate-pathway abnormalities.,,6.0,150885942.0,2e-10,Alzheimer's disease (late onset)
+IL34,reported,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,16.0,70660097.0,4e-10,Alzheimer's disease
+ABI3,reported,"Rare coding variants in PLCG2, ABI3, and TREM2 implicate microglial-mediated innate immunity in Alzheimer's disease.",,17.0,49219935.0,5e-10,Alzheimer's disease (late onset)
+ZCWPW1,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,7.0,100406823.0,6e-10,Alzheimer's disease (late onset)
+CACNA1G,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,17.0,50614721.0,1e-09,Alzheimer's disease (cognitive decline)
+NDUFAF7,reported,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,2.0,37288815.0,1e-09,Alzheimer's disease
+PRKD3,reported,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,2.0,37288815.0,1e-09,Alzheimer's disease
+IGF1R,reported,Novel Alzheimer Disease Risk Loci and Pathways in African American Individuals Using the African Genome Resources Panel: A Meta-analysis.,,15.0,97449455.0,2e-09,Alzheimer's disease
+ARRDC4,reported,Novel Alzheimer Disease Risk Loci and Pathways in African American Individuals Using the African Genome Resources Panel: A Meta-analysis.,,15.0,97449455.0,2e-09,Alzheimer's disease
+CD33,reported,"Common variants at MS4A4/MS4A6E, CD2AP, CD33 and EPHA1 are associated with late-onset Alzheimer's disease.",,19.0,51224706.0,2e-09,Alzheimer's disease (late onset)
+GLIS3,reported,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,9.0,3929424.0,3e-09,Alzheimer's disease biomarkers
+FAM47E,reported,Ethnic and trans-ethnic genome-wide association studies identify new loci influencing Japanese Alzheimer's disease risk.,,4.0,76217307.0,5e-09,Alzheimer's disease
+CCDC50,reported,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,3.0,190951729.0,5e-09,Alzheimer's disease biomarkers
+KANSL1,reported,A novel Alzheimer disease locus located near the gene encoding tau protein.,,17.0,46275856.0,6e-09,Alzheimer's disease in APOE e4- carriers
+RIN3,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,14.0,92460608.0,6e-09,Alzheimer's disease (late onset)
+SLC24A4,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,14.0,92460608.0,6e-09,Alzheimer's disease (late onset)
+MAPT,reported,A novel Alzheimer disease locus located near the gene encoding tau protein.,,17.0,46275856.0,6e-09,Alzheimer's disease in APOE e4- carriers
+HBEGF,reported,Transethnic genome-wide scan identifies novel Alzheimer's disease loci.,,5.0,140327854.0,7e-09,Alzheimer's disease
+PFDN1,reported,Transethnic genome-wide scan identifies novel Alzheimer's disease loci.,,5.0,140327854.0,7e-09,Alzheimer's disease
+ADAM10,reported,"Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing.",,15.0,58753575.0,7e-09,Alzheimer's disease (late onset)
+TRAPPC6A,reported,Identification of genetic heterogeneity of Alzheimer's disease across age.,,19.0,45168224.0,8e-09,Alzheimer's disease (onset between ages 58 and 79)
+FERMT2,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,14.0,52933911.0,8e-09,Alzheimer's disease (late onset)
+CTNNA2,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,2.0,80054047.0,1e-08,Alzheimer's disease (cognitive decline)
+PDE7B,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,6.0,136046867.0,1e-08,Alzheimer's disease (cognitive decline)
+SAP30L,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,5.0,154457546.0,1e-08,Alzheimer's disease (cognitive decline)
+CELF1,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,11.0,47536319.0,1e-08,Alzheimer's disease (late onset)
+PHF21B,reported,Genome-wide association meta-analysis of neuropathologic features of Alzheimer's disease and related dementias.,,,,2e-08,Dementia and core Alzheimer's disease neuropathologic changes
+LINC-PINT,reported,Genome-wide analysis identifies a novel LINC-PINT splice variant associated with vascular amyloid pathology in Alzheimer's disease.,,7.0,131007000.0,2e-08,Cerebral amyloid angiopathy in APOEe4 non-carrier Alzheimer’s disease
+IQCK,reported,"Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing.",,16.0,19796841.0,2e-08,Alzheimer's disease (late onset)
+CLMN,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,14.0,95298227.0,2e-08,Alzheimer's disease (cognitive decline)
+MYO16,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,13.0,108821598.0,2e-08,Alzheimer's disease (cognitive decline)
+NFIC,reported,Transethnic genome-wide scan identifies novel Alzheimer's disease loci.,,19.0,3405594.0,2e-08,Alzheimer's disease (APOE e4 interaction)
+KCTD2,reported,Shared genetic contribution to Ischaemic Stroke and Alzheimer's Disease.,,17.0,75022679.0,2e-08,Alzheimer's disease or small vessel stroke
+NDUFAF6,reported,Genome-wide association analysis of dementia and its clinical endophenotypes reveal novel loci associated with Alzheimer's disease and three causality networks: The GR@ACE project.,,8.0,94979792.0,2e-08,Alzheimer's disease
+CNTNAP2,reported,Genome-wide association analysis of dementia and its clinical endophenotypes reveal novel loci associated with Alzheimer's disease and three causality networks: The GR@ACE project.,,7.0,147937799.0,2e-08,Alzheimer’s disease and/or vascular dementia (clinical subgroup VaD++)
+TP53INP1,reported,Genome-wide association analysis of dementia and its clinical endophenotypes reveal novel loci associated with Alzheimer's disease and three causality networks: The GR@ACE project.,,8.0,94979792.0,2e-08,Alzheimer's disease
+INPP5D,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,2.0,233159830.0,3e-08,Alzheimer's disease (late onset)
+PMS2CL,reported,A novel Alzheimer disease locus located near the gene encoding tau protein.,,7.0,6732029.0,3e-08,Alzheimer's disease (APOE e4 interaction)
+ZNF12,reported,A novel Alzheimer disease locus located near the gene encoding tau protein.,,7.0,6732029.0,3e-08,Alzheimer's disease (APOE e4 interaction)
+BCHE,reported,APOE and BCHE as modulators of cerebral amyloid deposition: a florbetapir PET genome-wide association study.,,3.0,166296681.0,3e-08,Alzheimer's disease biomarkers
+MEF2C,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,5.0,88927603.0,3e-08,Alzheimer's disease (late onset)
+USP6NL,reported,Transethnic genome-wide scan identifies novel Alzheimer's disease loci.,,10.0,11678309.0,3e-08,Alzheimer's disease
+ZNF292,reported,Genome-wide association with MRI atrophy measures as a quantitative trait locus for Alzheimer's disease.,,6.0,87157345.0,3e-08,Entorhinal cortical volume (Alzheimer's disease interaction)
+ADAMTS1,reported,"Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing.",,21.0,26784537.0,3e-08,Alzheimer's disease (late onset)
+COBL,reported,"Two novel loci, COBL and SLC10A2, for Alzheimer's disease in African Americans.",,7.0,51510325.0,4e-08,Late-onset Alzheimer's disease
+PTPRG,reported,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,3.0,61650482.0,4e-08,Alzheimer disease and age of onset
+NCR2,reported,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,6.0,41368363.0,4e-08,Alzheimer's disease biomarkers
+WWOX,reported,"Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing.",,16.0,79321960.0,4e-08,Alzheimer's disease (late onset)
+MAF,reported,"Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing.",,16.0,79321960.0,4e-08,Alzheimer's disease (late onset)

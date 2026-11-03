@@ -1,0 +1,11 @@
+disease,gene,chr_id,chr_pos,locus,in_mhc,p_value,study
+Parkinson,HLA-DRB5,6.0,32610995.0,chr6.0_locus2,True,7e-28,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies."
+Parkinson,FCGR2A,1.0,161499264.0,chr1.0_locus1,False,6e-12,"Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies."
+Parkinson,HLA-DRB1,6.0,32602640.0,chr6.0_locus2,True,6e-12,Genome-wide Association Analysis of Parkinson's Disease and Schizophrenia Reveals Shared Genetic Architecture and Identifies Novel Risk Loci.
+Parkinson,HLA-DRA,6.0,32441753.0,chr6.0_locus2,True,2e-10,Common genetic variation in the HLA region is associated with late-onset sporadic Parkinson's disease.
+Parkinson,HLA-DQB1,6.0,32684419.0,chr6.0_locus2,True,2e-08,"The Genetic Architecture of Parkinson Disease in Spain: Characterizing Population-Specific Risk, Differential Haplotype Structures, and Providing Etiologic Insight."
+Alzheimer,TREM2,6.0,41161514.0,chr6.0_locus2,False,5e-24,"Rare coding variants in PLCG2, ABI3, and TREM2 implicate microglial-mediated innate immunity in Alzheimer's disease."
+Alzheimer,HLA-DRB1,6.0,32610753.0,chr6.0_locus1,True,3e-12,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease."
+Alzheimer,HLA-DRB5,6.0,32610753.0,chr6.0_locus1,True,3e-12,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease."
+Alzheimer,IL34,16.0,70660097.0,chr16.0_locus3,False,4e-10,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.
+Alzheimer,CD33,19.0,51224706.0,chr19.0_locus4,False,2e-09,"Common variants at MS4A4/MS4A6E, CD2AP, CD33 and EPHA1 are associated with late-onset Alzheimer's disease."

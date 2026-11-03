@@ -1,0 +1,593 @@
+gene,mapping_type,study,snp,chr_id,chr_pos,p_value,trait
+APOE,mapped,Exome-wide age-of-onset analysis reveals exonic variants in ERN1 and SPPL2C associated with Alzheimer's disease.,,19.0,44908684.0,0.0,Alzheimer's disease (age of onset)
+TOMM40,mapped,Genome-wide analysis of genetic loci associated with Alzheimer disease.,,19.0,44892362.0,1e-295,Alzheimer's disease
+APOC1,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,19.0,44918903.0,2e-228,Alzheimer's disease
+NECTIN2,mapped,Genome-wide meta-analysis identifies new loci and functional pathways influencing Alzheimer's disease risk.,,19.0,44848259.0,3e-194,Alzheimer's disease (late onset)
+LNCOB1,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,19.0,44888997.0,2e-189,Alzheimer's disease
+APOC1P1,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,19.0,44923868.0,2e-158,Alzheimer's disease
+NIFKP9,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,2.0,127135234.0,3e-124,Alzheimer's disease or related dementias
+BIN1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,2.0,127135234.0,3e-124,Alzheimer's disease or related dementias
+PVR,reported,Overrepresentation of glutamate signaling in Alzheimer's disease: network-based pathway enrichment using meta-analysis of genome-wide association studies.,,19.0,44892362.0,9e-116,Alzheimer's disease
+BCL3,reported,Overrepresentation of glutamate signaling in Alzheimer's disease: network-based pathway enrichment using meta-analysis of genome-wide association studies.,,19.0,44892362.0,9e-116,Alzheimer's disease
+BCAM,reported,Overrepresentation of glutamate signaling in Alzheimer's disease: network-based pathway enrichment using meta-analysis of genome-wide association studies.,,19.0,44892362.0,9e-116,Alzheimer's disease
+PVRL2,reported,Overrepresentation of glutamate signaling in Alzheimer's disease: network-based pathway enrichment using meta-analysis of genome-wide association studies.,,19.0,44892362.0,9e-116,Alzheimer's disease
+EXOC3L2,reported,Overrepresentation of glutamate signaling in Alzheimer's disease: network-based pathway enrichment using meta-analysis of genome-wide association studies.,,19.0,44892362.0,9e-116,Alzheimer's disease
+IL6R,mapped,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,1.0,154447611.0,6e-63,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+UBE2Q1,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,1.0,154447611.0,6e-63,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+ADAR,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,1.0,154447611.0,6e-63,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+SHE,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,1.0,154447611.0,6e-63,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+TDRD10,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,1.0,154447611.0,6e-63,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+MS4A6A,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,11.0,60173126.0,1.9999999999999998e-54,Alzheimer's disease or related dementias
+RNU6-560P,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,11.0,86156833.0,2e-53,Alzheimer's disease or related dementias
+LINC02695,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,11.0,86156833.0,2e-53,Alzheimer's disease or related dementias
+APOC4-APOC2,mapped,Multi-ancestry meta-analysis and fine-mapping in Alzheimer's disease.,,19.0,44945208.0,4e-51,Alzheimer's disease
+APOC4,mapped,Multi-ancestry meta-analysis and fine-mapping in Alzheimer's disease.,,19.0,44945208.0,4e-51,Alzheimer's disease
+CR1-AS1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,1.0,207577223.0,3.9999999999999996e-50,Alzheimer's disease or related dementias
+CR1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,1.0,207577223.0,3.9999999999999996e-50,Alzheimer's disease or related dementias
+MMP3,mapped,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,11.0,102846249.0,2e-44,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+CLU,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,8.0,27607795.0,2e-44,Alzheimer's disease
+MMP12,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,11.0,102846249.0,2e-44,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+WTAPP1,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,11.0,102846249.0,2e-44,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+MMP13,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,11.0,102846249.0,2e-44,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+DCUN1D5,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,11.0,102846249.0,2e-44,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+PICALM,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,11.0,86141937.0,2.9999999999999997e-44,Alzheimer's disease or related dementias
+MS4A4A,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,11.0,60254475.0,3.9999999999999995e-42,Alzheimer's disease
+PPP1R37,reported,"SORL1 is genetically associated with late-onset Alzheimer's disease in Japanese, Koreans and Caucasians.",,19.0,44873027.0,5.0000000000000005e-39,Alzheimer's disease (late onset)
+CEACAM16,reported,"SORL1 is genetically associated with late-onset Alzheimer's disease in Japanese, Koreans and Caucasians.",,19.0,44873027.0,5.0000000000000005e-39,Alzheimer's disease (late onset)
+NCTIN2,reported,Identification of genetic heterogeneity of Alzheimer's disease across age.,,19.0,44878777.0,7e-39,Alzheimer's disease (onset between ages 58 and 79)
+ABCA7,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,1050875.0,2e-38,Alzheimer's disease or related dementias
+TREM2,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,6.0,41161514.0,3e-37,Alzheimer's disease
+LRFN2,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,40974457.0,2e-33,Alzheimer's disease or related dementias
+UNC5CL,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,40974457.0,2e-33,Alzheimer's disease or related dementias
+PMS2P1,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,7.0,100334426.0,9.999999999999999e-27,Alzheimer's disease
+APH1B,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,15.0,63277703.0,1.9999999999999998e-25,Alzheimer's disease
+PTK2B,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,8.0,27362470.0,1.0000000000000001e-24,Alzheimer's disease or related dementias
+CASS4,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,20.0,56412160.0,2.0000000000000002e-24,Alzheimer's disease or related dementias
+SLC24A4,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,14.0,92472511.0,3e-24,Alzheimer's disease or related dementias
+PILRA,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,7.0,100374211.0,4.0000000000000004e-24,Alzheimer's disease or related dementias
+USP6NL-AS1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,10.0,11676714.0,6e-23,Alzheimer's disease or related dementias
+ECHDC3,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,10.0,11676714.0,6e-23,Alzheimer's disease or related dementias
+CD2AP,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,6.0,47517390.0,8e-22,Alzheimer's disease
+SORL1,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,11.0,121564878.0,1e-21,Alzheimer's disease
+CYB561,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,17.0,63471557.0,2e-20,Alzheimer's disease or related dementias
+GRN,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,17.0,44352876.0,2e-20,Alzheimer's disease
+PPIAP55,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,17.0,63471557.0,2e-20,Alzheimer's disease or related dementias
+B3GNTL1P2,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,47464901.0,5e-20,Alzheimer's disease or related dementias
+CD2AP-DT,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,47464901.0,5e-20,Alzheimer's disease or related dementias
+HLA-DRB1,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,6.0,32615322.0,7e-20,Alzheimer's disease
+HLA-DQA1,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,6.0,32615322.0,7e-20,Alzheimer's disease
+MTCO3P1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,32689933.0,2e-19,Alzheimer's disease or related dementias
+HLA-DQB1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,32689933.0,2e-19,Alzheimer's disease or related dementias
+TSPAN14,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,10.0,80494228.0,2e-19,Alzheimer's disease
+EPHA1-AS1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,7.0,143414203.0,4e-19,Alzheimer's disease
+MINDY2-DT,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,15.0,58763611.0,4e-19,Alzheimer's disease or related dementias
+MAF1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,8.0,144103704.0,9e-19,Alzheimer's disease or related dementias
+SHARPIN,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,8.0,144103704.0,9e-19,Alzheimer's disease or related dementias
+INPP5D,mapped,The first genome-wide association study in the Argentinian and Chilean populations identifies shared genetics with Europeans in Alzheimer's disease.,,2.0,233117202.0,1e-18,Alzheimer's disease
+SLC35C1,mapped,"GWAS meta-analysis of cerebrospinal fluid Alzheimer's biomarkers reveals loci regulating lipids, brain volume and autophagy.",,11.0,45810958.0,2e-18,Cerebrospinal fluid amyloid beta 42 levels in Alzheimer's disease
+ADGRF2P,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,47627419.0,2e-18,Alzheimer's disease or related dementias
+ACKR2,mapped,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,3.0,42864624.0,4e-18,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+CYP8B1,mapped,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,3.0,42864624.0,4e-18,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+CCBP2,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,3.0,42864624.0,4e-18,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+ADAM10,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,15.0,58730416.0,7e-18,Alzheimer's disease or related dementias
+RASGEF1C,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,5.0,180201150.0,9e-18,Alzheimer's disease or related dementias
+LINC02498,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,4.0,11023507.0,2e-17,Alzheimer's disease
+MIR572,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,4.0,11023507.0,2e-17,Alzheimer's disease
+HLA-DQB3,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,32714652.0,4e-17,Alzheimer's disease or related dementias
+CIAO2A,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,15.0,64078384.0,9e-17,Alzheimer's disease or related dementias
+SPI1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,11.0,47358789.0,2e-16,Alzheimer's disease or related dementias
+CEACAM16-AS1,mapped,Identification of genetic heterogeneity of Alzheimer's disease across age.,,19.0,44743791.0,3e-16,Alzheimer's disease (onset between ages 58 and 79)
+HLA-DRB9,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,32447376.0,3e-16,Alzheimer's disease or related dementias
+HLA-DRA,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,32447376.0,3e-16,Alzheimer's disease or related dementias
+MS4A2,mapped,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,11.0,60156035.0,6e-16,Alzheimer's disease (late onset)
+LINC02705,mapped,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,11.0,60156035.0,6e-16,Alzheimer's disease (late onset)
+PLCG2,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,16.0,81942226.0,6e-16,Alzheimer's disease or related dementias
+FERMT2,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,14.0,52924962.0,8e-16,Alzheimer's disease
+MAPT,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,17.0,46014622.0,9e-16,Alzheimer's disease or related dementias
+MARK4,mapped,Identification of genetic heterogeneity of Alzheimer's disease across age.,,19.0,45146841.0,9e-16,Alzheimer's disease (onset between ages 58 and 79)
+SNX22,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,15.0,64148980.0,1e-15,Alzheimer's disease or related dementias
+SNX1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,15.0,64148980.0,1e-15,Alzheimer's disease or related dementias
+MIR4280HG,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,5.0,86927378.0,1e-15,Alzheimer's disease
+LINC02059,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,5.0,86927378.0,1e-15,Alzheimer's disease
+LOC105373605,reported,Identification of genetic heterogeneity of Alzheimer's disease across age.,,2.0,127132061.0,2e-15,Alzheimer's disease (onset between ages 58 and 79)
+ACE,mapped,Multi-ancestry meta-analysis and fine-mapping in Alzheimer's disease.,,17.0,63483402.0,2e-15,Alzheimer's disease
+TMEM106B,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,7.0,12242825.0,4e-15,Alzheimer's disease in APOE e33 genotype
+FAM157C,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,16.0,90103687.0,6e-15,Alzheimer's disease
+TCN2,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,22.0,30611036.0,1e-14,Alzheimer's disease
+MGMT,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,10.0,129677743.0,2e-14,Alzheimer's disease
+TREML2,mapped,Multi-ancestry meta-analysis and fine-mapping in Alzheimer's disease.,,6.0,41192063.0,2e-14,Alzheimer's disease
+MS4A4E,reported,"Common variants at ABCA7, MS4A6A/MS4A4E, EPHA1, CD33 and CD2AP are associated with Alzheimer's disease.",,11.0,60171834.0,2e-14,Alzheimer's disease
+ABI3,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,17.0,49219935.0,3e-14,Alzheimer's disease or related dementias
+APP,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,21.0,26101558.0,4e-14,Alzheimer's disease or related dementias
+ZNF594-DT,mapped,Multi-ancestry meta-analysis and fine-mapping in Alzheimer's disease.,,17.0,5236512.0,5e-14,Alzheimer's disease
+KRAS,mapped,Genome-Wide association study of quantitative biomarkers identifies a novel locus for alzheimer's disease at 12p12.1.,,12.0,25397693.0,8e-14,Alzheimer's disease assessment scale (12 month visit)
+RNU4-67P,mapped,Genome-Wide association study of quantitative biomarkers identifies a novel locus for alzheimer's disease at 12p12.1.,,12.0,25397693.0,8e-14,Alzheimer's disease assessment scale (12 month visit)
+SLC6A1,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,3.0,11032991.0,9e-14,Alzheimer's disease (PheCode 290.11)
+EPHA1,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,7.0,143413669.0,1e-13,Alzheimer's disease (late onset)
+ANK3,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,10.0,60025170.0,1e-13,Alzheimer's disease or related dementias
+LINC01553,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,10.0,60025170.0,1e-13,Alzheimer's disease or related dementias
+CCR3,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,3.0,46408373.0,2e-13,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+CCRL2,mapped,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,3.0,46408373.0,2e-13,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+OARD1,mapped,"Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing.",,6.0,41066261.0,2e-13,Alzheimer's disease (late onset)
+CCR5,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,3.0,46408373.0,2e-13,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+CCR2,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,3.0,46408373.0,2e-13,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+LTF,reported,Genome-wide association study of CSF levels of 59 alzheimer's disease candidate proteins: significant associations with proteins involved in amyloid processing and inflammation.,,3.0,46408373.0,2e-13,Cerebrospinal fluid levels of Alzheimer's disease-related proteins
+MTSS2,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,16.0,70662369.0,2e-13,Alzheimer's disease or related dementias
+NCK2,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,2.0,105749599.0,2e-13,Alzheimer's disease
+TSPOAP1-AS1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,17.0,58332680.0,2e-13,Alzheimer's disease
+GAPDHP15,mapped,A novel Alzheimer disease locus located near the gene encoding tau protein.,,6.0,58045670.0,2e-13,Alzheimer's disease (APOE e4 interaction)
+RBBP4P4,mapped,A novel Alzheimer disease locus located near the gene encoding tau protein.,,6.0,58045670.0,2e-13,Alzheimer's disease (APOE e4 interaction)
+TSPOAP1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,17.0,58326988.0,3e-13,Alzheimer's disease
+DOC2A,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,16.0,30010081.0,3e-13,Alzheimer's disease
+GPR141,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,7.0,37843030.0,3e-13,Alzheimer's disease or related dementias
+NME8,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,7.0,37843030.0,3e-13,Alzheimer's disease or related dementias
+IDUA,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,4.0,993555.0,3e-13,Alzheimer's disease or related dementias
+SLC26A1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,4.0,993555.0,3e-13,Alzheimer's disease or related dementias
+RHOH,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,4.0,40197226.0,4e-13,Alzheimer's disease or related dementias
+SCIMP,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,17.0,5233752.0,4e-13,Alzheimer's disease
+SPATC1,mapped,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,8.0,144042819.0,4e-13,Alzheimer's disease
+TSBP1-AS1,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,6.0,32411770.0,5e-13,Alzheimer's disease in APOE e44 or e43 genotype
+OSBP2,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,22.0,30790322.0,7e-13,Alzheimer's disease
+EXOSC4,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,8.0,144069710.0,8e-13,Alzheimer's disease or related dementias
+OPLAH,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,8.0,144069710.0,8e-13,Alzheimer's disease or related dementias
+NPBWR1,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,8.0,52900473.0,8e-13,Alzheimer's disease (PheCode 290.11)
+RB1CC1,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,8.0,52900473.0,8e-13,Alzheimer's disease (PheCode 290.11)
+PGAM5P1,mapped,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,5.0,109885325.0,9e-13,Alzheimer's disease (cognitive decline)
+WNT3,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,17.0,46779275.0,9e-13,Alzheimer's disease
+MAN2A1,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,5.0,109885325.0,9e-13,Alzheimer's disease (cognitive decline)
+MAF,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,16.0,79574511.0,1e-12,Alzheimer's disease or related dementias
+RNA5SP431,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,16.0,79574511.0,1e-12,Alzheimer's disease or related dementias
+RNU2-54P,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,8.0,75905029.0,1e-12,Alzheimer disease and age of onset
+UMAD1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,7.0,7817263.0,1e-12,Alzheimer's disease
+CD33,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,51225221.0,1e-12,Alzheimer's disease or related dementias
+PSMC3,mapped,Multi-ancestry meta-analysis and fine-mapping in Alzheimer's disease.,,11.0,47433000.0,1e-12,Alzheimer's disease
+HNF4G,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,8.0,75905029.0,1e-12,Alzheimer disease and age of onset
+RAPSN,mapped,Multi-ancestry meta-analysis and fine-mapping in Alzheimer's disease.,,11.0,47433000.0,1e-12,Alzheimer's disease
+ERN1,mapped,Exome-wide age-of-onset analysis reveals exonic variants in ERN1 and SPPL2C associated with Alzheimer's disease.,,17.0,64064056.0,2e-12,Alzheimer's disease (age of onset) in APOE e4 non-carriers
+NGF-AS1,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,1.0,115169958.0,2e-12,Rate of cognitive decline in Alzheimer's disease
+IQCK,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,16.0,19804089.0,2e-12,Alzheimer's disease or related dementias
+LINC01765,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,1.0,115169958.0,2e-12,Rate of cognitive decline in Alzheimer's disease
+SUCLG2,reported,SUCLG2 identified as both a determinator of CSF Aβ1-42 levels and an attenuator of cognitive decline in Alzheimer's disease.,,3.0,67406609.0,3e-12,Cerebrospinal AB1-42 levels in Alzheimer's disease dementia
+OLFM1,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,9.0,135255256.0,3e-12,"Takes medication for Dementia (includes Alzheimer's, Vascular, etc.)?"
+LINC02907,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,9.0,135255256.0,3e-12,"Takes medication for Dementia (includes Alzheimer's, Vascular, etc.)?"
+HLA-DRB5,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,6.0,32610753.0,3e-12,Alzheimer's disease (late onset)
+ADRA1B,mapped,Multi-ancestry meta-analysis identifies genetic modifiers of age-at-onset of Alzheimer's disease at known and novel loci.,,5.0,159951499.0,4e-12,Alzheimer's disease (age of onset)
+MME,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,3.0,155084189.0,4e-12,Alzheimer's disease or related dementias
+MIAT,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,22.0,26662283.0,6e-12,"Dementia (includes Alzheimer's, Vascular, etc.)"
+MIATNB,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,22.0,26662283.0,6e-12,"Dementia (includes Alzheimer's, Vascular, etc.)"
+TBXAS1,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,7.0,139971504.0,8e-12,Alzheimer's disease (PheCode 290.11)
+CYYR1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,21.0,26775409.0,8e-12,Alzheimer's disease
+ADAMTS1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,21.0,26775409.0,8e-12,Alzheimer's disease
+LINC02946,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,2.0,105732208.0,8e-12,Alzheimer's disease or related dementias
+HS3ST1,reported,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,4.0,11025995.0,9e-12,Alzheimer's disease
+LRRC25,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,18402008.0,1e-11,Alzheimer's disease or related dementias
+LILRA5,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,54305226.0,1e-11,Alzheimer's disease or related dementias
+MIR4752,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,54302959.0,1e-11,Alzheimer's disease or related dementias
+SSBP4,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,18402008.0,1e-11,Alzheimer's disease or related dementias
+LINC01871,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,2.0,7737491.0,1e-11,"Takes medication for Dementia (includes Alzheimer's, Vascular, etc.)?"
+APOC2,reported,Identification of genetic heterogeneity of Alzheimer's disease across age.,,19.0,44935318.0,1e-11,Alzheimer's disease (onset between ages 58 and 79)
+FGGY,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,1.0,59786968.0,1e-11,"Takes medication for Dementia (includes Alzheimer's, Vascular, etc.)?"
+BCAS3,mapped,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,17.0,61215075.0,1e-11,Alzheimer's disease (cognitive decline)
+ATP8B4,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,15.0,49903911.0,2e-11,Alzheimer's disease or related dementias
+SLC52A3,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,20.0,772666.0,2e-11,Alzheimer's disease
+LINC02553,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,11.0,97041381.0,2e-11,Alzheimer's disease (PheCode 290.11)
+LLPH,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,12.0,66121827.0,2e-11,"Takes medication for Dementia (includes Alzheimer's, Vascular, etc.)?"
+BCKDK,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,16.0,31111250.0,2e-11,Alzheimer's disease
+MED28P5,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,11.0,97041381.0,2e-11,Alzheimer's disease (PheCode 290.11)
+PTPRC,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,1.0,198710886.0,2e-11,Alzheimer's disease or related dementias
+CBLC,mapped,Identification of genetic heterogeneity of Alzheimer's disease across age.,,19.0,44799694.0,3e-11,Alzheimer's disease (onset between ages 58 and 79)
+SLC16A9,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,10.0,59580135.0,3e-11,Alzheimer disease and age of onset
+RBCK1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,20.0,413334.0,3e-11,Alzheimer's disease or related dementias
+LINC02268,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,4.0,174174724.0,3e-11,Alzheimer disease and age of onset
+DAW1,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,2.0,227921567.0,3e-11,"Takes medication for Dementia (includes Alzheimer's, Vascular, etc.)?"
+MRPL50P4,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,10.0,59580135.0,3e-11,Alzheimer disease and age of onset
+ANKH,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,5.0,14724304.0,3e-11,Alzheimer's disease or related dementias
+TMED10,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,14.0,75164616.0,3e-11,Alzheimer's disease (PheCode 290.11)
+PLEC,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,8.0,143958463.0,3e-11,Alzheimer's disease or related dementias
+TBX6,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,16.0,30086869.0,4e-11,Alzheimer's disease or related dementias
+COL5A1,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,9.0,134719694.0,4e-11,Alzheimer's disease (PheCode 290.11)
+MS4A,reported,"The membrane-spanning 4-domains, subfamily A (MS4A) gene cluster contains a common variant associated with Alzheimer's disease.",,11.0,60255614.0,4e-11,Alzheimer's disease
+RNU6-1307P,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,19.0,54267597.0,4e-11,Alzheimer's disease
+LILRB2,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,19.0,54267597.0,4e-11,Alzheimer's disease
+NLRP7,mapped,Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program.,,19.0,54934176.0,5e-11,Biological Sibling: Alzheimer's / Other Dementia
+OTULIN,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,5.0,14664712.0,6e-11,Alzheimer's disease or related dementias
+BZW2,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,7.0,16668236.0,6e-11,Alzheimer's disease (cognitive decline)
+TSPAN13,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,7.0,16668236.0,6e-11,Alzheimer's disease (cognitive decline)
+PARP1P2,mapped,Identification of genetic modifiers of autosomal dominant Alzheimer's disease: a genome-wide association study.,,14.0,63196126.0,6e-11,Symptomatic autosomal dominant Alzheimer's disease mutations
+RHOJ,mapped,Identification of genetic modifiers of autosomal dominant Alzheimer's disease: a genome-wide association study.,,14.0,63196126.0,6e-11,Symptomatic autosomal dominant Alzheimer's disease mutations
+GNPNAT1,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,14.0,52832135.0,7e-11,Late-onset Alzheimer's disease
+BLNK,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,10.0,96266650.0,7e-11,Alzheimer's disease
+SPON1,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,11.0,14202800.0,7e-11,Alzheimer's disease (cognitive decline)
+RRAS2,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,11.0,14202800.0,7e-11,Alzheimer's disease (cognitive decline)
+PSMA1,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,11.0,14202800.0,7e-11,Alzheimer's disease (cognitive decline)
+WDR81,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,17.0,1728047.0,8e-11,Alzheimer's disease
+WDR81-AS1,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,17.0,1728047.0,8e-11,Alzheimer's disease
+IGHG3,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,14.0,105775363.0,9e-11,Alzheimer's disease or related dementias
+ATP6V1G1P1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,14.0,105775363.0,9e-11,Alzheimer's disease or related dementias
+FRMD4A,reported,Genome-wide haplotype association study identifies the FRMD4A gene as a risk locus for Alzheimer's disease.,,,,1e-10,Alzheimer's disease
+LEF1-AS1,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,4.0,108219159.0,1e-10,Alzheimer's disease
+GTF2H3,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,12.0,123650109.0,1e-10,Alzheimer's disease or related dementias
+IGHG1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,14.0,105733666.0,1e-10,Alzheimer's disease or related dementias
+GAB2,reported,GAB2 alleles modify Alzheimer's risk in APOE epsilon4 carriers.,,11.0,78380104.0,1e-10,Alzheimer's disease (late onset)
+IGHEP1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,14.0,105733666.0,1e-10,Alzheimer's disease or related dementias
+CHRNE,reported,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,17.0,4902142.0,2e-10,Alzheimer's disease
+EGFR,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,7.0,54873635.0,2e-10,Alzheimer's disease
+SEC61G-DT,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,7.0,54873635.0,2e-10,Alzheimer's disease
+SERPINF2,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,17.0,1749797.0,2e-10,Alzheimer's disease or related dementias
+C17orf107,mapped,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,17.0,4902142.0,2e-10,Alzheimer's disease
+LINC00861,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,8.0,126341293.0,2e-10,Alzheimer disease and age of onset
+RNU6-869P,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,8.0,126341293.0,2e-10,Alzheimer disease and age of onset
+TREML5P,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,41247320.0,2e-10,Alzheimer's disease or related dementias
+MTHFD1L,reported,Dementia revealed: novel chromosome 6 locus for late-onset Alzheimer disease provides genetic evidence for folate-pathway abnormalities.,,6.0,150885942.0,2e-10,Alzheimer's disease (late onset)
+LINC01605,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,8.0,37276671.0,2e-10,Alzheimer disease and age of onset
+SMARCE1P4,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,8.0,37276671.0,2e-10,Alzheimer disease and age of onset
+JAZF1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,7.0,28135367.0,2e-10,Alzheimer's disease or related dementias
+RNA5SP207,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,41247320.0,2e-10,Alzheimer's disease or related dementias
+IGHV3-64,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,14.0,106656649.0,2e-10,Alzheimer's disease or related dementias
+IGHV3-63,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,14.0,106656649.0,2e-10,Alzheimer's disease or related dementias
+IPO9,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,1.0,201856694.0,3e-10,Late-onset Alzheimer's disease
+RNU7-183P,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,1.0,185343062.0,3e-10,Late-onset Alzheimer's disease
+RPL38P2,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,2.0,77856753.0,3e-10,Late-onset Alzheimer's disease
+C6orf118,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,6.0,163856851.0,3e-10,Late-onset Alzheimer's disease
+CTSB,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,8.0,11844613.0,3e-10,Alzheimer's disease or related dementias
+FLJ40194,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,17.0,49267168.0,3e-10,Alzheimer's disease or related dementias
+RN7SL366P,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,6.0,163856851.0,3e-10,Late-onset Alzheimer's disease
+SRSF10P2,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,20.0,7728564.0,3e-10,Late-onset Alzheimer's disease
+RN7SL547P,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,20.0,7728564.0,3e-10,Late-onset Alzheimer's disease
+LINC01851,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,2.0,77856753.0,3e-10,Late-onset Alzheimer's disease
+GS1-279B7.1,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,1.0,185343062.0,3e-10,Late-onset Alzheimer's disease
+RBFOX1,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,16.0,7091262.0,4e-10,Alzheimer disease and age of onset
+IL34,reported,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,16.0,70660097.0,4e-10,Alzheimer's disease
+IGHV3-65,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,14.0,106665591.0,4e-10,Alzheimer's disease
+CNN2,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,1038077.0,4e-10,Alzheimer's disease or related dementias
+KANSL1,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,17.0,46111701.0,5e-10,Alzheimer's disease in APOE e33 genotype
+ZNF652-AS1,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,17.0,49373413.0,5e-10,Late-onset Alzheimer's disease
+IGHV1-68,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,14.0,106711684.0,5e-10,Alzheimer's disease or related dementias
+IGHV1-69,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,14.0,106711684.0,5e-10,Alzheimer's disease or related dementias
+KLF16,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,19.0,1854255.0,5e-10,Alzheimer's disease
+ZCWPW1,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,7.0,100406823.0,6e-10,Alzheimer's disease (late onset)
+ATP5F1C,mapped,"Rare coding variants in PLCG2, ABI3, and TREM2 implicate microglial-mediated innate immunity in Alzheimer's disease.",,10.0,7799848.0,6e-10,Alzheimer's disease (late onset)
+IQCD,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,12.0,113205627.0,6e-10,Alzheimer's disease or related dementias
+TRIB1AL,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,8.0,125471585.0,6e-10,Alzheimer's disease or related dementias
+ATP5C1,reported,"Rare coding variants in PLCG2, ABI3, and TREM2 implicate microglial-mediated innate immunity in Alzheimer's disease.",,10.0,7799848.0,6e-10,Alzheimer's disease (late onset)
+TLN2 x WWC1,reported,Male-specific epistasis between WWC1 and TLN2 genes is associated with Alzheimer's disease.,,,,7e-10,Alzheimer's disease (SNP x SNP interaction)
+MGAT5,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,2.0,134315905.0,7e-10,Alzheimer's disease or related dementias
+ZFYVE1,mapped,Matching heterogeneous cohorts by projected principal components reveals two novel Alzheimer's disease-associated genes in the Hispanic population.,,14.0,72997592.0,7e-10,Alzheimer's disease
+MIR142HG,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,17.0,58331728.0,7e-10,Late-onset Alzheimer's disease
+PRICKLE1,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,12.0,42485324.0,8e-10,Alzheimer's disease
+HAVCR2,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,5.0,157099320.0,8e-10,Late-onset Alzheimer's disease
+NOC4L,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,12.0,132180126.0,8e-10,Alzheimer's disease
+DIO2-AS1,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,14.0,80234008.0,8e-10,Alzheimer's disease
+LINC02361,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,12.0,132180126.0,8e-10,Alzheimer's disease
+DIO2,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,14.0,80234008.0,8e-10,Alzheimer's disease
+KIAA2013,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,1.0,11926564.0,9e-10,Alzheimer's disease
+PLOD1,mapped,Genome-wide meta-analysis identifies ancestry-specific loci for Alzheimer's disease.,,1.0,11926564.0,9e-10,Alzheimer's disease
+CACNA1G,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,17.0,50614721.0,1e-09,Alzheimer's disease (cognitive decline)
+BZRAP1-AS1,reported,Genome-wide meta-analysis identifies new loci and functional pathways influencing Alzheimer's disease risk.,,17.0,58331728.0,1e-09,Alzheimer's disease (late onset)
+CST6,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,11.0,66013988.0,1e-09,Alzheimer's disease
+CATSPER1,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,11.0,66013988.0,1e-09,Alzheimer's disease
+TMC5,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,16.0,19423707.0,1e-09,Alzheimer disease and age of onset
+RAC1P2,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,4.0,46689227.0,1e-09,Alzheimer disease and age of onset
+GABRA2,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,4.0,46412095.0,1e-09,Alzheimer disease and age of onset
+USP40,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,2.0,233575317.0,1e-09,Rate of cognitive decline in Alzheimer's disease
+UGT1A12P,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,2.0,233575317.0,1e-09,Rate of cognitive decline in Alzheimer's disease
+RNU6-412P,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,4.0,46689227.0,1e-09,Alzheimer disease and age of onset
+SIGLEC11,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,49955674.0,1e-09,Alzheimer's disease or related dementias
+TNIP1,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,5.0,151052827.0,1e-09,Late-onset Alzheimer's disease
+PRKD3,reported,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,2.0,37288815.0,1e-09,Alzheimer's disease
+NDUFAF7,reported,Common variants in Alzheimer's disease and risk stratification by polygenic risk scores.,,2.0,37288815.0,1e-09,Alzheimer's disease
+ATP2B1-AS1,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,12.0,89830937.0,1e-09,Alzheimer disease and age of onset
+LINC02568,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,15.0,63407216.0,1e-09,Alzheimer's disease in APOE e33 genotype
+MYO15A,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,17.0,18156140.0,1e-09,Alzheimer's disease
+LINC01723,mapped,Multi-Omic analyses characterize the ceramide/sphingomyelin pathway as a therapeutic target in Alzheimer's disease.,,20.0,12988752.0,1e-09,Sphingomyeline (d43:1/d34:1) ratio in Alzheimer disease
+ALDH1A2,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,15.0,58388755.0,2e-09,Alzheimer's disease or related dementias
+ARHGAP45,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,19.0,1066627.0,2e-09,Alzheimer's disease
+TPCN1,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,12.0,113281983.0,2e-09,Alzheimer's disease
+FAM171A2,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,17.0,44364976.0,2e-09,Late-onset Alzheimer's disease
+RPL7L1P5,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,17.0,44364976.0,2e-09,Late-onset Alzheimer's disease
+HDAC2-AS2,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,6.0,114291731.0,2e-09,Alzheimer's disease
+HS3ST5,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,6.0,114291731.0,2e-09,Alzheimer's disease
+GRIN3B,reported,"Variants in the ATP-binding cassette transporter (ABCA7), apolipoprotein E ϵ4,and the risk of late-onset Alzheimer disease in African Americans.",,19.0,1050421.0,2e-09,Alzheimer's disease (late onset)
+MS4,reported,A novel Alzheimer disease locus located near the gene encoding tau protein.,,11.0,60254475.0,2e-09,Alzheimer's disease in APOE e4- carriers
+SEMA3F,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,3.0,50167312.0,2e-09,Alzheimer's disease or gastroesophageal reflux disease
+HMHA1,reported,"Variants in the ATP-binding cassette transporter (ABCA7), apolipoprotein E ϵ4,and the risk of late-onset Alzheimer disease in African Americans.",,19.0,1050421.0,2e-09,Alzheimer's disease (late onset)
+ANO5,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,11.0,22250324.0,2e-09,Alzheimer's disease or related dementias
+MS4A6E,reported,A novel Alzheimer disease locus located near the gene encoding tau protein.,,11.0,60254475.0,2e-09,Alzheimer's disease in APOE e4- carriers
+ABCA1,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,9.0,104903697.0,2e-09,Alzheimer's disease
+VN1R104P,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,19.0,54313903.0,2e-09,Late-onset Alzheimer's disease
+MIR670HG,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,11.0,43611658.0,2e-09,Alzheimer disease and age of onset
+ARRDC4,reported,Novel Alzheimer Disease Risk Loci and Pathways in African American Individuals Using the African Genome Resources Panel: A Meta-analysis.,,15.0,97449455.0,2e-09,Alzheimer's disease
+SLC22A23,mapped,Alzheimer's disease multi-ancestry genome-wide interaction and stratified study with smoking.,,6.0,3398109.0,2e-09,Alzheimer's disease x smoking interaction
+LINC00348,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,13.0,70946701.0,2e-09,Rate of cognitive decline in Alzheimer's disease
+MTCL1P1,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,13.0,70946701.0,2e-09,Rate of cognitive decline in Alzheimer's disease
+DNTT,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,10.0,96281988.0,2e-09,Alzheimer's disease or related dementias
+IGF1R,reported,Novel Alzheimer Disease Risk Loci and Pathways in African American Individuals Using the African Genome Resources Panel: A Meta-analysis.,,15.0,97449455.0,2e-09,Alzheimer's disease
+LINC02253,mapped,Novel Alzheimer Disease Risk Loci and Pathways in African American Individuals Using the African Genome Resources Panel: A Meta-analysis.,,15.0,97449455.0,2e-09,Alzheimer's disease
+LINC00923,mapped,Novel Alzheimer Disease Risk Loci and Pathways in African American Individuals Using the African Genome Resources Panel: A Meta-analysis.,,15.0,97449455.0,2e-09,Alzheimer's disease
+FAM193B,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,5.0,177539622.0,2e-09,Alzheimer's disease or related dementias
+KCNG1,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,20.0,51038035.0,2e-09,Alzheimer's disease
+KIF12,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,9.0,114127254.0,2e-09,Rate of cognitive decline in Alzheimer's disease
+ATF5,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,49948251.0,2e-09,Alzheimer's disease or related dementias
+RPSAP1,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,20.0,51038035.0,2e-09,Alzheimer's disease
+RELB,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,19.0,45019031.0,2e-09,Alzheimer's disease
+REL-DT,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,2.0,60832908.0,2e-09,Alzheimer disease and age of onset
+NDUFAF6,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,8.0,94983473.0,2e-09,Alzheimer's disease
+SYNPR,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,3.0,63510692.0,2e-09,Alzheimer's disease
+SYNPR-AS1,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,3.0,63510692.0,2e-09,Alzheimer's disease
+COL27A1,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,9.0,114127254.0,2e-09,Rate of cognitive decline in Alzheimer's disease
+GDI2P1,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,7.0,48740701.0,3e-09,Alzheimer's disease
+SLC2A8,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,9.0,127404103.0,3e-09,Rate of cognitive decline in Alzheimer's disease
+RPL7AP81,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,1.0,220426553.0,3e-09,Alzheimer's disease
+RPLP0P5,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,1.0,220426553.0,3e-09,Alzheimer's disease
+DENND3,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,8.0,141167152.0,3e-09,Alzheimer's disease
+FAM193B-DT,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,5.0,177560723.0,3e-09,Alzheimer's disease or related dementias
+CNIH4,mapped,Identification of genetic modifiers of autosomal dominant Alzheimer's disease: a genome-wide association study.,,1.0,224365900.0,3e-09,Symptomatic autosomal dominant Alzheimer's disease mutations
+MIOS-DT,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,7.0,7565025.0,3e-09,Alzheimer's disease
+LINC02838,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,7.0,48740701.0,3e-09,Alzheimer's disease
+ANO3,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,11.0,25871035.0,3e-09,Alzheimer disease and age of onset
+LINC02699,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,11.0,25871035.0,3e-09,Alzheimer disease and age of onset
+MIR378C,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,10.0,130671390.0,3e-09,Alzheimer's disease
+C1S,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,12.0,7055497.0,3e-09,Alzheimer's disease
+SYNJ1,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,21.0,32716160.0,3e-09,Alzheimer disease and age of onset
+SLC2A4RG,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,20.0,63743088.0,3e-09,Alzheimer's disease
+MRC1,mapped,Similar Genetic Architecture of Alzheimer's Disease and Differential <i>APOE</i> Effect Between Sexes.,,10.0,17846684.0,3e-09,Alzheimer's disease
+DOCK4,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,7.0,111940111.0,3e-09,Alzheimer's disease or related dementias
+PLEKHA1,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,10.0,122413396.0,3e-09,Alzheimer's disease
+GLIS3,reported,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,9.0,3929424.0,3e-09,Alzheimer's disease biomarkers
+Y_RNA,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,10.0,130671390.0,3e-09,Alzheimer's disease
+UBA52P9,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,18.0,27352028.0,4e-09,Alzheimer's disease in APOE e33 genotype
+CTSH,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,15.0,78936857.0,4e-09,Alzheimer's disease
+MEFV,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,16.0,3250488.0,4e-09,Alzheimer's disease
+RN7SL152P,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,4.0,140579551.0,4e-09,Alzheimer disease and age of onset
+TBC1D9,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,4.0,140579551.0,4e-09,Alzheimer disease and age of onset
+TMEM184A,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,7.0,1552361.0,4e-09,Alzheimer's disease or related dementias
+LINC01908,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,18.0,27352028.0,4e-09,Alzheimer's disease in APOE e33 genotype
+LINC02325,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,14.0,97442349.0,4e-09,Alzheimer disease and age of onset
+CCDC50,reported,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,3.0,190951729.0,5e-09,Alzheimer's disease biomarkers
+SNAR-I,reported,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,3.0,190951729.0,5e-09,Alzheimer's disease biomarkers
+UTS2D,reported,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,3.0,190951729.0,5e-09,Alzheimer's disease biomarkers
+LINC01499,mapped,"Multi-ancestry genome-wide meta-analysis of 56,241 individuals identifies known and novel cross-population and ancestry-specific associations as novel risk loci for Alzheimer's disease.",,11.0,41714561.0,5e-09,Alzheimer's disease
+DSCAM,mapped,Identification of novel genes for age-at-onset of Alzheimer's disease by combining quantitative and survival trait analyses.,,21.0,40641783.0,5e-09,Alzheimer's disease (age of onset)
+ADAMTS4,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,1.0,161189357.0,5e-09,Alzheimer's disease or related dementias
+PRSS36,mapped,Multi-ancestry meta-analysis and fine-mapping in Alzheimer's disease.,,16.0,31143037.0,5e-09,Alzheimer's disease
+CLPTM1,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,19.0,44960129.0,5e-09,Alzheimer's disease
+PDE4B,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,1.0,65936741.0,5e-09,Alzheimer's disease or gastroesophageal reflux disease and/or peptic ulcer disease
+OSTN,mapped,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,3.0,190951729.0,5e-09,Alzheimer's disease biomarkers
+GMNC,mapped,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,3.0,190951729.0,5e-09,Alzheimer's disease biomarkers
+OSTNIL1-RAP,reported,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,3.0,190951729.0,5e-09,Alzheimer's disease biomarkers
+CR1L,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,1.0,207708849.0,5e-09,Alzheimer's disease or gastroesophageal reflux disease and/or peptic ulcer disease
+DAB1,mapped,Whole genome analysis in APOE4 homozygotes identifies the DAB1-RELN pathway in Alzheimer's disease pathogenesis.,,1.0,57182042.0,5e-09,Alzheimer's disease in APOE E4 homozygosity
+NYAP1,mapped,Multi-ancestry meta-analysis identifies genetic modifiers of age-at-onset of Alzheimer's disease at known and novel loci.,,7.0,100494172.0,5e-09,Alzheimer's disease (age of onset)
+CSTP2,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,20.0,23762403.0,5e-09,Alzheimer disease and age of onset
+FAM47E,reported,Ethnic and trans-ethnic genome-wide association studies identify new loci influencing Japanese Alzheimer's disease risk.,,4.0,76217307.0,5e-09,Alzheimer's disease
+CST1,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,20.0,23762403.0,5e-09,Alzheimer disease and age of onset
+SCARB2,mapped,Ethnic and trans-ethnic genome-wide association studies identify new loci influencing Japanese Alzheimer's disease risk.,,4.0,76217307.0,5e-09,Alzheimer's disease
+GEMC1,reported,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,3.0,190951729.0,5e-09,Alzheimer's disease biomarkers
+RNA5SP43,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,1.0,37287106.0,6e-09,Alzheimer disease and age of onset
+RPS29P6,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,1.0,37287106.0,6e-09,Alzheimer disease and age of onset
+DYM,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,18.0,49261603.0,6e-09,Alzheimer's disease
+ARL17B,mapped,A novel Alzheimer disease locus located near the gene encoding tau protein.,,17.0,46275856.0,6e-09,Alzheimer's disease in APOE e4- carriers
+RIN3,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,14.0,92460608.0,6e-09,Alzheimer's disease (late onset)
+LRRC27A,reported,A novel Alzheimer disease locus located near the gene encoding tau protein.,,17.0,46275856.0,6e-09,Alzheimer's disease in APOE e4- carriers
+FBN2,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,5.0,128619201.0,7e-09,Alzheimer's disease
+USP3,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,15.0,63566647.0,7e-09,Alzheimer's disease in APOE e33 or e44 or e43 genotype
+DDHD1-DT,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,14.0,53394351.0,7e-09,Alzheimer's disease in APOE e44 or e43 genotype
+SNORA70,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,12.0,75763576.0,7e-09,Alzheimer disease and age of onset
+RN7SL734P,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,12.0,75763576.0,7e-09,Alzheimer disease and age of onset
+SLC27A6,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,5.0,128619201.0,7e-09,Alzheimer's disease
+LILRA2,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,54565959.0,7e-09,Alzheimer's disease
+KIR3DX1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,54565959.0,7e-09,Alzheimer's disease
+HBEGF,mapped,Transethnic genome-wide scan identifies novel Alzheimer's disease loci.,,5.0,140327854.0,7e-09,Alzheimer's disease
+PFDN1,mapped,Transethnic genome-wide scan identifies novel Alzheimer's disease loci.,,5.0,140327854.0,7e-09,Alzheimer's disease
+PTMAP10,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,7.0,138194682.0,7e-09,Alzheimer's disease or related dementias
+ICA1,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,7.0,8204382.0,7e-09,Alzheimer's disease
+KCNK4-CATSPERZ,mapped,Multi-ancestry meta-analysis identifies genetic modifiers of age-at-onset of Alzheimer's disease at known and novel loci.,,11.0,64301284.0,7e-09,Alzheimer's disease (age of onset)
+CATSPERZ,mapped,Multi-ancestry meta-analysis identifies genetic modifiers of age-at-onset of Alzheimer's disease at known and novel loci.,,11.0,64301284.0,7e-09,Alzheimer's disease (age of onset)
+USP3-AS1,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,15.0,63566647.0,7e-09,Alzheimer's disease in APOE e33 or e44 or e43 genotype
+SDR42E2,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,16.0,22190681.0,8e-09,Alzheimer disease and age of onset
+SORT1,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,1.0,109345810.0,8e-09,Alzheimer's disease
+LINC01117,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,2.0,176778182.0,8e-09,Alzheimer disease and age of onset
+KIR3DL2,reported,Identification of genetic heterogeneity of Alzheimer's disease across age.,,19.0,54851404.0,8e-09,Alzheimer's disease (onset between ages 58 and 79)
+TRAPPC6A,mapped,Identification of genetic heterogeneity of Alzheimer's disease across age.,,19.0,45168224.0,8e-09,Alzheimer's disease (onset between ages 58 and 79)
+UBFD1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,16.0,23562385.0,8e-09,Alzheimer's disease or related dementias
+NKAIN3,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,8.0,62931072.0,8e-09,Alzheimer disease and age of onset
+SLC50A1,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,1.0,155135691.0,8e-09,Alzheimer's disease in APOE e33 genotype
+NEO1,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,15.0,73168712.0,9e-09,Alzheimer's disease
+KLC3,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,19.0,45338038.0,9e-09,Alzheimer's disease or gastroesophageal reflux disease
+PDE7B,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,6.0,136046867.0,1e-08,Alzheimer's disease (cognitive decline)
+NPAS3,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,14.0,33428905.0,1e-08,Alzheimer's disease in APOE e33 genotype
+LINC00917,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,16.0,86420604.0,1e-08,Alzheimer's disease
+FENDRR,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,16.0,86420604.0,1e-08,Alzheimer's disease
+WDR12,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,2.0,202878717.0,1e-08,Alzheimer's disease
+ILRUN,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,6.0,34644602.0,1e-08,Alzheimer's disease or related dementias
+CLDN17,mapped,Genome-wide association studies identify novel loci in rapidly progressive Alzheimer's disease.,,21.0,30037711.0,1e-08,Rapidly progressive Alzheimer's disease (clinical) (case-control set 3)
+GRIK1,mapped,Genome-wide association studies identify novel loci in rapidly progressive Alzheimer's disease.,,21.0,30037711.0,1e-08,Rapidly progressive Alzheimer's disease (clinical) (case-control set 3)
+CST8,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,20.0,23514209.0,1e-08,Alzheimer disease and age of onset
+CST13P,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,20.0,23514209.0,1e-08,Alzheimer disease and age of onset
+NDUFS5P4,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,4.0,98971324.0,1e-08,Alzheimer disease and age of onset
+RNU7-149P,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,4.0,98971324.0,1e-08,Alzheimer disease and age of onset
+MTCYBP19,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,8.0,36006420.0,1e-08,Rate of cognitive decline in Alzheimer's disease
+ENPP6,mapped,Genome-wide association identifies the first risk loci for psychosis in Alzheimer disease.,,4.0,184155489.0,1e-08,Psychosis in Alzheimer's disease
+UNC5D,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,8.0,36006420.0,1e-08,Rate of cognitive decline in Alzheimer's disease
+LINC01924,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,18.0,65373686.0,1e-08,Rate of cognitive decline in Alzheimer's disease
+LINC00564,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,13.0,81170245.0,1e-08,Rate of cognitive decline in Alzheimer's disease
+LINC01916,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,18.0,65373686.0,1e-08,Rate of cognitive decline in Alzheimer's disease
+DPPA3P3,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,13.0,81170245.0,1e-08,Rate of cognitive decline in Alzheimer's disease
+RN7SL354P,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,15.0,50701814.0,1e-08,Alzheimer's disease
+PLPPR5-AS1,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,1.0,99242198.0,1e-08,Alzheimer disease and age of onset
+SPPL2A,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,15.0,50701814.0,1e-08,Alzheimer's disease
+CELF1,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,11.0,47536319.0,1e-08,Alzheimer's disease (late onset)
+ANKRD31,reported,Genome-wide association analysis of dementia and its clinical endophenotypes reveal novel loci associated with Alzheimer's disease and three causality networks: The GR@ACE project.,,5.0,75072429.0,1e-08,Alzheimer's disease
+ARFGEF2,mapped,Identification of novel genes for age-at-onset of Alzheimer's disease by combining quantitative and survival trait analyses.,,20.0,48937766.0,1e-08,Alzheimer's disease (age of onset)
+FNTAP1,reported,Identification of genetic heterogeneity of Alzheimer's disease across age.,,11.0,86157598.0,1e-08,Alzheimer's disease (onset between ages 58 and 79)
+LINC01234,mapped,"Multi-ancestry genome-wide meta-analysis of 56,241 individuals identifies known and novel cross-population and ancestry-specific associations as novel risk loci for Alzheimer's disease.",,12.0,113643122.0,1e-08,Alzheimer's disease
+CHRNA2,mapped,"Multi-ancestry genome-wide meta-analysis of 56,241 individuals identifies known and novel cross-population and ancestry-specific associations as novel risk loci for Alzheimer's disease.",,8.0,27472579.0,1e-08,Alzheimer's disease
+SAP30L,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,5.0,154457546.0,1e-08,Alzheimer's disease (cognitive decline)
+REXO1,mapped,Multi-ancestry meta-analysis and fine-mapping in Alzheimer's disease.,,19.0,1833339.0,1e-08,Alzheimer's disease
+CDO1,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,5.0,115784235.0,1e-08,Alzheimer's disease
+ANKRD55,mapped,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,5.0,56214829.0,1e-08,Alzheimer's disease (cognitive decline)
+CTNNA2,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,2.0,80054047.0,1e-08,Alzheimer's disease (cognitive decline)
+RNU2-49P,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,5.0,115784235.0,1e-08,Alzheimer's disease
+PDE7B-AS1,mapped,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,6.0,136046867.0,1e-08,Alzheimer's disease (cognitive decline)
+ZNF232-AS1,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,17.0,5110917.0,1e-08,Alzheimer's disease or peptic ulcer disease
+RIPOR3,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,20.0,50637378.0,1e-08,Alzheimer's disease
+PHF14,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,7.0,11018769.0,1e-08,Alzheimer disease and age of onset
+HP1BP3,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,1.0,20745474.0,1e-08,Alzheimer's disease in APOE e44 or e43 genotype
+ZNF232,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,17.0,5110917.0,1e-08,Alzheimer's disease or peptic ulcer disease
+MINDY2,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,15.0,58790588.0,1e-08,Alzheimer's disease in APOE e44 or e43 genotype
+SCARA3,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,8.0,27633669.0,2e-08,Alzheimer's disease or peptic ulcer disease
+DEDD,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,1.0,161141573.0,2e-08,Alzheimer's disease
+OR2B2,mapped,Ethnic and trans-ethnic genome-wide association studies identify new loci influencing Japanese Alzheimer's disease risk.,,6.0,27915491.0,2e-08,Alzheimer's disease
+OR2W6P,mapped,Ethnic and trans-ethnic genome-wide association studies identify new loci influencing Japanese Alzheimer's disease risk.,,6.0,27915491.0,2e-08,Alzheimer's disease
+PUM3,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,9.0,2844360.0,2e-08,Rate of cognitive decline in Alzheimer's disease
+GPS2P1,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,9.0,2844360.0,2e-08,Rate of cognitive decline in Alzheimer's disease
+IFITM3P1,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,4.0,65977824.0,2e-08,Rate of cognitive decline in Alzheimer's disease
+RNU2-40P,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,4.0,65977824.0,2e-08,Rate of cognitive decline in Alzheimer's disease
+DUSP10,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,1.0,221521649.0,2e-08,Rate of cognitive decline in Alzheimer's disease
+LINC02817,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,1.0,221521649.0,2e-08,Rate of cognitive decline in Alzheimer's disease
+HNRNPA1P46,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,1.0,190928478.0,2e-08,Alzheimer's disease or gastroesophageal reflux disease
+LINC01720,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,1.0,190928478.0,2e-08,Alzheimer's disease or gastroesophageal reflux disease
+RIC8B,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,12.0,106811612.0,2e-08,Alzheimer's disease or related dementias
+MRPL58,mapped,Shared genetic contribution to Ischaemic Stroke and Alzheimer's Disease.,,17.0,75022679.0,2e-08,Alzheimer's disease or small vessel stroke
+KDM1B,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,6.0,18173684.0,2e-08,Alzheimer disease and age of onset
+RNU6-362P,mapped,Shared genetic contribution to Ischaemic Stroke and Alzheimer's Disease.,,17.0,75022679.0,2e-08,Alzheimer's disease or small vessel stroke
+KCTD2,reported,Shared genetic contribution to Ischaemic Stroke and Alzheimer's Disease.,,17.0,75022679.0,2e-08,Alzheimer's disease or small vessel stroke
+ENPP7P11,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,4.0,9590409.0,2e-08,Alzheimer disease and age of onset
+TPM3P3,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,8.0,83837822.0,2e-08,Alzheimer disease and age of onset
+ICT1,reported,Shared genetic contribution to Ischaemic Stroke and Alzheimer's Disease.,,17.0,75022679.0,2e-08,Alzheimer's disease or small vessel stroke
+ATP5H,reported,Shared genetic contribution to Ischaemic Stroke and Alzheimer's Disease.,,17.0,75022679.0,2e-08,Alzheimer's disease or small vessel stroke
+PHF21B,reported,Genome-wide association meta-analysis of neuropathologic features of Alzheimer's disease and related dementias.,,,,2e-08,Dementia and core Alzheimer's disease neuropathologic changes
+MAMSTR,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,19.0,48710247.0,2e-08,Late-onset Alzheimer's disease
+FUT2,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,19.0,48710247.0,2e-08,Late-onset Alzheimer's disease
+NFIC,mapped,Transethnic genome-wide scan identifies novel Alzheimer's disease loci.,,19.0,3405594.0,2e-08,Alzheimer's disease (APOE e4 interaction)
+USP50,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,15.0,50495212.0,2e-08,Alzheimer's disease or related dementias
+USP8,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,15.0,50495212.0,2e-08,Alzheimer's disease or related dementias
+LINC01254,mapped,Whole-genome sequencing analyses suggest novel genetic factors associated with Alzheimer's disease and a cumulative effects model for risk liability.,,18.0,10326201.0,2e-08,Alzheimer's disease
+VAPA,mapped,Whole-genome sequencing analyses suggest novel genetic factors associated with Alzheimer's disease and a cumulative effects model for risk liability.,,18.0,10326201.0,2e-08,Alzheimer's disease
+PDE4D,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,5.0,59693193.0,2e-08,Alzheimer's disease
+RN7SKP280,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,7.0,155194021.0,2e-08,Alzheimer's disease
+INSIG1-DT,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,7.0,155194021.0,2e-08,Alzheimer's disease
+MFSD10,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,4.0,2933891.0,2e-08,Alzheimer's disease or related dementias
+UFC1,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,1.0,161141573.0,2e-08,Alzheimer's disease
+LINC02940,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,21.0,39096912.0,2e-08,Alzheimer's disease or related dementias
+FAR2,mapped,Genome-Wide Association Study of Incident Dementia in a Community-Based Sample of Older Subjects.,,12.0,28677164.0,2e-08,Alzheimer's disease
+RPL23AP12,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,21.0,39096912.0,2e-08,Alzheimer's disease or related dementias
+TRIM16L,mapped,Multi-ancestry meta-analysis identifies genetic modifiers of age-at-onset of Alzheimer's disease at known and novel loci.,,17.0,18737894.0,2e-08,Alzheimer's disease (age of onset)
+FBXW10,mapped,Multi-ancestry meta-analysis identifies genetic modifiers of age-at-onset of Alzheimer's disease at known and novel loci.,,17.0,18737894.0,2e-08,Alzheimer's disease (age of onset)
+LDLRAD4,mapped,Multi-ancestry meta-analysis identifies genetic modifiers of age-at-onset of Alzheimer's disease at known and novel loci.,,18.0,13585011.0,2e-08,Alzheimer's disease (age of onset)
+CCDC91,mapped,Genome-Wide Association Study of Incident Dementia in a Community-Based Sample of Older Subjects.,,12.0,28677164.0,2e-08,Alzheimer's disease
+LINC01419,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,8.0,83837822.0,2e-08,Alzheimer disease and age of onset
+SNRPCP13,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,4.0,9590409.0,2e-08,Alzheimer disease and age of onset
+ITSN2,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,2.0,24254185.0,2e-08,Alzheimer disease and age of onset
+CLMN,mapped,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,14.0,95298227.0,2e-08,Alzheimer's disease (cognitive decline)
+TIAM1,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,21.0,31403765.0,2e-08,Alzheimer's disease
+TRIB1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,8.0,125446584.0,2e-08,Alzheimer's disease
+CNTNAP2,reported,Genome-wide association analysis of dementia and its clinical endophenotypes reveal novel loci associated with Alzheimer's disease and three causality networks: The GR@ACE project.,,7.0,147937799.0,2e-08,Alzheimer’s disease and/or vascular dementia (clinical subgroup VaD++)
+TP53INP1,reported,Genome-wide association analysis of dementia and its clinical endophenotypes reveal novel loci associated with Alzheimer's disease and three causality networks: The GR@ACE project.,,8.0,94979792.0,2e-08,Alzheimer's disease
+SLFN5,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,17.0,35209114.0,2e-08,Alzheimer's disease
+LMX1A,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,1.0,165164548.0,2e-08,Alzheimer's disease
+SLC35G3,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,17.0,35209114.0,2e-08,Alzheimer's disease
+RNU6-755P,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,1.0,165164548.0,2e-08,Alzheimer's disease
+MOB1A,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,2.0,74159003.0,2e-08,Alzheimer's disease
+LINC02360,mapped,Genome-wide meta-analysis identifies new loci and functional pathways influencing Alzheimer's disease risk.,,4.0,11721611.0,2e-08,Alzheimer's disease (late onset)
+CACNA1A,mapped,Potential Novel Genes for Late-Onset Alzheimer's Disease in East-Asian Descent Identified by APOE-Stratified Genome-Wide Association Study.,,19.0,13513675.0,2e-08,Late-onset Alzheimer’s disease in APOEe4 non-carriers
+LRIG1,mapped,Potential Novel Genes for Late-Onset Alzheimer's Disease in East-Asian Descent Identified by APOE-Stratified Genome-Wide Association Study.,,3.0,66492439.0,2e-08,Late-onset Alzheimer’s disease in APOEe4 non-carriers
+LINC02775,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,1.0,214188499.0,2e-08,Alzheimer's disease in APOE e33 or e44 or e43 genotype
+RN7SL825P,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,10.0,31991363.0,2e-08,Alzheimer disease and age of onset
+RPL34P19,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,10.0,31991363.0,2e-08,Alzheimer disease and age of onset
+TMEM132C,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,12.0,128585137.0,2e-08,Alzheimer disease and age of onset
+LINC-PINT,reported,Genome-wide analysis identifies a novel LINC-PINT splice variant associated with vascular amyloid pathology in Alzheimer's disease.,,7.0,131007000.0,2e-08,Cerebral amyloid angiopathy in APOEe4 non-carrier Alzheimer’s disease
+MYO16,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,13.0,108821598.0,2e-08,Alzheimer's disease (cognitive decline)
+SIGLEC22P,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,19.0,51210809.0,2e-08,Alzheimer's disease or peptic ulcer disease
+MIR8074,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,19.0,51210809.0,2e-08,Alzheimer's disease or peptic ulcer disease
+AHI1-DT,mapped,Genome-wide association study of Alzheimer's disease endophenotypes at prediagnosis stages.,,6.0,135756791.0,2e-08,Hippocampal volume in Alzheimer's disease dementia
+SMYD2,mapped,APOE-stratified genome-wide association analyses provide insights into the genetic etiology of Alzheimers's disease.,,1.0,214188499.0,2e-08,Alzheimer's disease in APOE e33 or e44 or e43 genotype
+LINC00271,reported,Genome-wide association study of Alzheimer's disease endophenotypes at prediagnosis stages.,,6.0,135756791.0,2e-08,Hippocampal volume in Alzheimer's disease dementia
+SEMA3F-AS1,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,3.0,50137415.0,3e-08,Alzheimer's disease or gastroesophageal reflux disease and/or peptic ulcer disease
+ZNF12,reported,A novel Alzheimer disease locus located near the gene encoding tau protein.,,7.0,6732029.0,3e-08,Alzheimer's disease (APOE e4 interaction)
+PMS2CL,reported,A novel Alzheimer disease locus located near the gene encoding tau protein.,,7.0,6732029.0,3e-08,Alzheimer's disease (APOE e4 interaction)
+TGM6,mapped,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,20.0,2404326.0,3e-08,Alzheimer's disease (cognitive decline)
+SPDYE20P,mapped,A novel Alzheimer disease locus located near the gene encoding tau protein.,,7.0,6732029.0,3e-08,Alzheimer's disease (APOE e4 interaction)
+ADAM17,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,2.0,9558882.0,3e-08,Alzheimer's disease
+YWHAQ,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,2.0,9558882.0,3e-08,Alzheimer's disease
+C16orf95,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,16.0,87200332.0,3e-08,Alzheimer's disease or related dementias
+ZFP3-DT,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,17.0,5066645.0,3e-08,Late-onset Alzheimer's disease
+SLC52A1,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,17.0,5066645.0,3e-08,Late-onset Alzheimer's disease
+ZNF292,mapped,Genome-wide association with MRI atrophy measures as a quantitative trait locus for Alzheimer's disease.,,6.0,87157345.0,3e-08,Entorhinal cortical volume (Alzheimer's disease interaction)
+MEF2C,reported,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,5.0,88927603.0,3e-08,Alzheimer's disease (late onset)
+CEP89,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,32879796.0,3e-08,Alzheimer's disease or related dementias
+MEF2C-AS1,mapped,"Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease.",,5.0,88927603.0,3e-08,Alzheimer's disease (late onset)
+LINC02039,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,5.0,126272219.0,3e-08,Rate of cognitive decline in Alzheimer's disease
+GRAMD2B,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,5.0,126272219.0,3e-08,Rate of cognitive decline in Alzheimer's disease
+ICA1L,mapped,Multi-ancestry meta-analysis and fine-mapping in Alzheimer's disease.,,2.0,202852081.0,3e-08,Alzheimer's disease
+KRT18P4,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,20.0,49970223.0,3e-08,Alzheimer's disease or related dementias
+RNU6-147P,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,20.0,49970223.0,3e-08,Alzheimer's disease or related dementias
+LINC00989,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,4.0,79608801.0,3e-08,Alzheimer's disease
+APAF1,mapped,Alzheimer's disease multi-ancestry genome-wide interaction and stratified study with smoking.,,12.0,98721883.0,3e-08,Alzheimer's disease in smokers
+SUCLA2,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,13.0,47612501.0,3e-08,Rate of cognitive decline in Alzheimer's disease
+USP6NL,reported,Transethnic genome-wide scan identifies novel Alzheimer's disease loci.,,10.0,11678309.0,3e-08,Alzheimer's disease
+ACTBP9,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,18.0,62495558.0,3e-08,Alzheimer's disease
+ZCCHC2,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,18.0,62495558.0,3e-08,Alzheimer's disease
+USH2A,mapped,Exome-wide age-of-onset analysis reveals exonic variants in ERN1 and SPPL2C associated with Alzheimer's disease.,,1.0,216097127.0,3e-08,Alzheimer's disease (age of onset) in APOE e4 non-carriers
+SUMF1,mapped,Genome-wide association identifies the first risk loci for psychosis in Alzheimer disease.,,3.0,3790149.0,3e-08,Psychosis in Alzheimer's disease
+MSR1,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,8.0,16108576.0,3e-08,Rate of cognitive decline in Alzheimer's disease
+SSBL6P,mapped,APOE and BCHE as modulators of cerebral amyloid deposition: a florbetapir PET genome-wide association study.,,3.0,166296681.0,3e-08,Alzheimer's disease biomarkers
+RNU6-248P,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,6.0,76439941.0,3e-08,Alzheimer disease and age of onset
+RNU6-261P,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,6.0,76439941.0,3e-08,Alzheimer disease and age of onset
+BCHE,reported,APOE and BCHE as modulators of cerebral amyloid deposition: a florbetapir PET genome-wide association study.,,3.0,166296681.0,3e-08,Alzheimer's disease biomarkers
+LINC01326,mapped,APOE and BCHE as modulators of cerebral amyloid deposition: a florbetapir PET genome-wide association study.,,3.0,166296681.0,3e-08,Alzheimer's disease biomarkers
+RN7SL700P,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,13.0,47612501.0,3e-08,Rate of cognitive decline in Alzheimer's disease
+COG7,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,16.0,23432947.0,4e-08,Alzheimer's disease
+AGRN,mapped,"A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease.",,1.0,1049997.0,4e-08,Late-onset Alzheimer's disease
+EDAR,mapped,Dementia revealed: novel chromosome 6 locus for late-onset Alzheimer disease provides genetic evidence for folate-pathway abnormalities.,,2.0,109018801.0,4e-08,Alzheimer's disease (late onset)
+Metazoa_SRP,mapped,Dementia revealed: novel chromosome 6 locus for late-onset Alzheimer disease provides genetic evidence for folate-pathway abnormalities.,,2.0,109018801.0,4e-08,Alzheimer's disease (late onset)
+OR5BT1P,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,12.0,48371822.0,4e-08,Alzheimer's disease
+OR5BK1P,mapped,Identification of 16 novel Alzheimer's disease loci using multi-ancestry meta-analyses.,,12.0,48371822.0,4e-08,Alzheimer's disease
+LINC01567,mapped,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,16.0,24664268.0,4e-08,Alzheimer's disease (cognitive decline)
+ERCC2,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,19.0,45372593.0,4e-08,Alzheimer's disease or gastroesophageal reflux disease
+TNRC6A,mapped,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,16.0,24664268.0,4e-08,Alzheimer's disease (cognitive decline)
+HYAL2,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,3.0,50320438.0,4e-08,Alzheimer's disease or gastroesophageal reflux disease and/or peptic ulcer disease
+TUSC2,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,3.0,50320438.0,4e-08,Alzheimer's disease or gastroesophageal reflux disease and/or peptic ulcer disease
+LARS1,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,5.0,146158952.0,4e-08,Alzheimer disease and age of onset
+RNF125,mapped,The first genome-wide association study in the Argentinian and Chilean populations identifies shared genetics with Europeans in Alzheimer's disease.,,18.0,32075509.0,4e-08,Alzheimer's disease
+NEUROD6,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,7.0,31262777.0,4e-08,Alzheimer disease and age of onset
+ADCYAP1R1,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,7.0,31262777.0,4e-08,Alzheimer disease and age of onset
+SLC9A7,mapped,Role of the X Chromosome in Alzheimer Disease Genetics.,,,46691127.0,4e-08,Alzheimer's disease
+ROBO2P1,mapped,"Two novel loci, COBL and SLC10A2, for Alzheimer's disease in African Americans.",,7.0,51510325.0,4e-08,Late-onset Alzheimer's disease
+BZRAP1,reported,Transethnic genome-wide scan identifies novel Alzheimer's disease loci.,,17.0,58331728.0,4e-08,Alzheimer's disease
+LILRA1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,54613004.0,4e-08,Alzheimer's disease or related dementias
+LILRB1,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,19.0,54613004.0,4e-08,Alzheimer's disease or related dementias
+WWOX,reported,"Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing.",,16.0,79321960.0,4e-08,Alzheimer's disease (late onset)
+MTMR2,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,11.0,95937492.0,4e-08,Alzheimer's disease
+LINC00290,mapped,Identification of novel genes for age-at-onset of Alzheimer's disease by combining quantitative and survival trait analyses.,,4.0,180902826.0,4e-08,Alzheimer's disease (age of onset)
+NDUFB5P1,mapped,Identification of novel genes for age-at-onset of Alzheimer's disease by combining quantitative and survival trait analyses.,,4.0,180902826.0,4e-08,Alzheimer's disease (age of onset)
+QKILA,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,4.0,139594965.0,4e-08,Alzheimer's disease
+LINC01776,mapped,Genome-Wide Association Study of Incident Dementia in a Community-Based Sample of Older Subjects.,,1.0,98342700.0,4e-08,Alzheimer's disease
+AIDAP3,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,18.0,1681353.0,4e-08,Alzheimer's disease
+LINC00470,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,18.0,1681353.0,4e-08,Alzheimer's disease
+SNX7-DT,mapped,Genome-Wide Association Study of Incident Dementia in a Community-Based Sample of Older Subjects.,,1.0,98342700.0,4e-08,Alzheimer's disease
+IPMK,mapped,Consensus meta-analysis of genome-wide association studies for Alzheimer's disease and related dementias.,,10.0,58253643.0,4e-08,Alzheimer's disease or related dementias
+CICP17,mapped,"Two novel loci, COBL and SLC10A2, for Alzheimer's disease in African Americans.",,7.0,51510325.0,4e-08,Late-onset Alzheimer's disease
+COBL,reported,"Two novel loci, COBL and SLC10A2, for Alzheimer's disease in African Americans.",,7.0,51510325.0,4e-08,Late-onset Alzheimer's disease
+NPAS2,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,2.0,100697607.0,4e-08,Alzheimer disease and age of onset
+LINC01868,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,2.0,100697607.0,4e-08,Alzheimer disease and age of onset
+NCR2,mapped,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,6.0,41368363.0,4e-08,Alzheimer's disease biomarkers
+FOXP4-AS1,mapped,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,6.0,41368363.0,4e-08,Alzheimer's disease biomarkers
+SDK1,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,7.0,3510211.0,4e-08,Alzheimer's disease
+TENM2,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,5.0,167472200.0,4e-08,Alzheimer's disease
+SNORD27,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,13.0,21138845.0,4e-08,Alzheimer's disease
+IPPKP1,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,13.0,21138845.0,4e-08,Alzheimer's disease
+RPL32P25,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,11.0,95937492.0,4e-08,Alzheimer's disease
+NTF3,mapped,Genome-wide association and multi-omics studies identify MGMT as a novel risk gene for Alzheimer's disease among women.,,12.0,5456966.0,4e-08,Alzheimer's disease
+SETD7,mapped,New insights into the genetic etiology of Alzheimer's disease and related dementias.,,4.0,139594965.0,4e-08,Alzheimer's disease
+PPP1R13L,mapped,A large-scale genome-wide cross-trait analysis reveals shared genetic architecture between Alzheimer's disease and gastrointestinal tract disorders.,,19.0,45372593.0,4e-08,Alzheimer's disease or gastroesophageal reflux disease
+FLJ45256,reported,Genome-wide association study of the rate of cognitive decline in Alzheimer's disease.,,16.0,24664268.0,4e-08,Alzheimer's disease (cognitive decline)
+TREM,reported,GWAS of cerebrospinal fluid tau levels identifies risk variants for Alzheimer's disease.,,6.0,41368363.0,4e-08,Alzheimer's disease biomarkers
+LINC02668,mapped,Genome-wide association study of rate of cognitive decline in Alzheimer's disease patients identifies novel genes and pathways.,,10.0,3254357.0,4e-08,Rate of cognitive decline in Alzheimer's disease
+ZKSCAN4,mapped,The first genome-wide association study in the Argentinian and Chilean populations identifies shared genetics with Europeans in Alzheimer's disease.,,6.0,28259100.0,4e-08,Alzheimer's disease
+NKAPL,mapped,The first genome-wide association study in the Argentinian and Chilean populations identifies shared genetics with Europeans in Alzheimer's disease.,,6.0,28259100.0,4e-08,Alzheimer's disease
+RNU6-1325P,mapped,The first genome-wide association study in the Argentinian and Chilean populations identifies shared genetics with Europeans in Alzheimer's disease.,,4.0,59984152.0,4e-08,Alzheimer's disease
+LINC02496,mapped,The first genome-wide association study in the Argentinian and Chilean populations identifies shared genetics with Europeans in Alzheimer's disease.,,4.0,59984152.0,4e-08,Alzheimer's disease
+PTPRG,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,3.0,61650482.0,4e-08,Alzheimer disease and age of onset
+SVIL,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,10.0,29940940.0,4e-08,Alzheimer disease and age of onset
+JCAD,mapped,"Family-based association analyses of imputed genotypes reveal genome-wide significant association of Alzheimer's disease with OSBPL6, PTPRG, and PDCL3.",,10.0,29940940.0,4e-08,Alzheimer disease and age of onset

@@ -1,0 +1,2 @@
+gene_symbol,mapping_type,study,snp,chr_id,chr_pos,p_value,trait
+FAN1,reported,Population-specific genetic modification of Huntington's disease in Venezuela.,,15,30910758,2e-20,Huntington's disease (age at onset)
