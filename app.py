@@ -243,9 +243,6 @@ def render_gene_evidence(disease: str, list_type: str):
     st.subheader("Genes Driving Top Regions")
     st.info("Region-specific gene contributions require additional computation. See notebooks/02_scoring.ipynb for details.")
 
-    st.subheader("Genes Driving Top Regions")
-    st.info("Region-specific gene contributions require additional computation. See notebooks/02_scoring.ipynb for details.")
-
     # Sensitivity analyses panel
     st.subheader("Sensitivity Analyses")
     st.caption(
@@ -501,35 +498,6 @@ def render_export(disease: str, list_type: str):
     )
 
 
-def main():
-    """Main dashboard entry point."""
-    disease, list_type = render_sidebar()
-
-    # Main tabs
-    tabs = st.tabs([
-        "📊 Regional Analysis",
-        "🧬 Gene Evidence",
-        "🧠 3D Brain",
-        "⚖️ Disease Comparison",
-        "📥 Export",
-    ])
-
-    with tabs[0]:
-        render_regional_analysis(disease, list_type)
-
-    with tabs[1]:
-        render_gene_evidence(disease, list_type)
-
-    with tabs[2]:
-        render_3d_brain(disease, list_type)
-
-    with tabs[3]:
-        render_disease_comparison()
-
-    with tabs[4]:
-        render_export(disease, list_type)
-
-
 def _generate_html_report(disease: str, list_type: str, stats: pd.DataFrame,
                           validation: pd.DataFrame, genes: pd.DataFrame) -> str:
     """Auto-generate an HTML report for the selected disease and list type."""
@@ -741,7 +709,7 @@ def render_hypothesis_ledger():
     )
     
     disease = st.selectbox("Disease", DISEASES, key="hyp_disease")
-    list_type = st.sidebar.radio("Gene List", LIST_TYPES, key="hyp_list_type") if "donor_subset" not in dir() else st.sidebar.radio("Gene List", LIST_TYPES, key="hyp_list_type_2")
+    list_type = st.radio("Gene List", LIST_TYPES, key="hyp_list_type", horizontal=True)
     
     col1, col2 = st.columns([1, 3])
     with col1:
