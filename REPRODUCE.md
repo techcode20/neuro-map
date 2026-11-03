@@ -65,14 +65,21 @@ python -c "import zipfile; print(zipfile.ZipFile('data/raw/allen/zips/donor9861.
 # Should print: None
 ```
 
-## Step 2: Download GWAS Catalog Parkinson's associations (MANUAL)
+## Step 2: Download GWAS Catalog associations (MANUAL)
 
-1. Go to https://www.ebi.ac.uk/gwas/efotraits/EFO_0000435 (Parkinson's disease trait page).
+Download the full tab-separated GWAS Catalog associations for each disease trait. The GWAS Catalog REST API is deprecated (returns 410 Gone), so files must be downloaded manually from a browser.
+
+| Disease | Trait page URL | Save as | Notes |
+|---------|----------------|---------|-------|
+| Parkinson's | https://www.ebi.ac.uk/gwas/efotraits/EFO_0000435 | `data/raw/gwas_parkinsons.tsv` | Real GWAS Catalog format (columns include `STUDY ACCESSION`, `REPORTED GENE(S)`, `MAPPED_GENE`, `P-VALUE`, `DISEASE/TRAIT`) |
+| Alzheimer's | https://www.ebi.ac.uk/gwas/efotraits/EFO_0000249 | `data/raw/gwas_catalog_alzheimer.tsv` | Replace the local mock `GENE_XXXX` file with real data to reproduce counts (Strict=166, Broad=1166) |
+| Huntington's | https://www.ebi.ac.uk/gwas/efotraits/EFO_0000666 | `data/raw/gwas_catalog_huntington.tsv` | Replace the local mock `GENE_XXXX` file with real data to reproduce counts (Strict=3, Broad=3) |
+
+For each disease:
+1. Open the trait page URL in a browser and sign in to the GWAS Catalog if prompted.
 2. Click **Download associations** (the full tab-separated file).
-3. Save as `data/raw/gwas_parkinsons.tsv` (this replaces any mock file).
+3. Save to the path shown above.
 4. Note the download date for your records.
-
-The file should have columns including: `STUDY ACCESSION`, `SNPS`, `REPORTED GENE(S)`, `MAPPED_GENE`, `P-VALUE`, `DISEASE/TRAIT`.
 
 ## Step 3: Run the pipeline with real data
 
