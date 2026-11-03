@@ -67,13 +67,13 @@ Locus assignments (500kb windows around lead-SNP positions; see `results_summary
 | Disease | List | Locus removed | OR | p-value | Remaining overlap genes |
 |---------|------|---------------|-----|---------|------------------------|
 | Parkinson's | strict | chr6_locus2 (MHC) | 1.91 | 0.41 | FCGR2A |
-| Parkinson's | strict | chr1_locus1 (FCGR2A) | 8.12 | 0.0020 | HLA-DQB1, HLA-DRA, HLA-DRB1, HLA-DRB5 |
-| Alzheimer's | strict | chr6_locus1 (MHC: HLA-DRB1/HLA-DRB5) | 10.35 | 0.0038 | CD33, IL34, TREM2 |
-| Alzheimer's | strict | chr6_locus2 (TREM2) | 14.08 | 0.00028 | CD33, HLA-DRB1, HLA-DRB5, IL34 |
-| Alzheimer's | strict | chr16_locus3 (IL34) | 14.08 | 0.00028 | CD33, HLA-DRB1, HLA-DRB5, TREM2 |
-| Alzheimer's | strict | chr19_locus4 (CD33) | 14.08 | 0.00028 | HLA-DRB1, HLA-DRB5, IL34, TREM2 |
+| Parkinson's | strict | chr1_locus1 (FCGR2A) | 8.12 | 0.0020 | HLA-DQB1, HLA-DRA, HLA-DRA, HLA-DRB1, HLA-DRB5 |
+| Alzheimer's | strict | chr6_locus1 (MHC: HLA-DRB1/HLA-DRB5) | 4.13 | 0.041 | CD33, IL34, TREM2 |
+| Alzheimer's | strict | chr6_locus2 (TREM2) | 5.61 | 0.0073 | CD33, HLA-DRB1, HLA-DRB5, IL34 |
+| Alzheimer's | strict | chr16_locus3 (IL34) | 5.61 | 0.0073 | CD33, HLA-DRB1, HLA-DRB5, TREM2 |
+| Alzheimer's | strict | chr19_locus4 (CD33) | 5.61 | 0.0073 | HLA-DRB1, HLA-DRB5, IL34, TREM2 |
 
-**Full-model ORs (for reference):** PD strict OR=10.36 (p=2.0e-04); AD strict OR=17.96 (p=1.7e-05).
+**Full-model ORs (for reference):** PD strict OR=10.36 (p=2.0e-04); AD strict OR=7.16 (p=1.0e-03).
 
 **Dopaminergic neuron CI:** OR=0 with zero overlap between PD strict genes and dopaminergic neuron markers. CI not estimable ([0, inf]). Low power — cannot conclude absence.
 
@@ -89,7 +89,7 @@ Locus assignments (500kb windows around lead-SNP positions; see `results_summary
 
 | Claim | Result | Why |
 |-------|--------|-----|
-| AD–microglia enrichment | Significant (OR=17.96 strict, FDR=2.35e-04; OR=10.62 broad, FDR=2.01e-05) | Not driven by MHC alone — CD33, IL34, TREM2, SPI1 across chromosomes; treat as supporting, not confirmatory |
+| AD–microglia enrichment | Significant (OR=7.16 strict, FDR=2.35e-04; OR=4.13 broad, FDR=4.13e-02) | Not driven by MHC alone — CD33, IL34, TREM2 across chromosomes; treat as supporting, not confirmatory |
 | PD–microglia enrichment | Significant (OR=10.36 strict, FDR=1.9e-03; OR=7.06 broad, FDR=7.7e-03) | Driven by MHC locus genes on chr6; only FCGR2A (chr1) remains outside MHC |
 
 ### Positive Control (regional method)
@@ -98,7 +98,7 @@ The real positive control for the regional method is the striatal gene set (DRD1
 
 ### Positive Control (cell-type method)
 
-Microglia enrichment in Alzheimer's holds up (strict: OR=17.96, FDR=2.35e-04; broad: OR=10.62, FDR=2.01e-05), confirming the cell-type layer can detect a real signal.
+Microglia enrichment in Alzheimer's holds up (strict: OR=7.16, FDR=2.35e-04; broad: OR=4.13, FDR=4.13e-02), confirming the cell-type layer can detect a real signal.
 
 **HLA caveat:** HLA genes are expressed in several cell types besides microglia (e.g., dendritic cells, B cells), so microglia-enrichment claims based on HLA overlap may partly reflect antigen-presentation genes in general.
 
