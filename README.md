@@ -66,14 +66,14 @@ Total: 3 diseases × 2 lists × 2 p-thresholds × 2 marker sets × 3 locus handl
 
 | Disease | List | Significant after FDR in specs | Fragility score |
 |---------|------|-------------------------------|-----------------|
-| Parkinson's | strict | 0 of 24 | 0% |
-| Parkinson's | broad | 0 of 24 | 0% |
-| Alzheimer's | strict | 0 of 24 | 0% |
-| Alzheimer's | broad | 0 of 24 | 0% |
-| Huntington's | strict | 0 of 24 | 0% |
-| Huntington's | broad | 0 of 24 | 0% |
+| Parkinson's | strict | 1 of 2 (full markers only) | 50% |
+| Parkinson's | broad | 1 of 2 (full markers only) | 50% |
+| Alzheimer's | strict | 1 of 2 (full markers only) | 50% |
+| Alzheimer's | broad | 1 of 2 (full markers only) | 50% |
+| Huntington's | strict | 0 of 2 | 0% |
+| Huntington's | broad | 0 of 2 | 0% |
 
-**Interpretation:** microglia enrichment is **fragile** — it appears in none of the 24 specification combinations. The signal depends on specific analytic choices (gene list, MHC inclusion) and does not survive across defensible analytic variations.
+**Interpretation:** microglia enrichment is **fragile** — it appears only with full marker sets (which include HLA genes) and only for Parkinson's strict and Alzheimer's strict/broad. When HLA genes are removed from the marker list, enrichment drops below FDR significance in all combinations. The signal depends on specific analytic choices (marker set) and does not survive across defensible analytic variations.
 
 ### Hypothesis Ledger — Bonferroni Correction
 

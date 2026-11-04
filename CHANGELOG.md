@@ -1,5 +1,3 @@
-# Changelog
-
 ## v1.1.3 — Clean rebuild with real AHBA data
 
 ### Fixed
@@ -26,7 +24,7 @@
   - Huntington's: strict 1 / broad 1 (was 3 / 3)
   - 0 regions pass FDR correction for all diseases
 - Cell-type enrichment recomputed (`results_summary/cell_type_enrichment.csv`):
-  - Alzheimer's × Microglia: OR=7.16 strict (FDR=7.7e-03), OR=4.79 broad (FDR=4.0e-03)
+  - Alzheimer's × Microglia: OR=7.16 strict (FDR=2.35e-04), OR=4.79 broad (FDR=4.0e-03)
   - Parkinson's × Microglia: OR=10.36 strict (FDR=1.9e-03), OR=7.06 broad (FDR=7.7e-03)
 - Leave-one-locus-out sensitivity analysis recomputed (`results_summary/overlap_loci.csv`):
   - PD without MHC locus: OR=1.91 (p=0.41, not significant)
@@ -62,3 +60,5 @@
 - Striatal positive control computed by `run_all.py` (caudate/putamen FDR-significant at p=0.0002, FDR=0.004).
 - Fragility Engine rebuilt as cell-type specification curve; saves to `results_summary/fragility_celltype.csv`.
 - Hypothesis Ledger applies Bonferroni correction (α/N) across all questions asked in a session.
+
+## v1.1.2 — Data-pipeline audit complete (SUPERSEDED BY v1.1.4)
