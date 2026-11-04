@@ -31,12 +31,12 @@ def region_name(region_id) -> str:
 
 def main():
     rows = []
-    for stats_file in sorted(RESULTS_DIR.glob("stats_*.csv")):
+    for stats_file in sorted(RESULTS_DIR.glob("stats_*.parquet")):
         stem = stats_file.stem
         parts = stem.split("_")
         disease = parts[1].capitalize()
         list_type = parts[2]
-        df = pd.read_csv(stats_file)
+        df = pd.read_parquet(stats_file)
         n_regions = len(df)
         n_sig = int(df["significant"].sum()) if "significant" in df.columns else 0
         n_depleted = int(df["depleted"].sum()) if "depleted" in df.columns else 0
@@ -52,7 +52,7 @@ def main():
         )
 
     if not rows:
-        print("No results CSVs found. Run `python run_all.py` first.")
+        print("No results found. Run `python run_all.py` first.")
         return
 
     df = pd.DataFrame(rows)
@@ -65,74 +65,61 @@ def main():
         )
 
     # Negative control
-    nc = RESULTS_DIR / "stats_height_strict.csv"
+    nc = RESULTS_DIR / "stats_height_strict.parquet"
     if nc.exists():
-        ndf = pd.read_csv(nc)
+        ndf = pd.read_parquet(nc)
         n_sig = int(ndf["significant"].sum()) if "significant" in ndf.columns else 0
         print()
         print(f"Negative control (Height): {n_sig} significant regions "
               f"(expected 0 — confirms no systematic bias).")
 
     # PD strict: top 10 regions by score, caudate/putamen
-    pd_stats = RESULTS_DIR / "stats_parkinson_strict.csv"
+    pd_stats = RESULTS_DIR / "stats_parkinson_strict.parquet"
     if pd_stats.exists():
-        pdf = pd.read_csv(pd_stats)
-        if len(pdf) > 0 and "region" in pdf.columns and len(pdf["region"].dropna()) > 0:
-            # Check if region column has numeric or string IDs
-            first_region = pdf["region"].dropna().iloc[0]
-            if isinstance(first_region, str):
-                # String region IDs — map directly
-                pdf["region_name"] = pdf["region"].apply(region_name)
-            else:
-                pdf["region"] = pdf["region"].astype(int)
-                pdf["region_name"] = pdf["region"].apply(region_name)
+        pdf = pd.read_parquet(pd_stats)
+        pdf["region_name"] = pdf.index.map(region_name)
 
-            print()
-            print("## Parkinson's strict — top 10 regions by score")
-            print("| Region | Score | P-value | FDR | Cohen's d | Significant | Depleted |")
-            print("|--------|-------|---------|-----|-----------|-------------|----------|")
-            top10 = pdf.nlargest(10, "score")
-            for _, r in top10.iterrows():
-                print(
-                    f"| {r['region_name']} | {r['score']:.4f} | "
-                    f"{r['pvalue']:.4f} | {r['fdr']:.4f} | {r['cohens_d']:.3f} | "
-                    f"{r['significant']} | {r['depleted']} |"
-                )
+        print()
+        print("## Parkinson's strict — top 10 regions by score")
+        print("| Region | Score | P-value | FDR | Cohen's d | Significant | Depleted |")
+        print("|--------|-------|---------|-----|-----------|-------------|----------|")
+        top10 = pdf.nlargest(10, "score")
+        for _, r in top10.iterrows():
+            print(
+                f"| {r['region_name']} | {r['score']:.4f} | "
+                f"{r['pvalue']:.4f} | {r['fdr']:.4f} | {r['cohens_d']:.3f} | "
+                f"{r['significant']} | {r['depleted']} |"
+            )
 
-            print()
-            print("## Parkinson's strict — Caudate and Putamen")
-            print("| Region | Score | P-value | FDR | Cohen's d | Significant | Depleted |")
-            print("|--------|-------|---------|-----|-----------|-------------|----------|")
-            targets = [36, 37, 77, 78]
-            cp = pdf[pdf["region"].isin(targets)].sort_values("region")
-            for _, r in cp.iterrows():
-                print(
-                    f"| {r['region_name']} | {r['score']:.4f} | "
-                    f"{r['pvalue']:.4f} | {r['fdr']:.4f} | {r['cohens_d']:.3f} | "
-                    f"{r['significant']} | {r['depleted']} |"
-                )
-        else:
-            print()
-            print("## Parkinson's strict — No regional data available")
-            print("(0 matched genes — analysis skipped)")
+        print()
+        print("## Parkinson's strict — Caudate and Putamen")
+        print("| Region | Score | P-value | FDR | Cohen's d | Significant | Depleted |")
+        print("|--------|-------|---------|-----|-----------|-------------|----------|")
+        targets = [36, 37, 77, 78]
+        cp = pdf[pdf.index.isin(targets)].sort_index()
+        for _, r in cp.iterrows():
+            print(
+                f"| {r['region_name']} | {r['score']:.4f} | "
+                f"{r['pvalue']:.4f} | {r['fdr']:.4f} | {r['cohens_d']:.3f} | "
+                f"{r['significant']} | {r['depleted']} |"
+            )
 
     # Striatal positive control — separate gene set analysis
     print()
     print("## Striatal positive control (regional method)")
     print("Gene set: DRD1, DRD2, PPP1R1B, ADORA2A, PENK, TAC1, GPR88, RGS9")
-    sc_stats = RESULTS_DIR / "stats_striatalcontrol_strict.csv"
+    sc_stats = RESULTS_DIR / "stats_striatalcontrol_strict.parquet"
     if sc_stats.exists():
-        sc_df = pd.read_csv(sc_stats)
-        if len(sc_df) > 0 and "region" in sc_df.columns:
-            cp_stats = sc_df[sc_df["region"].isin([36, 37, 77, 78])]
-            print("| Region | Score | P-value | FDR | Cohen's d | Significant | Depleted |")
-            print("|--------|-------|---------|-----|-----------|-------------|----------|")
-            for _, r in cp_stats.iterrows():
-                print(
-                    f"| {region_name(r['region'])} | {r['score']:.4f} | "
-                    f"{r['pvalue']:.4f} | {r['fdr']:.4f} | {r['cohens_d']:.3f} | "
-                    f"{r['significant']} | {r['depleted']} |"
-                )
+        sc_df = pd.read_parquet(sc_stats)
+        cp_stats = sc_df[sc_df.index.isin([36, 37, 77, 78])]
+        print("| Region | Score | P-value | FDR | Cohen's d | Significant | Depleted |")
+        print("|--------|-------|---------|-----|-----------|-------------|----------|")
+        for _, r in cp_stats.iterrows():
+            print(
+                f"| {region_name(r.name)} | {r['score']:.4f} | "
+                f"{r['pvalue']:.4f} | {r['fdr']:.4f} | {r['cohens_d']:.3f} | "
+                f"{r['significant']} | {r['depleted']} |"
+            )
     else:
         print("Not computed — run `python run_all.py` to generate.")
 

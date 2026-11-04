@@ -7,10 +7,11 @@ Usage: python run_all.py
 """
 
 import sys
-from pathlib import Path
-import argparse
+import hashlib
 import json
+import argparse
 import subprocess
+from pathlib import Path
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent / "src"))
@@ -18,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent / "src"))
 import pandas as pd
 import numpy as np
 
-from load_data import load_allen_expression
+from load_data import load_allen_expression, PROCESSED_DIR, PROCESSED_DIR
 from gene_lists import build_gene_lists
 from scoring import compute_regional_scores, compute_donor_scores, compute_consistency_metric, save_scores
 from stats import run_permutation_test, save_statistical_results
@@ -37,6 +38,15 @@ N_RANDOM_SETS = 5000
 N_NEGATIVE_CONTROL_SETS = 1000
 RANDOM_STATE = 42
 ATLAS = "desikan-killiany"
+
+# Striatal positive control gene set (known to be enriched in caudate/putamen)
+STRIATAL_GENES = ["DRD1", "DRD2", "PPP1R1B", "ADORA2A", "PENK", "TAC1", "GPR88", "RGS9"]
+
+# Paths for artifacts
+RESULTS_DIR = Path("results")
+RESULTS_SUMMARY_DIR = Path("results_summary")
+RESULTS_DIR.mkdir(exist_ok=True)
+RESULTS_SUMMARY_DIR.mkdir(exist_ok=True)
 
 # Striatal positive control gene set (known to be enriched in caudate/putamen)
 STRIATAL_GENES = ["DRD1", "DRD2", "PPP1R1B", "ADORA2A", "PENK", "TAC1", "GPR88", "RGS9"]
@@ -61,12 +71,6 @@ def run_pipeline_for_disease(
         disease, expression_matrix, force_refresh=False
     )
 
-    # Save gene lists to results for audit/reproducibility
-    results_dir = Path("results")
-    results_dir.mkdir(exist_ok=True)
-    strict_genes.to_csv(results_dir / f"gene_list_{disease.lower()}_strict.csv", index=False)
-    broad_genes.to_csv(results_dir / f"gene_list_{disease.lower()}_broad.csv", index=False)
-
     for list_type, genes in [("strict", strict_genes), ("broad", broad_genes)]:
         print(f"\n  Processing {list_type} list ({len(genes)} genes)...")
 
@@ -75,9 +79,33 @@ def run_pipeline_for_disease(
                 f"  WARNING: Only {len(genes)} genes for {disease} ({list_type}); "
                 f"minimum {MIN_GENES_FOR_ANALYSIS} required for meaningful analysis. Skipping."
             )
-            continue
-
-        if len(genes) == 0:
+            empty_scores = pd.Series(index=expression_matrix.index, dtype=float, name="score")
+            empty_index = expression_matrix.index
+            save_scores(empty_scores, disease, list_type)
+            save_statistical_results(
+                disease,
+                list_type,
+                empty_scores,
+                pd.Series(index=empty_index, dtype=float, name="pvalue"),
+                pd.DataFrame(
+                    index=empty_index,
+                    data={
+                        "fdr": pd.Series(dtype=float, index=empty_index),
+                        "significant": pd.Series(dtype=bool, index=empty_index),
+                        "pvalue_two_sided": pd.Series(dtype=float, index=empty_index),
+                        "fdr_two_sided": pd.Series(dtype=float, index=empty_index),
+                        "depleted": pd.Series(dtype=bool, index=empty_index),
+                    },
+                ),
+                pd.DataFrame(
+                    index=empty_index,
+                    data={
+                        "cohens_d": pd.Series(dtype=float, index=empty_index),
+                        "null_mean": pd.Series(dtype=float, index=empty_index),
+                        "null_std": pd.Series(dtype=float, index=empty_index),
+                    },
+                ),
+            )
             continue
 
         if len(genes) == 0:
@@ -274,19 +302,34 @@ def main():
         action="store_true",
         help="Delete data/processed/ and results/ before running.",
     )
+    parser.add_argument(
+        "--clean-all",
+        action="store_true",
+        help="Delete data/processed/, results/, and results_summary/ before running.",
+    )
     args = parser.parse_args()
 
     if args.clean:
         import shutil
-        for d in [Path("data/processed"), Path("results")]:
+
+        for d in [PROCESSED_DIR, Path("results")]:
             if d.exists():
                 shutil.rmtree(d)
                 print(f"Cleaned {d}")
+        RESULTS_DIR.mkdir(exist_ok=True)
+        RESULTS_SUMMARY_DIR.mkdir(exist_ok=True)
+        PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Ensure results directory exists
-    Path("results").mkdir(exist_ok=True)
-    Path("results_summary").mkdir(exist_ok=True)
-    Path("data/processed").mkdir(parents=True, exist_ok=True)
+    if args.clean_all:
+        import shutil
+
+        for d in [PROCESSED_DIR, Path("results"), Path("results_summary")]:
+            if d.exists():
+                shutil.rmtree(d)
+                print(f"Cleaned {d}")
+        RESULTS_DIR.mkdir(exist_ok=True)
+        RESULTS_SUMMARY_DIR.mkdir(exist_ok=True)
+        PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
     print("NeuroMap Pipeline")
     print("=" * 60)
@@ -294,6 +337,30 @@ def main():
     # Step 1: Load Allen expression data
     print("\n1. Loading Allen Human Brain Atlas data...")
     expression_matrix, donor_matrices = load_allen_expression(atlas_name=ATLAS)
+
+    # Detect mock data and warn
+    is_mock = (
+        expression_matrix.shape[1] < 10000
+        or any(str(c).startswith("GENE_") for c in expression_matrix.columns[:20])
+    )
+    if is_mock:
+        print()
+        print("=" * 60)
+        print("WARNING: MOCK DATA DETECTED")
+        print("=" * 60)
+        print("The expression matrix contains synthetic/mock gene symbols "
+              f"({expression_matrix.shape[1]} genes).")
+        print("No real Allen Human Brain Atlas data was loaded.")
+        print()
+        print("To use real AHBA data:")
+        print("  1. Download microarray data from https://human.brain-map.org")
+        print("  2. Place donor folders in data/raw/allen/")
+        print("  3. Run: REAL_DATA=1 python run_all.py")
+        print()
+        print("NOTE: Running in mock mode. Results are NOT valid for scientific use.")
+        print("      README.md and results_summary/ will NOT be updated.")
+        print("=" * 60)
+        print()
 
     print(f"\nExpression matrix shape: {expression_matrix.shape}")
     print(f"Number of donors: {len(donor_matrices)}")
@@ -362,16 +429,34 @@ def main():
     print("\nTo view dashboard: python -m streamlit run app.py")
 
     # Write manifest to results_summary
-    manifest_dir = Path("results_summary")
+    import hashlib
+    import datetime
+
+    manifest_dir = RESULTS_SUMMARY_DIR
     manifest_dir.mkdir(exist_ok=True)
+
+    # Compute checksum of expression matrix
+    expr_cache = PROCESSED_DIR / f"allen_expression_{ATLAS}.parquet"
+    expr_checksum = None
+    if expr_cache.exists():
+        h = hashlib.sha256()
+        with open(expr_cache, "rb") as f:
+            for chunk in iter(lambda: f.read(8192), b""):
+                h.update(chunk)
+        expr_checksum = h.hexdigest()
+
     manifest = {
         "commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
         "gwas_file": str(Path("data/raw/gwas_catalog_full.tsv").resolve()),
         "gwas_file_size": Path("data/raw/gwas_catalog_full.tsv").stat().st_size,
+        "expression_matrix_checksum": expr_checksum,
+        "expression_matrix_shape": list(expression_matrix.shape),
+        "data_type": "mock (synthetic)" if is_mock else "real (Allen Human Brain Atlas)",
         "run_date": pd.Timestamp.now().strftime("%Y-%m-%d %H:%M:%S"),
     }
     manifest_path = manifest_dir / "run_manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2))
+    print(f"\nManifest written to {manifest_path}")
 
 
 if __name__ == "__main__":

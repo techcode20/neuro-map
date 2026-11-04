@@ -1,11 +1,12 @@
 {
-  "commit": "90bd10bb51b621b2cecc2f975138634a8d34cca4",
+  "commit": "5930c55fff13a10e5733bc4b9b11556fb6261a4c",
   "gwas_file": "C:\\Users\\lenovo\\Desktop\\Opencode project\\NeuroMap\\data\\raw\\gwas_catalog_full.tsv",
   "gwas_file_size": 606814317,
-  "run_date": "2026-11-03 19:54:39",
+  "expression_matrix_checksum": "a52928833f2cdb837aa66d281096572c66325b5961456032b95f27ac2e6e8590",
   "expression_matrix_shape": [
     83,
     1000
   ],
-  "data_type": "mock (synthetic) - real AHBA data not downloaded"
+  "data_type": "mock (synthetic)",
+  "run_date": "2026-11-04 17:34:59"
 }
