@@ -11,6 +11,7 @@ import hashlib
 import json
 import argparse
 import subprocess
+import os
 from pathlib import Path
 
 # Add src to path
@@ -337,6 +338,18 @@ def main():
     # Step 1: Load Allen expression data
     print("\n1. Loading Allen Human Brain Atlas data...")
     expression_matrix, donor_matrices = load_allen_expression(atlas_name=ATLAS)
+
+    # Mock-data guard: prevent writing results with synthetic data
+    cols = [str(c) for c in expression_matrix.columns[:20]]
+    is_real = expression_matrix.shape[1] > 10000 and not any(
+        str(c).startswith("GENE_") for c in cols
+    )
+    if not is_real and not os.environ.get("ALLOW_MOCK"):
+        sys.exit(
+            "ABORT: expression matrix is mock data. "
+            "Set REAL_DATA=1 and place real AHBA data in data/raw/allen/. "
+            "Nothing written to results/."
+        )
 
     # Detect mock data and warn
     is_mock = (

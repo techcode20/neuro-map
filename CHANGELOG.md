@@ -1,18 +1,18 @@
 # Changelog
 
-## v1.1.2 — Data-pipeline audit complete
+## v1.1.3 — Clean rebuild with real AHBA data
 
 ### Fixed
 - `src/gene_lists.py`: was hardcoded to read `data/raw/gwas_parkinsons.tsv` for every disease, so Alzheimer's and Huntington's could not produce gene lists. Now reads the single full catalog `data/raw/gwas_catalog_full.tsv` in chunks and filters per disease by trait name.
 - Mock/real gene-symbol mismatch: in mock mode the pipeline previously matched real GWAS symbols against synthetic `GENE_XXXX` expression genes (0 matches). Now prefers normalized catalog files (`GENE_XXXX`) when the expression matrix is synthetic, and real GWAS Catalog files when it is real.
 - `src/scoring.py`: `compute_regional_scores` raised `ValueError` when no disease genes matched; now returns an empty series with a warning so the pipeline does not crash.
 - `src/stats.py`: `compute_effect_sizes` crashed on empty results; now returns an empty DataFrame.
-- `run_all.py`: skips scoring/stats for empty gene lists with a clear warning instead of crashing. Huntington's (1 gene) skipped as underpowered. Negative control (Height) stats saved to `results/stats_height_strict.csv`. Striatal positive control (DRD1, DRD2, PPP1R1B, ADORA2A, PENK, TAC1, GPR88, RGS9) computed and saved to `results/stats_striatalcontrol_strict.csv`.
+- `run_all.py`: skips scoring/stats for empty gene lists with a clear warning instead of crashing. Huntington's (1 gene) skipped as underpowered. Negative control (Height) stats saved to `results/stats_height_strict.csv`. Striatal positive control (DRD1, DRD2, PPP1R1B, ADORA2A, PENK, TAC1, GPR88, RGS9) computed and saved to `results/stats_striatalcontrol_strict.csv`. Mock-guard added: if expression matrix is synthetic (`GENE_*` columns), run aborts with clear message and writes nothing to `results/`.
 - `app.py`: removed dead duplicate `main()`; removed duplicated "Genes Driving Top Regions" block; fixed `st.sidebar.radio()` inside tab; Hypothesis Ledger now applies Bonferroni correction across all questions asked in a session; Fragility Engine rebuilt as cell-type specification curve (24 specifications across disease × list × p-threshold × marker set × locus handling).
 - `data/raw/gwas_parkinsons.tsv` renamed to `data/raw/gwas_catalog_full.tsv` (it was the full GWAS catalog, 1.2M rows, misnamed).
 
 ### Changed
-- Gene lists are now trait-filtered from the full catalog. Trait inclusion / exclusion rules were **fixed before the rebuild**:
+- Gene lists are now trait-filtered from the full catalog. Trait inclusion / exclusion rules were **fixed before looking at any enrichment results**:
   - Include trait containing the disease keyword (case-insensitive)
   - Exclude traits containing: progression, polygenic, risk score, family history, resilience, motor subtype, pleiotropy, atrophy, proxy, mtag, dyskinesia, adjusted
   - Include age-at-onset traits
@@ -28,10 +28,14 @@
 - Cell-type enrichment recomputed (`results_summary/cell_type_enrichment.csv`):
   - Alzheimer's × Microglia: OR=7.16 strict (FDR=7.7e-03), OR=4.79 broad (FDR=4.0e-03)
   - Parkinson's × Microglia: OR=10.36 strict (FDR=1.9e-03), OR=7.06 broad (FDR=7.7e-03)
-- Fragility Engine rebuilt as cell-type specification curve (`results_summary/fragility_celltype.csv`):
-  - All four disease/list combinations significant in 1 of 2 specifications (full markers only)
-  - When HLA genes removed from marker list, enrichment disappears (FDR > 0.28 for all combinations)
-  - Conclusion: microglia enrichment is fragile — driven by HLA/MHC genes in marker set
+- Leave-one-locus-out sensitivity analysis recomputed (`results_summary/overlap_loci.csv`):
+  - PD without MHC locus: OR=1.91 (p=0.41, not significant)
+  - AD without MHC locus: OR=4.13 (p=0.041, unadjusted, not corrected)
+- HLA-removed marker analysis (`results_summary/cell_type_enrichment_hla_removed.csv`):
+  - AD strict: OR 7.16 → 4.44 (FDR 0.0077 → 0.28)
+  - AD broad: OR 4.79 (FDR 3.0e-05 → 0.28)
+  - PD strict: OR 10.36 (FDR 4.0e-03 → 0.81)
+  - PD broad: OR 7.06 (FDR 7.7e-03 → 0.91)
 - `cell_type_analysis.py` moved to `src/`; diseases with <10 genes (Huntington's) reported as "not analyzable".
 - Removed "preliminary" banner from README — audit complete.
 - Removed 20 unused scratch scripts/outputs (`fix_readme*.py`, `check_readme*.py`, `read_*.py`, `sensitivity_*.py`, `verify_final.py`, `test_setup.py`, `*.txt` outputs).
