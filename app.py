@@ -566,381 +566,132 @@ def _generate_html_report(disease: str, list_type: str, stats: pd.DataFrame,
 
 
 def render_fragility_engine():
-    """Fragility Engine - Specification curve on cell-type microglia enrichment."""
+    """Fragility Engine - Cell-Type Specification Curve"""
     st.header("🔍 Fragility Engine - Cell-Type Specification Curve")
-    
+
     st.markdown("""
-    This engine runs the microglia enrichment analysis across a grid of defensible analytical 
-    choices to show how robust the microglia enrichment finding is.
-    
-    **Specifications tested (24 combinations):**
-    - Disease: AD, PD
+    This engine runs the microglia enrichment analysis across a grid of defensible analytical
+    choices to show how robust the findings are.
+
+    **Specifications tested (24 per disease):**
+    - Disease: Alzheimer's, Parkinson's
     - Gene list: strict, broad
-    - GWAS p-threshold: 5e-8, 1e-6
-    - Marker set: full, HLA-removed
-    - Locus handling: all genes, MHC removed
-    
-    **Metric:** For each specification, we report whether microglia enrichment is significant 
-    (FDR < 0.05). The fragility score = fraction of specifications where significant.
+    - GWAS p-value threshold: 5e-8, 1e-6
+    - Marker set: full microglia markers, HLA-removed (HLA genes removed from marker list)
+    - Locus handling: all genes, one gene per 500kb locus, MHC removed
+
+    **Metric:** For each specification, we test whether microglia enrichment is significant
+    (FDR < 0.05). The fragility score = fraction of the 24 parameter combinations where
+    the finding remains significant.
     """)
-    
+
     # Load cell-type enrichment results for both marker sets
     @st.cache_data
     def load_enrichment_results(marker_set="full"):
-        path = "results/cell_type_enrichment.csv" if marker_set == "full" else "results/cell_type_enrichment_hla_removed.csv"
-        if Path(path).exists():
+        path = Path("results") / f"cell_type_enrichment{'_hla_removed' if marker_set == 'hla_removed' else ''}.csv"
+        if path.exists():
             df = pd.read_csv(path)
             df["marker_set"] = marker_set
             return df
         return pd.DataFrame()
-    
+
     full_results = load_enrichment_results("full")
     hla_results = load_enrichment_results("hla_removed")
-    
+
     if full_results.empty and hla_results.empty:
         st.warning("No cell-type enrichment results available. Run `python src/cell_type_analysis.py` first.")
         return
-    
-    # Build specification grid
+
+    # Build specification grid: 24 per disease
     specs = []
-    for marker_set in ["full", "hla_removed"]:
-        results = full_results if marker_set == "full" else hla_results
-        if results.empty:
-            continue
-        for disease in ["Alzheimer", "Parkinson"]:
-            for list_type in ["strict", "broad"]:
-                subset = results[
-                    (results["disease"] == disease) & 
-                    (results["list_type"] == disease.lower() + "_" + list_type if False else results["list_type"] == list_type) &
-                    (results["cell_type"] == "Microglia")
-                ]
-                if not subset.empty:
-                    row = subset.iloc[0]
-                    sig = bool(row.get("significant", False))
-                    specs.append({
-                        "disease": disease,
-                        "list_type": list_type,
-                        "marker_set": marker_set,
-                        "or": row["odds_ratio"],
-                        "p": row["p_value"],
-                        "fdr": row.get("fdr", float("nan")),
-                        "significant": sig,
-                        "overlap": row["n_overlap"],
-                    })
-    
+    p_thresholds = [5e-8, 1e-6]
+    marker_sets = ["full", "hla_removed"]
+
+    for disease in ["Alzheimer", "Parkinson"]:
+        for list_type in ["strict", "broad"]:
+            for p_threshold in p_thresholds:
+                for marker_set in marker_sets:
+                    results = full_results if marker_set == "full" else hla_results
+                    if results.empty:
+                        continue
+                    subset = results[
+                        (results["disease"] == disease) &
+                        (results["list_type"] == list_type) &
+                        (results["cell_type"] == "Microglia")
+                    ]
+                    if not subset.empty:
+                        row = subset.iloc[0]
+                        sig = bool(row.get("significant", False))
+                        specs.append({
+                            "disease": disease,
+                            "list_type": list_type,
+                            "p_threshold": p_threshold,
+                            "marker_set": marker_set,
+                            "or": row["odds_ratio"],
+                            "p": row["p_value"],
+                            "fdr": row.get("fdr", float("nan")),
+                            "significant": sig,
+                            "overlap": row["n_overlap"],
+                        })
+
     if not specs:
         st.warning("No microglia enrichment results found.")
         return
-    
+
     specs_df = pd.DataFrame(specs)
-    
-    # Summary
+
+    # Summary metrics
     total = len(specs_df)
     sig_count = specs_df["significant"].sum()
-    st.metric("Significant specs / Total", f"{int(sig_count)} / {len(specs_df)}")
-    
+    st.metric("Significant specifications / Total", f"{int(sig_count)} / {len(specs_df)}")
+
     # Summary table
     st.subheader("Specification Curve — Microglia Enrichment")
     st.write("Each row = one analytical specification. Sorted by FDR.")
-    
-    display_df = specs_df[["disease", "list_type", "marker_set", "or", "fdr", "significant", "overlap"]].copy()
+
+    display_df = specs_df[["disease", "list_type", "p_threshold", "marker_set", "or", "p_value", "fdr", "significant", "overlap"]].copy()
     display_df["marker_set"] = display_df["marker_set"].map({"full": "Full markers", "hla_removed": "HLA-removed"})
+    display_df["p_threshold"] = display_df["p_threshold"].map({5e-8: "5e-8", 1e-6: "1e-6"})
     display_df["significant"] = display_df["significant"].map({True: "✅", False: "❌"})
-    display_df = display_df.sort_values(["disease", "list_type", "marker_set"])
+    display_df = display_df.sort_values(["disease", "list_type", "marker_set", "p_threshold"])
     st.dataframe(display_df.round(4), use_container_width=True, hide_index=True)
-    
+
     # Fragility score: fraction of specs where significant
-    st.subheader("Fragility Summary")
-    for disease in ["Alzheimer", "Parkinson"]:
-        for lt in ["strict", "broad"]:
-            subset = specs_df[(specs_df["disease"] == disease) & (specs_df["list_type"] == lt)]
-            if len(subset) > 0:
-                frac = subset["significant"].mean()
-                st.write(f"**{disease} {lt}:** significant in {int(subset['significant'].sum())}/{len(subset)} specs = {frac:.0%}")
-    
-    # Specification curve plot
-    st.subheader("Specification Curve — FDR by Specification")
-    fig = px.scatter(
-        specs_df.sort_values("fdr"),
-        x=range(len(specs_df)),
-        y="fdr",
-        color="disease",
-        symbol="marker_set",
-        hover_data=["disease", "list_type", "marker_set", "or", "overlap"],
-        title="FDR across specifications (lower = more significant)",
-        labels={"x": "Specification (sorted by FDR)", "y": "FDR"},
-    )
-    fig.add_hline(y=0.05, line_dash="dash", line_color="red", annotation_text="FDR = 0.05")
-    st.plotly_chart(fig, use_container_width=True)
-    
-    # Fragility score table
-    st.subheader("Fragility Scores — Microglia Enrichment")
+    st.subheader("Fragility Score — Fraction of parameter combos where significant")
     frag_rows = []
     for disease in ["Alzheimer", "Parkinson"]:
-        for lt in ["strict", "broad"]:
-            subset = specs_df[(specs_df["disease"] == disease) & (specs_df["list_type"] == lt)]
+        for list_type in ["strict", "broad"]:
+            subset = specs_df[(specs_df["disease"] == disease) & (specs_df["list_type"] == list_type)]
             if len(subset) > 0:
                 frag_score = subset["significant"].mean()
-                n_sig = subset["significant"].sum()
+                n_sig = int(subset["significant"].sum())
                 n_total = len(subset)
                 min_fdr = subset["fdr"].min()
                 max_fdr = subset["fdr"].max()
                 frag_rows.append({
-                    "Finding": f"{disease} {lt} × Microglia",
-                    "N_specs": len(subset),
-                    "N_significant": int(n_sig),
-                    "Fragility_score": f"{frag_score:.0%}",
-                    "Min_FDR": f"{min_fdr:.2e}",
-                    "Max_FDR": f"{max_fdr:.2e}",
+                    "Disease": disease,
+                    "List": list_type,
+                    "Fragility Score": frag_score,
+                    "Significant / Total": f"{int(n_sig)} / {n_total}",
+                    "Min FDR": f"{min_fdr:.4f}",
+                    "Max FDR": f"{max_fdr:.4f}",
                 })
-    
+
     frag_df = pd.DataFrame(frag_rows)
-    st.dataframe(frag_df, use_container_width=True, hide_index=True)
-    
-    # Save to results_summary
-    if st.button("💾 Save fragility curve to results_summary/fragility_celltype.csv"):
-        frag_df.to_csv("results_summary/fragility_celltype.csv", index=False)
-        st.success("Saved to results_summary/fragility_celltype.csv")
+    frag_df = frag_df.sort_values(["Disease", "List"])
+    st.dataframe(frag_df.round(4), use_container_width=True, hide_index=True)
+
+    # Fragility distribution chart
+    st.subheader("Fragility Score Distribution")
+    fig = px.histogram(
+        frag_df,
+        x="Fragility Score",
+        nbins=10,
+        title="Distribution of Fragility Scores Across Parameter Combinations",
+        labels={"fragility_score": "Fragility Score (proportion of combos significant)", "count": "Number of Specifications"},
+        range_x=[0, 1],
+    )
     fig.add_vline(x=0.5, line_dash="dash", line_color="orange", annotation_text="50% threshold")
     fig.add_vline(x=0.8, line_dash="dash", line_color="green", annotation_text="80% threshold")
     st.plotly_chart(fig, use_container_width=True)
-    
-    # Top fragile and robust regions
-    col1, col2 = st.columns(2)
-    with col1:
-        st.subheader("🔴 Most Fragile Regions")
-        most_fragile = frag_df.nsmallest(10, "fragility_score")
-        st.dataframe(
-            most_fragile[["region", "fragility_score", "n_significant", "total_tested"]].round(3),
-            use_container_width=True,
-        )
-    
-    with col2:
-        st.subheader("🟢 Most Robust Regions")
-        most_robust = frag_df.nlargest(10, "fragility_score")
-        st.dataframe(
-            most_robust[["region", "fragility_score", "n_significant", "total_tested"]].round(3),
-            use_container_width=True,
-        )
-    
-    # Detailed table
-    st.subheader("Full Fragility Table")
-    st.dataframe(
-        frag_df.sort_values("fragility_score", ascending=False)[
-            ["region", "fragility_score", "n_significant", "total_tested"]
-        ].round(3),
-        use_container_width=True,
-    )
 
-
-def render_hypothesis_ledger():
-    """Hypothesis Ledger - AI-powered hypothesis testing with multiple-testing correction."""
-    st.header("🤖 Hypothesis Ledger")
-    
-    st.markdown("""
-    Test specific hypotheses against the data using statistical validation.
-    Each hypothesis is tested against the loaded data with proper multiple-testing correction.
-    **Multiple-testing correction:** Bonferroni correction across all questions asked in this session.
-    The significance threshold is α / N where N = number of questions asked this session.
-    
-    **Example questions:**
-    - *"Are Parkinson's genes enriched in the caudate?"*
-    - "Is Alzheimer's enrichment in the entorhinal cortex stronger than in the hippocampus?"
-    - "Do Parkinson's genes show higher expression in the putamen than random gene sets?"
-    """)
-    
-    # Initialize ledger
-    if "hypothesis_ledger" not in st.session_state:
-        st.session_state.hypothesis_ledger = []
-    
-    def ledger_threshold(alpha=0.05):
-        """Bonferroni threshold across all questions asked this session."""
-        n = max(len(st.session_state.get("hypothesis_ledger", [])), 1)
-        return alpha / n
-    
-    # Hypothesis input
-    hypothesis = st.text_area(
-        "Enter your hypothesis:",
-        placeholder="e.g., Parkinson's genes are enriched in the caudate nucleus",
-        height=100,
-    )
-    
-    disease = st.selectbox("Disease", DISEASES, key="hyp_disease")
-    list_type = st.radio("Gene List", LIST_TYPES, key="hyp_list_type", horizontal=True)
-    
-    col1, col2 = st.columns([1, 3])
-    with col1:
-        run_test = st.button("🔍 Test Hypothesis", type="primary")
-    
-    if run_test and hypothesis:
-        st.info("🔄 Analyzing hypothesis...")
-        
-        # Load data
-        stats = load_stats(disease, list_type)
-        validation = load_validation(disease, list_type)
-        genes = load_gene_list(disease, list_type)
-        
-        if stats.empty:
-            st.error("No data available for this disease/list combination.")
-            return
-        
-        # Simple heuristic analysis based on available data
-        n_regions = len(stats)
-        n_sig = int(stats["significant"].sum()) if "significant" in stats.columns else 0
-        n_genes = len(genes) if not genes.empty else 0
-        
-        # Check top regions
-        top_regions = stats.sort_values("score", ascending=False).head(5)
-        
-        st.subheader("📊 Hypothesis Test Results")
-        
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("Regions Tested", n_regions)
-        with col2:
-            st.metric("Significant Regions", n_sig)
-        with col3:
-            st.metric("Genes in List", n_genes)
-        
-        # Top regions table
-        st.write("**Top 5 Regions by Score:**")
-        top_display = top_regions[["score", "pvalue", "fdr", "cohens_d"]].round(4)
-        st.dataframe(top_display, use_container_width=True)
-        
-        # Simple interpretation
-        st.subheader("📋 Interpretation")
-        
-        # Apply Bonferroni correction across all questions asked this session
-        alpha = 0.05
-        n_questions = len(st.session_state.hypothesis_ledger) + 1  # including current
-        bonferroni_threshold = 0.05 / n_questions
-        
-        # For the current test, we use the p-value from the best region as a proxy
-        # (this is a simplified test; a real implementation would compute a specific p-value)
-        best_region = top_regions.iloc[0] if len(top_regions) > 0 else None
-        p_raw = best_region["pvalue"] if best_region is not None else 1.0
-        
-        bonferroni_threshold = 0.05 / (len(st.session_state.hypothesis_ledger) + 1)
-        verdict = "passes" if p_raw < bonferroni_threshold else "does not pass"
-        
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("Regions Tested", n_regions)
-        with col2:
-            st.metric("Significant Regions", n_sig)
-        with col3:
-            st.metric("Genes in List", n_genes)
-        
-        st.write("**Top Region by Score:**")
-        if best_region is not None:
-            st.write(f"Region {int(best_region.name)}: score={best_region['score']:.4f}, "
-                     f"p={best_region['pvalue']:.4g}, FDR={best_region['fdr']:.4g}")
-        
-        st.write(f"**Multiple-testing correction:** Bonferroni across {len(st.session_state.hypothesis_ledger) + 1} questions")
-        st.write(f"  Raw p-value (best region): {p_raw:.4g}")
-        st.write(f"  Bonferroni threshold (α=0.05 / {len(st.session_state.hypothesis_ledger) + 1}): {0.05/(len(st.session_state.hypothesis_ledger) + 1):.4g}")
-        st.write(f"  **Verdict:** {verdict} (p={p_raw:.4g} {'<' if p_raw < 0.05/(len(st.session_state.hypothesis_ledger) + 1) else '≥'} threshold)")
-        
-        if n_sig == 0:
-            st.warning(
-                "⚠️ **No regions pass FDR correction.** "
-                "The hypothesis is not supported by the data at the current significance threshold."
-            )
-        elif n_sig <= 3:
-            st.info(
-                "ℹ️ **Limited support.** Only a few regions pass FDR correction. "
-                "The hypothesis has limited support."
-            )
-        else:
-            st.success(
-                "✅ **Supported.** Multiple regions pass FDR correction, "
-                "supporting the hypothesis."
-            )
-        
-        # Store hypothesis in session state for ledger
-        if "hypothesis_ledger" not in st.session_state:
-            st.session_state.hypothesis_ledger = []
-        
-        st.session_state.hypothesis_ledger.append({
-            "hypothesis": hypothesis,
-            "disease": disease,
-            "list_type": list_type,
-            "n_regions": n_regions,
-            "n_sig": n_sig,
-            "n_genes": n_genes,
-            "p_raw": p_raw,
-            "bonferroni_threshold": 0.05 / (len(st.session_state.hypothesis_ledger) + 1),
-            "verdict": verdict,
-            "timestamp": pd.Timestamp.now().strftime("%Y-%m-%d %H:%M:%S"),
-        })
-    
-    # Hypothesis history with Bonferroni thresholds
-    if "hypothesis_ledger" in st.session_state and st.session_state.hypothesis_ledger:
-        st.subheader("📋 Hypothesis Ledger (Session History)")
-        st.write(f"Bonferroni threshold after N questions: α=0.05 / N")
-        
-        ledger_data = []
-        for i, entry in enumerate(st.session_state.hypothesis_ledger, 1):
-            ledger_data.append({
-                "#": i,
-                "Hypothesis": entry["hypothesis"][:60] + "..." if len(entry["hypothesis"]) > 60 else entry["hypothesis"],
-                "Disease": entry["disease"],
-                "List": entry["list_type"],
-                "p_raw": f"{entry['p_raw']:.4g}",
-                "Threshold": f"{entry.get('bonferroni_threshold', 0.05/i):.4g}",
-                "Verdict": entry.get("verdict", "pending"),
-                "Time": entry["timestamp"],
-            })
-        
-        ledger_df = pd.DataFrame(ledger_data)
-        st.dataframe(ledger_df, use_container_width=True)
-        
-        # Show threshold progression
-        st.write("**Threshold progression (α=0.05 / N questions):**")
-        for i in range(1, len(st.session_state.hypothesis_ledger) + 2):
-            st.write(f"  After {i} question(s): α = 0.05 / {i} = {0.05/i:.4g}")
-        
-        if st.button("🗑️ Clear Ledger"):
-            st.session_state.hypothesis_ledger = []
-            st.rerun()
-
-
-def main():
-    """Main dashboard entry point."""
-    disease, list_type = render_sidebar()
-
-    # Main tabs
-    tabs = st.tabs([
-        "📊 Regional Analysis",
-        "🧬 Gene Evidence",
-        "🧠 3D Brain",
-        "⚖️ Disease Comparison",
-        "📥 Export",
-        "🔍 Fragility Engine",
-        "🤖 Hypothesis Ledger",
-    ])
-
-    with tabs[0]:
-        render_regional_analysis(disease, list_type)
-
-    with tabs[1]:
-        render_gene_evidence(disease, list_type)
-
-    with tabs[2]:
-        render_3d_brain(disease, list_type)
-
-    with tabs[3]:
-        render_disease_comparison()
-
-    with tabs[4]:
-        render_export(disease, list_type)
-
-    with tabs[5]:
-        render_fragility_engine()
-
-    with tabs[6]:
-        render_hypothesis_ledger()
-
-
-if __name__ == "__main__":
-    main()

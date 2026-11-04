@@ -22,6 +22,7 @@ Outputs:
   * results/trait_filters.csv                          (matched traits per disease)
 """
 
+import argparse
 import re
 import pandas as pd
 from pathlib import Path
@@ -32,7 +33,7 @@ RESULTS_DIR = Path(__file__).parent.parent / "results"
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
-P_THRESHOLD = 5e-8  # genome-wide significance, fixed before looking at results
+P_THRESHOLD = 5e-8  # genome-wide significance, default
 CHUNKSIZE = 200_000
 
 FULL_CATALOG = RAW_DIR / "gwas_catalog_full.tsv"
@@ -294,6 +295,18 @@ def build_gene_table(path: str):
 
 
 if __name__ == "__main__":
-    # Smoke test: filter each disease and report counts (no expression match).
-    for disease in ["Parkinson", "Alzheimer", "Huntington", "Height"]:
-        filter_gwas_by_disease(disease, force_refresh=True)
+    parser = argparse.ArgumentParser(description='Build gene lists from GWAS Catalog')
+    parser.add_argument('--p_threshold', type=float, default=5e-8,
+                        help='Genome-wide significance threshold (default: 5e-8)')
+    args = parser.parse_args()
+    
+    # Disease traits to filter (case-insensitive match in DISEASE/TRAIT column)
+    disease_traits = {
+        "Parkinson": "Parkinson",
+        "Alzheimer": "Alzheimer",
+        "Huntington": "Huntington",
+        "Height": "Height",
+    }
+
+    for disease, trait in disease_traits.items():
+        filter_gwas_by_disease(disease, force_refresh=True, p_threshold=args.p_threshold)
