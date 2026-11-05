@@ -12,14 +12,6 @@ import plotly.graph_objects as go
 from pathlib import Path
 from typing import Optional
 
-# Page config
-st.set_page_config(
-    page_title="NeuroMap",
-    page_icon="🧠",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
-
 # Paths
 RESULTS_DIR = Path(__file__).parent / "results"
 REFERENCE_DIR = Path(__file__).parent / "reference"
@@ -57,15 +49,6 @@ def load_gene_list(disease: str, list_type: str) -> pd.DataFrame:
 
 
 @st.cache_data
-def load_donor_scores(disease: str, list_type: str) -> pd.DataFrame:
-    """Load donor-level scores."""
-    file = RESULTS_DIR / f"donor_scores_{disease.lower()}_{list_type}.parquet"
-    if file.exists():
-        return pd.read_parquet(file)
-    return pd.DataFrame()
-
-
-@st.cache_data
 def load_expected_regions() -> pd.DataFrame:
     """Load expected regions table."""
     file = REFERENCE_DIR / "expected_regions.csv"
@@ -89,7 +72,7 @@ def render_sidebar():
     st.sidebar.multiselect(
         "Donor subset",
         ["Donor 1", "Donor 2", "Donor 3", "Donor 4", "Donor 5", "Donor 6"],
-        default=["Donor 1", "Donor 2", "Donor 3", "Donor 4", "Donor 5", "Donor 6"],
+        default=["Donor 1", "Donor 2", "Donor 3", "Donor 5", "Donor 6"],
         key="donor_subset"
     )
 
@@ -265,7 +248,7 @@ def render_gene_evidence(disease: str, list_type: str):
             "headline_fdr": "<0.0001",
             "overlap_genes": "CD33, HLA-DRA, HLA-DRB1, HLA-DRB5, IL34, NR1H3, SPI1, TREM2",
             "leave_one_out": "OR stays ~14.85 when dropping any single gene",
-            "independent_loci": "6 (chr6 MHC: HLA-DRA/HLA-DRB1/HLA-DRB5; chr6: TREM2; chr19: CD33; chrX: IL34; chr12: NR1H3; chr11: SPI1)",
+            "independent_loci": "6 (chr6 MHC: HLA-DRA/HLA-DRB1/HLA-DRB5/HLA-DQB1; chr6: TREM2; chr19: CD33; chrX: IL34; chr12: NR1H3; chr11: SPI1)",
             "caveat": "5 of 8 overlap genes in MHC region on chr6 — may reflect linkage disequilibrium",
         },
     }
@@ -293,7 +276,7 @@ def render_gene_evidence(disease: str, list_type: str):
         ("PD–microglia enrichment", "OR=10.02 → OR=2.01 without MHC locus (p=0.399, not significant)", "Enrichment driven by MHC locus genes on chr6; only FCGR2A (chr1) remains"),
         ("PD–dopaminergic neuron enrichment", "Zero overlap, CI not estimable", "Low power (23 markers vs 162 genes) — cannot conclude absence"),
         ("Caudate/putamen depletion for PD", "Does not survive two-sided FDR", "Descriptive only, not a significant finding"),
-        ("Huntington's cell-type analysis", "Only 3 genes", "Underpowered"),
+        ("Huntington's cell-type analysis", "Only 1 gene", "Underpowered — only 1 gene matched"),
     ]
     for claim, result, why in did_not_hold_up:
         st.write(f"**{claim}:** {result} — {why}")
@@ -337,7 +320,7 @@ def render_3d_brain(disease: str, list_type: str):
         "Uncertain": "orange",
         "Not supported": "red",
     }
-    colors = [badge_colors.get(stats.loc[r, "badge"], "gray") if "badge" in stats.columns else "blue" for r in regions]
+    colors = [badge_colors.get(stats.loc[r, "badge"], "gray") if "badge" in stats.columns else "gray" for r in regions]
 
     fig = go.Figure(data=[go.Scatter3d(
         x=x, y=y, z=z,
@@ -565,133 +548,34 @@ def _generate_html_report(disease: str, list_type: str, stats: pd.DataFrame,
     return html
 
 
-def render_fragility_engine():
-    """Fragility Engine - Cell-Type Specification Curve"""
-    st.header("🔍 Fragility Engine - Cell-Type Specification Curve")
+def main():
+    """Main dashboard entry point."""
+    disease, list_type = render_sidebar()
 
-    st.markdown("""
-    This engine runs the microglia enrichment analysis across a grid of defensible analytical
-    choices to show how robust the findings are.
+    # Main tabs
+    tabs = st.tabs([
+        "📊 Regional Analysis",
+        "🧬 Gene Evidence",
+        "🧠 3D Brain",
+        "⚖️ Disease Comparison",
+        "📥 Export",
+    ])
 
-    **Specifications tested (24 per disease):**
-    - Disease: Alzheimer's, Parkinson's
-    - Gene list: strict, broad
-    - GWAS p-value threshold: 5e-8, 1e-6
-    - Marker set: full microglia markers, HLA-removed (HLA genes removed from marker list)
-    - Locus handling: all genes, one gene per 500kb locus, MHC removed
+    with tabs[0]:
+        render_regional_analysis(disease, list_type)
 
-    **Metric:** For each specification, we test whether microglia enrichment is significant
-    (FDR < 0.05). The fragility score = fraction of the 24 parameter combinations where
-    the finding remains significant.
-    """)
+    with tabs[1]:
+        render_gene_evidence(disease, list_type)
 
-    # Load cell-type enrichment results for both marker sets
-    @st.cache_data
-    def load_enrichment_results(marker_set="full"):
-        path = Path("results") / f"cell_type_enrichment{'_hla_removed' if marker_set == 'hla_removed' else ''}.csv"
-        if path.exists():
-            df = pd.read_csv(path)
-            df["marker_set"] = marker_set
-            return df
-        return pd.DataFrame()
+    with tabs[2]:
+        render_3d_brain(disease, list_type)
 
-    full_results = load_enrichment_results("full")
-    hla_results = load_enrichment_results("hla_removed")
+    with tabs[3]:
+        render_disease_comparison()
 
-    if full_results.empty and hla_results.empty:
-        st.warning("No cell-type enrichment results available. Run `python src/cell_type_analysis.py` first.")
-        return
+    with tabs[4]:
+        render_export(disease, list_type)
 
-    # Build specification grid: 24 per disease
-    specs = []
-    p_thresholds = [5e-8, 1e-6]
-    marker_sets = ["full", "hla_removed"]
 
-    for disease in ["Alzheimer", "Parkinson"]:
-        for list_type in ["strict", "broad"]:
-            for p_threshold in p_thresholds:
-                for marker_set in marker_sets:
-                    results = full_results if marker_set == "full" else hla_results
-                    if results.empty:
-                        continue
-                    subset = results[
-                        (results["disease"] == disease) &
-                        (results["list_type"] == list_type) &
-                        (results["cell_type"] == "Microglia")
-                    ]
-                    if not subset.empty:
-                        row = subset.iloc[0]
-                        sig = bool(row.get("significant", False))
-                        specs.append({
-                            "disease": disease,
-                            "list_type": list_type,
-                            "p_threshold": p_threshold,
-                            "marker_set": marker_set,
-                            "or": row["odds_ratio"],
-                            "p": row["p_value"],
-                            "fdr": row.get("fdr", float("nan")),
-                            "significant": sig,
-                            "overlap": row["n_overlap"],
-                        })
-
-    if not specs:
-        st.warning("No microglia enrichment results found.")
-        return
-
-    specs_df = pd.DataFrame(specs)
-
-    # Summary metrics
-    total = len(specs_df)
-    sig_count = specs_df["significant"].sum()
-    st.metric("Significant specifications / Total", f"{int(sig_count)} / {len(specs_df)}")
-
-    # Summary table
-    st.subheader("Specification Curve — Microglia Enrichment")
-    st.write("Each row = one analytical specification. Sorted by FDR.")
-
-    display_df = specs_df[["disease", "list_type", "p_threshold", "marker_set", "or", "p_value", "fdr", "significant", "overlap"]].copy()
-    display_df["marker_set"] = display_df["marker_set"].map({"full": "Full markers", "hla_removed": "HLA-removed"})
-    display_df["p_threshold"] = display_df["p_threshold"].map({5e-8: "5e-8", 1e-6: "1e-6"})
-    display_df["significant"] = display_df["significant"].map({True: "✅", False: "❌"})
-    display_df = display_df.sort_values(["disease", "list_type", "marker_set", "p_threshold"])
-    st.dataframe(display_df.round(4), use_container_width=True, hide_index=True)
-
-    # Fragility score: fraction of specs where significant
-    st.subheader("Fragility Score — Fraction of parameter combos where significant")
-    frag_rows = []
-    for disease in ["Alzheimer", "Parkinson"]:
-        for list_type in ["strict", "broad"]:
-            subset = specs_df[(specs_df["disease"] == disease) & (specs_df["list_type"] == list_type)]
-            if len(subset) > 0:
-                frag_score = subset["significant"].mean()
-                n_sig = int(subset["significant"].sum())
-                n_total = len(subset)
-                min_fdr = subset["fdr"].min()
-                max_fdr = subset["fdr"].max()
-                frag_rows.append({
-                    "Disease": disease,
-                    "List": list_type,
-                    "Fragility Score": frag_score,
-                    "Significant / Total": f"{int(n_sig)} / {n_total}",
-                    "Min FDR": f"{min_fdr:.4f}",
-                    "Max FDR": f"{max_fdr:.4f}",
-                })
-
-    frag_df = pd.DataFrame(frag_rows)
-    frag_df = frag_df.sort_values(["Disease", "List"])
-    st.dataframe(frag_df.round(4), use_container_width=True, hide_index=True)
-
-    # Fragility distribution chart
-    st.subheader("Fragility Score Distribution")
-    fig = px.histogram(
-        frag_df,
-        x="Fragility Score",
-        nbins=10,
-        title="Distribution of Fragility Scores Across Parameter Combinations",
-        labels={"fragility_score": "Fragility Score (proportion of combos significant)", "count": "Number of Specifications"},
-        range_x=[0, 1],
-    )
-    fig.add_vline(x=0.5, line_dash="dash", line_color="orange", annotation_text="50% threshold")
-    fig.add_vline(x=0.8, line_dash="dash", line_color="green", annotation_text="80% threshold")
-    st.plotly_chart(fig, use_container_width=True)
-
+if __name__ == "__main__":
+    main()
