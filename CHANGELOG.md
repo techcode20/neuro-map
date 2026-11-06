@@ -1,5 +1,35 @@
 # Changelog
 
+## v1.1.7 — Fix critical data/statistics issues, add test suite
+
+### Fixed
+- `data/raw/gwas_catalog_height.tsv`: replaced mock `GENE_XXXX` symbols with real AHBA-matching gene symbols (negative control now uses real genes, 0 significant regions confirmed).
+- `run_all.py`: suppress statistical output for underpowered gene lists (<10 genes); Huntington's no longer writes invalid all-significant stats files.
+- `run_all.py`: removed duplicate `STRIATAL_GENES` definition and duplicate `PROCESSED_DIR` import.
+- `app.py`: fixed hardcoded "GWAS Catalog (Parkinson's disease)" in HTML report — now uses the actual disease parameter.
+- `.gitignore`: added `.pytest_cache/` to prevent committing machine-specific test cache.
+
+### Added
+- `tests/` — unit test suite (12 tests, all passing):
+  - `test_gene_lists.py` — gene list counts match README, gene_symbol column present, no mock GENE_XXXX symbols, height is negative control, trait_filters.csv written.
+  - `test_scoring.py` — compute_regional_scores returns Series, empty genes handled, compute_donor_scores returns DataFrame, compute_consistency_metric returns Series.
+  - `test_stats.py` — FDR correction bounds, all-NaN p-values handled, empirical p-values in [0,1].
+- `.github/workflows/test.yml` — GitHub Actions CI running pytest on push/PR.
+
+## v1.1.6 — Remove broken scratch files and backup
+
+### Removed
+- `inspect_gwas.py` — broken scratch file referencing non-existent `data/raw/gwas_parkinsons.tsv`.
+- `sensitivity_analysis.py` — one-off analysis script not part of core pipeline.
+- `src/load_data.py.bak` — backup file should not be committed.
+
+## v1.1.5 — Fix README GWAS claims, add results_summary note
+
+### Fixed
+- `README.md`: corrected claim that AD/HD GWAS files need downloading — all four TSV files are present in `data/raw/`.
+- `README.md`: added note about `results_summary/` directory contents.
+- Removed duplicated Running the Pipeline and Reproducibility sections.
+
 ## v1.1.4 — Clean rebuild with real AHBA data
 
 ### Fixed

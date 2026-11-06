@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).parent / "src"))
 import pandas as pd
 import numpy as np
 
-from load_data import load_allen_expression, PROCESSED_DIR, PROCESSED_DIR
+from load_data import load_allen_expression, PROCESSED_DIR
 from gene_lists import build_gene_lists
 from scoring import compute_regional_scores, compute_donor_scores, compute_consistency_metric, save_scores
 from stats import run_permutation_test, save_statistical_results
@@ -48,9 +48,6 @@ RESULTS_DIR = Path("results")
 RESULTS_SUMMARY_DIR = Path("results_summary")
 RESULTS_DIR.mkdir(exist_ok=True)
 RESULTS_SUMMARY_DIR.mkdir(exist_ok=True)
-
-# Striatal positive control gene set (known to be enriched in caudate/putamen)
-STRIATAL_GENES = ["DRD1", "DRD2", "PPP1R1B", "ADORA2A", "PENK", "TAC1", "GPR88", "RGS9"]
 
 
 def run_pipeline_for_disease(

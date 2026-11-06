@@ -522,7 +522,7 @@ def _generate_html_report(disease: str, list_type: str, stats: pd.DataFrame,
         <tr><td>Depleted regions (two-sided FDR)</td><td>{n_depleted}</td></tr>
         <tr><td>Supported badges</td><td>{n_supported}</td></tr>
         <tr><td>Data source</td><td>Allen Human Brain Atlas (6 donors)</td></tr>
-        <tr><td>Gene source</td><td>GWAS Catalog (Parkinson's disease)</td></tr>
+        <tr><td>Gene source</td><td>GWAS Catalog ({disease} disease)</td></tr>
         <tr><td>Random seed</td><td>42</td></tr>
     </table>
 
