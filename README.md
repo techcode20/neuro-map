@@ -113,9 +113,14 @@ Microglia enrichment in Alzheimer's holds up (strict: OR=17.96, FDR=0.0002351; b
 
 To get real results (these results are already from real AHBA data):
 
-1. Data files (`data/raw/` and `data/processed/`) already contain real AHBA microarray data
-2. GWAS Catalog data for Parkinson's is already present at `data/raw/gwas_catalog_full.tsv`
-3. Alzheimer's and Huntington's GWAS Catalog TSV files would need to be downloaded for complete analysis
+1. Data files (`data/raw/` and `data/processed/`) already contain real AHBA microarray data (6 donors)
+2. GWAS Catalog data for all four traits is present at `data/raw/`:
+   - `gwas_catalog_full.tsv` (full catalog, 606 MB)
+   - `gwas_catalog_parkinson.tsv` (Parkinson's)
+   - `gwas_catalog_alzheimer.tsv` (Alzheimer's)
+   - `gwas_catalog_huntington.tsv` (Huntington's)
+   - `gwas_catalog_height.tsv` (Height negative control)
+3. `gene_lists.py` reads from the full catalog and filters per disease by trait keyword — all gene lists are built from real GWAS data, never hardcoded to a single disease.
 
 ## Installation
 
@@ -155,51 +160,8 @@ python -m streamlit run app.py
 - `print_summary.py` prints the README numbers table from `results/*.csv` (numbers are never hand-typed)
 - `src/cell_type_analysis.py` runs cell-type enrichment → `results/cell_type_enrichment.csv`
 - Trait inclusion / exclusion rules are auditable in `results/trait_filters.csv`
-- `results_summary/run_manifest.json` records the git commit, GWAS file path/size, run date, expression matrix shape, and data type for every pipeline run
-- Data files (`data/raw/` and `data/processed/`) are not committed — run `run_all.py` with `REAL_DATA=1` to regenerate with real AHBA data
-
-## License
-
-MIT License
-
-```bash
-git clone <repo-url>
-cd NeuroMap
-python -m venv .venv
-.venv\Scripts\Activate.ps1   # Windows
-source .venv/bin/activate   # macOS/Linux
-python -m pip install -r requirements.txt
-```
-
-For real-data reproduction steps, see [REPRODUCE.md](REPRODUCE.md).
-
-## Running the Pipeline
-
-```bash
-# Run the full pipeline (cleans data/processed/ and results/ first)
-python run_all.py --clean
-
-# Run the full pipeline (keeps existing data)
-python run_all.py
-
-# Run with real AHBA data (requires manual download first)
-REAL_DATA=1 python run_all.py --clean
-
-# Launch the dashboard
-python -m streamlit run app.py
-```
-
-## Reproducibility
-
-- All random seeds are fixed (42)
-- Package versions are pinned in `requirements.txt`
-- The expected regions table is frozen in `reference/expected_regions.csv`
-- `run_all.py` rebuilds all results from raw data
-- `print_summary.py` prints the README numbers table from `results/*.csv` (numbers are never hand-typed)
-- `src/cell_type_analysis.py` runs cell-type enrichment → `results/cell_type_enrichment.csv`
-- Trait inclusion / exclusion rules are auditable in `results/trait_filters.csv`
-- `results_summary/run_manifest.json` records the git commit, GWAS file path/size, run date, expression matrix shape, and data type for every pipeline run
-- Data files (`data/raw/` and `data/processed/`) are not committed — run `run_all.py` with `REAL_DATA=1` to regenerate with real AHBA data
+- `results_summary/` directory contains `run_manifest.json` (records git commit, GWAS file path/size, run date, expression matrix shape, data type for every run) and per-disease gene list CSVs
+- Data files (`data/raw/` and `data/processed/`) are gitignored per `.gitignore` — regenerate with `python run_all.py --clean` or `REAL_DATA=1 python run_all.py --clean`
 
 ## License
 
