@@ -78,35 +78,14 @@ def run_pipeline_for_disease(
         if len(genes) < MIN_GENES_FOR_ANALYSIS:
             print(
                 f"  WARNING: Only {len(genes)} genes for {disease} ({list_type}); "
-                f"minimum {MIN_GENES_FOR_ANALYSIS} required for meaningful analysis. Skipping."
+                f"minimum {MIN_GENES_FOR_ANALYSIS} required for meaningful analysis. "
+                f"Skipping statistical analysis (results would be invalid)."
             )
             empty_scores = pd.Series(index=expression_matrix.index, dtype=float, name="score")
             empty_index = expression_matrix.index
             save_scores(empty_scores, disease, list_type)
-            save_statistical_results(
-                disease,
-                list_type,
-                empty_scores,
-                pd.Series(index=empty_index, dtype=float, name="pvalue"),
-                pd.DataFrame(
-                    index=empty_index,
-                    data={
-                        "fdr": pd.Series(dtype=float, index=empty_index),
-                        "significant": pd.Series(dtype=bool, index=empty_index),
-                        "pvalue_two_sided": pd.Series(dtype=float, index=empty_index),
-                        "fdr_two_sided": pd.Series(dtype=float, index=empty_index),
-                        "depleted": pd.Series(dtype=bool, index=empty_index),
-                    },
-                ),
-                pd.DataFrame(
-                    index=empty_index,
-                    data={
-                        "cohens_d": pd.Series(dtype=float, index=empty_index),
-                        "null_mean": pd.Series(dtype=float, index=empty_index),
-                        "null_std": pd.Series(dtype=float, index=empty_index),
-                    },
-                ),
-            )
+            # Do NOT write statistical results for underpowered gene lists —
+            # writing all-False/all-NaN stats would be misleading.
             continue
 
         if len(genes) == 0:
@@ -117,30 +96,8 @@ def run_pipeline_for_disease(
             empty_scores = pd.Series(index=expression_matrix.index, dtype=float, name="score")
             empty_index = expression_matrix.index
             save_scores(empty_scores, disease, list_type)
-            save_statistical_results(
-                disease,
-                list_type,
-                empty_scores,
-                pd.Series(index=empty_index, dtype=float, name="pvalue"),
-                pd.DataFrame(
-                    index=empty_index,
-                    data={
-                        "fdr": pd.Series(dtype=float, index=empty_index),
-                        "significant": pd.Series(dtype=bool, index=empty_index),
-                        "pvalue_two_sided": pd.Series(dtype=float, index=empty_index),
-                        "fdr_two_sided": pd.Series(dtype=float, index=empty_index),
-                        "depleted": pd.Series(dtype=bool, index=empty_index),
-                    },
-                ),
-                pd.DataFrame(
-                    index=empty_index,
-                    data={
-                        "cohens_d": pd.Series(dtype=float, index=empty_index),
-                        "null_mean": pd.Series(dtype=float, index=empty_index),
-                        "null_std": pd.Series(dtype=float, index=empty_index),
-                    },
-                ),
-            )
+            # Do NOT write statistical results when no genes match —
+            # writing empty stats would be misleading.
             continue
 
         # Compute regional scores
